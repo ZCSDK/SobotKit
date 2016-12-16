@@ -57,6 +57,12 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  */
 //@property (nonatomic,assign) BOOL    isKeepSession;
 
+/**
+ *  返回时是否开启满意度评价
+ *  默认为NO 未开启
+ *
+ */
+@property (nonatomic,assign) BOOL      isOpenEvaluation;
 
 /**
  *  自定义关闭的时候是否推送满意度评价
@@ -154,6 +160,11 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  *  各种按钮，网络提醒
  */
 @property (nonatomic,strong) UIFont    *listDetailFont;
+
+/**
+ *  是否有以下情况
+ */
+@property (nonatomic,strong) UIFont    *customlistDetailFont;
 
 /**
  *  消息提醒(转人工、客服接待等)

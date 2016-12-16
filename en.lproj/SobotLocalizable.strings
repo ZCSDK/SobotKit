@@ -192,4 +192,15 @@
 
 "ZCIcon_turnBtn_sel" = "ZCicon_manualWork_pressed_en";
 
+// 评价按钮的 解决和未解决
+"ZCIcon_NotSolved_nol" = "ZCIcon_NotSolved_nol_en";
+
+
+"ZCIcon_Resolved_nol_ch" = "ZCIcon_Resolved_nol_en";
+
+
+"ZCIcon_NotSolved_sel" = "ZCIcon_NotSolved_sel_en";
+
+
+"ZCIcon_Resolved_sel" = "ZCIcon_Resolved_sel_en";
 
