@@ -41,7 +41,7 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
 @interface ZCKitInfo : NSObject
 
 /**
- *  初始化必须参数（sysNum）
+ *  初始化必须参数（appKey）
  */
 @property(nonatomic,strong) ZCLibInitInfo *info;
 
@@ -50,7 +50,6 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  *  接口域名
  */
 @property(nonatomic,strong) NSString *apiHost;
-
 
 /**
  *  是否保持会话，默认NO,点击返回直接断开会话链接
@@ -131,6 +130,25 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
 @property (nonatomic,assign) BOOL    isAddNickName;
 
 
+
+
+/**
+ *   指定客服ID
+ *
+ *   默认不设置
+ */
+//@property (nonatomic,strong)  NSString  * receptionistId;
+
+
+/**
+ *  定指客服 转接类型
+ *
+ *  0 可转入其他客服  1 必须转入指定客服（注意：如果当前指定的客服不在线，选择之后不能在转接到其他客服）
+ */
+//@property (nonatomic,assign) int  tranReceptionistFlag;
+
+
+
 ////////////////////////////////////////////////////////////////
 // 自定义咨询内容，在转接人工成功时，方便用户发送自己咨询的信息，（可选）
 // 标题（必填）、页面地址url（必填）、摘要、标签、缩略图url
@@ -194,6 +212,11 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  */
 @property (nonatomic,strong) UIFont   *goodsDetFont;
 
+/**
+ *    商品详情cell中 btn的背景色
+ *
+ */
+@property (nonatomic,strong) UIColor    *goodSendBtnColor;
 
 ////////////////////////////////////////////////////////////////
 // 自定义背景、边框线颜色，（可选）
@@ -203,6 +226,9 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  *  对话页面背景
  */
 @property (nonatomic,strong) UIColor    *backgroundColor;
+
+
+
 
 /**
  *  自定义风格颜色：导航
