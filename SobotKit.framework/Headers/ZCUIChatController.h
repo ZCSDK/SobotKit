@@ -57,12 +57,5 @@
 -(void)setPageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick messageLinkClick:(void (^)(NSString *link)) linkBlock;
 
 
-/**
- *  设置输入框
- *
- *  @return UITextView 
- */
--(UITextView *)getChatTextView;
-
 
 @end

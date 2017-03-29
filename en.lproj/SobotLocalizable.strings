@@ -179,11 +179,17 @@
 
 "链接" = "URL";
 
-"请输入邮箱地址" = "email@domain.com";
-"请输入昵称" = "Nickname";
-"请输入手机号码" = "Tel";
+"请输入邮箱地址" = "email@domain.com(required)";
+
 
 "手机格式不正确" = "Mobile phone format is not correct";
+
+
+"请输入昵称（选填）" = "Nickname(optional)";
+"请输入手机号码（选填）" = "Tel(optional)";
+"请输入昵称（必填）" = "Nickname(required)";
+"请输入手机号码（必填）" = "Tel(required)";
+
 
 /************************图片************************/
 

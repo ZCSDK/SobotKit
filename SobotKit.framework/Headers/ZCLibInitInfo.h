@@ -10,15 +10,10 @@
 
 /**
  *  初始化配置用户信息
- *  企业唯一编号 用户唯一标识 用户昵称 用户电话 用户邮箱
+ *  企业唯一编号 用户唯一标识 用户昵称 用户电话 用户邮箱...
  */
 @interface ZCLibInitInfo : NSObject
 
-/**
- *  企业唯一编号
- *  not null
- */
-//@property (nonatomic,strong) NSString   *enterpriseId;
 
 
 /**
@@ -45,6 +40,7 @@
 @property (nonatomic,assign) int  tranReceptionistFlag;
 
 
+
 /**
  *  用户唯一标识（对接用户可靠身份，不建议为null）
  *  null
@@ -58,7 +54,7 @@
  *  对接机器人ID  （可以转接到对应的机器人）
  *
  */
-@property (nonatomic,strong) NSString  *robotFlag;
+@property (nonatomic,strong) NSString  *robotId;
 
 
 /**
@@ -67,6 +63,14 @@
  *  将自动备注到客户资料
  */
 @property (nonatomic,strong) NSString   *nickName;
+
+
+/**
+ *  用户的真实姓名
+ *  null
+ *  将自动备注到客户资料
+ */
+@property(nonatomic,strong) NSString   *realName;
 
 /**
  *  用户电话
@@ -90,49 +94,68 @@
  */
 @property (nonatomic,strong) NSDictionary *customInfo;
 
- /**
- *  当前转接的技能组 
+/**
+ *  用户的qq号码
  *  null
- *  自动连接上一个客服时用户服务端验证
+ *  将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *groupId;
+@property (nonatomic,strong) NSString *qqNumber;
 
 /**
- *  用户的姓名 将自动备注到客户资料
+ *  用户的性别 0男 1女
+ *  null
+ *  将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *userName;
+@property (nonatomic,strong) NSString *userSex;
 
 /**
- *  用户的QQ号 将自动备注到客户资料
+ *  用户的姓名
+ *
+ *  将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *qqNumber;
+@property (nonatomic,strong) NSString *useName;
 
 /**
- *  用户微信账号 将自动备注到客户资料
+ *  用户的微博账号
+ *  null
+ *  将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *weChat;
+@property (nonatomic,strong) NSString *weiBo;
 
 /**
- *  用户的微博账号 将自动备注到客户资料
+ *  用户的微博账号
+ *  null
+ *  将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *weiBo;
+@property (nonatomic,strong) NSString *weChat;
 
 /**
- *  用户的性别 将自动备注到客户资料
- *  0.男，1.女
+ *  用户的生日
+ *  例：20170323，*注意* 如果不是这个格式，初始化接口会给过滤掉
+ *  将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *userSex;
+@property (nonatomic,strong) NSString *userBirthday;
 
 /**
- *  用户的生日 将自动备注到客户资料
- *  yyyy-MM-dd
+ * 备注
+ * null
+ * 将自动显示到客服工作台客户资料
  */
-@property (nonatomic,strong) NSString     *userBirthday;
+@property (nonatomic,strong) NSString *userRemark;
 
 /**
- *  用户备注
+ *  技能组编号
+ *  null
+ *  根据传递的值转接到对应的技能组,不传不起作用
  */
-@property (nonatomic,strong) NSString     *userRemark;
+@property (nonatomic,strong) NSString   *skillSetId;
+
+/**
+ *  技能组名称(同一个技能组，不同名称是需要)
+ *  null
+ */
+@property (nonatomic,strong) NSString   *skillSetName;
+
 
 /**
  *  用户自定义头像 将自动备注到客户资料

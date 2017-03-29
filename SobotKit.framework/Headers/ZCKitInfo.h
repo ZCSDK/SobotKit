@@ -5,45 +5,16 @@
 //  Created by zhangxy on 15/11/13.
 //  Copyright © 2015年 zhichi. All rights reserved.
 //
-#import "ZCLibInitInfo.h"
+
 #import "ZCProductInfo.h"
 
 
-
-////////////////////////////////////////////////////////////////
-// 自定义回调）
-////////////////////////////////////////////////////////////////
-@protocol ZCReceivedMessageDelegate <NSObject>
-
 /**
- *  未读消息数获取
- *
- *  @param object 当前消息
- *  @param nleft  未读消息数
- */
--(void)onReceivedMessage:(id) message unRead:(int) nleft;
-
-@end
-
-/**
- *  未读消息数，block方式获取
- *
- *  @param message 当前消息
- *  @param nleft   未读消息数
- */
-typedef void(^ReceivedMessageBlock)(id message,int nleft);
-
-
-/**
- *  配置初始化自定义类
- *  自定义字体（可选） 自定义背景、边框线颜色（可选） 初始化必须参数（ZCLibInitInfo）
+ *  配置初始化自定义类（UI配置相关）
+ *  自定义字体（可选） 自定义背景、边框线颜色（可选）
  */
 @interface ZCKitInfo : NSObject
 
-/**
- *  初始化必须参数（appKey）
- */
-@property(nonatomic,strong) ZCLibInitInfo *info;
 
 
 /**
@@ -51,10 +22,12 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  */
 @property(nonatomic,strong) NSString *apiHost;
 
-/**
- *  是否保持会话，默认NO,点击返回直接断开会话链接
- */
-//@property (nonatomic,assign) BOOL    isKeepSession;
+
+
+////////////////////////////////////////////////////////////////
+//   和UI相关的配置参数自定义可选项                                //
+//                                                            //
+////////////////////////////////////////////////////////////////
 
 /**
  *  返回时是否开启满意度评价
@@ -68,7 +41,7 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  *  默认为N0;
  *
  */
-@property (nonatomic,assign) BOOL    isShowEvaluate;
+//@property (nonatomic,assign) BOOL    isShowEvaluate;
 
 /**
  *  机器人优先模式，是否直接显示转人工按钮(值为NO时，会在机器人无法回答时显示转人工按钮)，默认，YES
@@ -81,18 +54,6 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  */
 @property (nonatomic,strong) NSString *unWordsCount;
 
-/**
- *  技能组编号
- *  null
- *  根据传递的值转接到对应的技能组,不传不起作用
- */
-@property (nonatomic,strong) NSString   *skillSetId;
-
-/**
- *  技能组名称(同一个技能组，不同名称是需要)
- *  null
- */
-@property (nonatomic,strong) NSString   *skillSetName;
 
 /**
  *  是否开启语音功能
@@ -130,25 +91,6 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
 @property (nonatomic,assign) BOOL    isAddNickName;
 
 
-
-
-/**
- *   指定客服ID
- *
- *   默认不设置
- */
-//@property (nonatomic,strong)  NSString  * receptionistId;
-
-
-/**
- *  定指客服 转接类型
- *
- *  0 可转入其他客服  1 必须转入指定客服（注意：如果当前指定的客服不在线，选择之后不能在转接到其他客服）
- */
-//@property (nonatomic,assign) int  tranReceptionistFlag;
-
-
-
 ////////////////////////////////////////////////////////////////
 // 自定义咨询内容，在转接人工成功时，方便用户发送自己咨询的信息，（可选）
 // 标题（必填）、页面地址url（必填）、摘要、标签、缩略图url
@@ -158,6 +100,7 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  *  产品信息
  */
 @property(nonatomic,strong) ZCProductInfo *productInfo;
+
 
 
 ////////////////////////////////////////////////////////////////
@@ -218,6 +161,21 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  */
 @property (nonatomic,strong) UIColor    *goodSendBtnColor;
 
+
+/**
+ *
+ * 网络状态中的背景色（连接中）
+ *
+ */
+@property (nonatomic,strong) UIColor    *socketStatusButtonBgColor;
+
+
+/**
+ *
+ * 网络状态中的背景色（连接中）
+ *
+ */
+@property (nonatomic,strong) UIColor    *socketStatusButtonTitleColor;
 ////////////////////////////////////////////////////////////////
 // 自定义背景、边框线颜色，（可选）
 ////////////////////////////////////////////////////////////////
@@ -410,7 +368,7 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
 
 
 
-@property (nonatomic,strong) id<ZCReceivedMessageDelegate> delegate;
-@property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;
+//@property (nonatomic,strong) id<ZCReceivedMessageDelegate> delegate;
+//@property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;
 
 @end
