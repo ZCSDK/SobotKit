@@ -30,6 +30,13 @@
 ////////////////////////////////////////////////////////////////
 
 /**
+ *  评价完人工是否关闭会话（人工满意度评价后释放会话）
+ *  默认为NO 未开启
+ *
+ */
+@property (nonatomic,assign) BOOL      isCloseAfterEvaluation;
+
+/**
  *  返回时是否开启满意度评价
  *  默认为NO 未开启
  *
@@ -63,25 +70,12 @@
 
 
 /**
- *  留言时是否显示手机号
- *
- *  默认 关闭
- */
-@property (nonatomic,assign) BOOL    isShowPhoneNumber;
-
-/**
  *  留言时是否显示昵称
  *
  *  默认关闭
  */
 @property (nonatomic,assign) BOOL    isShowNickName;
 
-/**
- *  留言时是否必须输入手机号（在显示手机号的情况下）
- *
- *  默认不输入
- */
-@property (nonatomic,assign) BOOL    isAddPhoneNumber;
 
 /**
  *  留言时是否必须输入昵称 (在显示昵称的情况下)

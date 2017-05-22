@@ -40,9 +40,7 @@
 
 "暂时无法转接人工客服" = "Sorry, the team is not in service right now";
 
-"您可以留言" = "you can also get replies by email";
-
-"感谢您的反馈" = "Thank you";
+"您可以留言" = "you can also get replies by Email";
 
 "评价" = "Feedback";
 
@@ -128,7 +126,7 @@
 
 "您好，客服[%@]接受了您的请求" = "%@ is at your service";
 
-"排队中，您在队伍中的第%@个 您可以留言" = "Please wait，there are %@ people in need of service before you, you can also get replies by email";
+"排队中，您在队伍中的第%@个 您可以留言" = "Please wait，there are %@ people in need of service before you, you can also get replies by Email";
 
 "排队中，您在队伍中的第%@个" = "Please wait，there are %@ people in need of service before you";
 
@@ -141,7 +139,7 @@
 
 "以下为新消息" = "Below are new messages";
 
-"暂时无法转接人工客服，您可以 留言" = "Sorry, the team is not in service right now, you can also get replies by email";
+"暂时无法转接人工客服，您可以 留言" = "Sorry, the team is not in service right now, you can also get replies by Email";
 
 
 
@@ -185,24 +183,25 @@
 "手机格式不正确" = "Mobile phone format is not correct";
 
 
+"上传问题图片能大大提高解决问题效率(选填)" = "上传问题图片能大大提高解决问题效率(optional)";
+"上传问题图片能大大提高解决问题效率(必填)" = "上传问题图片能大大提高解决问题效率(required)";
 "请输入昵称（选填）" = "Nickname(optional)";
 "请输入手机号码（选填）" = "Tel(optional)";
 "请输入昵称（必填）" = "Nickname(required)";
 "请输入手机号码（必填）" = "Tel(required)";
-
-
+"要删除这张照片吗？" = "Want to delete this photo?";
 /************************图片************************/
 
 // 转人工的按钮图片
-"ZCIcon_turnBtn_nol" = "ZCIcon_manualWork_normal_en";
+"ZCicon_manualWork_nol" = "ZCIcon_manualWork_normal_en";
 
-"ZCIcon_turnBtn_sel" = "ZCicon_manualWork_pressed_en";
+"ZCicon_manualWork_pre" = "ZCicon_manualWork_pressed_en";
 
 // 评价按钮的 解决和未解决
 "ZCIcon_NotSolved_nol" = "ZCIcon_NotSolved_nol_en";
 
 
-"ZCIcon_Resolved_nol_ch" = "ZCIcon_Resolved_nol_en";
+"ZCIcon_Resolved_nol" = "ZCIcon_Resolved_nol_en";
 
 
 "ZCIcon_NotSolved_sel" = "ZCIcon_NotSolved_sel_en";

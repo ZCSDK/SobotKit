@@ -40,11 +40,13 @@
 
 "您可以留言" = "您可以留言";
 
-"感谢您的反馈" = "感谢您的反馈";
-
 "评价" = "评价";
 
 "您好，客服" = "您好，客服";
+
+
+"很抱歉没能帮到您"  = "很抱歉没能帮到您";
+"感谢您的反馈" = "感谢您的反馈";
 
 //"昵称" = "昵称";
 
@@ -184,18 +186,23 @@
 "手机格式不正确" = "手机格式不正确";
 
 
+"上传问题图片能大大提高解决问题效率(选填)" = "上传问题图片能大大提高解决问题效率(选填)";
+"上传问题图片能大大提高解决问题效率(必填)" = "上传问题图片能大大提高解决问题效率(必填)";
+
 "请输入昵称（选填）" = "请输入昵称（选填）";
-"请输入手机号码（选填）" = "请输入手机号码（选填）";
 "请输入昵称（必填）" = "请输入昵称（必填）";
+"请输入手机号码（选填）" = "请输入手机号码（选填）";
 "请输入手机号码（必填）" = "请输入手机号码（必填）";
 "请输入邮箱地址（必填）" = "请输入邮箱地址（必填）";
+"请输入邮箱地址（选填）" = "请输入邮箱地址（选填）";
+"要删除这张照片吗？" = "要删除这张照片吗？";
 /************************图片************************/
 
 // 转人工的按钮图片
 
-"ZCIcon_turnBtn_nol" = "ZCIcon_manualWork_normal_ch";
+"ZCIcon_manualWork_nol" = "ZCIcon_manualWork_nol";
 
-"ZCIcon_turnBtn_sel" = "ZCicon_manualWork_pressed_ch";
+"ZCicon_manualWork_pre" = "ZCicon_manualWork_pre";
 
 
 
@@ -203,7 +210,7 @@
 "ZCIcon_NotSolved_nol" = "ZCIcon_NotSolved_nol";
 
 
-"ZCIcon_Resolved_nol_ch" = "ZCIcon_Resolved_nol_ch";
+"ZCIcon_Resolved_nol" = "ZCIcon_Resolved_nol";
 
 
 "ZCIcon_NotSolved_sel" = "ZCIcon_NotSolved_sel";

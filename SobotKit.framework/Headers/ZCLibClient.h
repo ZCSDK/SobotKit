@@ -13,14 +13,16 @@
 ////////////////////////////////////////////////////////////////
 // 自定义回调）
 ////////////////////////////////////////////////////////////////
-@protocol ZCReceivedMessageDelegate <NSObject>
+
 
 /**
- *  未读消息数获取
  *
- *  @param object 当前消息
- *  @param nleft  未读消息数
+ *  消息回调
+ *
  */
+@protocol ZCReceivedMessageDelegate <NSObject>
+
+//未读消息数获取
 -(void)onReceivedMessage:(id) message unRead:(int) nleft;
 
 @end
@@ -134,9 +136,11 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
 
 /**
  关闭通道，清理内存，退出智齿客户
- 说明：调用此方法后将不能接收到离线消息，除非再次进入智齿SDK重新激活
+ 说明：调用此方法后将不能接收到离线消息，除非再次进入智齿SDK重新激活,
+ isClosePush:YES ,是关闭push；NO离线用户，但是可以收到push推送
  */
-+(void) closeAndoutZCServer;
++(void) closeAndoutZCServer:(BOOL) isClosePush;
+
 
 
 

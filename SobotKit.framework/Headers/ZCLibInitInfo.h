@@ -109,13 +109,6 @@
 @property (nonatomic,strong) NSString *userSex;
 
 /**
- *  用户的姓名
- *
- *  将自动显示到客服工作台客户资料
- */
-@property (nonatomic,strong) NSString *useName;
-
-/**
  *  用户的微博账号
  *  null
  *  将自动显示到客服工作台客户资料

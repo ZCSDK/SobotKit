@@ -33,14 +33,12 @@
              pageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick
       messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
 
-
 /**
  *  获取SDK版本号
  *
  *  @return 版本号
  */
 +(NSString *)getVersion;
-
 
 /**
  *  获取渠道名称
@@ -49,15 +47,12 @@
  */
 +(NSString *)getChannel;
 
-
-
 /**
  *  显示日志信息
  *
  *  @param isShowDebug 默认不显示
  */
 +(void) setShowDebug:(BOOL) isShowDebug;
-
 
 
 @end
