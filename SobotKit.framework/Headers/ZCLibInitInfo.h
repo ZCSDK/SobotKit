@@ -94,6 +94,15 @@
  */
 @property (nonatomic,strong) NSDictionary *customInfo;
 
+
+/**
+ * 固定KEY的自定义字段
+ * null
+ * 所有的KEY均在工作台设置后生效（设置->自定义字段->用户信息字段）
+ */
+@property (nonatomic,strong) NSDictionary *customerFields;
+
+
 /**
  *  用户的qq号码
  *  null
@@ -194,5 +203,76 @@
  历史记录时间范围，单位分钟(例:100-表示从现在起前100分钟的会话)
  */
 @property (nonatomic,assign) int  scopeTime;
+
+
+
+
+/**
+ *  自定义客服欢迎语,默认为空 （如果传入，优先使用该字段）
+ */
+@property (nonatomic,strong) NSString * customAdminHelloWord;
+
+
+/**
+ *  自定义机器人欢迎语,默认为空 （如果传入，优先使用该字段）
+ */
+@property (nonatomic,strong) NSString * customRobotHelloWord;
+
+
+/**
+ *  自定义用户超时提示语,默认为空 （如果传入，优先使用该字段）
+ */
+@property (nonatomic,strong) NSString * customUserTipWord;
+
+
+/**
+ *  自定义客服不在线的说辞,默认为空 （如果传入，优先使用该字段）
+ */
+@property (nonatomic,strong) NSString * customAdminNonelineTitle;
+
+
+/**
+ *  自定义客服超时提示语,默认为空 （如果传入，优先使用该字段）
+ */
+@property (nonatomic,strong) NSString * customAdminTipWord;
+
+
+/**
+ *  自定义用户超时下线提示语,默认为空 （如果传入，优先使用该字段）
+ */
+@property (nonatomic,strong) NSString * customUserOutWord;
+
+
+// *****   通告  ******
+
+/**
+ *   是否显示通告栏
+ */
+@property (nonatomic,assign) BOOL     isShowNotifitionTopView;
+
+/**
+ *  点击跳转后是否显示通告栏
+ */
+@property (nonatomic,assign) BOOL     isDismissNotifitionTopView;
+
+/**
+ *   通告标题
+ */
+@property (nonatomic,strong) NSString   * notifitionTitle;
+
+/**
+ *  通告的icon 的URL
+ */
+@property (nonatomic,strong) NSString   * notifitionIconUrl;
+
+
+/**
+ *  通告的 URL地址
+ */
+@property (nonatomic,strong) NSString   * notifitionaddressUrl;
+
+
+
+//@property (nonatomic,assign) BOOL   isWaitFull;
 
 @end

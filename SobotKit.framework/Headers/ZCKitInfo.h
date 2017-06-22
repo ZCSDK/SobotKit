@@ -273,6 +273,31 @@
  */
 @property (nonatomic,strong) UIColor    *LineRichColor;
 
+/**
+ *
+ *  通告栏的背景色
+ *
+ */
+@property (nonatomic,strong) UIColor    *notificationTopViewBgColor;
+
+/**
+ *
+ *  通告栏的文字颜色
+ *
+ */
+@property (nonatomic,strong) UIColor    *notificationTopViewLabelColor;
+
+/**
+ *
+ *  通告栏的字体设置
+ *
+ */
+@property (nonatomic,strong) UIFont    *notificationTopViewLabelFont;
+
+
+
+
+
 ////////////////////////////////////////////////////////////////
 // 自定义文字颜色，（可选）
 ////////////////////////////////////////////////////////////////
