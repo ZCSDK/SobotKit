@@ -170,6 +170,14 @@
  *
  */
 @property (nonatomic,strong) UIColor    *socketStatusButtonTitleColor;
+
+
+/**
+ *  满意度星级说明的文字颜色
+ */
+@property (nonatomic,strong) UIColor    *scoreExplainTextColor;
+
+
 ////////////////////////////////////////////////////////////////
 // 自定义背景、边框线颜色，（可选）
 ////////////////////////////////////////////////////////////////
@@ -379,6 +387,35 @@
  *
  */
 @property (nonatomic, strong) UIColor   *goodsSendTextColor;
+
+/**
+ *  提交评价后将结束会话的文字颜色
+ *
+ */
+@property (nonatomic, strong) UIColor   *satisfactionTextColor;
+
+
+/**
+ *  暂不评价文字颜色
+ *
+ */
+@property (nonatomic, strong) UIColor   *noSatisfactionTextColor;
+
+
+/**
+ *  评价页面中 已解决 未解决  文字的高亮状态颜色
+ *
+ */
+@property (nonatomic, strong) UIColor   *satisfactionTextSelectedColor;
+
+
+/**
+ *  评价页面中 已解决 未解决 按钮的选中的背景色
+ *
+ */
+@property (nonatomic, strong) UIColor   *satisfactionSelectedBgColor;
+
+
 
 /**
  *  是否设置相册背景图片

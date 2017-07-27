@@ -243,22 +243,22 @@
 @property (nonatomic,strong) NSString * customUserOutWord;
 
 
-// *****   通告  ******
+// *****   通告  ******  除了通告的图标地址，其他取接口
 
 /**
  *   是否显示通告栏
  */
-@property (nonatomic,assign) BOOL     isShowNotifitionTopView;
-
-/**
- *  点击跳转后是否显示通告栏
- */
-@property (nonatomic,assign) BOOL     isDismissNotifitionTopView;
-
-/**
- *   通告标题
- */
-@property (nonatomic,strong) NSString   * notifitionTitle;
+//@property (nonatomic,assign) BOOL     isShowNotifitionTopView;
+//
+///**
+// *  点击跳转后是否显示通告栏
+// */
+//@property (nonatomic,assign) BOOL     isDismissNotifitionTopView;
+//
+///**
+// *   通告标题
+// */
+//@property (nonatomic,strong) NSString   * notifitionTitle;
 
 /**
  *  通告的icon 的URL
@@ -269,7 +269,7 @@
 /**
  *  通告的 URL地址
  */
-@property (nonatomic,strong) NSString   * notifitionaddressUrl;
+//@property (nonatomic,strong) NSString   * notifitionaddressUrl;
 
 
 

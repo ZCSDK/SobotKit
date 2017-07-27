@@ -155,10 +155,13 @@
 "有声音吗" = "Have a voice?";
 "无网络" = "No Network";
 
-"无更多记录" = "No more record";
+"到顶了，没有更多" = "No more record";
 "新消息" = "NewMessages";
 "条未读消息" = "NewMessages";
 
+
+"收取中..." = "Connection...";
+"未连接" = "Not connected";
 
 "倒计时:" = "Countdown";
 
@@ -212,4 +215,37 @@
 
 /*******  2.2.1 新增 ********/
 "抱歉，人工排队人数已满，请您留言，我们有专项工作人员直接处理您提交的问题~" = "Sorry, the number of artificial line is full, please you leave a message, we have special staff to directly deal with the problem you submitted";
+
+
+
+/******* 2.3.0 新增 *********/
+"暂不评价" = "No evaluation";
+
+"客服评价" = "Evaluation Service";
+
+"机器人客服评价" = "Evaluation Robot";
+
+"提交评价后会话将结束" = "The conversation'll end after submission";
+
+"请您对本次服务进行评价" = "Please rate the service";
+
+"请问 [%@] 是否解决了您的问题？" = "Has your question been resolved?";
+
+"已解决" = "YES";
+
+"未解决" = " NO";
+
+"请您对 [%@] 进行评价" = "Please evaluate [%@]";
+
+"提交评价" = "Submit feedback";
+
+"存在哪些问题" = "Please select the problems that exist";
+
+"存在哪些问题（必选）" = "Please select the problems that exist（Required）";
+
+"√ 您的评价已成功提交" = "Your assessment has been successfully submitted";
+
+"您的评价会让我们做的更好" = "Your evaluation will make us do better";
+
+"排队已满" = "The queue is full";
 

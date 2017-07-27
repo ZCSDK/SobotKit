@@ -10,6 +10,13 @@
 #import "ZCKitInfo.h"
 #import "ZCUIBaseController.h"
 
+@protocol ZCUIChatDelagete <NSObject>
+
+@optional
+-(void)openLeaveMsgClick:(NSString*)tipMsg;
+
+@end
+
 /**
  *  智齿 聊天页面VC
  */
@@ -20,6 +27,7 @@
  *  初始化信息
  */
 @property(nonatomic,strong) ZCKitInfo  *zckitInfo;
+@property(nonatomic,weak) id<ZCUIChatDelagete> chatDelegate;
 
 /**
  *  聊天列表

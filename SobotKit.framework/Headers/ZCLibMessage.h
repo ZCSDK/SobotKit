@@ -51,6 +51,9 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
     ZCTipCellMessageOpenNewWindow                    = 17,
     /** 评价 */ 
     ZCTipCellMessageEvaluation                       = 18,
+    
+    /** 排队达到阀值*/
+    ZCTipCellMessageWatingFull                       = 19,
 };
 
 
@@ -179,13 +182,29 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 @property (nonatomic , assign) int commentType;
 
 
-
 /**
  机器人显示转人工按钮
  YES 显示，NO不显示
  */
 @property (nonatomic , assign) BOOL showTurnUser;
 
+
+/**
+ *  0 没有评价 1已解决  2未解决
+ *
+ */
+@property (nonatomic , assign) int  satisfactionCommtType;
+
+/**
+ *
+ *  评价后的星级
+ */
+@property (nonatomic , assign) float  ratingCount;
+
+/**
+ *  评价是否开启 已解决 未解决   1开启 0关闭
+ */
+@property (nonatomic , strong) NSString* isQuestionFlag;
 
 /**
  *  初始化
