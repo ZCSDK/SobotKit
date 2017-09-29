@@ -30,6 +30,11 @@
 @property (nonatomic,strong  ) NSString         * msg;
 
 /**
+ 语音翻译
+ */
+@property (nonatomic,strong  ) NSString         * msgtranslation;
+
+/**
  *  语音时长
  */
 @property (nonatomic,strong  ) NSString         * duration;

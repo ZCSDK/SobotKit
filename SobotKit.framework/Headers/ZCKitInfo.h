@@ -70,6 +70,14 @@
 
 
 /**
+ 是否开启机器人语音，（付费，否则语音无法识别）
+ 默认NO
+ */
+@property (nonatomic,assign) BOOL    isOpenRobotVoice;
+
+
+
+/**
  *  留言时是否显示昵称
  *
  *  默认关闭

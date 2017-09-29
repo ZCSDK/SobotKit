@@ -181,7 +181,8 @@
 "链接" = "URL";
 
 "请输入邮箱地址" = "email@domain.com(required)";
-
+"请输入邮箱地址（必填）" = "email(required)";
+"请输入邮箱地址（选填）" = "email(optional)";
 
 "手机格式不正确" = "Mobile phone format is not correct";
 
@@ -249,3 +250,11 @@
 
 "排队已满" = "The queue is full";
 
+/*********  2.3.1 *************/
+"问题描述*" = "Problem description*";
+
+"问题类型" = "Problem Types";
+
+"请填写问题描述" = "Please fill in the description of the problem";
+
+"请选择问题类型" = "请选择问题类型";
