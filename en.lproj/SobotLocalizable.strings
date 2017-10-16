@@ -197,9 +197,9 @@
 /************************图片************************/
 
 // 转人工的按钮图片
-"ZCicon_manualWork_nol" = "ZCIcon_manualWork_normal_en";
+"ZCIcon_manualWork_nol" = "ZCIcon_manualWork_normal_en";
 
-"ZCicon_manualWork_pre" = "ZCicon_manualWork_pressed_en";
+"ZCIcon_manualWork_pre" = "ZCIcon_manualWork_pressed_en";
 
 // 评价按钮的 解决和未解决
 "ZCIcon_NotSolved_nol" = "ZCIcon_NotSolved_nol_en";
