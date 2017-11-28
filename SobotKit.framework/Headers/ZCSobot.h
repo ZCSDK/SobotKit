@@ -10,6 +10,7 @@
 #import "ZCKitInfo.h"
 #import "ZCLibInitInfo.h"
 #import "ZCUIChatController.h"
+#import "ZCUIChatListController.h"
 #import "ZCLibClient.h"
 
 /**
@@ -34,6 +35,9 @@
                 target:(id<ZCUIChatDelagete>) delegate
              pageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick
       messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
+
+
++(void)startZCChatListView:(ZCKitInfo *)info with:(UIViewController *)byController;
 
 /**
  *  获取SDK版本号

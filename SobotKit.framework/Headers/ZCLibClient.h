@@ -23,7 +23,7 @@
 @protocol ZCReceivedMessageDelegate <NSObject>
 
 //未读消息数获取
--(void)onReceivedMessage:(id) message unRead:(int) nleft;
+-(void)onReceivedMessage:(id) message unRead:(int) nleft obj:(id) object;
 
 @end
 
@@ -33,7 +33,7 @@
  *  @param message 当前消息
  *  @param nleft   未读消息数
  */
-typedef void(^ReceivedMessageBlock)(id message,int nleft);
+typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 
 
 
@@ -51,7 +51,10 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  */
 @property (nonatomic,strong) NSData     *token;
 
-
+/**
+ 平台标识
+ */
+@property (nonatomic,strong) NSString     *platformUnionCode;
 
 #pragma mark ---  原 appKey  userId  2.1.0之前的版本使用，之后的版本使用 ZCLibInitInfo中的参数
 /**
@@ -123,15 +126,6 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft);
  （建议启动应用时调用，没有发起过咨询不会浪费资源,至少转一次人工才有效果）
  */
 -(void)initZCIMCaht;
-
-
-/**
- 移除消息推送
- 退出账号时，切记移除消息推送
- uid，根据传入的userId生成的唯一标识，token，当前推送的token，error退出错误
- error为nil说明成功(如果token和uid都是空不会调用)
- */
--(void)removePush:(void (^)(NSString *uid, NSData *token,NSError *error))resultBlock;
 
 
 /**

@@ -275,4 +275,11 @@
 
 //@property (nonatomic,assign) BOOL   isWaitFull;
 
+/**
+ 平台通道参数，初始化成功后会自动赋值
+ */
+@property (nonatomic,strong) NSString   * platformUserId;
+
+-(id)initByJsonDict:(NSDictionary *) dict;
+
 @end
