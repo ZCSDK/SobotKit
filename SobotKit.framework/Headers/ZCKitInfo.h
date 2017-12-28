@@ -451,6 +451,11 @@
 @property (nonatomic ,assign) BOOL    isSetPhotoLibraryBgImage;
 
 
+/**
+ *  多轮会话模板四的超链颜色
+ */
+@property (nonatomic,strong) UIColor   *chatLeftMultColor;
+
 
 //@property (nonatomic,strong) id<ZCReceivedMessageDelegate> delegate;
 //@property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;

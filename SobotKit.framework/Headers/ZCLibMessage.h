@@ -210,10 +210,10 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  *  初始化
  *
  *  @param dict 数据解析后的数据字典类型
- *
+ *  @param isHistory
  *  @return ZCLibMessage
  */
--(id) initWithMyDict:(NSDictionary *)dict;
+-(id) initWithMyDict:(NSDictionary *)dict IsHistory:(BOOL)isHistory;
 
 
 

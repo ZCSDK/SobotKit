@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ZCMultiwheelModel.h"
 
 /**
  *  配置富媒体
@@ -40,7 +40,7 @@
 @property (nonatomic,strong  ) NSString         * duration;
 
 /**
- *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频
+ *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话
  */
 @property (nonatomic,assign  ) int              msgType;
 
@@ -58,7 +58,7 @@
 
 /**
  *  1 直接回答，2 理解回答，3 不能回答, 4引导回答，6互联网寒暄，
- *  7 私有寒暄（包括第三方天气、快递接口）,8百科, 9 向导回答,10 业务接口
+ *  7 私有寒暄（包括第三方天气、快递接口）,8百科, 9 向导回答,10 业务接口    // 151 152 153 待接口 多轮会话的类型
  */
 @property (nonatomic,assign  ) int              answerType;
 
@@ -75,14 +75,20 @@
 @property (nonatomic,strong  ) NSString         * docName;
 
 
+@property(nonatomic,strong) ZCMultiwheelModel   * multiModel;
+
+// 0用户自己 1.机器人 2，客服
+@property(nonatomic,assign) int            senderType;
+
 /**
  *  初始化
  *
  *  @param dict 解析后的数据（字典类型）
- *
+ *  @param senderType  0 用户发送 1机器人发送 2客服发送
+ *  @param isSend  区分是发送的，还是历史记录
  *  @return ZCLibRich
  */
--(id) initWithMyDict:(NSDictionary *)dict;
+-(id) initWithMyDict:(NSDictionary *)dict WithSenderType:(int)senderType IsHistory:(BOOL) isHistory;
 
 /**
  *  初始化富媒体消息
@@ -91,6 +97,6 @@
  *
  *  @return ZCLibRich
  */
--(ZCLibRich *) initWithAsnwer:(NSString *)answer;
+-(ZCLibRich *) initWithAsnwer:(NSString *)answer WithSenderType:(int)senderType IsHistory:(BOOL) isHistory;
 
 @end

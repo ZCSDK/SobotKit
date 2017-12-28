@@ -60,5 +60,5 @@
  */
 +(void) setShowDebug:(BOOL) isShowDebug;
 
-
++(NSString *)getsystorm;
 @end
