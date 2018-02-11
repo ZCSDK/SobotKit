@@ -107,25 +107,22 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 +(ZCLibClient *) getZCLibClient;
 
 
-/**
- 添加异常统计
- */
-+(void)setZCLibUncaughtExceptionHandler;
 
 /**
- 获取未读消息数
-
- @return 未读消息数(进入智齿聊天页面会清空)
+ 初始化智齿客服
+ 
+ @param appkey 智齿appkey(如果是电商版本，请填写自己公司的APPKEY)
  */
--(int) getUnReadMessage;
+-(void)initSobotSDK:(NSString *) appkey;
 
 
 /**
- 初始化智齿客服，会建立长连接通道，监听服务端消息
- 检查如果断开就重新连接
- （建议启动应用时调用，没有发起过咨询不会浪费资源,至少转一次人工才有效果）
+ 检查初始化状态，（成功/失败）
+ @return
  */
--(void)initZCIMCaht;
+-(BOOL) getInitState;
+
+
 
 
 /**
@@ -136,6 +133,34 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 +(void) closeAndoutZCServer:(BOOL) isClosePush;
 
 
+
+/**
+ 添加异常统计
+ */
++(void)setZCLibUncaughtExceptionHandler;
+
+/**
+ 获取未读消息数
+ 
+ @return 未读消息数(进入智齿聊天页面会清空)
+ */
+-(int) getUnReadMessage;
+
+
+/**
+ 获取最后一条消息
+ 
+ @return
+ */
+-(NSString  *) getLastMessage;
+
+
+/**
+ 初始化智齿客服，会建立长连接通道，监听服务端消息
+ 检查如果断开就重新连接
+ （建议启动应用时调用，没有发起过咨询不会浪费资源,至少转一次人工才有效果）
+ */
+-(void)initZCIMCaht;
 
 
 @end

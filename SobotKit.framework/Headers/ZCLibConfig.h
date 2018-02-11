@@ -300,6 +300,7 @@
 @property (nonatomic,assign) BOOL   serviceOutTimeFlag;
 
 
+
 /**
  *  对象封装
  *

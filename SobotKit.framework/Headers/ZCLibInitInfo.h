@@ -245,20 +245,6 @@
 
 // *****   通告  ******  除了通告的图标地址，其他取接口
 
-/**
- *   是否显示通告栏
- */
-//@property (nonatomic,assign) BOOL     isShowNotifitionTopView;
-//
-///**
-// *  点击跳转后是否显示通告栏
-// */
-//@property (nonatomic,assign) BOOL     isDismissNotifitionTopView;
-//
-///**
-// *   通告标题
-// */
-//@property (nonatomic,strong) NSString   * notifitionTitle;
 
 /**
  *  通告的icon 的URL
@@ -279,6 +265,29 @@
  平台通道参数，初始化成功后会自动赋值
  */
 @property (nonatomic,strong) NSString   * platformUserId;
+
+/**
+ *
+ *   是否允许请求热点引导问题接口
+ */
+@property (nonatomic,assign) BOOL isEnableHotGuide;
+
+
+/**
+ *
+ *    热点引导问题的扩展字段
+ **/
+@property (nonatomic,strong) NSDictionary * hotguideDict;
+
+
+
+/**
+ *
+ *   机器人问答是否支持分词联想
+ */
+@property (nonatomic,assign) BOOL isEnableAutoTips;
+
+
 
 -(id)initByJsonDict:(NSDictionary *) dict;
 

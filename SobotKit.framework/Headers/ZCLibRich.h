@@ -40,7 +40,7 @@
 @property (nonatomic,strong  ) NSString         * duration;
 
 /**
- *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话
+ *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导
  */
 @property (nonatomic,assign  ) int              msgType;
 
@@ -80,6 +80,16 @@
 // 0用户自己 1.机器人 2，客服
 @property(nonatomic,assign) int            senderType;
 
+
+/** 热点引导 说辞*/
+@property (nonatomic,copy) NSString * guide;
+
+/** 热点引导的item 数组 */
+@property (nonatomic,strong) NSMutableArray * hotGuideArr;
+
+/** 当前数据是 热点引导*/
+@property (nonatomic,assign) BOOL isHotGuide;
+
 /**
  *  初始化
  *
@@ -88,7 +98,7 @@
  *  @param isSend  区分是发送的，还是历史记录
  *  @return ZCLibRich
  */
--(id) initWithMyDict:(NSDictionary *)dict WithSenderType:(int)senderType IsHistory:(BOOL) isHistory;
+-(id) initWithMyDict:(NSDictionary *)dict WithSenderType:(int)senderType IsHistory:(BOOL) isHistory isHotGuide:(BOOL) ishotGuide;
 
 /**
  *  初始化富媒体消息
@@ -97,6 +107,6 @@
  *
  *  @return ZCLibRich
  */
--(ZCLibRich *) initWithAsnwer:(NSString *)answer WithSenderType:(int)senderType IsHistory:(BOOL) isHistory;
+-(ZCLibRich *) initWithAsnwer:(NSString *)answer WithSenderType:(int)senderType IsHistory:(BOOL) isHistory isHotGuide:(BOOL) ishotGuide;
 
 @end
