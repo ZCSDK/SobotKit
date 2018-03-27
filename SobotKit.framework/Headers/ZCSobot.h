@@ -13,7 +13,9 @@
 #import "ZCUIChatListController.h"
 #import "ZCLibClient.h"
 #import "ZCChatController.h"
-//#import "ZCChatView.h"
+#import "ZCTopView.h"
+#import "ZCChatView.h"
+
 /**
  *  智齿SDK入口
  *  启动智齿客服 获取系统版本号 获取渠道名称
