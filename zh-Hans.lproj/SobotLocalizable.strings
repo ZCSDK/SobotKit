@@ -203,9 +203,9 @@
 
 // 转人工的按钮图片
 
-"ZCIcon_manualWork_nol" = "ZCIcon_manualWork_nol";
+"zcicon_manualWork_nol" = "zcicon_manualWork_nol";
 
-"ZCIcon_manualWork_pre" = "ZCIcon_manualWork_pre";
+"zcicon_manualWork_pre" = "zcicon_manualWork_pre";
 
 
 

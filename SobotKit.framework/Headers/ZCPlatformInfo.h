@@ -45,6 +45,8 @@ extern NSString * const PLATFORMKEY_MESSAGEARR;
 @property (nonatomic,assign) BOOL isSendToUser;
 @property (nonatomic,assign) BOOL isPjRobot;
 @property (nonatomic,assign) BOOL isPjUser;
+@property (nonatomic,strong) NSString *groupId;
+@property (nonatomic,strong) NSString *groupName;
 @property (nonatomic,strong) NSString     *checkInitKey;
 @property (nonatomic,strong) ZCLibConfig  *config;
 @property (nonatomic,strong) ZCLibMessage *waitintMessage;

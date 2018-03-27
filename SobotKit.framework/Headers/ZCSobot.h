@@ -12,7 +12,8 @@
 #import "ZCUIChatController.h"
 #import "ZCUIChatListController.h"
 #import "ZCLibClient.h"
-
+#import "ZCChatController.h"
+//#import "ZCChatView.h"
 /**
  *  智齿SDK入口
  *  启动智齿客服 获取系统版本号 获取渠道名称
@@ -32,11 +33,29 @@
  *  @param pageClick    点击返回，UI修改,object为当前
  *  @param linkBlock    点击消息链接回调，可以为null(注意：如果传递实现后内部将直接返回url，不在做跳转处理)
  */
++(void)startZCChatVC:(ZCKitInfo *) info
+                with:(UIViewController *) byController
+            loaction:(CGRect) location
+              target:(id<ZCChatControllerDelegate>) delegate
+           pageBlock:(void (^)(ZCChatController *object,ZCPageBlockType type))pageClick
+    messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
+
+
+
 +(void)startZCChatView:(ZCKitInfo *) info
                   with:(UIViewController *) byController
                 target:(id<ZCUIChatDelagete>) delegate
              pageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick
       messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
+
+
+
+//+(void)startZCChatView:(ZCKitInfo *) info
+//                  with:(UIViewController *) byController
+//              loaction:(CGRect) location
+//             pageBlock:(void (^)(ZCPageBlockType type))pageClick
+//      messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
+
 
 
 +(void)startZCChatListView:(ZCKitInfo *)info with:(UIViewController *)byController;

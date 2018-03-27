@@ -226,6 +226,12 @@
 
 
 /**
+ *  机器人的问答中 提示转人工按钮的文字颜色
+ *
+ */
+@property (nonatomic,strong) UIColor    *trunServerBtnColor;
+
+/**
  *  相册导航栏的颜色
  *
  */
@@ -456,6 +462,11 @@
  */
 @property (nonatomic,strong) UIColor   *chatLeftMultColor;
 
+
+/**
+ *  多轮会话中 展开和收起的文字颜色
+ */
+@property (nonatomic,strong) UIColor * openMoreBtnTextColor;
 
 //@property (nonatomic,strong) id<ZCReceivedMessageDelegate> delegate;
 //@property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;
