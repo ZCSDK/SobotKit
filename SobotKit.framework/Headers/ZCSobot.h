@@ -44,11 +44,12 @@
 
 
 
-+(void)startZCChatView:(ZCKitInfo *) info
-                  with:(UIViewController *) byController
-                target:(id<ZCUIChatDelagete>) delegate
-             pageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick
-      messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
+
+//+(void)startZCChatView:(ZCKitInfo *) info
+//                  with:(UIViewController *) byController
+//                target:(id<ZCUIChatDelagete>) delegate
+//             pageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick
+//      messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
 
 
 

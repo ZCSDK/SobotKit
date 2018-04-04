@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZCKitInfo.h"
-
+#import "ZCUIBaseController.h"
 
 
 @protocol ZCChatControllerDelegate <NSObject>
@@ -23,6 +23,7 @@
 
 @property(nonatomic,strong) ZCKitInfo *info;
 
+@property(nonatomic,assign) BOOL isNoPush;// 是否是push
 /**
  *  初始化
  *
@@ -34,6 +35,11 @@
 
 @property (nonatomic,assign) id<ZCChatControllerDelegate> chatdelegate;
 
-
+/**
+ *  点击返回后的回调（注意：实现此方法后，sdk不自动实现返回事件）
+ *
+ *  @param backBlock
+ */
+-(void)setPageBlock:(void (^)(ZCChatController *object,ZCPageBlockType type))pageClick messageLinkClick:(void (^)(NSString *link)) linkBlock;
 
 @end
