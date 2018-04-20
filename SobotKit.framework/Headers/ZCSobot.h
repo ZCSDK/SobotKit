@@ -37,7 +37,6 @@
  */
 +(void)startZCChatVC:(ZCKitInfo *) info
                 with:(UIViewController *) byController
-            loaction:(CGRect) location
               target:(id<ZCChatControllerDelegate>) delegate
            pageBlock:(void (^)(ZCChatController *object,ZCPageBlockType type))pageClick
     messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
@@ -85,4 +84,25 @@
 +(void) setShowDebug:(BOOL) isShowDebug;
 
 +(NSString *)getsystorm;
+
+/**
+ *
+ *   获取当前app的版本号
+ *
+ **/
++(NSString *)getAppVersion;
+
+/**
+ *
+ *  获取手机型号
+ *
+ **/
++(NSString *)getiphoneType;
+
+/**
+ *
+ * 获取当前集成的app名称
+ *
+ **/
++(NSString *)getAppName;
 @end

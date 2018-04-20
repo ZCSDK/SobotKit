@@ -14,6 +14,7 @@
 typedef NS_ENUM(NSInteger,ZCPageBlockType) {
     ZCPageBlockGoBack     = 1,// 点击返回
     ZCPageBlockLoadFinish = 2,// 加载界面完成，可对UI进行修改
+    ZCPageBlockLeave      = 3,// 留言
 };
 
 typedef NS_ENUM(NSInteger, ButtonClickTag) {

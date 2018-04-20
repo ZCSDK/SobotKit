@@ -15,15 +15,17 @@
 
 @optional
 
-// 跳转留言
--(void)openLeaveMsgClick:(NSString*)tipMsg;// 点击留言跳转到用户自己留言页面，SDK 不在处理留言
+/**
+ 点击留言跳转到用户自己留言页面，SDK将不在处理留言
+ @param tipMsg 提示语
+ */
+-(void)openLeaveMsgClick:(NSString*)tipMsg;
+
 @end
 
 @interface ZCChatController : UIViewController
 
-@property(nonatomic,strong) ZCKitInfo *info;
 
-@property(nonatomic,assign) BOOL isNoPush;// 是否是push
 /**
  *  初始化
  *
@@ -32,6 +34,7 @@
  *  @return ZCUIChatController
  */
 -(id)initWithInitInfo:(ZCKitInfo *)info;
+
 
 @property (nonatomic,assign) id<ZCChatControllerDelegate> chatdelegate;
 

@@ -11,9 +11,7 @@
 
 typedef NS_ENUM(NSInteger, ZCBtnClickTag) {
     Btn_BACK   = 1, // 返回
-    Btn_CLOSE  = 2, // 关闭(未使用)
-    Btn_UNREAD = 3, // 未读消息
-    Btn_MORE   = 4, // 清空历史记录
+    Btn_MORE   = 3, // 清空历史记录
 };
 
 typedef void(^TopViewBtnClickBlock)(int ZCBtnClickTag);

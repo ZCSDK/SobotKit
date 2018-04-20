@@ -11,7 +11,7 @@
 #import "ZCTopView.h"
 #import "ZCKitInfo.h"
 
-#import "ZCChatController.h"
+
 
 #import "ZCUIBaseController.h"
 
@@ -25,15 +25,13 @@
 -(void)onTitleChanged:(NSString *) title;
 
 // 跳转留言
-//-(void)openLeaveMsgClick:(NSString*)tipMsg;// 点击留言跳转到用户自己留言页面，SDK 不在处理留言
+-(void)onLeaveMsgClick:(NSString*)tipMsg;
+
 @end
 
 
 
 @interface ZCChatView : UIView
-
-
-@property (nonatomic,strong) ZCChatController * superController;
 
 /** 未知说辞计数*/
 @property (nonatomic, assign) NSUInteger       unknownWordsCount;
@@ -88,18 +86,22 @@
 -(void)cleanHistoryMessage;
 
 /**
- *
- *  返回判断
- *
+ *  返回事件
  **/
 -(void)confimGoBack;
 
 
 /**
  *  点击返回后的回调（注意：实现此方法后，sdk不自动实现返回事件）
- *
  *  @param backBlock
  */
 -(void)setPageBlock:(void (^)(ZCChatView *object,ZCPageBlockType type))pageClick messageLinkClick:(void (^)(NSString *link)) linkBlock;
+
+/**
+ *
+ *   跑马灯动画
+ *
+ **/
+-(void)beginAniantions;
 
 @end
