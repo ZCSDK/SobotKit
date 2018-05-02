@@ -194,24 +194,7 @@
 "请输入昵称（必填）" = "Nickname(required)";
 "请输入手机号码（必填）" = "Tel(required)";
 "要删除这张照片吗？" = "Want to delete this photo?";
-/************************图片************************/
 
-// 转人工的按钮图片
-"zcicon_manualWork_nol" = "zcicon_manualWork_normal_en";
-
-"zcicon_manualWork_pre" = "zcicon_manualWork_pressed_en";
-
-// 评价按钮的 解决和未解决
-"ZCIcon_NotSolved_nol" = "ZCIcon_NotSolved_nol_en";
-
-
-"ZCIcon_Resolved_nol" = "ZCIcon_Resolved_nol_en";
-
-
-"ZCIcon_NotSolved_sel" = "ZCIcon_NotSolved_sel_en";
-
-
-"ZCIcon_Resolved_sel" = "ZCIcon_Resolved_sel_en";
 
 
 /*******  2.2.1 新增 ********/

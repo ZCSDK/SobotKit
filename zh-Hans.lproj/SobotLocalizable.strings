@@ -199,27 +199,9 @@
 "请输入邮箱地址（必填）" = "请输入邮箱地址（必填）";
 "请输入邮箱地址（选填）" = "请输入邮箱地址（选填）";
 "要删除这张照片吗？" = "要删除这张照片吗？";
-/************************图片************************/
-
-// 转人工的按钮图片
-
-"zcicon_manualWork_nol" = "zcicon_manualWork_nol";
-
-"zcicon_manualWork_pre" = "zcicon_manualWork_pre";
 
 
 
-// 评价按钮的 解决和未解决
-"ZCIcon_NotSolved_nol" = "ZCIcon_NotSolved_nol";
-
-
-"ZCIcon_Resolved_nol" = "ZCIcon_Resolved_nol";
-
-
-"ZCIcon_NotSolved_sel" = "ZCIcon_NotSolved_sel";
-
-
-"ZCIcon_Resolved_sel" = "ZCIcon_Resolved_sel";
 
 
 /*******  2.2.1 新增 ********/

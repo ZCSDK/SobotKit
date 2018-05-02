@@ -134,6 +134,7 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 
 
 
++(void)closeZCServer:(BOOL)isClosePush;
 /**
  添加异常统计
  */
@@ -162,5 +163,5 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
  */
 -(void)initZCIMCaht;
 
-
+-(void)aginitIMChat;
 @end

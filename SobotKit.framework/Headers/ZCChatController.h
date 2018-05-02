@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ZCKitInfo.h"
 #import "ZCUIBaseController.h"
-
+#import "ZCChatView.h"
 
 @protocol ZCChatControllerDelegate <NSObject>
 
@@ -25,6 +25,9 @@
 
 @interface ZCChatController : UIViewController
 
+@property (nonatomic,assign) BOOL isPush;// 是否是push 进来的
+
+@property (nonatomic,strong) ZCChatView * chatView;
 
 /**
  *  初始化
@@ -44,5 +47,7 @@
  *  @param backBlock
  */
 -(void)setPageBlock:(void (^)(ZCChatController *object,ZCPageBlockType type))pageClick messageLinkClick:(void (^)(NSString *link)) linkBlock;
+
+
 
 @end
