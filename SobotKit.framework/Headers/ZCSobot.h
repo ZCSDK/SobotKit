@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "ZCKitInfo.h"
 #import "ZCLibInitInfo.h"
-#import "ZCUIChatController.h"
 #import "ZCUIChatListController.h"
 #import "ZCLibClient.h"
 #import "ZCChatController.h"

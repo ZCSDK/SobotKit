@@ -70,6 +70,11 @@
  */
 @property(nonatomic,strong) UILabel    * titleLabel;
 
+/**
+ *   跳转到用户自己的 留言VC
+ **/
+@property(nonatomic,assign) BOOL  isJumpCustomLeaveVC;
+
 
 
 // 显示聊天窗口
@@ -103,5 +108,7 @@
  *
  **/
 -(void)beginAniantions;
+
+
 
 @end

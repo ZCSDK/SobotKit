@@ -15,7 +15,12 @@
  */
 @interface ZCKitInfo : NSObject
 
-
+/**
+ *
+ *  SDK 页面中使用自定义的导航栏不在使用 系统的导航栏（影藏）
+ *  默认 为NO 跟随集成项目
+ **/
+@property (nonatomic,assign) BOOL navcBarHidden;
 
 /**
  *  接口域名
@@ -81,6 +86,15 @@
  智能转人工关键字，关键字作为key{@"转人工",@"1",@"R":@"1"}
  */
 @property (nonatomic,strong) NSDictionary *activeKeywords;
+
+
+/**
+ *  自定义快捷入口
+ *  快捷入口  链接 url: value  标题 title: vlaue
+ *
+ **/
+@property (nonatomic,strong) NSMutableArray * cusMenuArray;
+
 
 /**
  *  是否开启语音功能

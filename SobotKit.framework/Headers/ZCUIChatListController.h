@@ -7,7 +7,7 @@
 //
 
 #import <SobotKit/SobotKit.h>
-
+#import "ZCUIBaseController.h"
 @interface ZCUIChatListController : ZCUIBaseController
 
 @property(nonatomic,strong) NSString *userId;

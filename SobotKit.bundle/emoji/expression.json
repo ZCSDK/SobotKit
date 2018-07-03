@@ -1,0 +1,422 @@
+ [
+  {
+  "KEY": "[微笑]",
+  "VALUE": "weixiao"
+  },
+  {
+  "KEY": "[撇嘴]",
+  "VALUE": "piezui"
+  },
+  {
+  "KEY": "[色]",
+  "VALUE": "se"
+  },
+  {
+  "KEY": "[发呆]",
+  "VALUE": "fadai"
+  },
+  {
+  "KEY": "[得意]",
+  "VALUE": "deyi"
+  },
+  {
+  "KEY": "[流泪]",
+  "VALUE": "liulei"
+  },
+  {
+  "KEY": "[害羞]",
+  "VALUE": "haixiu"
+  },
+  {
+  "KEY": "[闭嘴]",
+  "VALUE": "bizui"
+  },
+  {
+  "KEY": "[睡]",
+  "VALUE": "shui"
+  },
+  {
+  "KEY": "[大哭]",
+  "VALUE": "daku"
+  },
+  {
+  "KEY": "[尴尬]",
+  "VALUE": "ganga"
+  },
+  {
+  "KEY": "[发怒]",
+  "VALUE": "fanu"
+  },
+  {
+  "KEY": "[调皮]",
+  "VALUE": "tiaopi"
+  },
+  {
+  "KEY": "[呲牙]",
+  "VALUE": "ciya"
+  },
+  {
+  "KEY": "[惊讶]",
+  "VALUE": "jingya"
+  },
+  {
+  "KEY": "[难过]",
+  "VALUE": "nanguo"
+  },
+  {
+  "KEY": "[酷]",
+  "VALUE": "ku"
+  },
+  {
+  "KEY": "[冷汗]",
+  "VALUE": "lenghan"
+  },
+  {
+  "KEY": "[衰]",
+  "VALUE": "shuai"
+  },
+  {
+  "KEY": "[骷髅]",
+  "VALUE": "kulou"
+  },
+  {
+  "KEY": "[敲打]",
+  "VALUE": "qiaoda"
+  },
+  {
+  "KEY": "[再见]",
+  "VALUE": "zaijian"
+  },
+  {
+  "KEY": "[擦汗]",
+  "VALUE": "cahan"
+  },
+  {
+  "KEY": "[抠鼻]",
+  "VALUE": "koubi"
+  },
+  {
+  "KEY": "[鼓掌]",
+  "VALUE": "guzhang"
+  },
+  {
+  "KEY": "[糗大了]",
+  "VALUE": "qiudal"
+  },
+  {
+  "KEY": "[坏笑]",
+  "VALUE": "huaixiao"
+  },
+  {
+  "KEY": "[左哼哼]",
+  "VALUE": "zuohengheng"
+  },
+  {
+  "KEY": "[右哼哼]",
+  "VALUE": "youhengheng"
+  },
+  {
+  "KEY": "[哈欠]",
+  "VALUE": "haqian"
+  },
+  {
+  "KEY": "[鄙视]",
+  "VALUE": "bishi"
+  },
+  {
+  "KEY": "[委屈]",
+  "VALUE": "weiqu"
+  },
+  {
+  "KEY": "[快哭了]",
+  "VALUE": "kuaikul"
+  },
+  {
+  "KEY": "[阴险]",
+  "VALUE": "yinxian"
+  },
+  {
+  "KEY": "[亲亲]",
+  "VALUE": "qinqin"
+  },
+  {
+  "KEY": "[吓]",
+  "VALUE": "xia"
+  },
+  {
+  "KEY": "[可怜]",
+  "VALUE": "kelian"
+  },
+  {
+  "KEY": "[抓狂]",
+  "VALUE": "zhuakuang"
+  },
+  {
+  "KEY": "[吐]",
+  "VALUE": "tu"
+  },
+  {
+  "KEY": "[偷笑]",
+  "VALUE": "touxiao"
+  },
+  {
+  "KEY": "[愉快]",
+  "VALUE": "yukuai"
+  },
+  {
+  "KEY": "[白眼]",
+  "VALUE": "baiyan"
+  },
+  {
+  "KEY": "[傲慢]",
+  "VALUE": "aoman"
+  },
+  {
+  "KEY": "[饥饿]",
+  "VALUE": "jie"
+  },
+  {
+  "KEY": "[困]",
+  "VALUE": "kun"
+  },
+  {
+  "KEY": "[惊恐]",
+  "VALUE": "jingkong"
+  },
+  {
+  "KEY": "[流汗]",
+  "VALUE": "liuhan"
+  },
+  {
+  "KEY": "[憨笑]",
+  "VALUE": "hanxiao"
+  },
+  {
+  "KEY": "[悠闲]",
+  "VALUE": "youxian"
+  },
+  {
+  "KEY": "[奋斗]",
+  "VALUE": "fendou"
+  },
+  {
+  "KEY": "[咒骂]",
+  "VALUE": "zhouma"
+  },
+  {
+  "KEY": "[疑问]",
+  "VALUE": "yiwen"
+  },
+  {
+  "KEY": "[嘘]",
+  "VALUE": "xu"
+  },
+  {
+  "KEY": "[晕]",
+  "VALUE": "yun"
+  },
+  {
+  "KEY": "[疯了]",
+  "VALUE": "fengl"
+  },
+  {
+  "KEY": "[篮球]",
+  "VALUE": "lanqiu"
+  },
+  {
+  "KEY": "[乒乓]",
+  "VALUE": "pingpang"
+  },
+  {
+  "KEY": "[咖啡]",
+  "VALUE": "kafei"
+  },
+  {
+  "KEY": "[饭]",
+  "VALUE": "fan"
+  },
+  {
+  "KEY": "[猪头]",
+  "VALUE": "zhutou"
+  },
+  {
+  "KEY": "[玫瑰]",
+  "VALUE": "meigui"
+  },
+  {
+  "KEY": "[调谢]",
+  "VALUE": "diaoxie"
+  },
+  {
+  "KEY": "[嘴唇]",
+  "VALUE": "zuichun"
+  },
+  {
+  "KEY": "[爱心]",
+  "VALUE": "aixin"
+  },
+  {
+  "KEY": "[心碎]",
+  "VALUE": "xinsui"
+  },
+  {
+  "KEY": "[蛋糕]",
+  "VALUE": "dangao"
+  },
+  {
+  "KEY": "[闪电]",
+  "VALUE": "shandian"
+  },
+  {
+  "KEY": "[炸弹]",
+  "VALUE": "zhadan"
+  },
+  {
+  "KEY": "[刀]",
+  "VALUE": "dao"
+  },
+  {
+  "KEY": "[足球]",
+  "VALUE": "zuqiu"
+  },
+  {
+  "KEY": "[瓢虫]",
+  "VALUE": "piaochong"
+  },
+  {
+  "KEY": "[便便]",
+  "VALUE": "bianbian"
+  },
+  {
+  "KEY": "[月亮]",
+  "VALUE": "yueliang"
+  },
+  {
+  "KEY": "[太阳]",
+  "VALUE": "taiyang"
+  },
+  {
+  "KEY": "[礼物]",
+  "VALUE": "liwu"
+  },
+  {
+  "KEY": "[拥抱]",
+  "VALUE": "yongbao"
+  },
+  {
+  "KEY": "[菜刀]",
+  "VALUE": "caidao"
+  },
+  {
+  "KEY": "[西瓜]",
+  "VALUE": "xigua"
+  },
+  {
+  "KEY": "[啤酒]",
+  "VALUE": "pijiu"
+  },
+  {
+  "KEY": "[弱]",
+  "VALUE": "ruo"
+  },
+  {
+  "KEY": "[握手]",
+  "VALUE": "woshou"
+  },
+  {
+  "KEY": "[胜利]",
+  "VALUE": "shengli"
+  },
+  {
+  "KEY": "[抱拳]",
+  "VALUE": "baoquan"
+  },
+  {
+  "KEY": "[勾引]",
+  "VALUE": "gouyin"
+  },
+  {
+  "KEY": "[拳头]",
+  "VALUE": "quantou"
+  },
+  {
+  "KEY": "[差劲]",
+  "VALUE": "chajin"
+  },
+  {
+  "KEY": "[爱你]",
+  "VALUE": "aini"
+  },
+  {
+  "KEY": "[NO]",
+  "VALUE": "no_1"
+  },
+  {
+  "KEY": "[OK]",
+  "VALUE": "ok_1"
+  },
+  {
+  "KEY": "[爱情]",
+  "VALUE": "aiqing"
+  },
+  {
+  "KEY": "[飞吻]",
+  "VALUE": "feiwen"
+  },
+  {
+  "KEY": "[跳跳]",
+  "VALUE": "tiaotiao"
+  },
+  {
+  "KEY": "[强]",
+  "VALUE": "qiang"
+  },
+  {
+  "KEY": "[发抖]",
+  "VALUE": "fadou"
+  },
+  {
+  "KEY": "[怄火]",
+  "VALUE": "ouhuo"
+  },
+  {
+  "KEY": "[转圈]",
+  "VALUE": "zhuanquan"
+  },
+  {
+  "KEY": "[磕头]",
+  "VALUE": "ketou"
+  },
+  {
+  "KEY": "[回头]",
+  "VALUE": "huitou"
+  },
+  {
+  "KEY": "[跳绳]",
+  "VALUE": "tiaosheng"
+  },
+  {
+  "KEY": "[投降]",
+  "VALUE": "touxiang"
+  },
+  {
+  "KEY": "[激动]",
+  "VALUE": "jidong"
+  },
+  {
+  "KEY": "[乱舞]",
+  "VALUE": "luanwu"
+  },
+  {
+  "KEY": "[献吻]",
+  "VALUE": "xianwen"
+  },
+  {
+  "KEY": "[左太极]",
+  "VALUE": "zuotaiji"
+  },
+  {
+  "KEY": "[右太极]",
+  "VALUE": "youtaiji"
+  }
+  ]

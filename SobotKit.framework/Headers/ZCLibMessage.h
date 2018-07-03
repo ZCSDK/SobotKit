@@ -54,6 +54,8 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
     
     /** 排队达到阀值*/
     ZCTipCellMessageWatingFull                       = 19,
+    /** 消息撤回*/
+    ZCTipCellMessageRevertMsg                        = 20,
 };
 
 
@@ -68,6 +70,13 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  *  会话时间
  */
 @property (nonatomic , strong) NSString *date;
+
+/**
+ * 消息id
+ */
+@property (nonatomic , strong) NSString *msgId;
+@property (nonatomic , strong) NSString *revokeMsgId;
+
 
 /**
  *  内容[未使用]

@@ -299,6 +299,18 @@
  */
 @property (nonatomic,assign) BOOL   serviceOutTimeFlag;
 
+/**
+ *   切换机器人开关 1-开启，0-关闭
+ */
+@property (nonatomic,assign) int  robotSwitchFlag;
+
+/**
+ *
+ *  是否开启快捷入口
+ *
+ **/
+@property (nonatomic,assign) int quickEntryFlag;
+
 
 
 /**

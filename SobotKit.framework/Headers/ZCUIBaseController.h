@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, ButtonClickTag) {
     BUTTON_CLOSE  = 2, // 关闭(未使用)
     BUTTON_UNREAD = 3, // 未读消息
     BUTTON_MORE   = 4, // 清空历史记录
+    BUTTON_TURNROBOT = 5,// 切换机器人
 };
 
 /**
