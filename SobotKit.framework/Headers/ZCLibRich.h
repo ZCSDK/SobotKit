@@ -77,6 +77,9 @@
  */
 @property (nonatomic,assign  ) int              answerType;
 
+@property (nonatomic,copy) NSString * answerStrip;// 引导语，多轮会话中 15239 1523 1524 时 megtype ==11 时 添加
+
+
 /**
  *  建议引导
  */

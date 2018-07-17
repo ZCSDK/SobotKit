@@ -19,7 +19,7 @@
 @property (nonatomic,copy) NSString          * retCode;//"000000",接口返回的请求状态
 @property (nonatomic,assign) int            templateId;// 模板类型
 
-// 0 横向，1、标签，2竖，3富媒体 4、存文本
+// 0 横向，1、标签，2竖，3富媒体 4、存文本  5、1511
 @property (nonatomic,assign) int            msgType;// 模板类型
 //@property (nonatomic,strong) NSMutableArray         *inputContentList;// \"北京,上海,成都\",     手动输入
 @property (nonatomic,copy) NSString          *retErrorMsg;// 失败时返回的数据
@@ -39,7 +39,7 @@
  *
  *  @return ZCLibRich
  */
--(id) initWithMyDict:(NSDictionary *)dict;
+-(id) initWithMyDict:(NSDictionary *)dict withAnswerType:(NSString *)answerType;
 
 
 -(NSString *)getRequestText:(NSDictionary *)model;

@@ -312,6 +312,12 @@
 @property (nonatomic,assign) int quickEntryFlag;
 
 
+/**
+ *
+ *  -1待激活，0免费版，1试用版，2专业版，3企业版  4旗舰版
+ *
+ **/
+@property (nonatomic,assign) int accountStatus;
 
 /**
  *  对象封装
