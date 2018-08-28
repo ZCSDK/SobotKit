@@ -287,6 +287,19 @@
  */
 @property (nonatomic,assign) BOOL isEnableAutoTips;
 
+/**
+ *
+ *  自定发送商品订单信息类型
+ *  0 不发 1 给机器人发送 2 给人工发送  3 机器人和人工都发送
+ **/
+@property (nonatomic,assign) int goodMsgType;
+
+/**
+ *
+ *   自动发送商品订单信息内容
+ *   例如：“商品订单编号1403388282”
+ **/
+@property (nonatomic,copy) NSString * goodMsg;
 
 
 -(id)initByJsonDict:(NSDictionary *) dict;

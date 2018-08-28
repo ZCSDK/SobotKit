@@ -90,11 +90,24 @@
 
 /**
  *  自定义快捷入口
- *  快捷入口  链接 url: value  标题 title: vlaue
+ *  填充内容为： ZCLibCusMenu.h
+ *  url: 快捷入口链接(点击后会调用初始化linkBock)
+ *  title: 按钮标题
+ *  lableId: 自定义快捷入口的ID
  *
  **/
 @property (nonatomic,strong) NSMutableArray * cusMenuArray;
 
+
+
+/**
+ * 自定义输入框下方更多(+号图标)按钮下面内容(不会替换原有内容，会在原有基础上追加)
+ * 填充内容为：ZCLibCusMenu.h
+ *  title:按钮名称
+ *  url：点击链接(点击后会调用初始化linkBock)
+ *  imgName:本地图片名称，如xxx@2x.png,icon=xxx
+ */
+@property (nonatomic,strong) NSMutableArray * cusMoreArray;
 
 /**
  *  是否开启语音功能
@@ -200,18 +213,18 @@
 
 /**
  *
- * 网络状态中的背景色（连接中）
+ * 网络状态中的背景色（连接中） （已弃用）
  *
  */
-@property (nonatomic,strong) UIColor    *socketStatusButtonBgColor;
+//@property (nonatomic,strong) UIColor    *socketStatusButtonBgColor;
 
 
 /**
  *
- * 网络状态中的背景色（连接中）
+ * 网络状态中的背景色（连接中） （已弃用）
  *
  */
-@property (nonatomic,strong) UIColor    *socketStatusButtonTitleColor;
+//@property (nonatomic,strong) UIColor    *socketStatusButtonTitleColor;
 
 
 /**
@@ -234,7 +247,7 @@
 
 /**
  *  自定义风格颜色：导航
- *
+ *  @deprecated 2018-07-31: Use linphone_factory_create_core_with_config_3() instead
  */
 @property (nonatomic,strong) UIColor    *customBannerColor;
 
@@ -482,7 +495,67 @@
  */
 @property (nonatomic,strong) UIColor * openMoreBtnTextColor;
 
-//@property (nonatomic,strong) id<ZCReceivedMessageDelegate> delegate;
-//@property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;
+/**
+ *
+ *  更多按钮默认图片
+ *
+ **/
+@property (nonatomic,copy) NSString * moreBtnNolImg;
+
+/**
+ *
+ *  更多按钮选中图片
+ *
+ **/
+@property (nonatomic,copy) NSString * moreBtnSelImg;
+
+/**
+ *
+ *  转人工按钮默认图片
+ *
+ **/
+@property (nonatomic,copy) NSString * turnBtnNolImg;
+
+/**
+ *
+ *  转人工按选中图片
+ *
+ **/
+@property (nonatomic,copy) NSString * turnBtnSelImg;
+
+/**
+ *
+ *  返回按钮默认图片
+ *
+ **/
+@property (nonatomic,copy) NSString * topBackNolImg;
+
+/**
+ *
+ *  返回按钮选中图片
+ *
+ **/
+@property (nonatomic,copy) NSString * topBackSelImg;
+
+/**
+ *
+ *  返回按钮的默认背景色
+ *
+ **/
+@property (nonatomic,strong) UIColor * topBackNolColor;
+
+/**
+ *
+ *  返回按钮的高亮背景色
+ *
+ **/
+@property (nonatomic,strong) UIColor * topBackSelColor;
+
+/**
+ *
+ *  导航栏背景色 （单独修改）
+ *
+ **/
+@property (nonatomic,strong) UIColor * topViewBgColor;
 
 @end

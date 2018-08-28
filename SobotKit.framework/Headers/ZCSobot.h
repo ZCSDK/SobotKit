@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZCLibCusMenu.h"
 #import "ZCKitInfo.h"
 #import "ZCLibInitInfo.h"
 #import "ZCUIChatListController.h"
+#import "ZCUIBaseController.h"
 #import "ZCLibClient.h"
 #import "ZCChatController.h"
 #import "ZCTopView.h"
@@ -39,23 +41,6 @@
               target:(id<ZCChatControllerDelegate>) delegate
            pageBlock:(void (^)(ZCChatController *object,ZCPageBlockType type))pageClick
     messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
-
-
-
-
-//+(void)startZCChatView:(ZCKitInfo *) info
-//                  with:(UIViewController *) byController
-//                target:(id<ZCUIChatDelagete>) delegate
-//             pageBlock:(void (^)(ZCUIChatController *object,ZCPageBlockType type))pageClick
-//      messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
-
-
-
-//+(void)startZCChatView:(ZCKitInfo *) info
-//                  with:(UIViewController *) byController
-//              loaction:(CGRect) location
-//             pageBlock:(void (^)(ZCPageBlockType type))pageClick
-//      messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
 
 
 

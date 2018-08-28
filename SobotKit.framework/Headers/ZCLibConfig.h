@@ -320,6 +320,14 @@
 @property (nonatomic,assign) int accountStatus;
 
 /**
+ *
+ * 智能路由开关   0 没有  1 有
+ *
+ **/
+@property (nonatomic,assign) BOOL smartRouteInfoFlag;
+
+
+/**
  *  对象封装
  *
  *  @param dict 获取数据解析后的数据
