@@ -42,6 +42,18 @@
 
 
 /**
+ 跨公司转接人工(仅电商版本可用)
+ */
+// 1 是开启，默认0不开启
+@property (nonatomic,assign)  int   flowType;
+// 转接到的公司ID
+@property (nonatomic,strong)  NSString  * flowCompanyId;
+// 转接到的公司技能组
+@property (nonatomic,strong)  NSString  * flowGroupId;
+
+
+
+/**
  *  用户唯一标识（对接用户可靠身份，不建议为null）
  *  null
  *  将自动备注到客户资料

@@ -327,6 +327,53 @@
 @property (nonatomic,assign) BOOL smartRouteInfoFlag;
 
 
+
+/**
+ *
+ *  机器人欢迎语开关：robotHelloWordFlag
+ *
+ **/
+@property (nonatomic,assign) BOOL robotHelloWordFlag;
+
+
+/**
+ *
+ *  客服欢迎语开关：adminHelloWordFlag
+ *
+ **/
+@property (nonatomic,assign) BOOL adminHelloWordFlag;
+
+
+/**
+ *
+ *  客服移除用户推送文案开关：serviceEndPushFlag
+ *
+ **/
+@property (nonatomic,assign) BOOL serviceEndPushFlag;
+
+/**
+ *
+ *  说辞会在用户转人工时返回，serviceEndPushMsg
+ *
+ **/
+@property (nonatomic,copy) NSString* serviceEndPushMsg;
+
+/**
+ *   转人工提示暂无客服在线 说辞 的开关  1 显示 0 不显示
+ *   adminNoneLineFlag
+ *
+ **/
+@property (nonatomic,assign) BOOL adminNoneLineFlag;
+
+
+/**
+ *
+ *  转人工排队说辞的 开关  1 显示 0 不显示
+ * queueFlag
+ **/
+@property (nonatomic,assign) BOOL queueFlag;
+
+
 /**
  *  对象封装
  *
