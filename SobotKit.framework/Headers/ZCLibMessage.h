@@ -189,7 +189,7 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 /**
  机器人评价
- 0，不处理，1新添加(可赞、可踩)，2已赞，3已踩，
+ 0，不处理，1新添加(可赞、可踩)，2已赞，3已踩，4 超时下线之后不能在评价 置灰并给提示“会话结束，无法反馈”
  */
 @property (nonatomic , assign) int commentType;
 

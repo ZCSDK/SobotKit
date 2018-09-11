@@ -23,10 +23,18 @@
 @property (nonatomic,assign) BOOL navcBarHidden;
 
 /**
- *  接口域名
+ *  接口域名,从2.6.5版本开始，本属性不起作用，请使用ZCLibInitInfo.apiHost
+ *  @deprecated 2018-09-05: Use ZCLibInitInfo.h  instead
  */
 @property(nonatomic,strong) NSString *apiHost;
 
+
+/**
+ *
+ *   导航栏右上角 是否显示 评价按钮  默认不显示
+ *
+ **/
+@property (nonatomic,assign) BOOL isShowEvaluation;
 
 
 ////////////////////////////////////////////////////////////////
@@ -214,6 +222,7 @@
 /**
  *
  * 网络状态中的背景色（连接中） （已弃用）
+ *  @deprecated 2018-07-31: Use customBannerColor  instead
  *
  */
 //@property (nonatomic,strong) UIColor    *socketStatusButtonBgColor;
@@ -222,6 +231,7 @@
 /**
  *
  * 网络状态中的背景色（连接中） （已弃用）
+ *  @deprecated 2018-07-31: Use customBannerColor  instead
  *
  */
 //@property (nonatomic,strong) UIColor    *socketStatusButtonTitleColor;
@@ -247,7 +257,6 @@
 
 /**
  *  自定义风格颜色：导航
- *  @deprecated 2018-07-31: Use linphone_factory_create_core_with_config_3() instead
  */
 @property (nonatomic,strong) UIColor    *customBannerColor;
 
@@ -557,5 +566,30 @@
  *
  **/
 @property (nonatomic,strong) UIColor * topViewBgColor;
+
+
+
+/**
+ *
+ *  顶踩 文字 默认颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * topBtnNolColor;
+
+/**
+ *
+ *  顶踩 文字 选中颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * topBtnSelColor;
+
+/**
+ *
+ *  顶踩 文字 置灰颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * topBtnGreyColor;
+
+
 
 @end

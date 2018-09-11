@@ -66,6 +66,14 @@
 @property(nonatomic,strong) UIButton    * moreButton;
 
 /**
+ *
+ *  评价
+ *
+ **/
+@property (nonatomic,strong) UIButton * evaluationBtn;
+
+
+/**
  *  标题
  */
 @property(nonatomic,strong) UILabel    * titleLabel;
@@ -102,6 +110,11 @@
  **/
 -(void)beginAniantions;
 
-
+/**
+ *
+ *  去评价
+ *
+ **/
+-(void)goEvaluation;
 
 @end

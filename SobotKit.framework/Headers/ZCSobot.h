@@ -10,10 +10,11 @@
 #import "ZCLibCusMenu.h"
 #import "ZCKitInfo.h"
 #import "ZCLibInitInfo.h"
-#import "ZCUIChatListController.h"
+#import "ZCPlatformInfo.h"
 #import "ZCUIBaseController.h"
 #import "ZCLibClient.h"
 #import "ZCChatController.h"
+#import "ZCUIChatListController.h"
 #import "ZCTopView.h"
 #import "ZCChatView.h"
 
@@ -44,7 +45,23 @@
 
 
 
-+(void)startZCChatListView:(ZCKitInfo *)info with:(UIViewController *)byController;
+
+/**
+ 开启消息中心
+
+ @param info 跳转时的样式
+ @param byController 当前执行跳转的VC           not null
+ @param itemClickBlock 自定义跳转,可以为null(注意：如果传递实现后内补不在做跳转处理)
+    事例代码：
+ [ZCSobot startZCChatListView:uiInfo with:self onItemClick:nil];
+ 或
+ [ZCSobot startZCChatListView:uiInfo with:self onItemClick:^(ZCUIChatListController *object, ZCPlatformInfo *info) {
+ [ZCSobot startZCChatVC:uiInfo with:object target:nil pageBlock:^(ZCChatController *object, ZCPageBlockType type) {
+ 
+ } messageLinkClick:nil]; // 可以自己实现跳转
+ }];
+ */
++(void)startZCChatListView:(ZCKitInfo *)info with:(UIViewController *)byController onItemClick:(void (^)(ZCUIChatListController *object,ZCPlatformInfo *info))itemClickBlock;
 
 /**
  *  获取SDK版本号

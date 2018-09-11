@@ -10,8 +10,9 @@
 
 
 typedef NS_ENUM(NSInteger, ZCBtnClickTag) {
-    Btn_BACK   = 1, // 返回
-    Btn_MORE   = 3, // 清空历史记录
+    Btn_BACK         = 1, // 返回
+    Btn_MORE         = 3, // 清空历史记录
+    Btn_EVALUATION   = 4, // 评价
 };
 
 typedef void(^TopViewBtnClickBlock)(int ZCBtnClickTag);

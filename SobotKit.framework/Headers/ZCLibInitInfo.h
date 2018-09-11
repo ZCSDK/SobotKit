@@ -14,6 +14,10 @@
  */
 @interface ZCLibInitInfo : NSObject
 
+/**
+ *  接口域名,默认SaaS平台接口
+ */
+@property(nonatomic,strong) NSString *apiHost;
 
 
 /**
@@ -277,6 +281,13 @@
  平台通道参数，初始化成功后会自动赋值
  */
 @property (nonatomic,strong) NSString   * platformUserId;
+
+/**
+ *
+ * 私钥
+ *
+ **/
+@property (nonatomic,copy) NSString * platformKey;
 
 /**
  *
