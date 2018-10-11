@@ -9,9 +9,11 @@ Sobot sdk for ios
 
 =======
 
-1.智齿集成文档地址： https://shimo.im/doc/raVxsmOJZJwyBgCC
-2.智齿 iOS_SDK UI源码 Git下载地址：https://github.com/ZCSDK/sobotKit_UI_iOS
-3.智齿 iOS_SDK 常见问题解答 下载地址：https://github.com/ZCSDK/FAQ_iOS      
+1.智齿集成文档地址： https://shimo.im/doc/raVxsmOJZJwyBgCC   
+
+2.智齿 iOS_SDK UI源码 Git下载地址：https://github.com/ZCSDK/sobotKit_UI_iOS  
+
+3.智齿 iOS_SDK 常见问题解答 下载地址：https://github.com/ZCSDK/FAQ_iOS        
  
 =======
 
