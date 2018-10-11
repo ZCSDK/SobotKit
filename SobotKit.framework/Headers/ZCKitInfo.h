@@ -590,6 +590,11 @@
  **/
 @property (nonatomic,strong) UIColor * topBtnGreyColor;
 
-
+/**
+ *
+ *   聊天页面 左上角 返回按钮的文字 （默认 返回）
+ *
+ **/
+@property (nonatomic,copy) NSString * topBackTitle;
 
 @end

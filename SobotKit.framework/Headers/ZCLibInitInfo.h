@@ -29,6 +29,14 @@
 
 
 /**
+ *
+ *  customerCode   商户对接id （仅电商版适用，如果没有appkey，请提供此编码）
+ *
+ */
+@property (nonatomic,strong) NSString   *customerCode;
+
+
+/**
  *   指定客服ID
  *
  *   默认不设置
@@ -323,6 +331,7 @@
  *   例如：“商品订单编号1403388282”
  **/
 @property (nonatomic,copy) NSString * goodMsg;
+
 
 
 -(id)initByJsonDict:(NSDictionary *) dict;
