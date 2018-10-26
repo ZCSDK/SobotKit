@@ -144,6 +144,15 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 -(int) getUnReadMessage;
 
 
+
+/**
+ 清空用户下的所有未读消息(本地清空)
+
+ @param userId 接入的用户ID
+ */
+-(void) clearUnReadNumber:(NSString *) userId;
+
+
 /**
  获取最后一条消息
  
