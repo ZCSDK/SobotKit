@@ -21,6 +21,8 @@
 
 "留言" = "Email";
 
+"文件" = "Files";
+
 "排队中，您在队伍中" = "Please wait，there are";
 
 "您打开了新窗口，本次会话结束" = "You have opened a new window, has been ended temporarily";
@@ -249,3 +251,15 @@
 
 
 "温馨提示：从正规网站按照正常操作进行交易，不要轻易提供验证码、账号等隐私信息，谨防被骗！" =  "温馨提示：从正规网站按照正常操作进行交易，不要轻易提供验证码、账号等隐私信息，谨防被骗！";
+
+"用其他应用打开" = "Other apps open";
+
+"立即下载" = "Download now";
+
+"智齿暂时无法打开此类文件，可使用其他应用打开浏览" = "Please use other applications to open browsing";
+
+"正在下载中...(%.2fKB/%.2fKB)" = "Downloading...(%.2fKB/%.2fKB)";
+
+"文件大小:%.2fKB)" = "File size:%.2fKB)";
+
+"不能上传20M以上的文件" = "Can't upload files of more than 20 M";

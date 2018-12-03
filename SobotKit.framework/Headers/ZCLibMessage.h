@@ -275,6 +275,14 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 
 /**
+ *
+ *   revokeFlag  0    1 撤回 “显示 客服xxx 撤回了一条消息”
+ *
+ **/
+@property (nonatomic,assign) BOOL revokeFlag;
+
+
+/**
  *  初始化
  *
  *  @param dict 数据解析后的数据字典类型

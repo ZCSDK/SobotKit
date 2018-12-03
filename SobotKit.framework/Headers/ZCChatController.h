@@ -27,7 +27,7 @@
 
 @property (nonatomic,assign) BOOL isPush;// 是否是push 进来的
 
-@property (nonatomic,strong) ZCChatView * chatView;
+
 
 /**
  *  初始化

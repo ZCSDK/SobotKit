@@ -15,7 +15,10 @@
 @interface ZCLibInitInfo : NSObject
 
 /**
- *  接口域名,默认SaaS平台接口
+ *  接口域名,
+ * 默认SaaS平台域名为:https://api.sobot.com
+ * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
+ * 如果您是本地化部署，请使用你们自己的部署的服务域名
  */
 @property(nonatomic,strong) NSString *apiHost;
 

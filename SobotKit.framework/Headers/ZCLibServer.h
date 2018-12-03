@@ -486,4 +486,9 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                 success:(void(^)(NSDictionary *dict,ZCMessageSendCode sendCode)) successBlock
                    fail:(void(^)(NSString * errorMsg,ZCMessageSendCode errorCode)) failBlock;
 
+
+
+
+
+
 @end

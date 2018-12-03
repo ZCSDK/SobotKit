@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "ZCMultiwheelModel.h"
 
+typedef NS_ENUM(NSInteger,ZCMsgType) {
+    // 0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 12文件
+    ZCMsgTypeText = 0,
+    ZCMsgTypePhoto = 1,
+    ZCMsgTypeVoice = 2,
+    ZCMsgTypeRich = 4,
+    ZCMsgTypeRichText = 5,
+    ZCMsgTypeRichVideo = 6,
+    ZCMsgTypeHotGuide = 7,
+    ZCMsgTypeFile = 12,
+    ZCMsgTypeLoopChat = 15,
+};
+
 /**
  *  配置富媒体
  */
@@ -40,9 +53,23 @@
 @property (nonatomic,strong  ) NSString         * duration;
 
 /**
- *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导
+ *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 8文件
  */
-@property (nonatomic,assign  ) int              msgType;
+@property (nonatomic,assign  ) ZCMsgType              msgType;
+
+/**
+ * 13 doc文件格式
+ * 14 ppt文件格式
+ * 15 xls文件格式
+ * 16 pdf文件格式
+ * 17 mp3文件格式
+ * 18 mp4文件格式
+ * 19 压缩文件格式
+ * 20 txt文件格式
+ * 21 其他文件格式
+ */
+@property (nonatomic,assign  ) int              fileType;
+@property (nonatomic,strong  ) NSString         *fileSize;
 
 /**
  *  回答建议

@@ -37,7 +37,7 @@
 @property (nonatomic, assign) NSUInteger       unknownWordsCount;
 
 // 初始化
--(instancetype)initWithFrame:(CGRect)frame WithSuperController:(UIViewController *)superController;
+-(instancetype)initWithFrame:(CGRect)frame WithSuperController:(UIViewController *)superController customNav:(BOOL)isCreated;
 
 // 设置页面代理
 @property (nonatomic,assign) id<ZCChatViewDelegate>delegate;
