@@ -90,7 +90,6 @@
                             config:(ZCLibConfig *) config;
 
 
-
 /**
  *
  *  发送消息
@@ -100,10 +99,27 @@
  *  @param message  消息体
  *  @param type     消息类型
  *  @param duration 声音长度，如00:20,字符串类型，直接用于显示
+ *  @parms
  *  @param startBlock    开始发送，返回用于显示的消息模型
  *  @param successBlock  发送成功，返回用于显示状态的消息模型
  *  @param progressBlock 发送进度，主要是图片和语言需要
  *  @param failBlock     发送失败，包括内容为空、文件不纯在、网络错误等，返回用于显示状态的消息模型，如果消息未发送，没有模型返回
+ */
+
+/**
+ 发送消息
+ 根据ZCLibConfig中的isArtificial类型，自动判断是否为机器人
+ @param message 消息体,如图片、视频地址，字符串
+ @param docId    引导说辞的问题编号
+ @param type     消息类型
+ @param duration 声音长度，如00:20,字符串类型，直接用于显示
+ @param config 初始化返回
+ @param roboflag
+ @param extendsParams 扩展参数，如位置（lng经度,lat纬度，localLabel大标题  localName地址，file缩略图）
+ @param startBlock    开始发送，返回用于显示的消息模型
+ @param successBlock  发送成功，返回用于显示状态的消息模型
+ @param progressBlock 发送进度，主要是图片和语言需要
+ @param failBlock     发送失败，包括内容为空、文件不纯在、网络错误等，返回用于显示状态的消息模型，如果消息未发送，没有模型返回
  */
 -(void)sendMessage:(NSString *)message
           questionId:(NSString*)docId
@@ -111,6 +127,7 @@
           duration:(NSString *)duration
             config:(ZCLibConfig *)config
          robotFlag:(NSString *)roboflag
+              dict:(NSDictionary *) extendsParams
              start:(void(^)(ZCLibMessage *message)) startBlock
            success:(void(^)(ZCLibMessage *message,ZCMessageSendCode sendCode)) successBlock
           progress:(void(^)(ZCLibMessage *message)) progressBlock

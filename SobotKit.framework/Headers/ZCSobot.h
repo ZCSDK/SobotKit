@@ -42,7 +42,7 @@
                 with:(UIViewController *) byController
               target:(id<ZCChatControllerDelegate>) delegate
            pageBlock:(void (^)(id object,ZCPageBlockType type))pageClick
-    messageLinkClick:(void (^)(NSString *link)) messagelinkBlock;
+    messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 
 
@@ -63,6 +63,30 @@
  }];
  */
 +(void)startZCChatListView:(ZCKitInfo *)info with:(UIViewController *)byController onItemClick:(void (^)(ZCUIChatListController *object,ZCPlatformInfo *info))itemClickBlock;
+
+
+
+
+/**
+ 发送位置信息，此方法，只能是收到sobot://sendlocation时调用
+ @param locations 位置信息
+@{
+ @"lng":经度,
+ @"lat":纬度,
+ @"localName":名称,
+ @"localLabel":地址,
+ @"file":当前位置截图};
+ 
+ 示例：
+ {
+ file = "/var/mobile/Containers/Data/Application/fff84824-4894-4CA1-A071-C0030A75xxxx/Documents/sobot/image1001544587922.jpg";
+ lat = "40.001693";
+ lng = "116.353276";
+ localLabel = "学清路38号金码大厦A座23层金码大酒店";
+ localName = "云景四季餐厅";
+ }
+ */
++(void)sendLocation:(NSDictionary *) locations;
 
 /**
  *  获取SDK版本号

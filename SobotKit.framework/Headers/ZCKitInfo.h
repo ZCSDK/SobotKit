@@ -28,6 +28,19 @@
  */
 @property(nonatomic,strong) NSString *apiHost;
 
+/**
+ *
+ *   人工状态，是否可以发送位置
+ 【 注意：
+ 由于各家定位插件特别多，智齿没有实现选择位置功能，所以需要自行传递位置到SDK以及打开显示，步骤如下：
+ 1、实现messageLinkClick事件（ZCSobot startZCChatVC函数中）
+ 2、当收到link = sobot://sendlocation 调用智齿接口发送位置信息
+ 3、当收到link = sobot://openlocation?latitude=xx&longitude=xxx&address=xxx 可根据自己情况处理相关业务
+】
+ *
+ **/
+@property (nonatomic,assign) BOOL canSendLocation;
+
 
 /**
  *

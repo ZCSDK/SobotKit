@@ -6,7 +6,7 @@
 //  Copyright © 2015年 ZCLib. All rights reserved.
 //
 
-#define FormateTime @"yyyy-MM-dd hh:mm:ss"
+#define FormateTime @"yyyy-MM-dd HH:mm:ss"
 
 
 /**

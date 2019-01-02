@@ -23,6 +23,8 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeSound = 2, // 声音
     ZCMessageTypeRich  = 3, // 富文本
     ZCMessageTypeFile  = 12, // 文件
+    ZCMessageTypeVideo = 23, // 视频
+    ZCMessageTypeLocation  = 22, // 文件
     ZCMessagetypeStartSound = 4,//正在录音
     ZCMessagetypeCancelSound = 5,//取消正在闪烁的语音cell
 };

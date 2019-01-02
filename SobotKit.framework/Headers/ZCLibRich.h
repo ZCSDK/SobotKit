@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
     ZCMsgTypeRichVideo = 6,
     ZCMsgTypeHotGuide = 7,
     ZCMsgTypeFile = 12,
+    ZCMsgTypeVideo = 23,
+    ZCMsgTypeLocation = 22,
     ZCMsgTypeLoopChat = 15,
 };
 
@@ -70,6 +72,17 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
  */
 @property (nonatomic,assign  ) int              fileType;
 @property (nonatomic,strong  ) NSString         *fileSize;
+
+
+//位置
+// 经度
+@property (nonatomic,strong  ) NSString         *longitude;
+// 维度
+@property (nonatomic,strong  ) NSString         *latitude;
+// 地址
+@property (nonatomic,strong  ) NSString         *localName;
+@property (nonatomic,strong  ) NSString         *localLabel;
+
 
 /**
  *  回答建议

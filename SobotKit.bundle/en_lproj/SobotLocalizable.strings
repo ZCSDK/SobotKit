@@ -263,3 +263,8 @@
 "文件大小:%.2fKB)" = "File size:%.2fKB)";
 
 "不能上传20M以上的文件" = "Can't upload files of more than 20 M";
+
+
+"位置" = "Location";
+
+"轻触拍照，按住摄像" = "Tap to take a picture and hold down the camera";

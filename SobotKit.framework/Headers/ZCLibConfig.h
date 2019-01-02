@@ -51,6 +51,9 @@
  */
 @property (nonatomic , strong) NSString *adminHelloWord;
 
+//客服欢迎语规则，1-只显示一次，0-默认值
+@property (nonatomic , assign) int      adminHelloWordCountRule;
+
 /**
  *  用户无应答提示时间
  */
@@ -70,6 +73,9 @@
  *  客服无应答提示文案
  */
 @property (nonatomic , strong) NSString *adminTipWord;
+
+// 客服超时推送规则，1-只显示一次，0-默认值
+@property (nonatomic , assign) int      serviceOutCountRule;
 
 /**
  *  企业名称
