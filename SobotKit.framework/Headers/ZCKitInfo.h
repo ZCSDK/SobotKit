@@ -50,6 +50,21 @@
 @property (nonatomic,assign) BOOL isShowEvaluation;
 
 
+/**
+ *
+ *   导航栏右上角 是否显示 拨号按钮 默认不显示    注意：和isShowEvaluation 互斥 只能设置一个有效
+ *
+ **/
+@property (nonatomic,assign) BOOL isShowTelIcon;
+
+/**
+ *  设置电话号码
+ *  当导航栏右上角 显示 拨号按钮时  （和isShowTelIcon 一起设置有效）
+ *
+ **/
+@property (nonatomic,copy) NSString * customTel;
+
+
 ////////////////////////////////////////////////////////////////
 //   和UI相关的配置参数自定义可选项                                //
 //                                                            //

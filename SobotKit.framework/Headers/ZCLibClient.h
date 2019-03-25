@@ -109,12 +109,19 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 
 
 /**
- 初始化智齿客服
+ 初始化智齿客服 2.7.2开始使用
  
  @param appkey 智齿appkey(如果是电商版本，请填写自己公司的APPKEY)
+ @param resultBlock 初始化结果回调
  */
--(void)initSobotSDK:(NSString *) appkey;
+-(void)initSobotSDK:(NSString *) appkey result:(void (^)(id object))resultBlock;
 
+/**
+ *
+ *  初始化智齿客服 (2.7.1之前使用)
+ *
+ **/
+-(void)initSobotSDK:(NSString *) appkey;
 
 /**
  检查初始化状态，（成功/失败）

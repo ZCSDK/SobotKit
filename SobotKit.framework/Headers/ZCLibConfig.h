@@ -379,6 +379,8 @@
  **/
 @property (nonatomic,assign) BOOL queueFlag;
 
+// 获取用户留言记录列表接口 使用入参
+@property (nonatomic,copy) NSString * customerId;
 
 /**
  *  对象封装

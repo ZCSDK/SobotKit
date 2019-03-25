@@ -122,6 +122,22 @@
 @property (nonatomic,strong) NSDictionary *customInfo;
 
 
+
+/**
+ *  转人工 指定技能组 溢出
+ * [{"actionType":"to_group","optionId":"3","deciId":"162bb6bb038d4a9ea018241a30694064","spillId":"7"},
+ {"actionType":"to_group","optionId":"4","deciId":"a457f4dfe92842f8a11d1616c1c58dc1"}]
+ 
+ actionType:执行动作类型：to_group:转接指定技能组
+ optionId:是否溢出  指定技能组时：3：溢出，4：不溢出。
+ deciId:指定的技能组。
+ spillId:溢出条件  指定客服组时：4:技能组无客服在线,5:技能组所有客服忙碌,6:技能组不上班,7:智能判断
+ *
+ */
+@property (nonatomic,strong) NSArray *customGroupType;
+
+
+
 /**
  * 固定KEY的自定义字段
  * null

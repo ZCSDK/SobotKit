@@ -54,6 +54,8 @@
  *  @param startBlock  开始请求
  *  @param errorBlock  转接失败
  *  @param resultBlock 请求结果
+ *  @param transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工
+ *  @param queueFlag 如果为1，展示排队或者客服不在线提示，为0不展示
  */
 -(void)connectOnlineCustomer:(NSString *) groupId
                    groupName:(NSString *) groupName
@@ -63,6 +65,9 @@
                      Keyword:(NSString*)keyword
                    KeywordId:(NSString *)keywordId
                      current:(BOOL) isWaiting
+                TransferType:(int)transferType
+                   QueueFlag:(int)queueFlag
+                  ActionType:(NSArray*)actionType
                        start:(void(^)())startBlock
                       result:(void (^)(NSDictionary *dict, ZCConnectUserStatusCode status)) resultBlock;
 
@@ -90,21 +95,6 @@
                             config:(ZCLibConfig *) config;
 
 
-/**
- *
- *  发送消息
- 根据ZCLibConfig中的isArtificial类型，自动判断是否为机器人
- *
- *  @param docId    引导说辞的问题编号
- *  @param message  消息体
- *  @param type     消息类型
- *  @param duration 声音长度，如00:20,字符串类型，直接用于显示
- *  @parms
- *  @param startBlock    开始发送，返回用于显示的消息模型
- *  @param successBlock  发送成功，返回用于显示状态的消息模型
- *  @param progressBlock 发送进度，主要是图片和语言需要
- *  @param failBlock     发送失败，包括内容为空、文件不纯在、网络错误等，返回用于显示状态的消息模型，如果消息未发送，没有模型返回
- */
 
 /**
  发送消息
@@ -268,6 +258,7 @@
  */
 -(void)sendLeaveMessage:(NSMutableDictionary *) params
                  config:(ZCLibConfig *) config
+             TemplateId:(NSString *)templateId
                 success:(void (^)(ZCNetWorkCode code,int status,NSString *msg))successBlock
                  failed:(void (^)(NSString *errorMessage, ZCNetWorkCode erroCode))failedBlock;
 
@@ -504,8 +495,79 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                    fail:(void(^)(NSString * errorMsg,ZCMessageSendCode errorCode)) failBlock;
 
 
+/**
+ *
+ *  获取留言模板 接口
+ *
+ **/
+-(void)getWsTemplateList:(ZCLibConfig *)config
+                   start:(void (^)())startBlock
+                 success:(void(^)(NSDictionary *dict,ZCMessageSendCode sendCode)) successBlock
+                    fail:(void(^)(NSString *errorMsg,ZCMessageSendCode errorCode)) failBlock;
 
 
+
+
+
+/**
+ *   获取 留言模板基础配置 2.7.1新增
+ *  @param  uid          用户ID
+ *  @param  templateld          留言模板id
+ *  @param  startBlock     开始请求的回调
+ *  @param  successBlock   请求成功的回调
+ *  @param  failedBlock    请求失败的回调
+ */
+-(void)postMsgTemplateConfigWithUid:(NSString *)uid
+                         Templateld:(NSString *)templateld
+                              start:(void (^)())startBlock
+                            success:(void(^)(NSDictionary *dict,NSMutableArray * typeArr,ZCNetWorkCode sendCode)) successBlock
+                             failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+/**
+ *  获取留言模板自定义字段 2.7.1新增
+ *  @param  templateld          留言模板id
+ *  @param  uid          用户ID
+ *  @param  startBlock     开始请求的回调
+ *  @param  successBlock   请求成功的回调
+ *  @param  failedBlock    请求失败的回调
+ *
+ **/
+-(void)postTemplateFieldInfoWithUid:(NSString *)uid
+                         Templateld:(NSString *)templateld
+                              start:(void (^)())startBlock
+                            success:(void(^)(NSDictionary *dict,NSMutableArray * cusFieldArray,ZCNetWorkCode sendCode)) successBlock
+                             failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+/**
+ *  获取用户留言记录列表接口 2.7.1 新增
+ *   uid  用户id
+ *
+ **/
+-(void)postUserTicketInfoListWithConfig:(ZCLibConfig*)config
+                                  start:(void (^)())startBlock
+                                success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
+                                 failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+/**
+ *  获取用户留言记录详情页接口 2.7.1 新增
+ *  ticketld  工单id
+ *
+ **/
+-(void)postUserDealTicketinfoListWith:(ZCLibConfig*)config
+                             ticketld:(NSString *)ticketld
+                                start:(void (^)())startBlock
+                              success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
+                               failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+/**
+ *  获取用户留言是否有反馈的接口 2.7.1 新增
+ *  如果初始化appint接口里面返回的customerId有值，才能调用该接口，如果customerId没值则不可能有最新留言回复
+ *
+ **/
+-(void)postcheckUserTicketInfoWith:(ZCLibConfig*)config
+                                start:(void (^)())startBlock
+                              success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                               failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 
 @end

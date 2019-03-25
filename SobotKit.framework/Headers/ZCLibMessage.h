@@ -59,6 +59,12 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
     
     /** 安全提示 */
     ZCTipCellMessageSafety                           = 21,
+    
+    /*** 您的留言状态有更新  ***/
+    ZCTipCellMessageUpdateLeave                      = 22,
+    
+    /***** 情绪转人工和重复提问转人工 提示文案   ****/
+    ZCTipCellMessageRobotTurnMsg                     = 23,
 };
 
 
@@ -280,6 +286,21 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  *
  **/
 @property (nonatomic,assign) BOOL revokeFlag;
+
+
+/**
+ *
+ *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工
+ *
+ **/
+@property (nonatomic,assign)  int transferType;
+
+/**
+ *
+ *  queueFlag  排队方式标记  只在关键字转人工的时候传给服务端，其他情况传空
+ *
+ **/
+@property (nonatomic,assign)  int queueFlag;
 
 
 /**

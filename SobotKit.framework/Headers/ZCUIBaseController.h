@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, ButtonClickTag) {
     BUTTON_MORE   = 4, // 清空历史记录
     BUTTON_TURNROBOT = 5,// 切换机器人
     BUTTON_EVALUATION =6,// 评价
+    BUTTON_TEL   = 7,// 拨打电话
 };
 
 /**
