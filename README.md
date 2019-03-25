@@ -19,6 +19,29 @@ Sobot sdk for ios
 
 ==============  版本更新说明  =============
 
+###SDK 2.7.2 版本更新说明
+1 [新增]  留言模板   
+2 [新增]  留言工单客户可在原渠道查看工单回复    
+3 [新增]  咨询页面新增自定义按钮（评价、呼叫）   
+4 [新增]  转人工溢出功能  
+5 [优化]  机器人转人工业务逻辑
+
+
+```
+2.7.2新增初始化方法
+/**
+ 初始化智齿客服 2.7.2开始使用
+ 
+ @param appkey 智齿appkey(如果是电商版本，请填写自己公司的APPKEY)
+ @param resultBlock 初始化结果回调
+ */
+-(void)initSobotSDK:(NSString *) appkey result:(void (^)(id object))resultBlock;
+
+原方法： -(void)initSobotSDK:(NSString *) appkey;可以继续使用
+```
+
+
+
 ###SDK 2.7.0 版本更新说明
 
 1 [新增] 推送消息支持来源  
