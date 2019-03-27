@@ -37,7 +37,7 @@ Sobot sdk for ios
  */
 -(void)initSobotSDK:(NSString *) appkey result:(void (^)(id object))resultBlock;
 
-原方法： -(void)initSobotSDK:(NSString *) appkey;可以继续使用
+原方法： -(void)initSobotSDK:(NSString *) appkey;  可以继续使用
 ```
 
 
