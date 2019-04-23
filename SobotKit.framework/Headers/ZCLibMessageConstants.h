@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
 /**下推消息类型*/
 typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
     ZCReceivedMessageUnKonw         = -1,// 未知类型
+    ZCReceiVedMessageNotice         = -2,// 通告不置顶
     ZCReceivedMessageNews           = 202,// 新消息
     ZCReceivedMessageOnline         = 200,// 接入人工成功
     ZCReceivedMessageWaiting        = 201,// 排队

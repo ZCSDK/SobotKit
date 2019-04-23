@@ -68,6 +68,7 @@
                 TransferType:(int)transferType
                    QueueFlag:(int)queueFlag
                   ActionType:(NSArray*)actionType
+                  QueueFirst:(int)queueFirst
                        start:(void(^)())startBlock
                       result:(void (^)(NSDictionary *dict, ZCConnectUserStatusCode status)) resultBlock;
 
@@ -569,5 +570,66 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                               success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
                                failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
+
+/**
+ *  获取帮助中心分类列表数据 2.7.4 新增
+ *  appid ：appkey
+ *
+ **/
+-(void)getCategoryWith:(NSString*)appId
+                             start:(void (^)())startBlock
+                           success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                            failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+
+/**
+ * 帮助中心  根据分类查询分类下的问题
+ * appid ：appkey
+ * categoryId： 分类id
+ **/
+-(void)getHelpDocByCategoryIdWith:(NSString*)appId
+            CategoryId:(NSString *)categoryId
+                 start:(void (^)())startBlock
+               success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+/**
+ * 帮助中心  根据词条id查询词条详情
+ * appid ：appkey
+ * docId： 词条id
+ **/
+-(void)getHelpDocByDocIdWith:(NSString*)appId
+                       DocId:(NSString *)docId
+                       start:(void (^)())startBlock
+                     success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                      failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+
+/**
+ * 留言转离线消息接口
+ * uid ：用户id
+ * content： 留言内容
+ **/
+-(void)getLeaveMsgWith:(NSString*)uid
+                       Content:(NSString *)content
+                       start:(void (^)())startBlock
+                     success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                      failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+
+
+/**
+ *
+ *  提交工单评价 （工单详情页面触发评价）
+ *
+ **/
+-(void)postAddTicketSatisfactionWith:(NSString*)ticketId
+                                 Uid:(NSString*)uid
+                           CompanyId:(NSString*)companyId
+                               Score:(NSString*)score
+                              Remark:(NSString*)remark
+                               start:(void (^)())startBlock
+                             success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                              failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 @end

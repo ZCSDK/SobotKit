@@ -65,6 +65,13 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
     
     /***** 情绪转人工和重复提问转人工 提示文案   ****/
     ZCTipCellMessageRobotTurnMsg                     = 23,
+    
+    /****** 留言转离线消息 ******/
+    ZCTIPCellMessageOrderLeave                        = 24,
+    
+    /****** 您的留言已提交成功 *****/
+    ZCTipCellMessageLeaveSuccess                      = 25,
+    
 };
 
 
@@ -302,6 +309,21 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  **/
 @property (nonatomic,assign)  int queueFlag;
 
+
+/**
+ *
+ *  记录通告是否展开
+ *
+ **/
+@property (nonatomic,assign) BOOL isOpenNotice;
+
+
+/**
+ *
+ *  消息体中包含leaveMsgFlag=1，表示该消息为离线留言消息，需要在左侧有小图标
+ *
+ **/
+@property (nonatomic,assign) int leaveMsgFlag;
 
 /**
  *  初始化

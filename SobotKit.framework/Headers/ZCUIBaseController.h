@@ -58,11 +58,19 @@ typedef NS_ENUM(NSInteger, ButtonClickTag) {
 @property(nonatomic,strong) UILabel    * titleLabel;
 
 /**
+ *
+ *  导航条底部线条
+ *
+ **/
+@property (nonatomic,strong) UIView * bottomLine;
+
+/**
  *  创建TitleView
  */
 -(void)createTitleView;
 
-
+// 创建titleView 默认随主题 1帮助中心用
+-(void)createTitleViewWith:(int)type;
 // button点击事件
 -(IBAction)buttonClick:(UIButton *) sender;
 

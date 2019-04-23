@@ -148,6 +148,9 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
 /** 当前数据是 热点引导*/
 @property (nonatomic,assign) BOOL isHotGuide;
 
+
+
+
 /**
  *  初始化
  *

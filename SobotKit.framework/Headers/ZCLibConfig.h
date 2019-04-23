@@ -278,6 +278,28 @@
  */
 @property (nonatomic,assign) int  announceMsgFlag;
 
+/**
+ *
+ *  msgToTicketFlag-留言按钮模式：1-转工单，2-转离线消息
+ *
+ **/
+@property (nonatomic,assign) int msgToTicketFlag;
+
+/**
+ *
+ *  msgLeaveTxt-转离线消息时，顶部引导文案
+ *
+ **/
+@property (nonatomic,copy) NSString * msgLeaveTxt;
+
+/**
+ *
+ *   msgLeaveContentTxt-转离线消息时，内容引导文案
+ *
+ **/
+@property (nonatomic,copy) NSString * msgLeaveContentTxt;
+
+
 
 /**
  *  通告的标题

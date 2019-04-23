@@ -27,6 +27,7 @@ extern NSString * const PLATFORMKEY_ISPJ_USER;
 extern NSString * const PLATFORMKEY_CONFIG;
 extern NSString * const PLATFORMKEY_INITINFO;
 extern NSString * const PLATFORMKEY_MESSAGEARR;
+extern NSString * const PLATFORMKEY_CUSTOMERCODE;
 
 @interface ZCPlatformInfo : NSObject
 
@@ -43,7 +44,7 @@ extern NSString * const PLATFORMKEY_MESSAGEARR;
 @property (nonatomic,strong) NSString *uid;
 @property (nonatomic,strong) NSString *lastCid;
 @property (nonatomic,strong) NSString *configJson;
-
+@property (nonatomic,strong) NSString * customerCode;// 对应的商户appkey
 
 // 临时数据
 @property (nonatomic,assign) BOOL isSendToRobot;

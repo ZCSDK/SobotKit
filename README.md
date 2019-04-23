@@ -19,6 +19,83 @@ Sobot sdk for ios
 
 ==============  版本更新说明  =============
 
+###SDK 2.7.4 版本更新说明
+1 [新增]  通告设置拓展  
+2 [新增]  留言转离线消息及回复功能    
+3 [新增]  帮助中心   
+4 [新增]  支持“指定客户优先”设置   
+5 [新增]  工单满意度   
+6 [新增]  发送订单信息功能   
+7 [优化]  清空聊天记录新增二次确认浮层  
+8 [新增]  查看对应商户客服是否正在和用户聊天API（仅电商版使用）
+
+
+```
+/**
+ *
+ *  启动 客户帮助中心
+ *
+ *  @param info         初始化参数，详情见ZCLibInitInfo not null
+ *  @param byController 当前执行跳转的VC           not null
+ *  @param delegate     ZCUIChatDelagete        聊天页面的代理，如果实现这个代理用户可以实现留言跳转到自定义页面
+ *  @param pageClick    点击返回，UI修改, object为ZCChatController（使用系统导航栏场景） 或者 ZCChatView（使用SDK自定义导航栏场景） 
+ *  @param linkBlock    点击消息链接回调，可以为null(注意：如果传递实现后内部将直接返回url，不在做跳转处理)
+ *
+ */
++(void)openZCServiceCentreVC:(ZCKitInfo *) info
+                with:(UIViewController *) byController
+                 onItemClick:(void (^)(ZCUIBaseController *object,ZCOpenType type))itemClickBlock;
+
+```
+
+
+
+```
+发送订单信息
+1.配置按钮
+ZCKitInfo *uiInfo=[ZCKitInfo new];
+NSMutableArray *arr = [[NSMutableArray alloc] init];
+
+        ZCLibCusMenu *menu1 = [[ZCLibCusMenu alloc] init];
+        menu1.title = [NSString stringWithFormat:@"订单"];
+        menu1.url = [NSString stringWithFormat:@"sobot://sendOrderMsg"];;
+        menu1.imgName = @"zcicon_sendpictures";
+        [arr addObject:menu1];
+        
+    uiInfo.cusMoreArray = arr;
+    
+2.实现发送事件
+[ZCSobot startZCChatVC:uiInfo with:self target:nil pageBlock:^(id object, ZCPageBlockType type) {
+        
+    } messageLinkClick:^BOOL(NSString *link) {
+        if( [link hasPrefix:@"sobot://sendOrderMsg"]){
+            // 发送位置信息
+             [ZCSobot sendeOrderMsg:@"订单号：123456789012\n商品1：恰恰瓜子200g*1\n商品链接：www.baidu.com\n商品描述：恰恰瓜子恰恰瓜子恰恰瓜子\n恰恰瓜子恰恰瓜子恰恰瓜子恰恰瓜子...\n商品2：农夫山泉500ml*12\n商品链接：www.sina.com\n商品描述:农夫山泉农夫山泉农夫山泉\n农夫山泉农夫山泉农夫山泉农夫山泉..."];          
+               return YES;
+        }
+       return NO;
+    }];
+
+```
+
+
+```
+
+/**
+ *
+ *   获取对应商户客服是否正在和用户聊天（仅电商版使用）
+ *   appkey：商户id   uid： ZCPlatformInfo 类中的uid 
+ **/
++(BOOL)getPlatformIsArtificialWithAppkey:(NSString *)appkey Uid:(NSString*)uid;
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+ ZCPlatformInfo *info = [_listArray objectAtIndex:indexPath.row];
+[ZCSobot getPlatformIsArtificialWithAppkey:info.appkey Uid:info.uid];
+}
+```
+
+
+
 ###SDK 2.7.2 版本更新说明
 
 1 [新增]  留言模板      

@@ -625,4 +625,66 @@
  **/
 @property (nonatomic,copy) NSString * topBackTitle;
 
+
+
+
+/****************   2.7.4  新增  ****************/
+
+/**
+ *
+ *  留言页面中 提交按钮的文字颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * leaveSubmitBtnTextColor;
+
+
+
+/**
+ *
+ *  留言页面中 提交按钮的背景颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * leaveSubmitBtnImgColor;
+
+//**********************     帮助中心       ***************/
+/**
+ *
+ * 帮助中心 标题的文字颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * scTopTextColor;
+
+/**
+ *
+ *  帮助中心 标题font
+ *
+ **/
+@property (nonatomic,strong) UIFont * scTopTextFont;
+
+
+/**
+ *
+ *  帮助中心 导航条背景色
+ *
+ **/
+@property (nonatomic,strong) UIColor * scTopBgColor;
+
+/**
+ *
+ * 帮助中心 顶部返回的文字颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * scTopBackTextColor;
+
+/**
+ *
+ *  帮助中心 顶部返回按钮的文字字号
+ *
+ **/
+@property (nonatomic,strong) UIFont * scTopBackTextFont;
+
+//**********************     帮助中心    end   ***************/
+
+
+
 @end

@@ -352,6 +352,13 @@
 @property (nonatomic,copy) NSString * goodMsg;
 
 
+/**
+ *
+ *  指定客户优先
+ *  同PC端 设置-在线客服分配-排队优先设置-指定客户优先   开启传1 默认不设置
+ *  开启后 指定客户发起咨询时，如果出现排队，系统将优先接入。
+ **/
+@property (nonatomic,assign) int queueFirst;
 
 -(id)initByJsonDict:(NSDictionary *) dict;
 
