@@ -72,6 +72,9 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
     /****** 您的留言已提交成功 *****/
     ZCTipCellMessageLeaveSuccess                      = 25,
     
+
+    
+    
 };
 
 
@@ -325,6 +328,10 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  **/
 @property (nonatomic,assign) int leaveMsgFlag;
 
+
+@property (nonatomic,strong) NSMutableDictionary * miniPageDic;// 卡片消息的数据（仅历史记录数据中获取）
+
+
 /**
  *  初始化
  *
@@ -339,6 +346,15 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 -(NSString *)getTipMsg:(int)action content:(NSString*)message isOpenLeave:(NSUInteger) isOpen;
 
 -(instancetype)initWithModel:(ZCLibMessage *)model isShowGroup:(BOOL)isShow;
+
+
+
+/**
+ 获取显示的组合内容
+
+ @return
+ */
+-(NSString *) getModelDisplayText;
 
 
 @end

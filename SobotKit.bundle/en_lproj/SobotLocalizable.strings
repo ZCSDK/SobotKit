@@ -51,6 +51,8 @@
 
 "查看详情>>" = "Read All>>";
 
+"换一组" = "New data";
+
 "已保存到系统相册" = "Saved to album";
 
 "保存图片" = "Save the picture";
@@ -81,7 +83,7 @@
 
 "拍摄" = "Camera";
 
-"请在iPhone的“设置-隐私-相机”选项中，允许访问你的手机相机" = "Please allow to access your device's camera in Settings";
+"请在iPhone的“设置-隐私-相机”选项中，允许访问你的手机相机" = "Will be in when you submit a work order to customer feedback problems and need access to your camera.Please allow to access your device's camera in Settings";
 
 "好" = "OK";
 
@@ -125,7 +127,7 @@
 
 
 
-"您好，客服[%@]接受了您的请求" = "%@ is at your service";
+"您好，客服[%@]接受了您的请求" = "Hello, customer service [%@] is at your service";
 
 "排队中，您在队伍中的第%@个 您可以留言" = "Please wait，there are %@ people in need of service before you, you can also get replies by Email";
 

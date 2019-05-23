@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "ZCLibInitInfo.h"
-
+//#import "ZCKitInfo.h"
+#import "ZCLibMessage.h"
 
 ////////////////////////////////////////////////////////////////
 // 自定义回调）
 ////////////////////////////////////////////////////////////////
+
 
 
 /**
@@ -36,7 +38,7 @@
 typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 
 
-
+typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSString*keyword ,NSString*keywordId);
 
 
 
@@ -103,6 +105,15 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
 // block方式配置
 @property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;
 
+/**
+ *
+ *
+ * 自定义转人工回调事件
+ * 拦截SDK 转人工事件 用于跳转到自己的app页面动态处理转人工 配置技能组id 商品信息等参数
+ *
+ *
+ ***/
+@property (nonatomic,strong)  TurnServiceBlock    turnServiceBlock;
 
 +(ZCLibClient *) getZCLibClient;
 
@@ -206,6 +217,20 @@ typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
  检查当前监听是否被移除，如果移除就重新注册
  */
 -(void)checkIMObserverWithRegister;
+
+
+
+/**
+ *  自定义 转人工事件（在turnServiceBlock回调事件中调用）
+ *   groupId 传入技能组id
+ *   obj   转人工参数
+     msg   转人工信息
+    uiInfo   配置商品信息和自动发送参数
+    turnType  转人工事件类型（按钮触发，关键字触发等）
+    Keyword 关键字
+    keywordId 关键字id
+ **/
+-(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj Msg:(NSString*)msg KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
 
 
 @end

@@ -155,6 +155,13 @@
           progress:(void(^)(ZCLibMessage *message)) progressBlock
             failed:(void (^)(ZCLibMessage *, ZCMessageSendCode))failedBlock;
 
+// 发送消息给人工客服
+-(void)sendToUser:(NSString *)text
+           config:(ZCLibConfig *) _config
+          msgType:(ZCMessageType ) type
+            start:(void (^)(ZCLibMessage *))startBlock
+          success:(void (^)(ZCLibMessage *, ZCMessageSendCode))successBlock
+           failed:(void (^)(ZCLibMessage *, ZCMessageSendCode))failedBlock;
 
 
 

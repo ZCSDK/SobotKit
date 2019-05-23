@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ZCMultiwheelModel.h"
-
 typedef NS_ENUM(NSInteger,ZCMsgType) {
     // 0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 12文件
     ZCMsgTypeText = 0,
@@ -22,6 +21,7 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
     ZCMsgTypeVideo = 23,
     ZCMsgTypeLocation = 22,
     ZCMsgTypeLoopChat = 15,
+    ZCMsgTypeCard = 101,
 };
 
 /**
@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
 @property (nonatomic,strong  ) NSString         * duration;
 
 /**
- *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 8文件
+ *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 8文件 ,24 商品卡片
  */
 @property (nonatomic,assign  ) ZCMsgType              msgType;
 
@@ -118,6 +118,16 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
 @property (nonatomic,assign  ) int              answerType;
 
 @property (nonatomic,copy) NSString * answerStrip;// 引导语，多轮会话中 15239 1523 1524 时 megtype ==11 时 添加
+
+
+// 是否开启换一批功能
+@property (nonatomic,assign  ) int              guideGroupFlag;
+
+// 没页显示的数量
+@property (nonatomic,assign  ) int              guideGroupNum;
+
+// 当前显示页数，从0开始
+@property (nonatomic,assign  ) int              guideGroupPage;
 
 
 /**

@@ -27,6 +27,8 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeLocation  = 22, // 文件
     ZCMessagetypeStartSound = 4,//正在录音
     ZCMessagetypeCancelSound = 5,//取消正在闪烁的语音cell
+//    ZCMessagetypeCard   = 101,//商品卡片消息
+    ZCMessageTypeCard = 24,//商品卡片消息
 };
 
 /**下推消息类型*/
@@ -65,5 +67,17 @@ typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
  *  @param status 智齿连接业务状态码
  */
 -(void)onConnectStatusChanged:(ZCConnectStatusCode) status;
+
+/**
+ *
+ *  自定义转人工事件
+ *
+ **/
+/**
+ *  用户自己拦截转人工的事件 调用自己的技能组页面
+ *
+ *
+ **/
+-(void)customTurnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj Msg:(NSString*)msg KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
 
 @end

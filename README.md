@@ -19,6 +19,60 @@ Sobot sdk for ios
 
 ==============  版本更新说明  =============
 
+###SDK 2.7.5 版本更新说明
+1 [新增]  自定义转人工事件   
+2 [新增]  商品卡片消息类型    
+3 [新增]  服务总结自定义字段支持传参   
+4 [新增]  多轮会话中自定义字段“multi-Params”   
+5 [优化]  标签链接UI优化   
+6 [优化]  支持富文本形式展现知识库词条文本内容  
+7 [优化]  机器人设置-机器人引导问题展示--增加“换一组”功能   
+8 [优化]  输入框遮挡聊天气泡  
+
+
+```
+自定义转人工事件 
+如果实现该方法，SDK中转人工事件将交由外部控制处理，您可以跳转到自己设计的技能组页面，或者切换商品信息等，最后调取 -(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj Msg:(NSString*)msg KitInfo:(ZCKitInfo*)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;方法去执行转人工操作。
+
+/**
+* 自定义转人工回调事件
+* 拦截SDK 转人工事件 用于跳转到自己的app页面动态处理转人工 配置技能组id 商品信息等参数
+***/
+@property (nonatomic,strong)  TurnServiceBlock    turnServiceBlock;
+
+/**
+*  自定义 转人工事件（在turnServiceBlock回调事件中调用）
+*   groupId 传入技能组id
+*   obj   转人工参数
+msg   转人工信息
+uiInfo   配置商品信息和自动发送参数
+turnType  转人工事件类型（按钮触发，关键字触发等）
+Keyword 关键字
+keywordId 关键字id
+**/
+-(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj Msg:(NSString*)msg KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
+
+
+示例代码：
+
+[ZCLibClient getZCLibClient].turnServiceBlock = ^(id obj,NSString *msg,NSInteger turnType, NSString *keyword ,NSString *keywordId) {
+
+ZCProductInfo *productInfo = [ZCProductInfo new];
+productInfo.thumbUrl = @"商品图片URL";
+productInfo.title = @"商品标题";
+productInfo.desc = @"摘要";
+productInfo.label = @"标签";
+productInfo.link = @"http://www.sobot.com";
+uiInfo.productInfo = productInfo;
+uiInfo.isSendInfoCard = YES;// 转人工工成功后是否自动发送该商品卡片信息
+
+[[ZCLibClient getZCLibClient] turnServiceWithGroupId:@"技能组id" Obj:obj Msg:msg KitInfo:uiInfo ZCTurnType:turnType Keyword:keyword KeywordId:keywordId];
+};
+
+```
+
+
+
 ###SDK 2.7.4 版本更新说明
 1 [新增]  通告设置拓展  
 2 [新增]  留言转离线消息及回复功能    
@@ -296,7 +350,6 @@ NSMutableArray *arr = [[NSMutableArray alloc] init];
 
 1、增加机器人分词联想（自动补全）功能
 
-2、增加用户画像功能
 
 ###SDK 2.4.2 版本更新说明
 

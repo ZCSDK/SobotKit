@@ -69,9 +69,9 @@
 
 
 /**
- *  用户唯一标识（对接用户可靠身份，不建议为null）
+ *  用户唯一标识（对接用户可靠身份，不能写死，不建议为null，如果为空会以设备区别）
  *  null
- *  将自动备注到客户资料
+ *  将自动备注到客户资料，
  */
 @property (nonatomic,strong) NSString   *userId;
 
@@ -137,6 +137,12 @@
 @property (nonatomic,strong) NSArray *customGroupType;
 
 
+/**
+ *  商品信息自定义字段
+ *
+ *
+ **/
+@property (nonatomic,strong) NSDictionary * summaryParams;
 
 /**
  * 固定KEY的自定义字段
@@ -144,6 +150,14 @@
  * 所有的KEY均在工作台设置后生效（设置->自定义字段->用户信息字段）
  */
 @property (nonatomic,strong) NSDictionary *customerFields;
+
+
+/**
+ *
+ *  多轮会话 自定义字段
+ *  默认 null
+ **/
+@property (nonatomic,strong) NSDictionary *multiParams ;
 
 
 /**
