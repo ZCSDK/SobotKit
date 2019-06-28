@@ -114,12 +114,35 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
  */
 +(void)sendLocation:(NSDictionary *) locations;
 
+
+
+/**
+ 发送商品信息给客服（仅转人工成功以后可以成功，机器人发送无法成功）
+
+ @param pinfo
+ */
++(void)sendProductInfo:(ZCProductInfo *)pinfo;
+
+
 /**
  *  发送订单信息 消息给 人工客服
  *
  *
  */
 +(void)sendeOrderMsg:(NSString *)orderMsg;
+
+
+
+/**
+ 自定义转人工调用
+ @param groupId  传入技能组id
+ @param obj 转人工类型(ZCLibClient.h 中的TurnServiceBlock会给)  obj[@"value"]，0-不转，1-重复提问转人工，2-情绪负向转人工
+ @param uiInfo 配置商品信息和自动发送参数
+ @param turnType 转人工事件类型（按钮触发，关键字触发等）
+ @param keyword 关键字
+ @param keywordId 关键字id
+ */
++(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
 
 /**
  *

@@ -220,17 +220,4 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 
 
 
-/**
- *  自定义 转人工事件（在turnServiceBlock回调事件中调用）
- *   groupId 传入技能组id
- *   obj   转人工参数
-     msg   转人工信息
-    uiInfo   配置商品信息和自动发送参数
-    turnType  转人工事件类型（按钮触发，关键字触发等）
-    Keyword 关键字
-    keywordId 关键字id
- **/
--(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj Msg:(NSString*)msg KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
-
-
 @end

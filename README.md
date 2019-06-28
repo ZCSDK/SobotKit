@@ -14,12 +14,21 @@ Sobot sdk for ios
 2.智齿 iOS_SDK UI源码 Git下载地址：https://github.com/ZCSDK/sobotKit_UI_iOS  
 
 3.智齿 iOS_SDK 常见问题解答 下载地址：https://github.com/ZCSDK/FAQ_iOS        
- 
+
 =============================================
 
 ==============  版本更新说明  =============
 
+### SDK 2.7.6 版本更新说明
+
+1 [新增]  新增人工咨询页面结束会话按钮   
+2 [新增]  消息卡片消息类型开放    
+3 [新增]  转人工支持传入服务总结自定义字段 
+
+
+
 ###SDK 2.7.5 版本更新说明
+
 1 [新增]  自定义转人工事件   
 2 [新增]  商品卡片消息类型    
 3 [新增]  服务总结自定义字段支持传参   
@@ -190,7 +199,7 @@ NSMutableArray *arr = [[NSMutableArray alloc] init];
 ###SDK 2.6.7 版本更新说明
 
 1 [新增] 机器人切换业务时切换欢迎语
-  
+
 2 [新增] 商家删除指定商户接口(仅电商版使用)
 
 3 [新增] 清空用户下的所有未读消息(本地清空)
@@ -200,7 +209,7 @@ NSMutableArray *arr = [[NSMutableArray alloc] init];
 ###SDK 2.6.6 版本更新说明
 
 1 [新增]iPhone 新机型适配
-  
+
 2 [新增]增加商户对接id(仅电商版使用)
 
 3 初始化方法中 pageBlock 中原 ZCChatController *object 替换为 id object 
@@ -223,7 +232,7 @@ NSMutableArray *arr = [[NSMutableArray alloc] init];
 ###SDK 2.6.5 版本更新说明
 
 1 聊天页导航栏新增评级入口（可选）
-  
+
 2 机器人顶踩UI优化
 
 3 新增获取商家信息列表功能（仅电商版使用）
@@ -232,7 +241,7 @@ NSMutableArray *arr = [[NSMutableArray alloc] init];
 ###SDK 2.6.4 版本更新说明
 
 1[新增] 自定义发送消息功能
-  
+
 2[新增] 自定义排队说辞
 
 
@@ -250,7 +259,7 @@ NSMutableArray *arr = [[NSMutableArray alloc] init];
 >返回按钮的高亮背景色  
 >导航栏背景色 
 >自定义输入框下方更多(+号图标)按钮下面内容cusMoreArray 
- 
+
 2[新增] 智能路由逻辑处理
 
 3[修改] 方法变更

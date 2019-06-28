@@ -68,16 +68,4 @@ typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
  */
 -(void)onConnectStatusChanged:(ZCConnectStatusCode) status;
 
-/**
- *
- *  自定义转人工事件
- *
- **/
-/**
- *  用户自己拦截转人工的事件 调用自己的技能组页面
- *
- *
- **/
--(void)customTurnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj Msg:(NSString*)msg KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
-
 @end

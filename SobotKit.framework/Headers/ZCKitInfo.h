@@ -15,6 +15,10 @@
  */
 @interface ZCKitInfo : NSObject
 
+
+
+@property (nonatomic,assign) BOOL isShowPortratit;
+
 /**
  *
  *  SDK 页面中使用自定义的导航栏不在使用 系统的导航栏（影藏）
@@ -56,6 +60,14 @@
  *
  **/
 @property (nonatomic,assign) BOOL isShowTelIcon;
+
+
+/**
+ *
+ *   导航栏左上角 是否显示 关闭按钮 默认不显示，关闭按钮，点击后无法监听后台消息
+ *
+ **/
+@property (nonatomic,assign) BOOL isShowClose;
 
 /**
  *  设置电话号码
