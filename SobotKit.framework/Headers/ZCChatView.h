@@ -27,12 +27,19 @@
 // 跳转留言
 -(void)onLeaveMsgClick:(NSString*)tipMsg;
 
+- (void)onPageStatusChange:(BOOL)isArtificial;
+
 @end
 
 
 
 @interface ZCChatView : UIView
 
+typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
+    ZCChatViewGoBackType_normal    = 1, // 返回按钮
+    ZCChatViewGoBackType_close    = 2,  // 关闭按钮
+    
+};
 /** 未知说辞计数*/
 @property (nonatomic, assign) NSUInteger       unknownWordsCount;
 
@@ -107,13 +114,16 @@
 /**
  *  返回事件
  **/
--(void)confimGoBack;
+//-(void)confimGoBack;
 
 
 /**
  返回后关闭通道，离线用户
  */
--(void)confimGoBackCloseChat;
+//-(void)confimGoBackCloseChat;
+
+- (void)confimGoBackWithType:(ZCChatViewGoBackType )type;
+
 
 /**
  *

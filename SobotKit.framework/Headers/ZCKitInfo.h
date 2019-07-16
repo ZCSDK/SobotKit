@@ -53,6 +53,12 @@
  **/
 @property (nonatomic,assign) BOOL isShowEvaluation;
 
+/**
+ *
+ *   针对关闭按钮，单独设置是否显示评价界面，默认不显示
+ *
+ **/
+@property (nonatomic,assign) BOOL isShowCloseSatisfaction;
 
 /**
  *
@@ -150,12 +156,23 @@
 
 /**
  * 自定义输入框下方更多(+号图标)按钮下面内容(不会替换原有内容，会在原有基础上追加)
+ * 修改人工模式的按钮
  * 填充内容为：ZCLibCusMenu.h
  *  title:按钮名称
  *  url：点击链接(点击后会调用初始化linkBock)
  *  imgName:本地图片名称，如xxx@2x.png,icon=xxx
  */
 @property (nonatomic,strong) NSMutableArray * cusMoreArray;
+
+/**
+ * 自定义输入框下方更多(+号图标)按钮下面内容(不会替换原有内容，会在原有基础上追加)
+ * 修改机器人模式的按钮
+ * 填充内容为：ZCLibCusMenu.h
+ *  title:按钮名称
+ *  url：点击链接(点击后会调用初始化linkBock)
+ *  imgName:本地图片名称，如xxx@2x.png,icon=xxx
+ */
+@property (nonatomic,strong) NSMutableArray * cusRobotMoreArray;
 
 /**
  *  是否开启语音功能
