@@ -17,7 +17,10 @@
 
 
 
-@property (nonatomic,assign) BOOL isShowPortratit;
+/**
+ 仅支持竖屏
+ */
+@property (nonatomic,assign) BOOL isShowPortrait;
 
 /**
  *
@@ -90,7 +93,7 @@
 
 
 /**
- *  评价完人工是否关闭会话（人工满意度评价后释放会话）
+ *  是否使用Images
  *  默认为NO 未开启
  *
  */

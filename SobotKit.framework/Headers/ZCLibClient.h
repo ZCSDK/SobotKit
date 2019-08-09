@@ -219,5 +219,16 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 -(void)checkIMObserverWithRegister;
 
 
+/**
+ *  读取日志文件内容 保存最近的7天 v2.7.9
+ *
+ *  @param dateString 具体哪一天的日志，格式yyyyMMdd
+ *
+ *  @return 文件内容
+ */
++(NSString *) readLogFileDateString:(NSString *) dateString;
+
+
+
 
 @end
