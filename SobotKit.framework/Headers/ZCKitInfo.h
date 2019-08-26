@@ -15,10 +15,16 @@
  */
 @interface ZCKitInfo : NSObject
 
+/**
+ *  push后隐藏 BottomBar
+ *  默认为 YES
+ */
+@property (nonatomic,assign) BOOL ishidesBottomBarWhenPushed;
 
 
 /**
- 仅支持竖屏
+ *  仅支持竖屏
+ *  默认为 NO
  */
 @property (nonatomic,assign) BOOL isShowPortrait;
 
