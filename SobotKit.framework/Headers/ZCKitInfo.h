@@ -456,6 +456,12 @@
  */
 @property (nonatomic,strong) UIColor    *topViewTextColor;
 
+
+/**
+ 顶部左右按钮颜色
+ */
+@property (nonatomic,strong) UIColor    *topSubheadTextColor;
+
 /**
  *  左边气泡文字颜色
  */
