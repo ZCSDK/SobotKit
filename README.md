@@ -12,15 +12,15 @@
 ==============  版本更新说明  =============
 
 ### SDK 2.7.10 版本更新说明
-1、解决webview查看txt乱码问题，优先使用UTF-8编码解析
-2、解决iOS 13 使用presentViewController方式启动不兼容问题，添加.modalPresentationStyle = UIModalPresentationOverFullScreen;
-3、补全国际化标签
-4、商品标签颜色自定义
+1、解决webview查看txt乱码问题，优先使用UTF-8编码解析   
+2、解决iOS 13 使用presentViewController方式启动不兼容问题，添加.modalPresentationStyle = UIModalPresentationOverFullScreen;   
+3、补全国际化标签  
+4、商品标签颜色自定义    
 
 ### SDK 2.7.9 版本更新说明
-1 [增加] 工单回复富文本优化
-2 [增加] 图片增加二维码识别
-3 [增加] 会话锁定功能
+1 [增加] 工单回复富文本优化    
+2 [增加] 图片增加二维码识别   
+3 [增加] 会话锁定功能  
 
 
 ### SDK 2.7.8 版本更新说明
