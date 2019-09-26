@@ -16,6 +16,7 @@
 2、解决iOS 13 使用presentViewController方式启动不兼容问题，添加.modalPresentationStyle = UIModalPresentationOverFullScreen;   
 3、补全国际化标签  
 4、商品标签颜色自定义    
+5、优化iOS 13不兼容bug
 
 ### SDK 2.7.9 版本更新说明
 1 [增加] 工单回复富文本优化    

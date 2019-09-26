@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
     ZCMsgTypeHotGuide = 7,
     ZCMsgTypeFile = 12,
     ZCMsgTypeVideo = 23,
+    ZCMsgTypeGoods = 24,
     ZCMsgTypeLocation = 22,
     ZCMsgTypeLoopChat = 15,
     ZCMsgTypeCard = 101,
