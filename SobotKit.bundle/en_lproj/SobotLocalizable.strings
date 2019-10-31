@@ -19,6 +19,18 @@
 
 "清空聊天记录" = "Clear Chat History";
 
+"请问您是要进行什么操作？" = "What are you doing?";
+
+"结束会话" = "End session";
+
+"暂时离开" = "leave temporarily";
+
+"请输入标题（必填）" = "Please enter a title (required)";
+
+"标题*" = "title*";
+
+"视频处理中，请稍后!" = "Video processing, please wait!";
+
 "留言" = "Email";
 
 "文件" = "Files";
@@ -121,7 +133,7 @@
 "手指上滑，取消发送" = "Slide up to cancel";
 
 
-"请输入您的邮箱" = "email@domain.com";
+"请输入您的邮箱" = "Please enter your email";
 
 
 
@@ -197,6 +209,7 @@
 "请输入昵称（必填）" = "Nickname(required)";
 "请输入手机号码（必填）" = "Tel(required)";
 "要删除这张照片吗？" = "Want to delete this photo?";
+"请输入手机号码" = "Please enter your mobile phone number";
 
 
 
@@ -302,7 +315,7 @@
 "邮箱*" = "Email*";
 
 "手机"= "Mobile";
-"手机*"= "Mobile*"
+"手机*"= "Mobile*";
 "留言详情" = "Message details";
 "点击查看详情" = "Click for details";
 "工单号：%@" = "work order：%@";
@@ -333,3 +346,17 @@
 "您收到一张图片" = "You have received a picture";
 "您收到一条语音" = "You have received a voice message";
 "您收到一条新消息" = "You have received a new message";
+
+
+"评价本次服务" = "Evaluate the service";
+
+"评价星级：" = "Star rating:";
+"评价反馈：" = "Evaluation feedback:";
+"选填"="optional";
+"请您上传附件"="Please upload the attachment";
+"问题描述，最多只能输入3000字符"="Problem description, only 3000 characters at most";
+"不能为空"="Can not be empty";
+"暂无相关内容"="No relevant content";
+
+"拍照"="Camera";
+"从相册选择"="Select from the album";

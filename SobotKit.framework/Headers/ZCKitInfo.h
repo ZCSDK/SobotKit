@@ -16,6 +16,12 @@
 @interface ZCKitInfo : NSObject
 
 /**
+*  返回是否显示提示
+*  默认为 YES
+*/
+@property (nonatomic,assign) BOOL isShowReturnTips;
+
+/**
  *  push后隐藏 BottomBar
  *  默认为 YES
  */
@@ -68,6 +74,14 @@
  *
  **/
 @property (nonatomic,assign) BOOL isShowCloseSatisfaction;
+
+
+/**
+ *
+ *   是否显示“暂不评价” 按钮，默认是YES
+ *
+ **/
+@property (nonatomic,assign) BOOL isShowNotSatisfaction;
 
 /**
  *
@@ -149,6 +163,19 @@
  智能转人工关键字，关键字作为key{@"转人工",@"1",@"R":@"1"}
  */
 @property (nonatomic,strong) NSDictionary *activeKeywords;
+
+
+/**
+ 自定义留言内容预置文案，如果需要国际化，可自行c在bundle文件中，以文案为key，翻译即可
+ 例如："请输入内容"="Please enter content";
+ */
+@property (nonatomic,strong) NSString *leaveContentPlaceholder;
+
+/**
+ 自定义留言引导语，如果需要国际化，可自行在bundle文件中，以文案为key，翻译即可
+ 例如："无法解答你的问题，你可以留言"="Please leave";
+ */
+@property (nonatomic,strong) NSString *leaveMsgGuideContent;
 
 
 /**
