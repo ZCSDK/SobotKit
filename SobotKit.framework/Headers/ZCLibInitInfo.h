@@ -59,7 +59,7 @@
 /**
  跨公司转接人工(仅电商版本可用)
  */
-// 1 是开启，默认0不开启
+// 默认0不开启 1-全部溢出，2-忙碌时溢出，3-不在线时溢出
 @property (nonatomic,assign)  int   flowType;
 // 转接到的公司ID
 @property (nonatomic,strong)  NSString  * flowCompanyId;
@@ -373,6 +373,18 @@
  *  开启后 指定客户发起咨询时，如果出现排队，系统将优先接入。
  **/
 @property (nonatomic,assign) int queueFirst;
+
+
+/**
+ *
+ *  指定客户是否为vip，0:普通 1:vip
+ *  同PC端 设置-在线客服分配-排队优先设置-VIP客户排队优先   开启传1 默认不设置
+ *  开启后 指定客户发起咨询时，如果出现排队，系统将优先接入。
+ **/
+@property (nonatomic,copy) NSString *isVip;
+
+
+
 
 -(id)initByJsonDict:(NSDictionary *) dict;
 

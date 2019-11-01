@@ -17,6 +17,7 @@
 #import "ZCUIChatListController.h"
 #import "ZCTopView.h"
 #import "ZCChatView.h"
+#import "ZCUILeaveMessageController.h"
 
 typedef NS_ENUM(NSInteger,ZCCustomLinkClikType) {
     ZCCustomLinkClikTypeOrderMsg         = 1,// 发送商品订单信息，（发给人工客服）
@@ -150,6 +151,23 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
  *   appkey：商户id   uid： ZCPlatformInfo 类中的uid 
  **/
 +(BOOL)getPlatformIsArtificialWithAppkey:(NSString *)appkey Uid:(NSString*)uid;
+
+/**
+ 初始化SDK，初始化之前，必须给ZCLibClient中的initInfo赋值
+  code = 0 ,正常，其他情况发送错误
+ */
++(void)backgroundInitSDK:(void (^)(NSString *msg,int code))ResultBlock;
+
+/**
+ 直接打开留言页面
+
+ @param showRecored  是否选中留言记录，0不选择，默认功能，1仅显示留言记录，2默认选中留言记录,可切换到留言
+ @param byController 当前执行跳转的VC           not null
+ @param CloseBlock 留言点击返回时间 code = 0 ,正常关闭， ，其他情况发送错误
+ */
++(void)openLeanve:(int ) showRecored kitinfo:(ZCKitInfo *)kitInfo with:(UIViewController *)byController onItemClick:(void (^)(NSString *msg,int code))CloseBlock;
+
+
 
 /**
  *  获取SDK版本号

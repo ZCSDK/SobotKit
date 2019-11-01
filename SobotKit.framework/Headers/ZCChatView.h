@@ -124,6 +124,8 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 
 - (void)confimGoBackWithType:(ZCChatViewGoBackType )type;
 
+// 滑动返回，只保存数据
+-(void)goBackIsKeep;
 
 /**
  *

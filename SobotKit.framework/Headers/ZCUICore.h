@@ -211,6 +211,9 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 /** 是否正在初始化，网络变化时使用 */
 @property (nonatomic,assign)  BOOL             isInitLoading;
 
+/** 是否正在执行转人工 */
+@property (nonatomic, assign) BOOL             isTurnLoading;
+
 @property(nonatomic,strong) ZCLibMessage *lineModel;
 
 @property (nonatomic,assign) BOOL isSmartTurnServer;// 是否执行机器人智能转人工

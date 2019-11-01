@@ -53,6 +53,11 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  */
 @property (nonatomic,strong) NSData     *token;
 
+
+
+/// 可直接设置字符串，NSdata可不设置
+@property (nonatomic,strong) NSString     *deviceToken;
+
 /**
  平台标识
  */
@@ -88,6 +93,12 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  说明：如果开启自动提醒消息，当没有在智齿聊天页面的时候，都会主动把消息作为本地通知展示
  */
 @property (nonatomic,assign) BOOL autoNotification;
+
+/**
+ 退出道后台，自动关闭长连接，默认NO
+ 说明：如果设置YES，退出后台立即关闭通道，不影响应用后台挂起时长
+ */
+@property (nonatomic,assign) BOOL autoCloseConnect;
 
 
 /**
