@@ -4,7 +4,6 @@
 
 # SobotKit
 
-<<<<<<< HEAD
 Sobot sdk for ios 
 ========
 智齿客服
