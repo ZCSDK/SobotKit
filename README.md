@@ -22,6 +22,40 @@ Sobot sdk for ios
 =============================================
 
 ==============  版本更新说明  =============
+### SDK 2.7.12 版本更新说明
+1、【优化】转人工过程不支持发送消息，解决人工聊天时偶发出现机器人消息问题    
+
+2、【新增】直接跳转到留言页面方法   
++(void)openLeanve:(int ) showRecored with:(UIViewController *)byController onItemClick:(void (^)(NSString *msg,int code))CloseBlock;
+
+
+
+### SDK 2.7.11 版本更新说明
+1、【优化】使用WKWebView替换UIWebView，需要兼容iOS 8.0以前版本客户请联系售后
+2、【优化】兼容iOS 13推送
+3、【优化】解决@available方法引起的编译问题
+4、【优化】仅人工模式不能与机器人发消息
+
+
+### SDK 2.7.10 版本更新说明
+
+1、解决webview查看txt乱码问题，优先使用UTF-8编码解析
+
+2、解决iOS 13 使用presentViewController方式启动不兼容问题，添加.modalPresentationStyle = UIModalPresentationOverFullScreen;
+
+3、补全国际化标签
+
+4、商品标签颜色自定义
+
+### SDK 2.7.9 版本更新说明
+
+【增加】工单回复富文本优化
+
+【增加】图片增加二维码识别
+
+【增加】会话锁定功能
+
+
 
 ### SDK 2.7.8 版本更新说明
 
