@@ -28,7 +28,7 @@
 /**
  *  appKey
  */
-@property (nonatomic , strong) NSString *appKey;
+@property (nonatomic , strong) NSString *app_key;
 
 
 /**
@@ -247,7 +247,7 @@
 @property (nonatomic,strong) NSString *msgTmp;
 
 /**
- *  留言开关   0关闭 ，1开启
+ *  留言开关   0开启 ，1关闭
  */
 @property (nonatomic,assign) NSUInteger msgFlag;
 

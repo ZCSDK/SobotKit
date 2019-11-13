@@ -29,6 +29,7 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessagetypeCancelSound = 5,//取消正在闪烁的语音cell
 //    ZCMessagetypeCard   = 101,//商品卡片消息
     ZCMessageTypeCard = 24,//商品卡片消息
+    ZCMessageTypeOrder= 25,//订单卡片消息
 };
 
 /**下推消息类型*/

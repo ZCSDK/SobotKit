@@ -7,19 +7,26 @@
 Sobot sdk for ios 
 ========
 智齿客服
->>>>>> 9392edf24d8c5b3b703839b5a01bc59bd55fb42b
-
 ========
 
 =============   智齿SDK文档地址  =============
 
-1.智齿集成文档地址： https://shimo.im/doc/raVxsmOJZJwyBgCC   
+1.智齿集成文档地址： https://shimo.im/docs/HyQ9crCXWqQxtXKg   
 
 2.智齿 iOS_SDK UI源码 Git下载地址：https://github.com/ZCSDK/sobotKit_UI_iOS  
 
 3.智齿 iOS_SDK 常见问题解答 下载地址：https://github.com/ZCSDK/FAQ_iOS        
 
 =============================================
+
+
+### SDK 2.8.0 版本更新说明
+1、新增商品订单消息类型  
+2、新增商品信息消息模板  
+3、统一接入参数  
+4、统一UI风格，去掉聊天中的名称和头像显示  
+
+
 
 ==============  版本更新说明  =============
 ### SDK 2.7.12 版本更新说明
