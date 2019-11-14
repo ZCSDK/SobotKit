@@ -91,7 +91,7 @@
                           duration:(NSString *) voiceDuration
                              style:(NSInteger) style
                               send:(BOOL) isSend
-                              name:(NSString *)user_nick
+                              name:(NSString *)nickname
                            content:(NSString *)count
                             config:(ZCLibConfig *) config;
 
@@ -114,7 +114,7 @@
  */
 -(void)sendMessage:(NSString *)message
           questionId:(NSString*)docId
-           msgType:(ZCMsgType ) type
+           msgType:(ZCMessageType ) type
           duration:(NSString *)duration
             config:(ZCLibConfig *)config
          robotFlag:(NSString *)roboflag
@@ -191,7 +191,7 @@
  @param successBlock 成功
  @param failBlock 失败
  */
--(void)getPlatformMemberNews:(NSString *) partnerid
+-(void)getPlatformMemberNews:(NSString *) userId
                  start:(void(^)()) startBlock
                success:(void(^)(NSMutableArray *news,NSDictionary *dictionary,ZCNetWorkCode sendCode)) successBlock
                 failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
@@ -309,7 +309,7 @@
 /**
  退出推送
  */
--(void)loginOutPush:(void(^)(NSString *partnerid,NSString *token,NSError *err)) resultBlock;
+-(void)loginOutPush:(void(^)(NSString *userId,NSData *token,NSError *err)) resultBlock;
 
 /**
  *  下载文件

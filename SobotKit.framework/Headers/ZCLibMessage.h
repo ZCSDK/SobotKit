@@ -300,7 +300,7 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 /**
  *
- *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工  3、关键词转人工、4、多次命中转人工
+ *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工
  *
  **/
 @property (nonatomic,assign)  int transferType;
@@ -329,7 +329,7 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 @property (nonatomic,assign) int leaveMsgFlag;
 
 
-@property (nonatomic,strong) NSMutableDictionary * miniPageDic;// 订单消息、卡片消息的数据（仅历史记录数据中获取）
+@property (nonatomic,strong) NSMutableDictionary * miniPageDic;// 卡片消息的数据（仅历史记录数据中获取）
 
 
 /**
@@ -345,8 +345,7 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 -(NSString *)getTipMsg:(int)action content:(NSString*)message isOpenLeave:(NSUInteger) isOpen;
 
-
--(void)getNewMessageModel:(ZCLibMessage *)model isShowGroup:(BOOL)isShow;
+-(instancetype)initWithModel:(ZCLibMessage *)model isShowGroup:(BOOL)isShow;
 
 
 
@@ -357,6 +356,5 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  */
 -(NSString *) getModelDisplayText;
 
--(NSString *) getModelDisplaySugestionText;
 
 @end

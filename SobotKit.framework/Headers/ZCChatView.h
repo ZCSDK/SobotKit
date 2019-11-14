@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-
 #import "ZCKitInfo.h"
 
 
+
 #import "ZCUIBaseController.h"
+
 typedef NS_ENUM(NSInteger, ZCBtnClickTag) {
     Btn_BACK         = 1, // 返回
     Btn_CLOSE        = 2, // 返回关闭
@@ -27,7 +28,7 @@ typedef NS_ENUM(NSInteger, ZCBtnClickTag) {
 -(void)topViewBtnClick:(ZCBtnClickTag )Tag;
 
 // 标题改变
--(void)onTitleChanged:(NSString *) title imageUrl:(NSString *) url;
+-(void)onTitleChanged:(NSString *) title;
 
 // 跳转留言
 -(void)onLeaveMsgClick:(NSString*)tipMsg;
@@ -90,7 +91,10 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 @property (nonatomic,strong) UIButton * evaluationBtn;
 
 
-
+/**
+ *  标题
+ */
+@property(nonatomic,strong) UILabel    * titleLabel;
 
 /**
  *   跳转到用户自己的 留言VC
@@ -99,9 +103,6 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 
 // 系统导航栏是否设置透明度
 @property (nonatomic,assign) BOOL  nacTranslucent;
-
-
--(UITextView *) getChatTextView;
 
 // 显示聊天窗口
 -(void)showZCChatView:(ZCKitInfo *)kitInfo;
@@ -129,6 +130,8 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 
 - (void)confimGoBackWithType:(ZCChatViewGoBackType )type;
 
+// 滑动返回，只保存数据
+-(void)goBackIsKeep;
 
 /**
  *

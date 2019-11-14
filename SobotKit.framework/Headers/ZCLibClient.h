@@ -94,6 +94,12 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  */
 @property (nonatomic,assign) BOOL autoNotification;
 
+/**
+ 退出道后台，自动关闭长连接，默认NO
+ 说明：如果设置YES，退出后台立即关闭通道，不影响应用后台挂起时长
+ */
+@property (nonatomic,assign) BOOL autoCloseConnect;
+
 
 /**
  *  记录当前是否可以显示转人工按钮（记录机器人未知回复的次数已达到，在一次有效的会话中）
@@ -173,7 +179,7 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 
  @param userId 接入的用户ID
  */
--(void) clearUnReadNumber:(NSString *) partnerid;
+-(void) clearUnReadNumber:(NSString *) userId;
 
 
 /**
