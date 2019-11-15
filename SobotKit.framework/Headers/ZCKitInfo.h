@@ -68,6 +68,12 @@
 
 
 /**
+ *  是否关闭询前表单
+ *  默认为 NO，跟随系统配置
+ */
+@property (nonatomic,assign) BOOL isCloseInquiryForm;
+
+/**
  *
  *   导航栏右上角 是否显示 评价按钮  默认不显示
  *
