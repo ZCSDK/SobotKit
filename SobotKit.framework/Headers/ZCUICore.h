@@ -10,7 +10,11 @@
 #import "ZCKitInfo.h"
 #import "ZCLibInitInfo.h"
 
+//#import "ZCButton.h"
+//#import "ZCUIKeyboard.h"
+
 #import "ZCLibMessageConstants.h"
+
 #import "ZCLibConfig.h"
 #import "ZCUILeaveMessageController.h"
 #import "ZCChatView.h"
@@ -75,6 +79,9 @@ typedef NS_ENUM(NSInteger,ZCShowStatus) {
     ZCShowQuickEntryView         = 30,// 显示快捷入口，重新设置页面高度
 
     ZCShowStatusRefreshing       = 32,// 刷新进度条
+    
+    
+    ZCShowTextHeightChanged      = 33,// 输入框高度变化了
 };
 
 /**
@@ -124,9 +131,7 @@ typedef NS_ENUM(NSInteger,ZCPagesType) {
  *  跳转到 留言和询前表单页面
  *
  **/
--(void)jumpNewPageVC:(ZCPagesType)type IsExist:(LeaveExitType) isExist  isShowToat:(BOOL) isShow  tipMsg:(NSString *)msg  Dict:(NSDictionary*)dict;
-
--(void)jumpNewPageVC:(ZCPagesType)type IsExist:(LeaveExitType) isExist  isShowToat:(BOOL) isShow  tipMsg:(NSString *)msg  Dict:(NSDictionary*)dict Object:(id)obj;
+-(void)coreOpenNewPageVC:(ZCPagesType)type IsExist:(LeaveExitType) isExist  isShowToat:(BOOL) isShow  tipMsg:(NSString *)msg  Dict:(NSDictionary*)dict Object:(id)obj;
 /**
  *
  *  跳转到评价页面 当前类中不能持有 chatView ,chatView 需要服从 ZCUICore的代理
@@ -141,6 +146,15 @@ typedef NS_ENUM(NSInteger,ZCPagesType) {
 
 // 留言模板页面
 -(void)changeLeaveMsgType:(LeaveExitType) isExist;
+
+
+
+/**
+ 评价成功
+
+ @param model 评价成功model
+ */
+-(void)commentSusccess:(ZCLibMessage *) model;
 
 @end
 
@@ -197,6 +211,10 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 // 播放临时model，用于停止播放状态改变
 @property (nonatomic,strong) ZCLibMessage    *playModel;
 
+
+@property (nonatomic,strong) NSString    *checkGroupId;
+@property (nonatomic,strong) NSString    *checkGroupName;
+
 // 记录中间变量
 @property(nonatomic,assign) BOOL isSayHello;
 @property(nonatomic,assign) BOOL isOffline;
@@ -210,9 +228,6 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 /** 是否正在初始化，网络变化时使用 */
 @property (nonatomic,assign)  BOOL             isInitLoading;
-
-/** 是否正在执行转人工 */
-@property (nonatomic, assign) BOOL             isTurnLoading;
 
 @property(nonatomic,strong) ZCLibMessage *lineModel;
 
@@ -462,7 +477,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
                           duration:(NSString *) voiceDuration
                              style:(NSInteger) style
                               send:(BOOL) isSend
-                              name:(NSString *)nickname
+                              name:(NSString *)user_nick
                            content:(NSString *)content
                             config:(ZCLibConfig *) _config;
 
