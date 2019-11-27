@@ -63,6 +63,12 @@
 
 "查看详情>>" = "Read All>>";
 
+"转人工" = "Manual";
+
+"有用" = "yes";
+
+"没用" = "no";
+
 "换一组" = "New data";
 
 "已保存到系统相册" = "Saved to album";

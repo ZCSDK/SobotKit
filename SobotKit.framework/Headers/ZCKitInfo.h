@@ -16,6 +16,12 @@
 @interface ZCKitInfo : NSObject
 
 /**
+*  是否显示导航栏 返回 文案
+*  默认为 YES
+*/
+@property (nonatomic,assign) BOOL isShowNavBackString;
+
+/**
 *  返回是否显示提示
 *  默认为 YES
 */
@@ -60,6 +66,12 @@
  **/
 @property (nonatomic,assign) BOOL canSendLocation;
 
+
+/**
+ *  是否关闭询前表单
+ *  默认为 NO，跟随系统配置
+ */
+@property (nonatomic,assign) BOOL isCloseInquiryForm;
 
 /**
  *
@@ -176,6 +188,17 @@
  例如："无法解答你的问题，你可以留言"="Please leave";
  */
 @property (nonatomic,strong) NSString *leaveMsgGuideContent;
+
+
+/**
+ *  直接进入留言自定义字段
+ *  数组，可以以传递多个，临时方案，后期将废弃此字段
+ *  id: 自定义字段的id
+ *  value: 想传递的数据
+ *  @{@"id":@"",@"value":@"我是数据"}
+ *
+ **/
+@property (nonatomic,strong) NSMutableArray * leaveCusFieldArray;
 
 
 /**

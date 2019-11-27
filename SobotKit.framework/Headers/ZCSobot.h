@@ -15,7 +15,6 @@
 #import "ZCLibClient.h"
 #import "ZCChatController.h"
 #import "ZCUIChatListController.h"
-#import "ZCTopView.h"
 #import "ZCChatView.h"
 #import "ZCUILeaveMessageController.h"
 
