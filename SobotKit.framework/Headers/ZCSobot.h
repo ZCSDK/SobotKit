@@ -16,7 +16,6 @@
 #import "ZCChatController.h"
 #import "ZCUIChatListController.h"
 #import "ZCChatView.h"
-#import "ZCUILeaveMessageController.h"
 
 typedef NS_ENUM(NSInteger,ZCCustomLinkClikType) {
     ZCCustomLinkClikTypeOrderMsg         = 1,// 发送商品订单信息，（发给人工客服）
@@ -126,10 +125,20 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
 
 /**
  *  发送订单信息 消息给 人工客服
+ * 只能人工客服的时候才可以发送成功
  *
  *
  */
-+(void)sendeOrderMsg:(NSString *)orderMsg;
++(void)sendOrderGoodsInfo:(ZCOrderGoodsModel *)orderGoodsInfo;
+
+
+// 已废弃，请使用sendTextToUser:方法替换
+//+(void)sendeOrderMsg:(NSString *) msg;
+
+/**
+ 发送字符串给人工
+ */
++(void)sendTextToUser:(NSString *) textMsg;
 
 
 
@@ -150,6 +159,8 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
  *   appkey：商户id   uid： ZCPlatformInfo 类中的uid 
  **/
 +(BOOL)getPlatformIsArtificialWithAppkey:(NSString *)appkey Uid:(NSString*)uid;
+
+
 
 /**
  初始化SDK，初始化之前，必须给ZCLibClient中的initInfo赋值
