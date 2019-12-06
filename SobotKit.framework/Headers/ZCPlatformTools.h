@@ -26,7 +26,7 @@
  本地获取，主线程执行即可
  @return 商户列表
  */
--(NSMutableArray *) getPlatformList:(NSString *) partnerid;
+-(NSMutableArray *) getPlatformList:(NSString *) userId;
 
 
 /**
@@ -35,11 +35,11 @@
  @param appkey 商户APPKEY
  @param userId 用户标识
  */
--(void)deletePlatformByAppKey:(NSString *) appkey user:(NSString *) partnerid;
+-(void)deletePlatformByAppKey:(NSString *) appkey user:(NSString *) userId;
 
 
 
--(ZCPlatformInfo *)getPlatformInfo:(NSString *) appkey partnerid:(NSString *) partnerid;
+-(ZCPlatformInfo *)getPlatformInfo:(NSString *) appkey userId:(NSString *) userId;
 -(void)savePlatformInfo:(ZCPlatformInfo *)platformInfo;
 -(void)savePlatformInfo:(ZCPlatformInfo *)platformInfo cache:(BOOL) isCache;
 
@@ -55,7 +55,7 @@
  @param appkey 具体商户APPKEY
  @return 最新消息列表
  */
--(NSMutableArray *)getMessageForAppkey:(NSString *) appkey partnerid:(NSString *)partnerid;
+-(NSMutableArray *)getMessageForAppkey:(NSString *) appkey userId:(NSString *)userId;
 
 
 
@@ -74,7 +74,7 @@
  @param appkey
  @param userId
  */
--(void)cleanCacheDataByAppkey:(NSString *) appkey partnerid:(NSString *) partnerid;
+-(void)cleanCacheDataByAppkey:(NSString *) appkey userId:(NSString *) userId;
 +(void)cleanLocalParamterByPrefix:(NSString *) prefix;
 
 

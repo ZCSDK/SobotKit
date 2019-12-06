@@ -33,8 +33,8 @@ extern NSString * const PLATFORMKEY_CUSTOMERCODE;
 
 @property (nonatomic,strong) NSString *listId;
 @property (nonatomic,strong) NSString *platformId;
-@property (nonatomic,strong) NSString *partnerid;
-@property (nonatomic,strong) NSString *app_key;
+@property (nonatomic,strong) NSString *userId;
+@property (nonatomic,strong) NSString *appkey;
 @property (nonatomic,strong) NSString *companyId;
 @property (nonatomic,strong) NSString *platformName;
 @property (nonatomic,strong) NSString *avatar;
@@ -44,7 +44,7 @@ extern NSString * const PLATFORMKEY_CUSTOMERCODE;
 @property (nonatomic,strong) NSString *uid;
 @property (nonatomic,strong) NSString *lastCid;
 @property (nonatomic,strong) NSString *configJson;
-@property (nonatomic,strong) NSString * customer_code;// 对应的商户appkey
+@property (nonatomic,strong) NSString * customerCode;// 对应的商户appkey
 
 // 临时数据
 @property (nonatomic,assign) BOOL isSendToRobot;
