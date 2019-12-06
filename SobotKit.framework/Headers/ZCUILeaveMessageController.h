@@ -7,7 +7,6 @@
 //
 
 #import <SobotKit/SobotKit.h>
-//#import "ZCOrderModel.h"
 
 typedef void(^BackRefreshPageBlock)(id * object);
 
@@ -37,11 +36,12 @@ typedef void(^BackRefreshPageBlock)(id * object);
 @property(nonatomic,strong)NSMutableArray   *coustomArr;// 用户自定义字段数组
 
 // 2.7.1版本 和留言模板关联 数据从模板接口获取 原初始化接口的数据不在使用
-@property (nonatomic , assign) BOOL     telShowFlag;
 
 // 2.8.0 是否显示标题
 @property (nonatomic , assign) BOOL     ticketTitleShowFlag;
 
+
+@property (nonatomic , assign) BOOL     telShowFlag;
 @property (nonatomic , assign) BOOL     telFlag;
 
 @property (nonatomic , assign) BOOL     enclosureShowFlag;
