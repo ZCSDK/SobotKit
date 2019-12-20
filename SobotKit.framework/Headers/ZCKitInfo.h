@@ -17,6 +17,12 @@
 @interface ZCKitInfo : NSObject
 
 /**
+ *  留言完成后，是否 显示 回复按钮
+ *  默认为 yes  , 可以回复
+ */
+@property (nonatomic,assign) BOOL leaveCompleteCanReply;
+
+/**
 *  是否显示导航栏 返回 文案
 *  默认为 YES
 */

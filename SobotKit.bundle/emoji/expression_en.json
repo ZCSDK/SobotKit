@@ -1,0 +1,422 @@
+ [
+  {
+  "KEY": "[Smile]",
+  "VALUE": "weixiao"
+  },
+  {
+  "KEY": "[Grimace]",
+  "VALUE": "piezui"
+  },
+  {
+  "KEY": "[Drooling]",
+  "VALUE": "se"
+  },
+  {
+  "KEY": "[Scowl]",
+  "VALUE": "fadai"
+  },
+  {
+  "KEY": "[Chill]",
+  "VALUE": "deyi"
+  },
+  {
+  "KEY": "[Sob]",
+  "VALUE": "liulei"
+  },
+  {
+  "KEY": "[Shy]",
+  "VALUE": "haixiu"
+  },
+  {
+  "KEY": "[Silence]",
+  "VALUE": "bizui"
+  },
+  {
+  "KEY": "[Sleep]",
+  "VALUE": "shui"
+  },
+  {
+  "KEY": "[Cry]",
+  "VALUE": "daku"
+  },
+  {
+  "KEY": "[Embarrassed]",
+  "VALUE": "ganga"
+  },
+  {
+  "KEY": "[On Fire]",
+  "VALUE": "fanu"
+  },
+  {
+  "KEY": "[Wink]",
+  "VALUE": "tiaopi"
+  },
+  {
+  "KEY": "[Grin]",
+  "VALUE": "ciya"
+  },
+  {
+  "KEY": "[Surprised]",
+  "VALUE": "jingya"
+  },
+  {
+  "KEY": "[Frown]",
+  "VALUE": "nanguo"
+  },
+  {
+  "KEY": "[Cool]",
+  "VALUE": "ku"
+  },
+  {
+  "KEY": "[Blush]",
+  "VALUE": "lenghan"
+  },
+  {
+  "KEY": "[Scream]",
+  "VALUE": "shuai"
+  },
+  {
+  "KEY": "[Skull]",
+  "VALUE": "kulou"
+  },
+  {
+  "KEY": "[Hammer]",
+  "VALUE": "qiaoda"
+  },
+  {
+  "KEY": "[Wave]",
+  "VALUE": "zaijian"
+  },
+  {
+  "KEY": "[Relieved]",
+  "VALUE": "cahan"
+  },
+  {
+  "KEY": "[Pick Nose]",
+  "VALUE": "koubi"
+  },
+  {
+  "KEY": "[Applause]",
+  "VALUE": "guzhang"
+  },
+  {
+  "KEY": "[Flushed]",
+  "VALUE": "qiudal"
+  },
+  {
+  "KEY": "[Hellooo]",
+  "VALUE": "huaixiao"
+  },
+  {
+  "KEY": "[Snub 1]",
+  "VALUE": "zuohengheng"
+  },
+  {
+  "KEY": "[Snub 2]",
+  "VALUE": "youhengheng"
+  },
+  {
+  "KEY": "[Yawn]",
+  "VALUE": "haqian"
+  },
+  {
+  "KEY": "[Booo]",
+  "VALUE": "bishi"
+  },
+  {
+  "KEY": "[Distressed]",
+  "VALUE": "weiqu"
+  },
+  {
+  "KEY": "[Sniffle]",
+  "VALUE": "kuaikul"
+  },
+  {
+  "KEY": "[Sly]",
+  "VALUE": "yinxian"
+  },
+  {
+  "KEY": "[Pucker]",
+  "VALUE": "qinqin"
+  },
+  {
+  "KEY": "[Uh Oh]",
+  "VALUE": "xia"
+  },
+  {
+  "KEY": "[Whimper]",
+  "VALUE": "kelian"
+  },
+  {
+  "KEY": "[Scream]",
+  "VALUE": "zhuakuang"
+  },
+  {
+  "KEY": "[Puke]",
+  "VALUE": "tu"
+  },
+  {
+  "KEY": "[Chuckle]",
+  "VALUE": "touxiao"
+  },
+  {
+  "KEY": "[Pleased]",
+  "VALUE": "yukuai"
+  },
+  {
+  "KEY": "[Doubtful]",
+  "VALUE": "baiyan"
+  },
+  {
+  "KEY": "[Smug]",
+  "VALUE": "aoman"
+  },
+  {
+  "KEY": "[Sneer]",
+  "VALUE": "jie"
+  },
+  {
+  "KEY": "[Drowsy]",
+  "VALUE": "kun"
+  },
+  {
+  "KEY": "[Panic]",
+  "VALUE": "jingkong"
+  },
+  {
+  "KEY": "[Sweating]",
+  "VALUE": "liuhan"
+  },
+  {
+  "KEY": "[Laugh]",
+  "VALUE": "hanxiao"
+  },
+  {
+  "KEY": "[Soldier]",
+  "VALUE": "youxian"
+  },
+  {
+  "KEY": "[Strive]",
+  "VALUE": "fendou"
+  },
+  {
+  "KEY": "[Scold]",
+  "VALUE": "zhouma"
+  },
+  {
+  "KEY": "[Confused]",
+  "VALUE": "yiwen"
+  },
+  {
+  "KEY": "[Shhh]",
+  "VALUE": "xu"
+  },
+  {
+  "KEY": "[Hypnotized]",
+  "VALUE": "yun"
+  },
+  {
+  "KEY": "[Frustrated]",
+  "VALUE": "fengl"
+  },
+  {
+  "KEY": "[Basketball]",
+  "VALUE": "lanqiu"
+  },
+  {
+  "KEY": "[Ping Pong]",
+  "VALUE": "pingpang"
+  },
+  {
+  "KEY": "[Coffee]",
+  "VALUE": "kafei"
+  },
+  {
+  "KEY": "[Rice]",
+  "VALUE": "fan"
+  },
+  {
+  "KEY": "[Pig]",
+  "VALUE": "zhutou"
+  },
+  {
+  "KEY": "[Rose]",
+  "VALUE": "meigui"
+  },
+  {
+  "KEY": "[Wilt]",
+  "VALUE": "diaoxie"
+  },
+  {
+  "KEY": "[Kisses]",
+  "VALUE": "zuichun"
+  },
+  {
+  "KEY": "[Heart]",
+  "VALUE": "aixin"
+  },
+  {
+  "KEY": "[Broken Heart]",
+  "VALUE": "xinsui"
+  },
+  {
+  "KEY": "[Cake]",
+  "VALUE": "dangao"
+  },
+  {
+  "KEY": "[Lightning]",
+  "VALUE": "shandian"
+  },
+  {
+  "KEY": "[Bomb]",
+  "VALUE": "zhadan"
+  },
+  {
+  "KEY": "[Dagger]",
+  "VALUE": "dao"
+  },
+  {
+  "KEY": "[Soccer]",
+  "VALUE": "zuqiu"
+  },
+  {
+  "KEY": "[Ladybug]",
+  "VALUE": "piaochong"
+  },
+  {
+  "KEY": "[Poop]",
+  "VALUE": "bianbian"
+  },
+  {
+  "KEY": "[Moon]",
+  "VALUE": "yueliang"
+  },
+  {
+  "KEY": "[Sun]",
+  "VALUE": "taiyang"
+  },
+  {
+  "KEY": "[Present]",
+  "VALUE": "liwu"
+  },
+  {
+  "KEY": "[Hug]",
+  "VALUE": "yongbao"
+  },
+  {
+  "KEY": "[Cleaver]",
+  "VALUE": "caidao"
+  },
+  {
+  "KEY": "[Watermelon]",
+  "VALUE": "xigua"
+  },
+  {
+  "KEY": "[Beer]",
+  "VALUE": "pijiu"
+  },
+  {
+  "KEY": "[Thumbs Down]",
+  "VALUE": "ruo"
+  },
+  {
+  "KEY": "[Shake]",
+  "VALUE": "woshou"
+  },
+  {
+  "KEY": "[Victory]",
+  "VALUE": "shengli"
+  },
+  {
+  "KEY": "[Admire]",
+  "VALUE": "baoquan"
+  },
+  {
+  "KEY": "[Beckon]",
+  "VALUE": "gouyin"
+  },
+  {
+  "KEY": "[Fist]",
+  "VALUE": "quantou"
+  },
+  {
+  "KEY": "[Pinky]",
+  "VALUE": "chajin"
+  },
+  {
+  "KEY": "[Love]",
+  "VALUE": "aini"
+  },
+  {
+  "KEY": "[NO]",
+  "VALUE": "no_1"
+  },
+  {
+  "KEY": "[OK]",
+  "VALUE": "ok_1"
+  },
+  {
+  "KEY": "[Lovebirds]",
+  "VALUE": "aiqing"
+  },
+  {
+  "KEY": "[In Love]",
+  "VALUE": "feiwen"
+  },
+  {
+  "KEY": "[Waddle]",
+  "VALUE": "tiaotiao"
+  },
+  {
+  "KEY": "[Thumbs Up]",
+  "VALUE": "qiang"
+  },
+  {
+  "KEY": "[Sit]",
+  "VALUE": "fadou"
+  },
+  {
+  "KEY": "[Aaagh!]",
+  "VALUE": "ouhuo"
+  },
+  {
+  "KEY": "[Twirl]",
+  "VALUE": "zhuanquan"
+  },
+  {
+  "KEY": "[Bow]",
+  "VALUE": "ketou"
+  },
+  {
+  "KEY": "[Turn Away]",
+  "VALUE": "huitou"
+  },
+  {
+  "KEY": "[Jump]",
+  "VALUE": "tiaosheng"
+  },
+  {
+  "KEY": "[Surrender]",
+  "VALUE": "touxiang"
+  },
+  {
+  "KEY": "[Hooray]",
+  "VALUE": "jidong"
+  },
+  {
+  "KEY": "[Hey Hey]",
+  "VALUE": "luanwu"
+  },
+  {
+  "KEY": "[Smooches]",
+  "VALUE": "xianwen"
+  },
+  {
+  "KEY": "[Fighting Girl]",
+  "VALUE": "zuotaiji"
+  },
+  {
+  "KEY": "[Fighting Boy]",
+  "VALUE": "youtaiji"
+  }
+  ]

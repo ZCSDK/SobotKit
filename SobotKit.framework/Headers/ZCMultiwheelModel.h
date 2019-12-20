@@ -28,6 +28,8 @@
 
 @property (nonatomic,copy) NSString          * msg;// 消息体，机器人的回复
 
+@property (nonatomic,copy) NSString          *clickFlag; // 0 一次，1 多次
+
 @property (nonatomic,assign) BOOL            isHistoryMessages;// 是否是历史记录
 
 
