@@ -17,21 +17,9 @@
 @interface ZCKitInfo : NSObject
 
 /**
- *  留言完成后，是否 显示 回复按钮
- *  默认为 yes  , 可以回复
+ *  是否有返回提示
+ *  默认为 NO
  */
-@property (nonatomic,assign) BOOL leaveCompleteCanReply;
-
-/**
-*  是否显示导航栏 返回 文案
-*  默认为 YES
-*/
-@property (nonatomic,assign) BOOL isShowNavBackString;
-
-/**
-*  返回是否显示提示
-*  默认为 YES
-*/
 @property (nonatomic,assign) BOOL isShowReturnTips;
 
 /**
@@ -40,6 +28,11 @@
  */
 @property (nonatomic,assign) BOOL ishidesBottomBarWhenPushed;
 
+/**
+ *  留言完成后，是否 显示 回复按钮
+ *  默认为 yes  , 可以回复
+ */
+@property (nonatomic,assign) BOOL leaveCompleteCanReply;
 
 /**
  *  仅支持竖屏
@@ -49,7 +42,7 @@
 
 /**
  *
- *  SDK 页面中使用自定义的导航栏不在使用 系统的导航栏（影藏）
+ *  SDK 页面中使用自定义的导航栏不在使用系统的导航栏（隐藏）
  *  默认 为NO 跟随集成项目
  **/
 @property (nonatomic,assign) BOOL navcBarHidden;
@@ -75,17 +68,19 @@
 
 
 /**
- *  是否关闭询前表单
- *  默认为 NO，跟随系统配置
- */
-@property (nonatomic,assign) BOOL isCloseInquiryForm;
-
-/**
  *
  *   导航栏右上角 是否显示 评价按钮  默认不显示
  *
  **/
 @property (nonatomic,assign) BOOL isShowEvaluation;
+
+
+/**
+ *
+ *   是否关闭询前表单（默认为NO，使用系统默认配置）
+ *
+ **/
+@property (nonatomic,assign) BOOL isCloseInquiryForm;
 
 /**
  *
@@ -93,14 +88,6 @@
  *
  **/
 @property (nonatomic,assign) BOOL isShowCloseSatisfaction;
-
-
-/**
- *
- *   是否显示“暂不评价” 按钮，默认是YES
- *
- **/
-@property (nonatomic,assign) BOOL isShowNotSatisfaction;
 
 /**
  *
@@ -185,32 +172,8 @@
 
 
 /**
- 自定义留言内容预置文案，如果需要国际化，可自行c在bundle文件中，以文案为key，翻译即可
- 例如："请输入内容"="Please enter content";
- */
-@property (nonatomic,strong) NSString *leaveContentPlaceholder;
-
-/**
- 自定义留言引导语，如果需要国际化，可自行在bundle文件中，以文案为key，翻译即可
- 例如："无法解答你的问题，你可以留言"="Please leave";
- */
-@property (nonatomic,strong) NSString *leaveMsgGuideContent;
-
-
-/**
- *  直接进入留言自定义字段
- *  数组，可以以传递多个，临时方案，后期将废弃此字段
- *  id: 自定义字段的id
- *  value: 想传递的数据
- *  @{@"id":@"",@"value":@"我是数据"}
- *
- **/
-@property (nonatomic,strong) NSMutableArray * leaveCusFieldArray;
-
-
-/**
  *  自定义快捷入口
- *  填充内容为： ZCLibCusMenu.h
+ *  填充内容为： NSDictionary
  *  url: 快捷入口链接(点击后会调用初始化linkBock)
  *  title: 按钮标题
  *  lableId: 自定义快捷入口的ID
@@ -271,6 +234,10 @@
 @property (nonatomic,assign) BOOL    isAddNickName;
 
 
+////////////////////////////////////////////////////////////////
+// 自定义咨询内容，在转接人工成功时，方便用户发送自己咨询的信息，（可选）
+// 标题（必填）、页面地址url（必填）、摘要、标签、缩略图url
+////////////////////////////////////////////////////////////////
 
 /**
  *
@@ -278,16 +245,10 @@
  *   默认不发送
  **/
 @property (nonatomic,assign) BOOL isSendInfoCard;
-
-////////////////////////////////////////////////////////////////
-// 自定义咨询内容，在转接人工成功时，方便用户发送自己咨询的信息，（可选）
-// 标题（必填）、页面地址url（必填）、摘要、标签、缩略图url
-////////////////////////////////////////////////////////////////
 /**
  *  产品信息
  */
 @property(nonatomic,strong) ZCProductInfo *productInfo;
-
 
 
 
@@ -302,6 +263,8 @@
 
 
 
+
+
 ////////////////////////////////////////////////////////////////
 // 自定义字体，（可选）
 ////////////////////////////////////////////////////////////////
@@ -312,7 +275,7 @@
 @property (nonatomic,strong) UIFont    *titleFont;
 
 /**
- *  页面返回按钮，输入框，评价提交按钮、Toast提示语
+ *  页面返回按钮，输入框，评价提交按钮、Toast提示语  2.8.0 已弃用
  */
 @property (nonatomic,strong) UIFont    *listTitleFont;
 
@@ -322,7 +285,7 @@
 @property (nonatomic,strong) UIFont    *listDetailFont;
 
 /**
- *  是否有以下情况
+ *  是否有以下情况 2.8.0 已弃用
  */
 @property (nonatomic,strong) UIFont    *customlistDetailFont;
 
@@ -443,6 +406,13 @@
 @property (nonatomic,strong) UIColor    *rightChatSelectedColor;
 
 
+
+/**
+ *  输入框字体颜色
+ */
+@property (nonatomic,strong) UIColor    *chatTextViewColor;
+
+
 /**
  *  底部bottom的背景颜色
  */
@@ -455,7 +425,7 @@
 @property (nonatomic,strong) UIColor    *bottomLineColor;
 
 /**
- *  评价普通按钮选中背景颜色和边框(默认跟随主题色customBannerColor)
+ *  评价普通按钮选中背景颜色和边框(默认跟随主题色customBannerColor)  2.8.0 已移除
  */
 @property (nonatomic,strong) UIColor    *commentOtherButtonBgColor;
 
@@ -481,14 +451,14 @@
 @property (nonatomic,strong) UIColor    *BgTipAirBubblesColor;
 
 /**
- * 语音cell选中的背景色
+ * 语音cell选中的背景色  2.8.0 已移除
  *
  */
 @property (nonatomic,strong) UIColor    *videoCellBgSelColor;
 
 /**
  *
- *  富文本中的线条颜色
+ *  富文本中的线条颜色 2.8.0 已移除
  *
  */
 @property (nonatomic,strong) UIColor    *LineRichColor;
@@ -531,12 +501,6 @@
  *  顶部文字颜色
  */
 @property (nonatomic,strong) UIColor    *topViewTextColor;
-
-
-/**
- 顶部左右按钮颜色
- */
-@property (nonatomic,strong) UIColor    *topSubheadTextColor;
 
 /**
  *  左边气泡文字颜色
@@ -696,14 +660,14 @@
 
 /**
  *
- *  返回按钮的默认背景色
+ *  返回按钮的默认背景色 2.8.0 已移除
  *
  **/
 @property (nonatomic,strong) UIColor * topBackNolColor;
 
 /**
  *
- *  返回按钮的高亮背景色
+ *  返回按钮的高亮背景色  2.8.0 已移除
  *
  **/
 @property (nonatomic,strong) UIColor * topBackSelColor;
@@ -804,4 +768,43 @@
 @property (nonatomic,strong) UIFont * scTopBackTextFont;
 
 //**********************     帮助中心    end   ***************/
+
+
+// 2.8.0
+/**
+ *
+ * 文件查看，ImgProgress 图片背景颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * documentLookImgProgressColor;
+
+/**
+ *
+ * 文件查看，按钮 背景颜色
+ *
+ **/
+@property (nonatomic,strong) UIColor * documentBtnDownColor;
+
+/**
+ 自定义留言内容预置文案，如果需要国际化，可自行在bundle文件中，以文案为key，翻译即可
+ 例如："请输入内容"="Please enter content";
+ */
+@property (nonatomic,strong) NSString *leaveContentPlaceholder;
+
+/**
+ 自定义留言引导语，如果需要国际化，可自行在bundle文件中，以文案为key，翻译即可
+ 例如："无法解答你的问题，你可以留言"="Please leave";
+ */
+@property (nonatomic,strong) NSString *leaveMsgGuideContent;
+
+/**
+ *  直接进入留言自定义字段
+ *  数组，可以以传递多个，临时方案，后期将废弃此字段
+ *  id: 自定义字段的id
+ *  value: 想传递的数据
+ *  @{@"id":@"",@"value":@"我是数据"}
+ *
+ **/
+@property (nonatomic,strong) NSMutableArray * leaveCusFieldArray;
+
 @end

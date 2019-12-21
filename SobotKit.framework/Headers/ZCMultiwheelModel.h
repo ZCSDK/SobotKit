@@ -19,6 +19,9 @@
 @property (nonatomic,copy) NSString          * retCode;//"000000",接口返回的请求状态
 @property (nonatomic,assign) int            templateId;// 模板类型
 
+// 2.8.2  clickFlag 0: 只能点击一次，1 可以多次点击
+@property (nonatomic,copy) NSString *clickFlag;
+
 // 0 横向，1、标签，2竖，3富媒体 4、存文本  5、1511
 @property (nonatomic,assign) int            msgType;// 模板类型
 //@property (nonatomic,strong) NSMutableArray         *inputContentList;// \"北京,上海,成都\",     手动输入
@@ -27,8 +30,6 @@
 @property (nonatomic,copy) NSString          *remindQuestion;// "机器人提示问题",
 
 @property (nonatomic,copy) NSString          * msg;// 消息体，机器人的回复
-
-@property (nonatomic,copy) NSString          *clickFlag; // 0 一次，1 多次
 
 @property (nonatomic,assign) BOOL            isHistoryMessages;// 是否是历史记录
 

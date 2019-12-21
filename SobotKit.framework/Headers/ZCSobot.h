@@ -16,7 +16,6 @@
 #import "ZCChatController.h"
 #import "ZCUIChatListController.h"
 #import "ZCChatView.h"
-#import "ZCUILeaveMessageController.h"
 
 typedef NS_ENUM(NSInteger,ZCCustomLinkClikType) {
     ZCCustomLinkClikTypeOrderMsg         = 1,// 发送商品订单信息，（发给人工客服）
@@ -92,6 +91,9 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
 
 
 
+/// 点击链接拦截 帮助中心、留言、聊天、留言记录
+/// @param messagelinkBlock 获取到链接，如果返回 YES 则拦截
++(void)getMessageLinkClick:(BOOL (^)(NSString *link))messagelinkBlock;
 
 /**
  发送位置信息，此方法，只能是收到sobot://sendlocation时调用
@@ -161,17 +163,13 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
  **/
 +(BOOL)getPlatformIsArtificialWithAppkey:(NSString *)appkey Uid:(NSString*)uid;
 
+
+
 /**
  初始化SDK，初始化之前，必须给ZCLibClient中的initInfo赋值
   code = 0 ,正常，其他情况发送错误
  */
 +(void)backgroundInitSDK:(void (^)(NSString *msg,int code))ResultBlock;
-
-
-/// 初始化，如果多次重复打开返回上一页收不到消息，使用此方法重新初始化
-/// @param coreDelegate  接收消息的ZCChatView对象
-/// @param ResultBlock 
-+(void)backgroundInitSDK:(id) coreDelegate block:(void (^)(NSString *msg,int code))ResultBlock;
 
 /**
  直接打开留言页面

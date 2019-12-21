@@ -15,9 +15,9 @@
 
 
 /**
- * ZC 接口核心类。
- * <p/>
- * 所有 ZC 相关方法、监听器都由此调用和设置。
+ *  ZC 接口核心类。
+ *  <p/>
+ *  所有 ZC 相关方法、监听器都由此调用和设置。
  */
 @interface ZCLibServer : NSObject
 
@@ -91,7 +91,7 @@
                           duration:(NSString *) voiceDuration
                              style:(NSInteger) style
                               send:(BOOL) isSend
-                              name:(NSString *)nickname
+                              name:(NSString *)user_nick
                            content:(NSString *)count
                             config:(ZCLibConfig *) config;
 
@@ -114,7 +114,7 @@
  */
 -(void)sendMessage:(NSString *)message
           questionId:(NSString*)docId
-           msgType:(ZCMessageType ) type
+           msgType:(ZCMsgType ) type
           duration:(NSString *)duration
             config:(ZCLibConfig *)config
          robotFlag:(NSString *)roboflag
@@ -191,7 +191,7 @@
  @param successBlock 成功
  @param failBlock 失败
  */
--(void)getPlatformMemberNews:(NSString *) userId
+-(void)getPlatformMemberNews:(NSString *) partnerid
                  start:(void(^)()) startBlock
                success:(void(^)(NSMutableArray *news,NSDictionary *dictionary,ZCNetWorkCode sendCode)) successBlock
                 failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
@@ -309,7 +309,7 @@
 /**
  退出推送
  */
--(void)loginOutPush:(void(^)(NSString *userId,NSData *token,NSError *err)) resultBlock;
+-(void)loginOutPush:(void(^)(NSString *partnerid,NSString *token,NSError *err)) resultBlock;
 
 /**
  *  下载文件
@@ -515,6 +515,8 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
 
 
 
+
+
 /**
  *   获取 留言模板基础配置 2.7.1新增
  *  @param  uid          用户ID
@@ -528,27 +530,6 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                               start:(void (^)())startBlock
                             success:(void(^)(NSDictionary *dict,NSMutableArray * typeArr,ZCNetWorkCode sendCode)) successBlock
                              failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
-
-
-
-
-/**
- *   获取 留言模板基础配置 2.7.1新增
- *  @param  config        初始化对象
- *  @param  param          回复字典
- *  @{@"ticketId":@"工单编号",
- *  @"replyContent":@"回复内容",
- *  @"fileStr":@"附件路径，多个附件中间以分号分隔",
- *  @"companyId":@"公司id"}
- *  @param  startBlock     开始请求的回调
- *  @param  successBlock   请求成功的回调
- *  @param  failedBlock    请求失败的回调
- */
--(void)replyLeaveMessage:(ZCLibConfig*)config
-             replayParam:(NSDictionary *)params
-                   start:(void (^)())startBlock
-                 success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
-                  failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 /**
  *  获取留言模板自定义字段 2.7.1新增
@@ -585,6 +566,28 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                                 start:(void (^)())startBlock
                               success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
                                failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+
+/**
+ *   获取 留言模板基础配置 2.7.1新增
+ *  @param  config        初始化对象
+ *  @param  param          回复字典
+ *  @{@"ticketId":@"工单编号",
+ *  @"replyContent":@"回复内容",
+ *  @"fileStr":@"附件路径，多个附件中间以分号分隔",
+ *  @"companyId":@"公司id"}
+ *  @param  startBlock     开始请求的回调
+ *  @param  successBlock   请求成功的回调
+ *  @param  failedBlock    请求失败的回调
+ */
+-(void)replyLeaveMessage:(ZCLibConfig*)config
+             replayParam:(NSDictionary *)params
+                   start:(void (^)())startBlock
+                 success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
+                  failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+
+
 
 /**
  *  获取用户留言是否有反馈的接口 2.7.1 新增

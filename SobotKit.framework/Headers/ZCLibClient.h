@@ -11,10 +11,20 @@
 //#import "ZCKitInfo.h"
 #import "ZCLibMessage.h"
 
+
+
 ////////////////////////////////////////////////////////////////
 // 自定义回调）
 ////////////////////////////////////////////////////////////////
 
+
+// 当前用户会话状态
+typedef NS_ENUM(NSInteger,ZCServerConnectStatus) {
+    ZCServerConnectOffline    = 0, // 当前会话已经结束
+    ZCServerConnectRobot      = 1, // 机器人
+    ZCServerConnectArtificial = 2, // 人工接入成功
+    ZCServerConnectWaiting    = 3  // 仅人工的排队
+};
 
 
 /**
@@ -27,6 +37,12 @@
 //未读消息数获取
 -(void)onReceivedMessage:(id) message unRead:(int) nleft obj:(id) object;
 
+
+
+/// <#Description#>
+/// @param status status description
+-(void)currentConnectStatus:(id) message status:(ZCServerConnectStatus) status obj:(id) object;
+
 @end
 
 /**
@@ -36,6 +52,11 @@
  *  @param nleft   未读消息数
  */
 typedef void(^ReceivedMessageBlock)(id message,int nleft,NSDictionary *object);
+
+
+typedef void(^ZCServerConnectBlock)(id message,ZCServerConnectStatus status,NSDictionary *object);
+
+
 
 
 typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSString*keyword ,NSString*keywordId);
@@ -94,18 +115,18 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  */
 @property (nonatomic,assign) BOOL autoNotification;
 
-/**
- 退出道后台，自动关闭长连接，默认NO
- 说明：如果设置YES，退出后台立即关闭通道，不影响应用后台挂起时长
- */
-@property (nonatomic,assign) BOOL autoCloseConnect;
-
 
 /**
  *  记录当前是否可以显示转人工按钮（记录机器人未知回复的次数已达到，在一次有效的会话中）
  *
  */
 @property (nonatomic,assign) BOOL isShowTurnBtn;
+
+/**
+ 退出道后台，自动关闭长连接，默认NO
+ 说明：如果设置YES，退出后台立即关闭通道，不影响应用后台挂起时长
+ */
+@property (nonatomic,assign) BOOL autoCloseConnect;
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -115,6 +136,8 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 @property (nonatomic,strong) id<ZCReceivedMessageDelegate> delegate;
 // block方式配置
 @property (nonatomic,strong) ReceivedMessageBlock          receivedBlock;
+
+@property (nonatomic,strong) ZCServerConnectBlock          serverConnectBlock;
 
 /**
  *
@@ -179,7 +202,7 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 
  @param userId 接入的用户ID
  */
--(void) clearUnReadNumber:(NSString *) userId;
+-(void) clearUnReadNumber:(NSString *) partnerid;
 
 
 /**
