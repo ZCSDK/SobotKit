@@ -331,6 +331,10 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 @property (nonatomic,strong) NSMutableDictionary * miniPageDic;// 订单消息、卡片消息的数据（仅历史记录数据中获取）
 
+/**
+ *  是否是机器人引导语
+ */
+@property (nonatomic , assign) BOOL isRobotGuide;
 
 /**
  *  初始化

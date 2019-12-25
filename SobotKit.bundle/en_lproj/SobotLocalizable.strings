@@ -99,10 +99,10 @@
 "请输入邮箱地址（选填）" = "email(optional)";
 "抱歉，人工排队人数已满，请您留言，我们有专项工作人员直接处理您提交的问题~" = "Sorry, the number of artificial line is full, please you leave a message, we have special staff to directly deal with the problem you submitted";
 "暂不评价" = "No evaluation";
-"客服评价" = "Evaluation Service";
+"客服评价" = "feedback";
 "机器人客服评价" = "Evaluation Robot";
 "提交评价后会话将结束" = "The conversation'll end after submission";
-"服务评价" = "Service evaluate";
+"服务评价" = "feedback";
 "%@ 是否解决了您的问题？" = "Has your question been resolved?";
 "已解决" = "YES";
 "未解决" = " NO";

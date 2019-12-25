@@ -188,7 +188,7 @@
 @property(nonatomic,strong) NSArray *transferaction;
 
 /**
- *  转人工自定义字段
+ *  转人工传入 服务总结自定义字段
  *
  *
  **/

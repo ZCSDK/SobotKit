@@ -17,6 +17,12 @@
 @interface ZCKitInfo : NSObject
 
 /**
+ *   调整行间距
+ *  默认为 0
+ */
+@property (nonatomic,assign) NSInteger lineSpacing;
+
+/**
  *  是否有返回提示
  *  默认为 NO
  */
@@ -217,21 +223,6 @@
 @property (nonatomic,assign) BOOL    isOpenRobotVoice;
 
 
-
-/**
- *  留言时是否显示昵称
- *
- *  默认关闭
- */
-@property (nonatomic,assign) BOOL    isShowNickName;
-
-
-/**
- *  留言时是否必须输入昵称 (在显示昵称的情况下)
- *
- *  默认不输入
- */
-@property (nonatomic,assign) BOOL    isAddNickName;
 
 
 ////////////////////////////////////////////////////////////////
@@ -435,6 +426,17 @@
 @property (nonatomic,strong) UIColor    *commentCommitButtonColor;
 
 /**
+ *  评价弹出页面 按钮文字颜色(默认跟随主题色customBannerColor)
+ */
+@property (nonatomic,strong) UIColor    *commentButtonTextColor;
+
+/**
+ *  评价弹出页面 按钮选中颜色(默认跟随主题色customBannerColor)
+ */
+@property (nonatomic,strong) UIColor    *commentButtonBgColor;
+
+
+/**
  * 评价提交按钮背景颜色和边框(默认跟随主题色customBannerColor)
  */
 @property (nonatomic,strong) UIColor    *commentCommitButtonBgColor;
@@ -524,12 +526,12 @@
 @property (nonatomic,strong) UIColor    *tipLayerTextColor;
 
 /**
- *  客服昵称颜色
+ *  客服昵称颜色  2.8.0 弃用
  */
 @property (nonatomic,strong) UIColor    *serviceNameTextColor;
 
 /**
- *  提示cell中客服昵称的文字颜色
+ *  提示cell中客服昵称的文字颜色 2.8.0 弃用
  */
 @property (nonatomic,strong) UIColor    *nickNameTextColor;
 
@@ -806,5 +808,12 @@
  *
  **/
 @property (nonatomic,strong) NSMutableArray * leaveCusFieldArray;
+
+
+/**
+ 留言技能组 id
+ 获取：设置 —>工单技能组设置
+*/
+@property (nonatomic,strong) NSString * leaveMsgGroupId;
 
 @end
