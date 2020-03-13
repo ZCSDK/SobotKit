@@ -158,9 +158,17 @@
 /**
  *
  *  指定客户的vip等级，传入等级
- *  同PC端 设置-自定义字段-客户字段
+ *  同PC端 设置-自定义字段-VIP等级(注意设置编码，不是显示值)
  **/
-@property (nonatomic,copy) NSString *vipLevel;
+@property (nonatomic,copy) NSString *vip_level;
+
+
+/**
+ *用户标签,多个字段用逗号分隔
+ **/
+@property (nonatomic,copy) NSString *user_label;
+
+
 
 /**
  *  自定义用户资料
@@ -333,6 +341,7 @@
 
 /**
  历史记录时间范围，单位分钟(例:100-表示从现在起前100分钟的会话)
+ 最大支持查询60天，如果不传是查询所有的
  */
 @property (nonatomic,assign) int  scopeTime;
 // 启用新的接口命名方式，兼容驼峰命名

@@ -8,23 +8,29 @@
 
 #import <Foundation/Foundation.h>
 #import "ZCMultiwheelModel.h"
-typedef NS_ENUM(NSInteger,ZCMsgType) {
-    // 0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 12文件,24商品信息
-    ZCMsgTypeText = 0,
-    ZCMsgTypePhoto = 1,
-    ZCMsgTypeVoice = 2,
-    ZCMsgTypeRich = 4,
-    ZCMsgTypeRichText = 5,
-    ZCMsgTypeRichVideo = 6,
-    ZCMsgTypeHotGuide = 7,
-    ZCMsgTypeFile = 12,
-    ZCMsgTypeVideo = 23,
-    ZCMsgTypeGoods = 24,
-    ZCMsgTypeOrder = 25,
-    ZCMsgTypeLocation = 22,
-    ZCMsgTypeLoopChat = 15,
-    ZCMsgTypeCard = 101,
-    ZCMsgTypeRobotCommonProblemGuide = 102, // 机器人 常见问题引导
+
+/**消息体类型*/
+typedef NS_ENUM(NSInteger,ZCMessageType) {
+    // 0文本 1图片 2音频 3、富文本带标签、4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 12文件,24商品信息
+    ZCMessageTypeText  = 0, //文本
+    ZCMessageTypePhoto = 1, //图片
+    ZCMessageTypeSound = 2, // 声音
+    ZCMessageTypeRich  = 3, // 富文本
+    ZCMessageTypeRichPhoto  = 4, // 富文本
+    ZCMessageTypeRichText = 5, //
+    ZCMessageTypeRichVideo = 6,
+    ZCMessageTypeHotGuide = 7,
+    ZCMessageTypeFile  = 12, // 文件
+    ZCMessageTypeLoopChat = 15,
+    ZCMessageTypeLocation  = 22, // 位置
+    ZCMessageTypeVideo = 23,
+//    ZCMessagetypeCard   = 101,//商品卡片消息
+    ZCMessageTypeCard = 24,//商品卡片消息
+    ZCMessageTypeOrder= 25,//订单卡片消息
+    ZCMessageTypeRobotCommonProblemGuide = 102, // 机器人 常见问题引导
+    
+    ZCMessagetypeStartSound = -4,//正在录音
+    ZCMessagetypeCancelSound = -5,//取消正在闪烁的语音cell
 };
 
 /**
@@ -60,7 +66,7 @@ typedef NS_ENUM(NSInteger,ZCMsgType) {
 /**
  *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 8文件 ,24 商品卡片
  */
-@property (nonatomic,assign  ) ZCMsgType              msgType;
+@property (nonatomic,assign  ) ZCMessageType              msgType;
 
 /**
  * 13 doc文件格式

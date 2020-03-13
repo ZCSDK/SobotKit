@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZCTitleView.h"
 
 
 /**ZCPageBlockType回调类型*/
@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger,ZCPageBlockType) {
     ZCPageBlockLeave      = 3,// 留言
 };
 
-typedef NS_ENUM(NSInteger, ButtonClickTag) {
+typedef NS_ENUM(NSInteger, ZCButtonClickTag) {
     BUTTON_BACK   = 1, // 返回
     BUTTON_CLOSE  = 2, // 关闭(未使用)
     BUTTON_UNREAD = 3, // 未读消息
@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, ButtonClickTag) {
     BUTTON_TURNROBOT = 5,// 切换机器人
     BUTTON_EVALUATION =6,// 评价
     BUTTON_TEL   = 7,// 拨打电话
+    BUTTON_SEND   = 8, // 清空历史记录
 };
 
 /**
@@ -64,6 +65,9 @@ typedef NS_ENUM(NSInteger, ButtonClickTag) {
  **/
 @property (nonatomic,strong) UIView * bottomLine;
 
+@property (nonatomic,assign) BOOL  isArtificial;
+
+
 /**
  *  创建TitleView
  */
@@ -74,6 +78,21 @@ typedef NS_ENUM(NSInteger, ButtonClickTag) {
 // button点击事件
 -(IBAction)buttonClick:(UIButton *) sender;
 
+
+-(BOOL)orientationChanged;
+
+-(CGFloat) getCurViewWidth;
+-(CGFloat) getCurViewHeight;
+
+
+
+/// 系统导航，统一创建
+/// @param leftTags 左边点击事件：ZCButtonClickTag
+/// @param rightTags 右边点击事件：ZCButtonClickTag
+- (void)setNavigationBarLeft:(NSArray *)leftTags right:(NSArray *) rightTags;
+
+// 仅有返回按钮
+- (void)setNavigationBarStyle;
 @end
 
 

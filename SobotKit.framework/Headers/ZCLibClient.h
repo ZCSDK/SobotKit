@@ -237,7 +237,6 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 -(void)closeIMConnection;
 
 
-
 /**
  移除IM所有监听，可能会影响应用在后台存活时长，如果调用此方法后需要checkIMObserverWithCreate重新激活
  网络监听 ZCNotification_NetworkChange

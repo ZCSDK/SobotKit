@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 #import "ZCLibMessageConstants.h"
 #import "ZCLibStatusDefine.h"
 #import "ZCLibConfig.h"
@@ -73,20 +72,18 @@
                       result:(void (^)(NSDictionary *dict, ZCConnectUserStatusCode status)) resultBlock;
 
 /**
- *  拼接显示对象
- *
- *  @param text          显示的文字
- *  @param msgType       消息类型
- *  @param voiceDuration 如果是音频，就是音频时长
- *  @param style         提示信息，还是普通信息
- *  @param isSend        是否是发送者消息
- *  @param nickname      发送的昵称
- *  @param count         排队人数
- *  @param isOpen        开启留言
- *
- *  @return             ZCLibMessage
- */
--(ZCLibMessage *)setLocalDataToArr:(int) action
+ *  把本地数据，封装到展示Model上
+  *
+  *  @param action  当天消息动作类型
+  *  @param msgType 消息类型ZCMessageType
+  *  @param voiceDuration 声音时长
+  *  @param style 提示类型，0是普通消息，大于0是提醒消息-2是弹屏商品信息
+  *  @param content   消息内容
+  *  @param isSend  YES自己发送，NO，按当前状态设置发送者
+  *  @param _config 初始化对象
+  *  @return
+  */
++(ZCLibMessage *)setLocalDataToArr:(ZCTipMessageType) action
                               type:(int)msgType
                           duration:(NSString *) voiceDuration
                              style:(NSInteger) style
@@ -114,7 +111,7 @@
  */
 -(void)sendMessage:(NSString *)message
           questionId:(NSString*)docId
-           msgType:(ZCMsgType ) type
+           msgType:(ZCMessageType ) type
           duration:(NSString *)duration
             config:(ZCLibConfig *)config
          robotFlag:(NSString *)roboflag
@@ -559,9 +556,14 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
 /**
  *  获取用户留言记录详情页接口 2.7.1 新增
  *  ticketld  工单id
+ *  dict : {
+ *  partnerid
+ *  uid
+ *  companyId
+ * }
  *
  **/
--(void)postUserDealTicketinfoListWith:(ZCLibConfig*)config
+-(void)postUserDealTicketinfoListWith:(NSDictionary *)dict
                              ticketld:(NSString *)ticketld
                                 start:(void (^)())startBlock
                               success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
@@ -586,6 +588,35 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                  success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
                   failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
+
+/**
+ *   获取 留言 回复内容
+ *  @param  param          回复字典
+ *  @{
+ *  @"partnerId":@"用户id",
+ *  @"companyId":@"公司id"}
+ *  @param  startBlock     开始请求的回调
+ *  @param  successBlock   请求成功的回调
+ *  @param  failedBlock    请求失败的回调
+ */
+-(void)getLastReplyLeaveMessage:(NSMutableDictionary *)params
+                      start:(void (^)())startBlock
+                    success:(void(^)(NSDictionary *dict,NSMutableArray * itemArray,ZCNetWorkCode sendCode)) successBlock
+                     failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+/**
+ *   设置留言回复已读状态
+ *  @param  param          回复字典
+ *  @{@"ticketId":@"工单编号",
+ *  @"partnerId":@"对接id",
+ *  @"companyId":@"公司id"}
+ *  @param  startBlock     开始请求的回调
+ *  @param  successBlock   请求成功的回调
+ *  @param  failedBlock    请求失败的回调
+ */
+-(void)updateUserTicketReplyInfo:(NSMutableDictionary *)params
+                           start:(void (^)())startBlock
+                         success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                          failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 
 

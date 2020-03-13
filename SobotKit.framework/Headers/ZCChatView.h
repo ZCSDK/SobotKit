@@ -13,18 +13,13 @@
 
 
 #import "ZCUIBaseController.h"
-typedef NS_ENUM(NSInteger, ZCBtnClickTag) {
-    Btn_BACK         = 1, // 返回
-    Btn_CLOSE        = 2, // 返回关闭
-    Btn_MORE         = 3, // 清空历史记录
-    Btn_EVALUATION   = 4, // 评价
-};
+
 
 @protocol ZCChatViewDelegate <NSObject>
 
 @optional
 // 头部点击事件，(返回/清理消息)
--(void)topViewBtnClick:(ZCBtnClickTag )Tag;
+-(void)topViewBtnClick:(ZCButtonClickTag )Tag;
 
 // 标题改变
 -(void)onTitleChanged:(NSString *) title imageUrl:(NSString *) url;

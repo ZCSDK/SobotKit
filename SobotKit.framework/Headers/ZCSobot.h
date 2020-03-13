@@ -4,7 +4,7 @@
 //
 //  Created by zhangxy on 15/11/12.
 //  Copyright © 2015年 zhichi. All rights reserved.
-//  0828a
+//  0221a
 
 #import <Foundation/Foundation.h>
 #import "ZCLibCusMenu.h"
@@ -17,16 +17,6 @@
 #import "ZCUIChatListController.h"
 #import "ZCChatView.h"
 
-typedef NS_ENUM(NSInteger,ZCCustomLinkClikType) {
-    ZCCustomLinkClikTypeOrderMsg         = 1,// 发送商品订单信息，（发给人工客服）
-    ZCCustomLinkClikTypeSendlocation     = 2,// 发送定位信息
-   
-};
-
-typedef NS_ENUM(NSUInteger, ZCOpenType) {
-    ZCOpenTypeServiceCentreVC =1,
-    ZCOpenTypeServiceDetailVC =2,
-};
 
 /**
  *  智齿SDK入口
@@ -69,7 +59,7 @@ typedef NS_ENUM(NSUInteger, ZCOpenType) {
  */
 +(void)openZCServiceCentreVC:(ZCKitInfo *) info
                 with:(UIViewController *) byController
-                 onItemClick:(void (^)(ZCUIBaseController *object,ZCOpenType type))itemClickBlock;
+                 onItemClick:(void (^)(ZCUIBaseController *object))itemClickBlock;
 
 
 /**

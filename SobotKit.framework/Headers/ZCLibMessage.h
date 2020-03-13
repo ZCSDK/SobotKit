@@ -7,77 +7,78 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZCLibRich.h"
-
 
 
 /**
- *  ZCTipCellMessageType 提示消息内容
+ *  ZCTipMessageType 提示消息内容
  */
-typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
+typedef NS_ENUM(NSInteger,ZCTipMessageType) {
+    /** 普通消息*/
+    ZCTipMessageDefault                          = 0,
     /** 转人工成功 */
-    ZCTipCellMessageOnline                           = 1,
+    ZCTipMessageOnline                           = 1,
     /** 转人工排队 */
-    ZCTipCellMessageWaiting                          = 2,
+    ZCTipMessageWaiting                          = 2,
     /** 暂无客服在线 */
-    ZCTipCellMessageUserNoAdmin                      = 3,
+    ZCTipMessageUserNoAdmin                      = 3,
     /** 暂时无法评价 */
-    ZCTipCellMessageTemporarilyUnableToEvaluate      = 4,
+    ZCTipMessageTemporarilyUnableToEvaluate      = 4,
     /** 已完成评价 */
-    ZCTipCellMessageEvaluationCompleted              = 5,
+    ZCTipMessageEvaluationCompleted              = 5,
     /** 咨询后才可评价 */
-    ZCTipCellMessageAfterConsultingEvaluation        = 6,
+    ZCTipMessageAfterConsultingEvaluation        = 6,
     /** 已下为新消息 */
-    ZCTipCellMessageNewMessage                       = 7,
+    ZCTipMessageNewMessage                       = 7,
     /** 空消息 */
-    ZCTipCellMessageNullMessage                      = 8,
+    ZCTipMessageNullMessage                      = 8,
     /** 机器人欢迎语 */
-    ZCTipCellMessageRobotHelloWord                   = 9,
+    ZCTipMessageRobotHelloWord                   = 9,
     /** 用户超时提示语 */
-    ZCTipCellMessageUserTipWord                      = 10,
+    ZCTipMessageUserTipWord                      = 10,
     /** 客服超时提示语 */
-    ZCTipCellMessageAdminTipWord                     = 11,
+    ZCTipMessageAdminTipWord                     = 11,
     /** 拉黑，暂时无法转人工 */
-    ZCTipCellMessageIsBlock                          = 12,
+    ZCTipMessageIsBlock                          = 12,
     /** 用户超时下线 */
-    ZCTipCellMessageUserOutWord                      = 13,
+    ZCTipMessageUserOutWord                      = 13,
     /** 发送和接收的消息内容 文件路径 */
-    ZCTipCellMessageText                             = 14,
+    ZCTipMessageText                             = 14,
     /** 人工欢迎语 */
-    ZCTipCellMessageAdminHelloWord                   = 15,
+    ZCTipMessageAdminHelloWord                   = 15,
     /** 本次会话结束 */
-    ZCTipCellMessageOverWord                         = 16,
+    ZCTipMessageOverWord                         = 16,
     /** 您打开了新窗口，本次会话结束 */
-    ZCTipCellMessageOpenNewWindow                    = 17,
+    ZCTipMessageOpenNewWindow                    = 17,
     /** 评价 */ 
-    ZCTipCellMessageEvaluation                       = 18,
+    ZCTipMessageEvaluation                       = 18,
     
     /** 排队达到阀值*/
-    ZCTipCellMessageWatingFull                       = 19,
+    ZCTipMessageWatingFull                       = 19,
     /** 消息撤回*/
-    ZCTipCellMessageRevertMsg                        = 20,
+    ZCTipMessageRevertMsg                        = 20,
     
     /** 安全提示 */
-    ZCTipCellMessageSafety                           = 21,
+    ZCTipMessageSafety                           = 21,
     
     /*** 您的留言状态有更新  ***/
-    ZCTipCellMessageUpdateLeave                      = 22,
+    ZCTipMessageUpdateLeave                      = 22,
     
     /***** 情绪转人工和重复提问转人工 提示文案   ****/
-    ZCTipCellMessageRobotTurnMsg                     = 23,
+    ZCTipMessageRobotTurnMsg                     = 23,
     
     /****** 留言转离线消息 ******/
-    ZCTIPCellMessageOrderLeave                        = 24,
+    ZCTipMessageOrderLeave                        = 24,
     
     /****** 您的留言已提交成功 *****/
-    ZCTipCellMessageLeaveSuccess                      = 25,
-    
-
-    
-    
+    ZCTipMessageLeaveSuccess                      = 25,
+    /****** 通告消息 *****/
+    ZCTipMessageNotice                            = 26,
 };
 
 
+
+
+#import "ZCLibRich.h"
 
 /**
  *  配置消息记录
@@ -108,11 +109,6 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 @property (nonatomic , strong) NSString *cid;
 
 /**
- *  会话类型0，用户，1机器人 2客服
- */
-@property (nonatomic , strong) NSString *action;
-
-/**
  *  用户id
  */
 @property (nonatomic , strong) NSString *sender;
@@ -126,6 +122,11 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
  *  发送,0，自己，1机器人，2客服
  */
 @property (nonatomic , assign) int      senderType;
+
+/**
+ *  会话类型0，不知道怎么用
+ */
+@property (nonatomic , strong) NSString *action;
 
 /**
  *  头像
@@ -300,7 +301,7 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 /**
  *
- *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工  3、关键词转人工、4、多次命中转人工
+ *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工  3、关键词转人工、4、多次命中转人工(显示转人工按钮，不主动转人工)，5、按回答类型设置转人工策略
  *
  **/
 @property (nonatomic,assign)  int transferType;
@@ -347,7 +348,7 @@ typedef NS_ENUM(NSInteger,ZCTipCellMessageType) {
 
 
 
--(NSString *)getTipMsg:(int)action content:(NSString*)message isOpenLeave:(NSUInteger) isOpen;
+-(NSString *)getTipMsg:(ZCTipMessageType)action content:(NSString*)message isOpenLeave:(NSUInteger) isOpen;
 
 
 -(void)getNewMessageModel:(ZCLibMessage *)model isShowGroup:(BOOL)isShow;

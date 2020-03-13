@@ -9,7 +9,7 @@
 #import <SobotKit/SobotKit.h>
 //#import "ZCOrderModel.h"
 
-typedef void(^BackRefreshPageBlock)(id * object);
+typedef void(^BackRefreshPageBlock)(id _Nonnull object);
 
 /**
  *  ZCUILeaveMessageController 留言VC

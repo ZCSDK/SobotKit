@@ -22,6 +22,29 @@
  */
 @property (nonatomic,assign) NSInteger lineSpacing;
 
+
+/**
+ *  链接地址正则表达式
+ *  默认为：
+ *  @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{1,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(([a-zA-Z0-9]{2,4}).[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+ */
+@property (nonatomic,strong) NSString * urlRegular;
+
+/**
+*  电话号码正则表达式
+ *  默认为@"\\d{3}-\\d{8}|\\d{3}-\\d{7}|\\d{4}-\\d{8}|\\d{4}-\\d{7}|1+[3578]+\\d{9}|400\\d{7}|\\d{8}|\\d{7}"
+ */
+@property (nonatomic,strong) NSString * telRegular;
+
+/**
+ *   调整机器人引导语 行间距
+ *  默认为 0
+ */
+@property (nonatomic,assign) NSInteger guideLineSpacing;
+
+// 自定义 换业务文案
+@property (nonatomic,strong) NSString *changeBusinessStr;
+
 /**
  *  是否有返回提示
  *  默认为 NO

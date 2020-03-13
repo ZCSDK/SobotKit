@@ -9,33 +9,19 @@
 #import "ZCLibMessage.h"
 
 #define ZCNotification_NetworkChange @"NetworkChanged"
-#import "ZCLibStatusDefine.h"
+#import  "ZCLibStatusDefine.h"
 
 
 typedef void(^onZCConnectBlock)();
 
 typedef void(^onZCReceiveMessageBlock)(ZCLibMessage *message,int num,id obj);
 
-/**消息体类型*/
-typedef NS_ENUM(NSInteger,ZCMessageType) {
-    ZCMessageTypeText  = 0, //文本
-    ZCMessageTypePhoto = 1, //图片
-    ZCMessageTypeSound = 2, // 声音
-    ZCMessageTypeRich  = 3, // 富文本
-    ZCMessageTypeFile  = 12, // 文件
-    ZCMessageTypeVideo = 23, // 视频
-    ZCMessageTypeLocation  = 22, // 文件
-    ZCMessagetypeStartSound = 4,//正在录音
-    ZCMessagetypeCancelSound = 5,//取消正在闪烁的语音cell
-//    ZCMessagetypeCard   = 101,//商品卡片消息
-    ZCMessageTypeCard = 24,//商品卡片消息
-    ZCMessageTypeOrder= 25,//订单卡片消息
-};
 
 /**下推消息类型*/
 typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
     ZCReceivedMessageUnKonw         = -1,// 未知类型
     ZCReceiVedMessageNotice         = -2,// 通告不置顶
+    ZCReceiVedMessageDefault        = 0, // 普通消息
     ZCReceivedMessageNews           = 202,// 新消息
     ZCReceivedMessageOnline         = 200,// 接入人工成功
     ZCReceivedMessageWaiting        = 201,// 排队

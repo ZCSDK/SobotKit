@@ -23,9 +23,10 @@
 
 @end
 
-@interface ZCChatController : UIViewController
+@interface ZCChatController : ZCUIBaseController
 
 @property (nonatomic,assign) BOOL isPush;// 是否是push 进来的
+@property (nonatomic,strong) ZCTitleView *titleView;
 
 
 

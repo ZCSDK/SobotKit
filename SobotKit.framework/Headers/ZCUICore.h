@@ -18,6 +18,8 @@
 #import "ZCLibConfig.h"
 #import "ZCUILeaveMessageController.h"
 #import "ZCChatView.h"
+#import "ZCLibServer.h"
+
 
 typedef NS_ENUM(NSInteger,ZCTurnType) {
     ZCTurnType_KeyWord                 = 1,  // 关键字转人工
@@ -237,6 +239,8 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 -(ZCLibConfig *) getLibConfig;
 
+-(ZCLibServer *)getAPIServer;
+
 /**
  判断初始化接口
  
@@ -251,7 +255,6 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  @param appkey 那个appkey的聊天记录
  */
 -(void)getChatMessages;
-
 
 /**
  检查并执行转人工操作
@@ -328,8 +331,6 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  **/
 -(void) sendMessage:(NSString *)text questionId:(NSString*)question type:(ZCMessageType) type duration:(NSString *) time;
 -(void) sendMessage:(NSString *)text questionId:(NSString*)question type:(ZCMessageType) type duration:(NSString *) time dict:(NSDictionary *)extendParams;
--(void) sendMessage:(NSString *)text questionId:(NSString*)question type:(ZCMessageType) type duration:(NSString *) time dict:(NSDictionary *)extendParams Type:(ZCCustomLinkClikType)customtype;
-
 
 /**
  发送正在输入文本
