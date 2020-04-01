@@ -32,7 +32,9 @@
 
 /**
 *  电话号码正则表达式
- *  默认为@"\\d{3}-\\d{8}|\\d{3}-\\d{7}|\\d{4}-\\d{8}|\\d{4}-\\d{7}|1+[3578]+\\d{9}|400\\d{7}|\\d{8}|\\d{7}"
+ *  默认为@"0+\\d{2}-\\d{8}|0+\\d{2}-\\d{7}|0+\\d{3}-\\d{8}|0+\\d{3}-\\d{7}|1+[34578]+\\d{9}|\\+\\d{2}1+[34578]+\\d{9}|400\\d{7}|400-\\d{3}-\\d{4}|\\d{11}|\\d{10}|\\d{8}|\\d{7}"
+ * 例如：82563452、01082563234、010-82543213、031182563234、0311-82563234
+ 、+8613691080322、4008881234、400-888-1234
  */
 @property (nonatomic,strong) NSString * telRegular;
 
@@ -62,6 +64,14 @@
  *  默认为 yes  , 可以回复
  */
 @property (nonatomic,assign) BOOL leaveCompleteCanReply;
+
+
+
+/**
+ *  已完成留言详情界面：返回时是否弹出服务评价窗口(只会第一次返回弹，下次返回不会再弹)
+ *  默认为 NO   , 不主动提醒
+ */
+@property (nonatomic,assign) BOOL showLeaveDetailBackEvaluate;
 
 /**
  *  仅支持竖屏
@@ -94,6 +104,25 @@
  *
  **/
 @property (nonatomic,assign) BOOL canSendLocation;
+
+
+/// 聊天页面底部加号中功能：隐藏评价，默认NO(不隐藏)
+@property (nonatomic,assign) BOOL hideMenuSatisfaction;
+
+
+/// 聊天页面底部加号中功能：隐藏留言，默认NO(不隐藏)
+@property (nonatomic,assign) BOOL hideMenuLeave;
+
+/// 聊天页面底部加号中功能：隐藏图片，默认NO(不隐藏)
+@property (nonatomic,assign) BOOL hideMenuPicture;
+
+/// 聊天页面底部加号中功能：隐藏拍摄，默认NO(不隐藏)
+@property (nonatomic,assign) BOOL hideMenuCamera;
+
+
+/// 聊天页面底部加号中功能：隐藏文件，默认NO(不隐藏)
+@property (nonatomic,assign) BOOL hideMenuFile;
+
 
 
 /**
@@ -287,6 +316,11 @@
  *  顶部标题颜色、评价标题
  */
 @property (nonatomic,strong) UIFont    *titleFont;
+
+/**
+ *  副标题字体
+ */
+@property (nonatomic,strong) UIFont    *subTitleFont;
 
 /**
  *  页面返回按钮，输入框，评价提交按钮、Toast提示语  2.8.0 已弃用

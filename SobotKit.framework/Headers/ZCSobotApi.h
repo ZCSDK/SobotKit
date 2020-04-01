@@ -34,6 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
        pageBlock:(void (^)(id object,ZCPageBlockType type))pageClick
 messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
+
+
+
+/// 点击链接拦截 帮助中心、留言、聊天、留言记录
+/// @param messagelinkBlock 获取到链接，如果返回 YES 则拦截
++(void)setMessageLinkClick:(BOOL (^)(NSString *link))messagelinkBlock;
+
+
 // 打开客户中心页面
 + (void)openZCServiceCenter:(ZCKitInfo *) info
                          with:(UIViewController *) byController
@@ -72,7 +80,7 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 + (void)synchronizationInitInfoToSDK:(void (^)(NSString *msg,int code))ResultBlock;
 
 // 转人工自定义
-+ (void)connectCustomerService:(NSString *)groupId  Obj:(id)obj KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
++ (void)connectCustomerService:(NSString *)groupId  Obj:(id)obj KitInfo:(ZCKitInfo*)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
 
 
 /// 获取最新回复
@@ -124,6 +132,9 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 + (void)outCurrentUserZCLibInfo:(BOOL) isClosePush;
 
 
+/// 初始化，如果要修改域名，请在调用方法之前设置
+/// @param appkey appkey
+/// @param resultBlock
 + (void)initSobotSDK:(NSString *) appkey result:(void (^)(id object))resultBlock;
 
 // 获取最后一条消息

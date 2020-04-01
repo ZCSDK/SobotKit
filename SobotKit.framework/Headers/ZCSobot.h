@@ -144,7 +144,7 @@
  @param keyword 关键字
  @param keywordId 关键字id
  */
-+(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj KitInfo:(id)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
++(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj KitInfo:(ZCKitInfo *)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
 
 /**
  *

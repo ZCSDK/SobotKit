@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = "SobotKit"
 
-s.version          = "2.8.3"
+s.version          = "2.8.4"
 
 s.summary          = "A marquee view used on iOS."
 s.description      = <<-DESC
@@ -14,7 +14,7 @@ s.author           = { 'zhangxy' => 'app_dev@sobot.com' }
 s.source           = { :git => "https://github.com/ZCSDK/SobotKit.git", :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/NAME'
 
-s.platform     = :ios, '6.1'
+s.platform     = :ios, '8.0'
 #s.ios.deployment_target = ‘6.1’
 # s.osx.deployment_target = '10.7'
 s.requires_arc = true
