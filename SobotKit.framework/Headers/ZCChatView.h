@@ -99,6 +99,7 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 // 隐藏聊天窗口，回收页面数据
 -(void)dismissZCChatView;
 
+-(void)saveDataToLocal;
 
 /**
  *
