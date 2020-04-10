@@ -103,7 +103,7 @@
 "机器人客服评价" = "Evaluation Robot";
 "提交评价后会话将结束" = "The conversation'll end after submission";
 "服务评价" = "feedback";
-"%@ 是否解决了您的问题？" = "Has your question been resolved?";
+"%@ 是否解决了您的问题？" = "%@ Has your question been resolved?";
 "已解决" = "YES";
 "未解决" = " NO";
 "请您对 [%@] 进行评价" = "Please evaluate [%@]";
