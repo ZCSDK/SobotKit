@@ -475,6 +475,12 @@
 // 启用新的接口命名方式，兼容驼峰命名
 @property(nonatomic,assign) int queue_first;
 
+
+
+// 默认语言，默认为en_lproj,可选ar_lproj,zh-Hans_lproj,zh-Hant_lproj
+@property(nonatomic,copy) NSString *default_language;
+
+
 -(id)initByJsonDict:(NSDictionary *) dict;
 
 @end
