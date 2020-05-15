@@ -1,3 +1,17 @@
+## SDK 2.8.4.5 版本更新说明
+1、【优化】新建window打开聊天页面，无法查看大图问题
+2、【优化】留言提醒过多时，发送文件UI错位问题
+
+
+## SDK 2.8.4.3 版本更新说明
+1、【优化】新增默认语言  
+
+```   
+   [ZCLibClient getZCLibClient].libInitInfo.default_language = @"zh-Hant_lproj";  
+```  
+2、【优化】设置状态栏颜色为默认颜色
+
+
 ## SDK 2.8.4 版本更新说明
   
 1、【新增】 添加留言评价主动提醒开关   

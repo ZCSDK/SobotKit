@@ -90,7 +90,7 @@
  *  接口域名,从2.6.5版本开始，本属性不起作用，请使用ZCLibInitInfo.apiHost
  *  @deprecated 2018-09-05: Use ZCLibInitInfo.h  instead
  */
-@property(nonatomic,strong) NSString *apiHost;
+//@property(nonatomic,strong) NSString *apiHost;
 
 /**
  *

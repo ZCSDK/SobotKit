@@ -27,9 +27,29 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-//  打开会话页面
+
+/**
+ *
+ *  启动智齿客服聊天页面，自动判断打开方式
+ *
+ *  @param info         初始化参数，详情见ZCKitInfo not null
+ *  @param byController 当前执行跳转的VC           not null
+ *  @param delegate     ZCUIChatDelagete        聊天页面的代理，如果实现这个代理用户可以实现留言跳转到自定义页面
+ *  @param pageClick    点击返回，UI修改, object为ZCChatController（使用系统导航栏场景） 或者 ZCChatView（使用SDK自定义导航栏场景） 2.6.6 此处回调参数修改
+ *  @param linkBlock    点击消息链接回调，可以为null(注意：如果传递实现后内部将直接返回url，不在做跳转处理)
+ *
+ */
 + (void)openZCChat:(ZCKitInfo *) info
             with:(UIViewController *) byController
+          target:(id<ZCChatControllerDelegate>) delegate
+       pageBlock:(void (^)(id object,ZCPageBlockType type))pageClick
+messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
+
+
+// 以present方式打开聊天页面
++ (void)openZCChat:(ZCKitInfo *) info
+            with:(UIViewController *) byController
+         isPresend:(BOOL) isPresent
           target:(id<ZCChatControllerDelegate>) delegate
        pageBlock:(void (^)(id object,ZCPageBlockType type))pageClick
 messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
