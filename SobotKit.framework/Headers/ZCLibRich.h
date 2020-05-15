@@ -11,7 +11,7 @@
 
 /**消息体类型*/
 typedef NS_ENUM(NSInteger,ZCMessageType) {
-    // 0文本 1图片 2音频 3、富文本带标签、4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 12文件,24商品信息
+    // 0文本 1图片 2音频 3、富文本带标签、4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频，9、10为一个json字符串 15，多轮会话  7.热点引导, 12文件,24商品信息
     ZCMessageTypeText  = 0, //文本
     ZCMessageTypePhoto = 1, //图片
     ZCMessageTypeSound = 2, // 声音
@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeRichText = 5, //
     ZCMessageTypeRichVideo = 6,
     ZCMessageTypeHotGuide = 7,
+    ZCMessageTypeLoopRobotRich  = 11, // 多伦会话，按普通文本处理
     ZCMessageTypeFile  = 12, // 文件
     ZCMessageTypeLoopChat = 15,
     ZCMessageTypeLocation  = 22, // 位置

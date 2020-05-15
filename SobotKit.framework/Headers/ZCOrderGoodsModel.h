@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  订单链接: orderUrl  ，
  商品描述: goodsDesc
  商品件数: goodsCount
- 总金额: totalFee
+ 总金额: totalFee，单位为分，显示时会默认格式化为元，例如，传入100，显示效果为1.00元
 */
 @interface ZCOrderGoodsModel : NSObject
 
@@ -48,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 //此链接可监听链接点击事件，拦截后自行处理
 @property (nonatomic,strong) NSString *orderUrl;
 @property (nonatomic,strong) NSString *goodsCount;
+
+
+/// 单位为分，显示时会默认格式化为元，例如，传入100，显示效果为1.00元
 @property (nonatomic,strong) NSString *totalFee;
 
 // 获取状态字符串内容

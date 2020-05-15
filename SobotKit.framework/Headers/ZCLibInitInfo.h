@@ -17,15 +17,12 @@
 @interface ZCLibInitInfo : NSObject
 
 /**
- *  接口域名,
+ *  接口域名（已废弃，初始化时统一设置)
  * 默认SaaS平台域名为:https://api.sobot.com
  * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
  * 如果您是本地化部署，请使用你们自己的部署的服务域名
  */
-@property(nonatomic,strong) NSString *apiHost;
-
-// 启用新的接口命名方式，兼容驼峰命名
-@property(nonatomic,strong) NSString *api_host;
+//@property(nonatomic,strong) NSString *api_host;
 
 
 /**
@@ -229,39 +226,7 @@
 @property (nonatomic,strong) NSString *qqNumber;
 // 启用新的接口命名方式，兼容驼峰命名
 @property(nonatomic,strong) NSString *qq;
-/**
- *  用户的性别 0男 1女
- *  null
- *  将自动显示到客服工作台客户资料
- */
-@property (nonatomic,strong) NSString *userSex;
-// 启用新的接口命名方式，兼容驼峰命名
-@property(nonatomic,strong) NSString *user_sex;
 
-/**
- *  用户的微博账号
- *  null
- *  将自动显示到客服工作台客户资料
- */
-@property (nonatomic,strong) NSString *weiBo;
-// 启用新的接口命名方式，兼容驼峰命名
-@property(nonatomic,strong) NSString *weibo;
-/**
- *  用户的微信账号
- *  null
- *  将自动显示到客服工作台客户资料
- */
-@property (nonatomic,strong) NSString *weChat;
-// 启用新的接口命名方式，兼容驼峰命名
-@property(nonatomic,strong) NSString *weixin;
-/**
- *  用户的生日
- *  例：20170323，*注意* 如果不是这个格式，初始化接口会给过滤掉
- *  将自动显示到客服工作台客户资料
- */
-@property (nonatomic,strong) NSString *userBirthday;
-// 启用新的接口命名方式，兼容驼峰命名
-@property(nonatomic,strong) NSString *birthday;
 /**
  * 备注
  * null
@@ -443,13 +408,6 @@
 
 /**
  *
- *   机器人问答是否支持分词联想
- */
-@property (nonatomic,assign) BOOL isEnableAutoTips;
-// 启用新的接口命名方式，兼容驼峰命名
-@property(nonatomic,assign) BOOL support;
-/**
- *
  *  自定发送商品订单信息类型
  *  0 不发 1 给机器人发送 2 给人工发送  3 机器人和人工都发送
  **/
@@ -475,12 +433,13 @@
 // 启用新的接口命名方式，兼容驼峰命名
 @property(nonatomic,assign) int queue_first;
 
+
 // 内部使用，uni-app渠道图片路径
 @property(nonatomic,copy) NSString *wwwStaticPath;
 
+
 // 默认语言，默认为en_lproj,可选ar_lproj,zh-Hans_lproj,zh-Hant_lproj
 @property(nonatomic,copy) NSString *default_language;
-
 
 -(id)initByJsonDict:(NSDictionary *) dict;
 

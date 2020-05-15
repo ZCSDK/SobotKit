@@ -157,22 +157,32 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  初始化智齿客服 2.7.2开始使用
  
  @param appkey 智齿appkey(如果是电商版本，请填写自己公司的APPKEY)
+ @param apiHost,不设置为默认域名
+ * 默认SaaS平台域名为:https://api.sobot.com
+ * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
+ * 如果您是本地化部署，请使用你们自己的部署的服务域名
  @param resultBlock 初始化结果回调
  */
--(void)initSobotSDK:(NSString *) appkey result:(void (^)(id object))resultBlock;
+-(void)initSobotSDK:(NSString *) appkey host:(NSString *) apiHost result:(void (^)(id object))resultBlock;
 
 /**
  *
  *  初始化智齿客服 (2.7.1之前使用)
+    @param apiHost 不设置为默认域名
+    * 默认SaaS平台域名为:https://api.sobot.com
+    * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
+    * 如果您是本地化部署，请使用你们自己的部署的服务域名
  *
  **/
--(void)initSobotSDK:(NSString *) appkey;
+-(void)initSobotSDK:(NSString *) appkey host:(NSString *)apiHost;
 
 /**
  检查初始化状态，（成功/失败）
  @return
  */
 -(BOOL) getInitState;
+
+-(NSString *)getCurApiHost;
 
 
 /**

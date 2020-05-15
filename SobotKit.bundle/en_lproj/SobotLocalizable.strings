@@ -5,7 +5,6 @@
 "选择分类" = "Choose classification";
 "取消" = "Cancel";
 "确定" = "Confirm";
-"是否退出" = "Whether to quit";
 "排队中..." = "Waiting...";
 "清空聊天记录" = "Clear Chat History";
 "留言" = "message";
@@ -19,7 +18,7 @@
 "您已完成评价" = "We've received your feedback";
 "咨询后才能评价服务质量" = "You need to ask questions before feedback";
 "暂时无法转接人工客服" = "Sorry, the team is not in service right now";
-"您可以留言" = "you can also get replies by Email";
+"您可以留言" = "you can also get replies by message";
 "评价" = "Feedback";
 "您好，客服" = "Hello, customer service";
 "昵称" = "NickName";
@@ -256,4 +255,12 @@
 "元"="$";
 "最大支持15秒视频!" = "Supports up to 15 seconds of video!";
 
+
+// 2.8.5新增
+"您的评价会让我们做得更好" = "Your comments will make us do better";
 "视频处理中，请稍后!" = "Video processing, please wait!";
+"请您对本次服务进行评价~"="Please comment on this service~";
+// 取消 "是否退出" = "Whether to quit";
+"您是否要结束会话？" = "Do you want to end the session?";
+"结束会话"="End session";
+"暂时离开"="Leave temporarily";

@@ -73,6 +73,8 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
     ZCTipMessageLeaveSuccess                      = 25,
     /****** 通告消息 *****/
     ZCTipMessageNotice                            = 26,
+    /****** 诈骗词告警消息 *****/
+    ZCTipMessageChatWarning                       = 29,
 };
 
 

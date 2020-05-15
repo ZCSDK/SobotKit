@@ -235,6 +235,9 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 @property (nonatomic,assign) BOOL isSmartTurnServer;// 是否执行机器人智能转人工
 
+
+@property(nonatomic,strong) NSDictionary *satisfactionDict; // 评价代码
+
 +(ZCUICore *)getUICore;
 
 -(ZCLibConfig *) getLibConfig;
@@ -316,6 +319,11 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 
 
+/// 加载星级内容，成功以后，数据存在satisfactionDict中
+/// @param loadResult 0成功，1失败
+- (void)loadSatisfactionDictlock:(void (^)(int)) loadResult;
+
+
 /**
  获取当前会话数据
 
@@ -349,12 +357,15 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 /**
  销毁所有数据
  */
--(void)desctoryBlock;
+-(void)desctoryZCBlock;
 -(void)desctory;
 
 
 
 -(NSDictionary *)allExpressionDict;
+
+
+-(NSDictionary *)getZCThemeColorDict;
 
 
 /**
@@ -408,7 +419,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  *  提交评价
  *
  **/
-- (void)commitSatisfactionWithIsResolved:(int)isResolved Rating:(int)rating;
+ - (void)commitSatisfactionWithIsResolved:(int)isResolved Rating:(int)rating problem:(NSString *) problem;
 
 // 感谢您的评价
 -(void)thankFeedBack;

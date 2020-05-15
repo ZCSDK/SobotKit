@@ -26,6 +26,8 @@ typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
     ZCReceivedMessageOnline         = 200,// 接入人工成功
     ZCReceivedMessageWaiting        = 201,// 排队
     ZCReceivedMessageTansfer        = 210,// 转接
+    ZCReceivedMessageChatLock       = 213,// 会话锁定
+    ZCReceivedMessageChatWarning    = 215,// 诈骗词告警
     ZCReceivedMessageOfflineByAdmin = 2041,// 管理员下线
     ZCReceivedMessageOfflineByClose = 2042,// 管理员移除用户
     ZCReceivedMessageOfflineBeBlack = 2043,// 被拉入黑名单，不重新接入

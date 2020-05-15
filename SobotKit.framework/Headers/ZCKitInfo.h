@@ -23,6 +23,21 @@
 @property (nonatomic,assign) NSInteger lineSpacing;
 
 
+
+/**
+ *  是否设置为暗黑模式
+ *  默认为0,跟随系统设置, 1暗黑
+ */
+@property (nonatomic,assign) NSInteger themeStyle;
+
+
+/**
+ * 如果设置了自定义颜色，是否使用默认暗黑模式
+ * 默认为YES，如果设置为NO，当为暗黑模式时候自定义颜色属性将失效
+ */
+@property (nonatomic,assign) BOOL useDefaultDarkTheme;
+
+
 /**
  *  链接地址正则表达式
  *  默认为：
@@ -90,7 +105,7 @@
  *  接口域名,从2.6.5版本开始，本属性不起作用，请使用ZCLibInitInfo.apiHost
  *  @deprecated 2018-09-05: Use ZCLibInitInfo.h  instead
  */
-//@property(nonatomic,strong) NSString *apiHost;
+@property(nonatomic,strong) NSString *apiHost;
 
 /**
  *
@@ -140,12 +155,6 @@
  **/
 @property (nonatomic,assign) BOOL isCloseInquiryForm;
 
-/**
- *
- *   针对关闭按钮，单独设置是否显示评价界面，默认不显示
- *
- **/
-@property (nonatomic,assign) BOOL isShowCloseSatisfaction;
 
 /**
  *
@@ -183,6 +192,14 @@
  */
 @property (nonatomic,assign) BOOL      isUseImagesxcassets;
 
+
+/**
+ *
+ *   针对关闭按钮，单独设置是否显示评价界面，默认不显示
+ *
+ **/
+@property (nonatomic,assign) BOOL isShowCloseSatisfaction;
+
 /**
  *  评价完人工是否关闭会话（人工满意度评价后释放会话）
  *  默认为NO 未开启
@@ -197,12 +214,14 @@
  */
 @property (nonatomic,assign) BOOL      isOpenEvaluation;
 
+
 /**
- *  自定义关闭的时候是否推送满意度评价
- *  默认为N0;
+ *  返回时开启满意度评价,显示暂不评价
+ *  默认为NO 未开启
  *
  */
-//@property (nonatomic,assign) BOOL    isShowEvaluate;
+@property (nonatomic,assign) BOOL      canBackWithNotEvaluation;
+
 
 /**
  *  机器人优先模式，是否直接显示转人工按钮(值为NO时，会在机器人无法回答时显示转人工按钮)，默认，YES
@@ -409,28 +428,32 @@
 
 
 /**
- *  自定义风格颜色：导航
+ *  自定义风格颜色：导航（已弃用）
+ *  @deprecated 2020-04-20: Use topViewBgColor  instead
  */
-@property (nonatomic,strong) UIColor    *customBannerColor;
+//@property (nonatomic,strong) UIColor    *customBannerColor;
 
 
 /**
- *  机器人的问答中 提示转人工按钮的文字颜色
+ *  机器人的问答中 提示转人工按钮的文字颜色（已弃用）
+ *  @deprecated 2020-04-20: Use topBtnNolColor和topBtnSelColor  instead
  *
  */
-@property (nonatomic,strong) UIColor    *trunServerBtnColor;
+//@property (nonatomic,strong) UIColor    *trunServerBtnColor;
 
 /**
- *  相册导航栏的颜色
+ *  相册导航栏的颜色（已弃用）
+ *  @deprecated 2020-04-20: Use topViewBgColor  instead
  *
  */
-@property (nonatomic,strong) UIColor   *imagePickerColor;
+// @property (nonatomic,strong) UIColor   *imagePickerColor;
 
 /**
- *  相册导航栏的标题颜色
+ *  相册导航栏的标题颜色（已弃用）
+ *  @deprecated 2020-04-20: Use topViewTextColor  instead
  *
  */
-@property (nonatomic,strong) UIColor  *imagePickerTitleColor;
+//@property (nonatomic,strong) UIColor  *imagePickerTitleColor;
 
 
 /**
@@ -742,14 +765,14 @@
 
 /**
  *
- *  顶踩 文字 默认颜色
+ *  聊天对话框中 顶踩、转人工 文字 默认颜色
  *
  **/
 @property (nonatomic,strong) UIColor * topBtnNolColor;
 
 /**
  *
- *  顶踩 文字 选中颜色
+ *  聊天对话框中顶踩 、转人工文字 选中颜色
  *
  **/
 @property (nonatomic,strong) UIColor * topBtnSelColor;
@@ -792,7 +815,7 @@
 //**********************     帮助中心       ***************/
 /**
  *
- * 帮助中心 标题的文字颜色
+ * 帮助中心、导航 标题的文字颜色
  *
  **/
 @property (nonatomic,strong) UIColor * scTopTextColor;

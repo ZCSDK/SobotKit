@@ -365,7 +365,7 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
  */
 - (void)satisfactionMessage:(NSString*) uid
                       start:(void(^)())startBlock
-                    success:(void(^)(NSMutableArray * messageArr,ZCNetWorkCode code)) successBlock
+                    success:(void(^)(NSDictionary * messageArr,ZCNetWorkCode code)) successBlock
                        fail:(void(^)(NSString* msg, ZCNetWorkCode errorCode)) failedBlock;
 
 

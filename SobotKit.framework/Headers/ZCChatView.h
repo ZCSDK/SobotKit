@@ -87,9 +87,6 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
  **/
 @property(nonatomic,assign) BOOL  isJumpCustomLeaveVC;
 
-// 系统导航栏是否设置透明度
-@property (nonatomic,assign) BOOL  nacTranslucent;
-
 
 -(UITextView *) getChatTextView;
 
