@@ -80,7 +80,7 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
 @property (nonatomic,strong) NSString     *deviceToken;
 
 /**
- 平台标识
+ 平台标识，仅电商版本需要
  */
 @property (nonatomic,strong) NSString     *platformUnionCode;
 
