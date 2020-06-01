@@ -365,7 +365,8 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 -(NSDictionary *)allExpressionDict;
 
 
--(NSDictionary *)getZCThemeColorDict;
+// style == light ,dark
+-(NSDictionary *)getZCThemeColorDict:(NSString *) style;
 
 
 /**
