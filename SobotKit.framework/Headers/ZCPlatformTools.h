@@ -87,6 +87,10 @@
 +(BOOL) checkInitParameterChanged;
 
 
+// 检查是否拥有留言功能
++(BOOL) checkLeaveMessageModule;
+
+
 -(void)changeConnectedStatus:(ZCServerConnectStatus) status message:(id) message object:(NSDictionary *) obj;
 
 @end

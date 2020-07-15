@@ -17,23 +17,20 @@
 @interface ZCKitInfo : NSObject
 
 /**
- *   调整行间距
- *  默认为 0
+ *   调整行间距 ，默认为 0
  */
 @property (nonatomic,assign) NSInteger lineSpacing;
 
 
 
 /**
- *  是否设置为暗黑模式
- *  默认为0,跟随系统设置, 1暗黑
+ *  是否设置为暗黑模式 默认为0,跟随系统设置, 1暗黑
  */
 @property (nonatomic,assign) NSInteger themeStyle;
 
 
 /**
- * 如果设置了自定义颜色，是否使用默认暗黑模式
- * 默认为YES，如果设置为NO，当为暗黑模式时候自定义颜色属性将失效
+ * 暗黑模式时自定义颜色是否失效，默认为YES不使用
  */
 @property (nonatomic,assign) BOOL useDefaultDarkTheme;
 
@@ -41,7 +38,7 @@
 /**
  *  链接地址正则表达式
  *  默认为：
- *  @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{1,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(([a-zA-Z0-9]{2,4}).[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+    @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{1,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(([a-zA-Z0-9]{2,4}).[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
  */
 @property (nonatomic,strong) NSString * urlRegular;
 
@@ -54,23 +51,21 @@
 @property (nonatomic,strong) NSString * telRegular;
 
 /**
- *   调整机器人引导语 行间距
- *  默认为 0
+ * 机器人引导语 行间距，默认为 0
  */
 @property (nonatomic,assign) NSInteger guideLineSpacing;
 
-// 自定义 换业务文案
+// 自定义换业务(切换机器人)文案
 @property (nonatomic,strong) NSString *changeBusinessStr;
 
 /**
- *  是否有返回提示
- *  默认为 NO
+ *  是否有返回提示，默认为 NO
  */
 @property (nonatomic,assign) BOOL isShowReturnTips;
 
 /**
  *  push后隐藏 BottomBar
- *  默认为 YES
+ *  vc.hidesBottomBarWhenPushed = 设定值，默认YES
  */
 @property (nonatomic,assign) BOOL ishidesBottomBarWhenPushed;
 
@@ -79,8 +74,6 @@
  *  默认为 yes  , 可以回复
  */
 @property (nonatomic,assign) BOOL leaveCompleteCanReply;
-
-
 
 /**
  *  已完成留言详情界面：返回时是否弹出服务评价窗口(只会第一次返回弹，下次返回不会再弹)
@@ -101,22 +94,14 @@
  **/
 @property (nonatomic,assign) BOOL navcBarHidden;
 
-/**
- *  接口域名,从2.6.5版本开始，本属性不起作用，请使用ZCLibInitInfo.apiHost
- *  @deprecated 2018-09-05: Use ZCLibInitInfo.h  instead
- */
-@property(nonatomic,strong) NSString *apiHost;
 
 /**
- *
  *   人工状态，是否可以发送位置
  【 注意：
  由于各家定位插件特别多，智齿没有实现选择位置功能，所以需要自行传递位置到SDK以及打开显示，步骤如下：
  1、实现messageLinkClick事件（ZCSobot startZCChatVC函数中）
  2、当收到link = sobot://sendlocation 调用智齿接口发送位置信息
- 3、当收到link = sobot://openlocation?latitude=xx&longitude=xxx&address=xxx 可根据自己情况处理相关业务
-】
- *
+ 3、当收到link = sobot://openlocation?latitude=xx&longitude=xxx&address=xxx 可根据自己情况处理相关业务】
  **/
 @property (nonatomic,assign) BOOL canSendLocation;
 
@@ -138,65 +123,46 @@
 /// 聊天页面底部加号中功能：隐藏文件，默认NO(不隐藏)
 @property (nonatomic,assign) BOOL hideMenuFile;
 
-
-
 /**
- *
- *   导航栏右上角 是否显示 评价按钮  默认不显示
- *
+ *导航栏右上角 是否显示 评价按钮  默认不显示
  **/
 @property (nonatomic,assign) BOOL isShowEvaluation;
 
-
 /**
- *
- *   是否关闭询前表单（默认为NO，使用系统默认配置）
- *
- **/
-@property (nonatomic,assign) BOOL isCloseInquiryForm;
-
-
-/**
- *
- *   导航栏右上角 是否显示 拨号按钮 默认不显示    注意：和isShowEvaluation 互斥 只能设置一个有效
- *
+ * 导航栏右上角 是否显示 拨号按钮 默认不显示    注意：和isShowEvaluation 互斥 只能设置一个有效
  **/
 @property (nonatomic,assign) BOOL isShowTelIcon;
-
+/**
+ *  设置电话号码
+ *  当导航栏右上角 显示 拨号按钮时  （和isShowTelIcon 一起设置有效）
+ **/
+@property (nonatomic,copy) NSString * customTel;
 
 /**
- *
- *   导航栏左上角 是否显示 关闭按钮 默认不显示，关闭按钮，点击后无法监听后台消息
- *
+ *导航栏右上角 是否显示 关闭按钮 默认不显示，关闭按钮，点击后无法监听后台消息
  **/
 @property (nonatomic,assign) BOOL isShowClose;
 
 /**
- *  设置电话号码
- *  当导航栏右上角 显示 拨号按钮时  （和isShowTelIcon 一起设置有效）
- *
+ *是否关闭询前表单（默认为NO，使用系统默认配置）
  **/
-@property (nonatomic,copy) NSString * customTel;
+@property (nonatomic,assign) BOOL isCloseInquiryForm;
+
+
 
 
 ////////////////////////////////////////////////////////////////
-//   和UI相关的配置参数自定义可选项                                //
-//                                                            //
+//   和UI相关的配置参数自定义可选项
 ////////////////////////////////////////////////////////////////
-
-
 /**
  *  是否使用Images
  *  默认为NO 未开启
- *
  */
 @property (nonatomic,assign) BOOL      isUseImagesxcassets;
 
 
 /**
- *
- *   针对关闭按钮，单独设置是否显示评价界面，默认不显示
- *
+ *针对关闭按钮，单独设置是否显示评价界面，默认不显示
  **/
 @property (nonatomic,assign) BOOL isShowCloseSatisfaction;
 
@@ -210,7 +176,6 @@
 /**
  *  返回时是否开启满意度评价
  *  默认为NO 未开启
- *
  */
 @property (nonatomic,assign) BOOL      isOpenEvaluation;
 
@@ -218,13 +183,12 @@
 /**
  *  返回时开启满意度评价,显示暂不评价
  *  默认为NO 未开启
- *
  */
 @property (nonatomic,assign) BOOL      canBackWithNotEvaluation;
 
 
 /**
- *  机器人优先模式，是否直接显示转人工按钮(值为NO时，会在机器人无法回答时显示转人工按钮)，默认，YES
+ * 机器人优先模式，是否直接显示转人工按钮(值为NO时，会在机器人无法回答时显示转人工按钮)，默认，YES
  */
 @property (nonatomic,assign) BOOL    isShowTansfer;
 
@@ -235,9 +199,8 @@
 @property (nonatomic,strong) NSString *unWordsCount;
 
 
-
 /**
- *  是否开启智能转人工,(如输入“转人工”，直接转接人工)
+ * 是否开启智能转人工,(如输入“转人工”，直接转接人工)
  * 需要隐藏转人工按钮，请参见isShowTansfer和unWordsCount属性
  */
 @property (nonatomic,assign) BOOL  isOpenActiveUser;
@@ -254,7 +217,6 @@
  *  url: 快捷入口链接(点击后会调用初始化linkBock)
  *  title: 按钮标题
  *  lableId: 自定义快捷入口的ID
- *
  **/
 @property (nonatomic,strong) NSMutableArray * cusMenuArray;
 
@@ -302,7 +264,6 @@
 ////////////////////////////////////////////////////////////////
 
 /**
- *
  *   商品卡片信息是否自动发送（转人工成功时，自动发送商品卡片信息）
  *   默认不发送
  **/
@@ -312,8 +273,6 @@
  */
 @property(nonatomic,strong) ZCProductInfo *productInfo;
 
-
-
 /*
  需要发送的订单信息
  */
@@ -322,8 +281,6 @@
 
 /// 人工后，是否主动发送一条信息
 @property(nonatomic,assign) BOOL autoSendOrderMessage;
-
-
 
 
 
@@ -342,7 +299,7 @@
 @property (nonatomic,strong) UIFont    *subTitleFont;
 
 /**
- *  页面返回按钮，输入框，评价提交按钮、Toast提示语  2.8.0 已弃用
+ *  列表标题字体
  */
 @property (nonatomic,strong) UIFont    *listTitleFont;
 
@@ -352,7 +309,7 @@
 @property (nonatomic,strong) UIFont    *listDetailFont;
 
 /**
- *  是否有以下情况 2.8.0 已弃用
+ *  是否有以下情况
  */
 @property (nonatomic,strong) UIFont    *customlistDetailFont;
 
@@ -390,25 +347,6 @@
  */
 @property (nonatomic,strong) UIColor    *goodSendBtnColor;
 
-
-/**
- *
- * 网络状态中的背景色（连接中） （已弃用）
- *  @deprecated 2018-07-31: Use customBannerColor  instead
- *
- */
-//@property (nonatomic,strong) UIColor    *socketStatusButtonBgColor;
-
-
-/**
- *
- * 网络状态中的背景色（连接中） （已弃用）
- *  @deprecated 2018-07-31: Use customBannerColor  instead
- *
- */
-//@property (nonatomic,strong) UIColor    *socketStatusButtonTitleColor;
-
-
 /**
  *  满意度星级说明的文字颜色
  */
@@ -423,38 +361,6 @@
  *  对话页面背景
  */
 @property (nonatomic,strong) UIColor    *backgroundColor;
-
-
-
-
-/**
- *  自定义风格颜色：导航（已弃用）
- *  @deprecated 2020-04-20: Use topViewBgColor  instead
- */
-//@property (nonatomic,strong) UIColor    *customBannerColor;
-
-
-/**
- *  机器人的问答中 提示转人工按钮的文字颜色（已弃用）
- *  @deprecated 2020-04-20: Use topBtnNolColor和topBtnSelColor  instead
- *
- */
-//@property (nonatomic,strong) UIColor    *trunServerBtnColor;
-
-/**
- *  相册导航栏的颜色（已弃用）
- *  @deprecated 2020-04-20: Use topViewBgColor  instead
- *
- */
-// @property (nonatomic,strong) UIColor   *imagePickerColor;
-
-/**
- *  相册导航栏的标题颜色（已弃用）
- *  @deprecated 2020-04-20: Use topViewTextColor  instead
- *
- */
-//@property (nonatomic,strong) UIColor  *imagePickerTitleColor;
-
 
 /**
  *  左边聊天气泡颜色
@@ -495,37 +401,21 @@
  */
 @property (nonatomic,strong) UIColor    *bottomLineColor;
 
-/**
- *  评价普通按钮选中背景颜色和边框(默认跟随主题色customBannerColor)  2.8.0 已移除
- */
-@property (nonatomic,strong) UIColor    *commentOtherButtonBgColor;
 
 /**
- *  评价(立即结束、取消)按钮文字颜色(默认跟随主题色customBannerColor)
+ *  评价(提交)按钮文字颜色(默认跟随主题色)
  */
 @property (nonatomic,strong) UIColor    *commentCommitButtonColor;
 
 /**
- *  评价弹出页面 按钮文字颜色(默认跟随主题色customBannerColor)
+ *  评价(条件选择 按钮）文字颜色(默认跟随主题色)
  */
 @property (nonatomic,strong) UIColor    *commentButtonTextColor;
 
 /**
- *  评价弹出页面 按钮选中颜色(默认跟随主题色customBannerColor)
+ *  评价弹出页面 按钮选中颜色(默认跟随主题色)
  */
 @property (nonatomic,strong) UIColor    *commentButtonBgColor;
-
-
-/**
- * 评价提交按钮背景颜色和边框(默认跟随主题色customBannerColor)
- */
-@property (nonatomic,strong) UIColor    *commentCommitButtonBgColor;
-
-/**
- *  评价提交按钮点击后背景色，默认0x089899, 0.95
- */
-@property (nonatomic,strong) UIColor    *commentCommitButtonBgHighColor;
-
 
 /**
  *  提示气泡的背景颜色
@@ -533,36 +423,28 @@
 @property (nonatomic,strong) UIColor    *BgTipAirBubblesColor;
 
 /**
- * 语音cell选中的背景色  2.8.0 已移除
+ * 语音cell选中的背景色
  *
  */
 @property (nonatomic,strong) UIColor    *videoCellBgSelColor;
 
 /**
- *
- *  富文本中的线条颜色 2.8.0 已移除
- *
+ *富文本中的线条颜色
  */
 @property (nonatomic,strong) UIColor    *LineRichColor;
 
 /**
- *
- *  通告栏的背景色
- *
+ * 通告栏的背景色
  */
 @property (nonatomic,strong) UIColor    *notificationTopViewBgColor;
 
-/**
- *
- *  通告栏的文字颜色
- *
+/**、
+ *通告栏的文字颜色
  */
 @property (nonatomic,strong) UIColor    *notificationTopViewLabelColor;
 
 /**
- *
- *  通告栏的字体设置
- *
+ *通告栏的字体设置
  */
 @property (nonatomic,strong) UIFont    *notificationTopViewLabelFont;
 
@@ -595,6 +477,19 @@
  */
 @property (nonatomic,strong) UIColor    *rightChatTextColor;
 
+
+/**
+ *  表情发送按钮背景颜色,2.8.5新增
+ */
+@property (nonatomic,strong) UIColor    *emojiSendBgColor;
+
+
+
+/**
+ *  表情发送按钮文字颜色,2.8.5新增
+ */
+@property (nonatomic,strong) UIColor    *emojiSendTextColor;
+
 /**
  *  时间文字的颜色
  */
@@ -606,14 +501,9 @@
 @property (nonatomic,strong) UIColor    *tipLayerTextColor;
 
 /**
- *  客服昵称颜色  2.8.0 弃用
+ *  播放失败提醒，消息中心文字颜色
  */
 @property (nonatomic,strong) UIColor    *serviceNameTextColor;
-
-/**
- *  提示cell中客服昵称的文字颜色 2.8.0 弃用
- */
-@property (nonatomic,strong) UIColor    *nickNameTextColor;
 
 
 /**
@@ -699,74 +589,54 @@
 @property (nonatomic,strong) UIColor * openMoreBtnTextColor;
 
 /**
- *
- *  更多按钮默认图片
- *
+ *更多按钮默认图片
  **/
 @property (nonatomic,copy) NSString * moreBtnNolImg;
 
 /**
- *
- *  更多按钮选中图片
- *
+ *更多按钮选中图片
  **/
 @property (nonatomic,copy) NSString * moreBtnSelImg;
 
 /**
- *
- *  转人工按钮默认图片
- *
+ * 转人工按钮默认图片
  **/
 @property (nonatomic,copy) NSString * turnBtnNolImg;
 
 /**
- *
- *  转人工按选中图片
- *
+ *转人工按选中图片
  **/
 @property (nonatomic,copy) NSString * turnBtnSelImg;
 
 /**
- *
- *  返回按钮默认图片
- *
+ *返回按钮默认图片
  **/
 @property (nonatomic,copy) NSString * topBackNolImg;
 
 /**
- *
- *  返回按钮选中图片
- *
+ *返回按钮选中图片
  **/
 @property (nonatomic,copy) NSString * topBackSelImg;
 
 /**
- *
- *  返回按钮的默认背景色 2.8.0 已移除
- *
+ *返回按钮的默认背景色
  **/
 @property (nonatomic,strong) UIColor * topBackNolColor;
 
 /**
- *
- *  返回按钮的高亮背景色  2.8.0 已移除
- *
+ *返回按钮的高亮背景色
  **/
 @property (nonatomic,strong) UIColor * topBackSelColor;
 
 /**
- *
- *  导航栏背景色 （单独修改）
- *
+ *导航栏背景色 （单独修改）
  **/
 @property (nonatomic,strong) UIColor * topViewBgColor;
 
 
 
 /**
- *
- *  聊天对话框中 顶踩、转人工 文字 默认颜色
- *
+ * 聊天对话框中 顶踩、转人工 文字 默认颜色
  **/
 @property (nonatomic,strong) UIColor * topBtnNolColor;
 
@@ -785,9 +655,7 @@
 @property (nonatomic,strong) UIColor * topBtnGreyColor;
 
 /**
- *
- *   聊天页面 左上角 返回按钮的文字 （默认 返回）
- *
+ *聊天页面 左上角 返回按钮的文字 （默认 返回）
  **/
 @property (nonatomic,copy) NSString * topBackTitle;
 
@@ -797,48 +665,31 @@
 /****************   2.7.4  新增  ****************/
 
 /**
- *
- *  留言页面中 提交按钮的文字颜色
- *
+ *留言页面中 提交按钮的文字颜色
  **/
 @property (nonatomic,strong) UIColor * leaveSubmitBtnTextColor;
 
 
-
 /**
- *
- *  留言页面中 提交按钮的背景颜色
- *
+ *留言页面中 提交按钮的背景颜色
  **/
 @property (nonatomic,strong) UIColor * leaveSubmitBtnImgColor;
 
 //**********************     帮助中心       ***************/
-/**
- *
- * 帮助中心、导航 标题的文字颜色
- *
+/*帮助中心、导航 标题的文字颜色
  **/
 @property (nonatomic,strong) UIColor * scTopTextColor;
 
-/**
- *
- *  帮助中心 标题font
- *
+/**帮助中心 标题font
  **/
 @property (nonatomic,strong) UIFont * scTopTextFont;
 
 
-/**
- *
- *  帮助中心 导航条背景色
- *
+/** 帮助中心 导航条背景色
  **/
 @property (nonatomic,strong) UIColor * scTopBgColor;
 
-/**
- *
- * 帮助中心 顶部返回的文字颜色
- *
+/**帮助中心 顶部返回的文字颜色
  **/
 @property (nonatomic,strong) UIColor * scTopBackTextColor;
 
@@ -854,16 +705,12 @@
 
 // 2.8.0
 /**
- *
- * 文件查看，ImgProgress 图片背景颜色
- *
+ *文件查看，ImgProgress 图片背景颜色
  **/
 @property (nonatomic,strong) UIColor * documentLookImgProgressColor;
 
 /**
- *
- * 文件查看，按钮 背景颜色
- *
+ *文件查看，按钮 背景颜色
  **/
 @property (nonatomic,strong) UIColor * documentBtnDownColor;
 
@@ -881,13 +728,24 @@
 
 /**
  *  直接进入留言自定义字段
- *  数组，可以以传递多个，临时方案，后期将废弃此字段
+ *  数组，可以以传递多个
  *  id: 自定义字段的id
  *  value: 想传递的数据
  *  @{@"id":@"",@"value":@"我是数据"}
- *
  **/
 @property (nonatomic,strong) NSMutableArray * leaveCusFieldArray;
+
+
+
+/**
+ *  直接进入留言对接字段
+ *  数组，可以以传递多个
+ *  id: 对接字段系统自动生成的id
+ *  value: 想传递的数据
+ *  params: 显示的字段ID，例如city、address，与id对应
+ *  @{@"id":@"textfield12",@"value":@"我是数据",@"params":@"city"}
+ **/
+@property (nonatomic,strong) NSMutableArray * leaveParamsExtends;
 
 
 /**
@@ -895,5 +753,11 @@
  获取：设置 —>工单技能组设置
 */
 @property (nonatomic,strong) NSString * leaveMsgGroupId;
+
+
+/**
+  是否隐藏会话时间，默认NO不隐藏；如果不是中国区，与客户端的真实时间是有差异可以选择隐藏会话中的时间
+*/
+@property (nonatomic,assign) BOOL hideChatTime;
 
 @end

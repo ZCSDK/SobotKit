@@ -50,11 +50,12 @@ typedef void(^BackRefreshPageBlock)(id _Nonnull object);
 @property (nonatomic , assign) BOOL     emailFlag;
 @property (nonatomic , assign) BOOL     emailShowFlag;
 
+// 未使用
 @property (nonatomic , assign) int      ticketStartWay;
 
-@property (nonatomic,copy) NSString * msgTmp;// "'您好，为了更好地解决您的问题,请告诉我们以下内容：<br>1. 您的姓名 2. 问题描述'"
+@property (nonatomic,copy) NSString * _Nullable msgTmp;// "'您好，为了更好地解决您的问题,请告诉我们以下内容：<br>1. 您的姓名 2. 问题描述'"
 
-@property (nonatomic,copy) NSString * msgTxt;// "<p>您好，很抱歉我们暂时无法为您提供服务，如需帮助，请留言，我们将尽快联系并解决您的问题</p>"
+@property (nonatomic,copy) NSString * _Nullable msgTxt;// "<p>您好，很抱歉我们暂时无法为您提供服务，如需帮助，请留言，我们将尽快联系并解决您的问题</p>"
 
 @property (nonatomic,assign) int  ticketShowFlag;//  1 显示留言记录
 
@@ -62,7 +63,7 @@ typedef void(^BackRefreshPageBlock)(id _Nonnull object);
 
 @property (nonatomic,assign) int tickeTypeFlag ; //1-自行选择分类，要显示  2-指定分类 其他，不显示
 
-@property (nonatomic,copy) NSString * ticketTypeId;// 当-指定分类 传这个值
+@property (nonatomic,copy) NSString * _Nullable ticketTypeId;// 当-指定分类 传这个值
 
 @property (nonatomic,copy) BackRefreshPageBlock backRefreshPageblock;
 // 直接退出SDK 并关闭技能组弹框

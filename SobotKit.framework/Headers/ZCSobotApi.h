@@ -18,8 +18,9 @@
 #import "ZCUIChatListController.h"
 #import "ZCChatView.h"
 #import "ZCRecordListModel.h"
-
+#import "ZCUICore.h"
 #import "ZCLibClient.h"
+#import "ZCPlatformTools.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -44,7 +45,21 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)initSobotSDK:(NSString *) appkey host:(NSString *) apiHost result:(void (^)(id object))resultBlock;
 
 
-//  打开会话页面
+
+/// 启动聊天页面，简单处理
+/// @param info 自定义UI属性
+/// @param byController  启动的页面
+/// @param pageClick 页面当前状态
++ (void)openZCChat:(ZCKitInfo *) info
+            with:(UIViewController *) byController
+       pageBlock:(void (^)(id object,ZCPageBlockType type))pageClick;
+
+/// 启动聊天页面
+/// @param info 自定义UI属性
+/// @param byController  启动的页面
+/// @param delegate   点击留言拦截操作,如果不为空切实现了代理方法，留言将不再跳转
+/// @param pageClick 页面当前状态
+/// @param messagelinkBlock 链接点击事件，也可使用setMessageLinkClick统一处理
 + (void)openZCChat:(ZCKitInfo *) info
             with:(UIViewController *) byController
           target:(id<ZCChatControllerDelegate>) delegate
@@ -68,8 +83,13 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 // 打开消息中心页面
 + (void)openZCChatListView:(ZCKitInfo *)info with:(UIViewController *)byController onItemClick:(void (^)(ZCUIChatListController *object,ZCPlatformInfo *info))itemClickBlock;
 
+/**
+直接打开留言页面
 
-// 打开留言页面
+@param showRecored  是否选中留言记录，0不选择，默认功能，1仅显示留言记录，2默认选中留言记录,可切换到留言
+@param byController 当前执行跳转的VC           not null
+@param CloseBlock 留言点击返回时间 code = 0 ,正常关闭， ，其他情况发送错误
+*/
 + (void)openLeave:(int )showRecored kitinfo:(ZCKitInfo *)kitInfo with:(UIViewController *)byController onItemClick:(void (^)(NSString *msg,int code))CloseBlock;
 
 // 打开留言记录详情页面
@@ -84,16 +104,26 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 // 发送文字消息
 + (void)sendTextToUser:(NSString *)textMsg resultBlock:(void (^)(NSString *msg,int code))ResultBlock;
 
+/// 发送消息给人工
+/// @param textMsg  消息内如，如果是视频、图片、音频、文件时，请传本地图片路径
+/// @param msgType  0, //文本   1, //图片  12, // 文件   23, // 视频
+/// @param ResultBlock 发送结果 code == 0表示已发送
++ (void)sendMessageToUser:(NSString *)textMsg type:(NSInteger ) msgType resultBlock:(nonnull void (^)(NSString *, int code))ResultBlock;
+
+
 // 发送订单卡片
 + (void)sendOrderGoodsInfo:(ZCOrderGoodsModel *)orderGoodsInfo resultBlock:(void (^)(NSString *msg,int code))ResultBlock;
 
 // 发送商品卡片
 + (void)sendProductInfo:(ZCProductInfo *)productInfo resultBlock:(void (^)(NSString *msg,int code))ResultBlock;
 
-// 给机器人发送消息 ?
+// 给机器人发送消息
 + (void)sendTextToRobot:(NSString *)textMsg;
 
-// 同步用户信息
+
+///同步用户信息，如果没有建立会话，会默认建立一个新会话（同openZCChat）
+/// @param ResultBlock
+///  msg 操作结果说明，code=0成功，code==1失败
 + (void)synchronizationInitInfoToSDK:(void (^)(NSString *msg,int code))ResultBlock;
 
 // 转人工自定义
@@ -121,6 +151,12 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 // 显示日志信息 默认不显示
 + (void)setShowDebug:(BOOL)isShowDebug;
+
+/**
+*   获取对应商户客服是否正在和用户聊天
+*   appkey：商户id   uid： ZCPlatformInfo 类中的uid
+**/
++(BOOL)getPlatformIsArtificialWithAppkey:(NSString *)appkey Uid:(NSString*)uid;
 
 //
 + (NSString *)getSystem;
@@ -153,6 +189,12 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 // 获取最后一条消息
 + (NSString *)readLastMessage;
 
+
+/// 查询用户最后一条聊天记录
+/// @param resultBlock 会返回2次，第一次为本地缓存，第二次同步接口结果，必须保证有cid的前提才能获取到
+///  info：最后一条消息内容，message：内部使用消息体(不用)，code =0 本地，=1接口结果，其它为异常
++(void ) getLastMessageInfo:(void (^)(ZCPlatformInfo *info,ZCLibMessage *message, int code))resultBlock;
+
 // 检查当前消息通道是否建立，没有就重新建立
 + (void)checkIMConnected;
 
@@ -160,11 +202,26 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 + (void)closeIMConnection;
 
 // 清空用户下的所有未读消息(本地清空)
-+ (void)clearUnReadNumber;
++ (void)clearUnReadNumber:(NSString *) partnerid;
 
 // 获取未读消息数
 + (int)getUnReadMessage;
 
+// 获取最后一条消息
++(NSString *)getLastMessage;
+
+
+/// 从服务端同步语言文件
+/// @param lan  要同步的语言，如果本地bundle中已存在不会下载，en_lproj,zh-Hans_lproj
+/// @param isReWrite  如果已经下载过了是否重复下载
++(void)synchronizeLanguage:(NSString *) language write:(BOOL) isReWrite result:(void (^)(NSString *message,int code))ResultBlock;;
+
+
+/// 获取当前语言文件名称
++(NSString *)getCurLanguagePreHeader;
+
+// 测试多语言是否有效，key 参见zh-Hans_lproj中获取
++(NSString *)checkZCSTLocalString:(NSString *)key;
 
 @end
 

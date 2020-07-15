@@ -271,7 +271,4 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  */
 +(NSString *) readLogFileDateString:(NSString *) dateString;
 
-
-
-
 @end
