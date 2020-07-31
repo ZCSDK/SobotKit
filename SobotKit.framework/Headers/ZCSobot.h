@@ -16,6 +16,7 @@
 #import "ZCChatController.h"
 #import "ZCUIChatListController.h"
 #import "ZCChatView.h"
+#import "ZCUIWebController.h"
 
 
 /**

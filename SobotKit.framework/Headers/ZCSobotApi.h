@@ -21,6 +21,7 @@
 #import "ZCUICore.h"
 #import "ZCLibClient.h"
 #import "ZCPlatformTools.h"
+#import "ZCUIWebController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
