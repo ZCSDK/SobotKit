@@ -178,7 +178,7 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 + (void)setZCLibUncaughtExceptionHandler;
 
 // 读取日志文件内容 保存最近的7天
-+ (void)readLogFileDateString:(NSString *) dateString;
++ (NSString *)readLogFileDateString:(NSString *) dateString;
 
 
 /// 关闭通道，清理内存，退出智齿客户 移除推送

@@ -268,3 +268,6 @@
 
 // 2.8.6新增
 "由于服务到期，该功能已关闭。" = "The feature has been turned off due to service expiration.";
+"要删除这张照片吗？" = "Do you want to delete this photo?";
+"删除" = "delete";
+"您可以" = "You can";
