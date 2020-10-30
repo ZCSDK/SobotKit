@@ -760,4 +760,14 @@
 */
 @property (nonatomic,assign) BOOL hideChatTime;
 
+/**
+  是否隐藏机器人评价标签，默认不隐藏
+*/
+@property (nonatomic,assign) BOOL hideRototEvaluationLabels;
+
+/**
+  是否隐藏人工评价标签，默认不隐藏
+*/
+@property (nonatomic,assign) BOOL hideManualEvaluationLabels;
+
 @end

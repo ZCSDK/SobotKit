@@ -416,6 +416,16 @@
  */
 @property(nonatomic,copy) NSString *absolute_language NS_AVAILABLE_IOS(2.8.6);
 
+
+
+/*
+ 指定接口语言，
+ 例如：en、zh-Hant、zh-Hans、pt、ar等
+ */
+@property(nonatomic,copy) NSString *locale NS_AVAILABLE_IOS(2.8.9);
+
+
+
 -(id)initByJsonDict:(NSDictionary *) dict;
 
 @end

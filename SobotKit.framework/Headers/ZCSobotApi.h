@@ -22,6 +22,7 @@
 #import "ZCLibClient.h"
 #import "ZCPlatformTools.h"
 #import "ZCUIWebController.h"
+#import "ZCLocalStore.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -152,6 +153,12 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 // 显示日志信息 默认不显示
 + (void)setShowDebug:(BOOL)isShowDebug;
+
+
+
+/// 根据手机时区，自动适配
+/// @param autoMatchTimeZone  默认NO，不自动切换
++(void)setAutoMatchTimeZone:(BOOL) autoMatchTimeZone;
 
 /**
 *   获取对应商户客服是否正在和用户聊天
