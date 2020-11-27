@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeSound = 2, // 声音
     ZCMessageTypeRich  = 3, // 富文本
     ZCMessageTypeRichPhoto  = 4, // 富文本
-    ZCMessageTypeRichText = 5, //
+    ZCMessageTypeRichText = 5, // 富文本中纯文字
     ZCMessageTypeRichVideo = 6,
     ZCMessageTypeHotGuide = 7,
     ZCMessageTypeLoopRobotRich  = 11, // 多伦会话，按普通文本处理
@@ -34,6 +34,21 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessagetypeCancelSound = -5,//取消正在闪烁的语音cell
 };
 
+typedef NS_ENUM(NSInteger,ZCMessageRichType) {
+//    对象类型：
+//    * 0-富文本
+//    * 1-多伦会话
+//    * 2-位置
+//    * 3-小卡片
+//    * 4-订单卡片
+    
+    ZCMessageRichTypeText  = 0, //文本
+    ZCMessageRichTypeLoop = 1, //图片
+    ZCMessageRichTypeLocation = 2, // 声音
+    ZCMessageRichTypeGoods = 3, // 视频
+    ZCMessageRichTypeOrder  = 4, // 订单
+    ZCMessageRichTypeBrowseTrack  = 114, // 浏览轨迹
+};
 /**
  *  配置富媒体
  */
@@ -82,6 +97,38 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
  */
 @property (nonatomic,assign  ) int              fileType;
 @property (nonatomic,strong  ) NSString         *fileSize;
+@property (nonatomic,strong  ) NSString         *fileName;
+
+
+
+
+// 富文本类型
+@property (nonatomic,assign  ) ZCMessageRichType          richType;
+
+
+// 富文本数组:0：文本，1：图片，2：音频，3：视频，4：文件
+// {type:0,1,2,3,msg:}
+@property (nonatomic,strong  ) NSArray * richMsgList;
+
+
+// 新消息体
+@property (nonatomic,strong) NSArray         *goods;
+@property (nonatomic,assign) int          orderStatus;//:订单状态
+@property (nonatomic,copy) NSString          *orderStatusStr;//:订单状态
+@property (nonatomic,copy) NSString          *orderCode;//:订单编号
+@property (nonatomic,copy) NSString          *orderUrl;//:订单链接
+@property (nonatomic,copy) NSString          *createTime;//:创建时间
+@property (nonatomic,copy) NSString          *totalFee;//:总金额
+@property (nonatomic,copy) NSString          *goodsCount;//:商品个数
+@property (nonatomic,copy) NSString          *createTimeFormat;//：格式化后的时间url:位置链接地址
+@property (nonatomic,copy) NSString          *picUrl;//:位置缩略图
+
+@property (nonatomic,copy) NSString          *richMoreUrl;//富文本内容
+@property (nonatomic,copy) NSString          *snapshot;//富文本内容
+
+@property (nonatomic,copy) NSString          *thumbnail;//富文本内容
+@property (nonatomic,copy) NSString          *label;//富文本内容
+@property (nonatomic,copy) NSString          *url;//富文本内容
 
 
 //位置

@@ -358,6 +358,9 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 -(void)getNewMessageModel:(ZCLibMessage *)model isShowGroup:(BOOL)isShow;
 
 
+// 临时使用，查询数据时赋值
+@property (nonatomic,strong) NSMutableAttributedString * displayAttr;
+@property (nonatomic,strong) NSMutableAttributedString * displaySugestionattr;
 
 /**
  获取显示的组合内容

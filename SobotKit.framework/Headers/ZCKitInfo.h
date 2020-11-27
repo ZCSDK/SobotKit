@@ -770,4 +770,14 @@
 */
 @property (nonatomic,assign) BOOL hideManualEvaluationLabels;
 
+/**
+  是否底部新会话时的评价按钮留言按钮，默认不隐藏
+*/
+@property (nonatomic,assign) BOOL hideBottomLeave;
+
+/**
+  是否隐藏底部新会话时的评价按钮，默认不隐藏
+*/
+@property (nonatomic,assign) BOOL hideBottomEvaluation;
+
 @end
