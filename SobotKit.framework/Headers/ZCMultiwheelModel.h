@@ -14,6 +14,11 @@
 @property (nonatomic,copy) NSString          * docId;// 1a3a05c7025044e9a44a55e87c8dd0b9
 @property (nonatomic,assign) BOOL             endFlag; // false 多轮会话是否结束
 @property (nonatomic,strong) NSMutableArray   *interfaceRetList;// 问题列表
+
+// 如果inputContentList字段不为空，显示为链接样式
+@property (nonatomic,assign) BOOL   showLinkStyle;// 问题列表
+
+
 @property (nonatomic,copy) NSString          * level;
 @property (nonatomic,strong) NSString         * outPutParamList;// "movieId#movieId"
 @property (nonatomic,copy) NSString          * retCode;//"000000",接口返回的请求状态

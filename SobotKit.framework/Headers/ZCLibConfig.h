@@ -402,7 +402,15 @@
 @property (nonatomic,assign) BOOL queueFlag;
 
 // 获取用户留言记录列表接口 使用入参
-@property (nonatomic,copy) NSString * customerId;
+@property (nonatomic,strong) NSString * customerId;
+
+
+/// 离线消息开关，1:开; 0:关
+@property (nonatomic,assign) BOOL offlineMsgConnectFlag;
+
+/// 离线消息的客服ID，当id不为空是，说明当前客户发送了离线消息，需要直接转人工
+@property (nonatomic,strong) NSString *offlineMsgAdminId;
+
 
 /**
  *  对象封装

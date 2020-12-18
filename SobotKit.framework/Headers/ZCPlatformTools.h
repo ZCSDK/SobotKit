@@ -21,6 +21,15 @@
 + (instancetype)sharedInstance;
 
 
+
+/// 离线消息开关，1:开; 0:关,
+/// 临时存储使用
+@property (nonatomic,assign) BOOL isOfflineMsgConnect;
+
+/// 离线消息的客服ID，当id不为空是，说明当前客户发送了离线消息，需要直接转人工
+/// 临时存储使用
+@property (nonatomic,strong) NSString *offlineMsgAdminId;
+
 /**
  获取平台咨询过的商户列表
 

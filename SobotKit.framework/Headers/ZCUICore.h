@@ -236,7 +236,8 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 @property (nonatomic,assign) BOOL isSmartTurnServer;// 是否执行机器人智能转人工
 
 
-@property(nonatomic,strong) NSDictionary *satisfactionDict; // 评价代码
+@property(nonatomic,strong) NSDictionary *satisfactionDict; // 评价选项
+@property(nonatomic,strong) NSString *inviteSatisfactionCheckLabels; // 邀请评价已选择的标签
 
 +(ZCUICore *)getUICore;
 
