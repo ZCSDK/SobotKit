@@ -259,7 +259,7 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
 /**
  *
- *   transferFlag:1-指定技能组；2-客户选择技能组
+ *   transferFlag:1-指定技能组；2-客户选择技能组，3-默认规则
  *
  **/
 @property (nonatomic,assign) int  transferFlag;
@@ -313,6 +313,7 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 /**
  *
  *  queueFlag  排队方式标记  只在关键字转人工的时候传给服务端，其他情况传空
+ *  1:展示排队或者客服不在线提示，为0不展示(如果转人工失败显示机器人回复，如果成功，不显示机器人回复)
  *
  **/
 @property (nonatomic,assign)  int queueFlag;

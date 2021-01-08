@@ -426,6 +426,14 @@
 
 
 
+
+/*
+ 指定引导语,不同的用户设置特定的引导语
+ */
+@property(nonatomic,assign) int faqId NS_AVAILABLE_IOS(2.9.2);
+
+
+
 -(id)initByJsonDict:(NSDictionary *) dict;
 
 @end

@@ -213,6 +213,9 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 // 播放临时model，用于停止播放状态改变
 @property (nonatomic,strong) ZCLibMessage    *playModel;
 
+// 关键字转人工，机器人回复
+@property (nonatomic,strong) ZCLibMessage    *keyworkRobotReplyModel;
+
 
 @property (nonatomic,strong) NSString    *checkGroupId;
 @property (nonatomic,strong) NSString    *checkGroupName;
