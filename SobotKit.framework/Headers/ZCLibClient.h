@@ -159,7 +159,7 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  @param appkey 智齿appkey(如果是电商版本，请填写自己公司的APPKEY)
  @param apiHost,不设置为默认域名
  * 默认SaaS平台域名为:https://api.sobot.com
- * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
+ * 如果您是腾讯云服务，请设置为：https://www.soboten.com
  * 如果您是本地化部署，请使用你们自己的部署的服务域名
  @param resultBlock 初始化结果回调
  */
@@ -170,7 +170,7 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  *  初始化智齿客服 (2.7.1之前使用)
     @param apiHost 不设置为默认域名
     * 默认SaaS平台域名为:https://api.sobot.com
-    * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
+    * 如果您是腾讯云服务，请设置为：https://www.soboten.com
     * 如果您是本地化部署，请使用你们自己的部署的服务域名
  *
  **/

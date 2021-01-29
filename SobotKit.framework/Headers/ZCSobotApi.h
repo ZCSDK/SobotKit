@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param appkey 智齿appkey(如果是电商版本，请填写自己公司的APPKEY)
  @param apiHost
  * 默认SaaS平台域名为:https://api.sobot.com
- * 如果您是腾讯云服务，请设置为：https://ten.sobot.com
+ * 如果您是腾讯云服务，请设置为：https://www.soboten.com
  * 如果您是本地化部署，请使用你们自己的部署的服务域名
  @param resultBlock 初始化结果回调
  */

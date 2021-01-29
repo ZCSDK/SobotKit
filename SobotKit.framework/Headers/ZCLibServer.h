@@ -161,6 +161,13 @@
            failed:(void (^)(ZCLibMessage *, ZCMessageSendCode))failedBlock;
 
 
+// 转人工之前，发送消息给人工客服
+-(void)sendFirstMsgToUser:(NSString *)text
+           config:(ZCLibConfig *) _config
+          msgType:(ZCMessageType ) type
+            start:(void (^)(ZCLibMessage *))startBlock
+          success:(void (^)(ZCLibMessage *, ZCMessageSendCode))successBlock
+           failed:(void (^)(ZCLibMessage *, ZCMessageSendCode))failedBlock;
 
 
 /**
@@ -352,7 +359,7 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
  @parma commanyId: 企业编号
  */
 -(void)fileUploadForLeave:(NSString *) filePath
-                commanyId:(NSString *) commanyId
+                config:(ZCLibConfig *) libConfig
                     start:(void(^)())startBlock
                   success:(void(^)(NSString *fileURL,ZCNetWorkCode code)) successBlock
                      fail:(void(^)(ZCNetWorkCode errorCode)) failBlock;

@@ -237,6 +237,9 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 @property(nonatomic,strong) ZCLibMessage *lineModel;
 
 @property (nonatomic,assign) BOOL isSmartTurnServer;// 是否执行机器人智能转人工
+// 是否已经执行过转人工，再发送消息的时候使用，YES时，说明已经转过人工了，但是未说过话不做真正的转人工调用
+@property (nonatomic,assign) BOOL isAfterConnectUser;
+@property(nonatomic,strong) ZCLibMessage *afterModel;
 
 
 @property(nonatomic,strong) NSDictionary *satisfactionDict; // 评价选项

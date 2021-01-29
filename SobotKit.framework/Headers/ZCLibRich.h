@@ -15,16 +15,16 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeText  = 0, //文本
     ZCMessageTypePhoto = 1, //图片
     ZCMessageTypeSound = 2, // 声音
-    ZCMessageTypeRich  = 3, // 富文本
+//    ZCMessageTypeRich  = 3, // 富文本
     ZCMessageTypeRichPhoto  = 4, // 富文本
     ZCMessageTypeRichText = 5, // 富文本中纯文字
     ZCMessageTypeRichVideo = 6,
     ZCMessageTypeHotGuide = 7,
     ZCMessageTypeLoopRobotRich  = 11, // 多伦会话，按普通文本处理
-    ZCMessageTypeFile  = 12, // 文件
+    ZCMessageTypeFile  = 4, // 文件
     ZCMessageTypeLoopChat = 15,
     ZCMessageTypeLocation  = 22, // 位置
-    ZCMessageTypeVideo = 23,
+    ZCMessageTypeVideo = 3,
 //    ZCMessagetypeCard   = 101,//商品卡片消息
     ZCMessageTypeCard = 24,//商品卡片消息
     ZCMessageTypeOrder= 25,//订单卡片消息
@@ -42,10 +42,10 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 //    * 3-小卡片
 //    * 4-订单卡片
     
-    ZCMessageRichTypeText  = 0, //文本
-    ZCMessageRichTypeLoop = 1, //图片
-    ZCMessageRichTypeLocation = 2, // 声音
-    ZCMessageRichTypeGoods = 3, // 视频
+    ZCMessageRichTypeText  = 0,//-富文本
+    ZCMessageRichTypeLoop = 1, //多伦
+    ZCMessageRichTypeLocation = 2, // 位置
+    ZCMessageRichTypeGoods = 3, // 商品卡片
     ZCMessageRichTypeOrder  = 4, // 订单
     ZCMessageRichTypeBrowseTrack  = 114, // 浏览轨迹
 };
@@ -94,7 +94,17 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
  * 19 压缩文件格式
  * 20 txt文件格式
  * 21 其他文件格式
+ * DOC(0,"doc"),
+ PPT(1,"ppt"),
+ XLS(2,"xls"),
+ PDF(3,"pdf"),
+ MP3(4,"mp3"),
+ MP4(5,"mp4"),
+ RAR(6,"rar"),
+ TXT(7,"txt"),
+ OTHER(8,"other");
  */
+
 @property (nonatomic,assign  ) int              fileType;
 @property (nonatomic,strong  ) NSString         *fileSize;
 @property (nonatomic,strong  ) NSString         *fileName;

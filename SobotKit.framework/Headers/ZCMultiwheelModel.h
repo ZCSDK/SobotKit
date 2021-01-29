@@ -47,7 +47,7 @@
  *
  *  @return ZCLibRich
  */
--(id) initWithMyDict:(NSDictionary *)dict withAnswerType:(NSString *)answerType;
+-(id) initWithMyDict:(NSDictionary *)dict;
 
 
 -(NSString *)getRequestText:(NSDictionary *)model;

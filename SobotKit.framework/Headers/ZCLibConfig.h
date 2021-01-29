@@ -412,6 +412,10 @@
 @property (nonatomic,strong) NSString *offlineMsgAdminId;
 
 
+
+/// 延迟转人工，1:开; 0:关
+@property (nonatomic,assign) BOOL invalidSessionFlag;
+
 /**
  *  对象封装
  *

@@ -93,6 +93,10 @@ typedef NS_ENUM(NSInteger, ZCButtonClickTag) {
 
 // 仅有返回按钮
 - (void)setNavigationBarStyle;
+
+-(UIButton *)createHelpCenterButtons:(CGFloat ) y sView:(UIView *) superView;
+-(void)openZCSDK:(UIButton *)sender;
+
 @end
 
 

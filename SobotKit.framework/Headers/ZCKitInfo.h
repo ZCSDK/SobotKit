@@ -38,7 +38,8 @@
 /**
  *  链接地址正则表达式
  *  默认为：
-    @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{1,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(([a-zA-Z0-9]{2,4}).[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+    @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{1,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|([a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{1,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+ *
  */
 @property (nonatomic,strong) NSString * urlRegular;
 
@@ -137,6 +138,12 @@
  *  当导航栏右上角 显示 拨号按钮时  （和isShowTelIcon 一起设置有效）
  **/
 @property (nonatomic,copy) NSString * customTel;
+
+
+/// 帮助中心添加呼叫电话号码
+@property (nonatomic,copy) NSString * helpCenterTel;
+/// 帮助中心电话号码按钮字段
+@property (nonatomic,copy) NSString * helpCenterTelTitle;
 
 /**
  *导航栏右上角 是否显示 关闭按钮 默认不显示，关闭按钮，点击后无法监听后台消息

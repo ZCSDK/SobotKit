@@ -372,4 +372,6 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
 -(NSString *) getModelDisplaySugestionText;
 
+-(NSString *)getLastMessage;
+
 @end
