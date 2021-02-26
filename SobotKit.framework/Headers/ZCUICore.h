@@ -110,6 +110,7 @@ typedef NS_ENUM(NSInteger,ZCPagesType) {
     ZC_LeaveOffLine    = 4, //发送留言离线消息，提交留言后 服务端会将用户下线
 };
 
+
 @protocol ZCUICoreDelegate <NSObject>
 
 @optional
@@ -178,6 +179,8 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 @property(nonatomic,copy) BOOL (^LinkClickBlock)(NSString *linkUrl); // 1129
 @property(nonatomic,copy) void (^PageLoadBlock)(id object,ZCPageBlockType type);
+
+@property(nonatomic,copy) void (^ZCViewControllerCloseBlock)(id object,ZCPageCloseType type); // 1129
 
 
 @property(nonatomic,strong) ZCKitInfo     *kitInfo;

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = "SobotKit"
 
-s.version          = "2.9.3"
+s.version          = "2.9.4"
 
 s.summary          = "A marquee view used on iOS."
 s.description      = <<-DESC
@@ -28,7 +28,7 @@ s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 # s.osx.exclude_files = 'Classes/ios'
 # s.public_header_files = 'Classes/**/*.h'
 s.frameworks =  "AudioToolbox","AssetsLibrary","SystemConfiguration","AVFoundation","MobileCoreServices","WebKit"
-s.library   = 'z.1.2.5'
+#s.library   = 'z.1.2.5'
 
 # s.resource  = "icon.png"
 s.resources = 'SobotKit.bundle'

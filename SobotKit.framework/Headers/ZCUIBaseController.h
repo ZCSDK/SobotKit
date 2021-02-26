@@ -28,6 +28,14 @@ typedef NS_ENUM(NSInteger, ZCButtonClickTag) {
     BUTTON_SEND   = 8, // 清空历史记录
 };
 
+// 返回监听
+typedef NS_ENUM(NSInteger,ZCPageCloseType) {
+    ZC_CloseLeave       = 1, // 留言返回
+    ZC_CloseChat        = 2, // 会话页面
+    ZC_CloseHelpCenter  = 3, // 帮助中心
+    ZC_CloseChatList  = 4, // 电商消息中心
+};
+
 /**
  *  智齿SDK中公共UIViewController
  */

@@ -761,11 +761,17 @@
 */
 @property (nonatomic,strong) NSString * leaveMsgGroupId;
 
+/**
+  选择图片时，不直接发送，预览发送
+ 【注意：预览方框仅为放大镜效果，不是裁切图片，发送的还是原图】
+*/
+@property (nonatomic,assign) BOOL showPhotoPreview;
 
 /**
   是否隐藏会话时间，默认NO不隐藏；如果不是中国区，与客户端的真实时间是有差异可以选择隐藏会话中的时间
 */
 @property (nonatomic,assign) BOOL hideChatTime;
+
 
 /**
   是否隐藏机器人评价标签，默认不隐藏

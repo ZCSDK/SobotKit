@@ -76,6 +76,10 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 +(void)setMessageLinkClick:(BOOL (^)(NSString *link))messagelinkBlock;
 
 
+/// 点击返回按钮事件监听，仅点击事件有效，滑动返回不能触发
+/// @param backBlock id当前viewcontroller，type：帮助中心、留言、聊天、会话列表
++(void)setZCViewControllerBackClick:(void (^)(id currentVC,ZCPageCloseType type))backBlock;
+
 // 打开客户中心页面
 + (void)openZCServiceCenter:(ZCKitInfo *) info
                          with:(UIViewController *) byController
