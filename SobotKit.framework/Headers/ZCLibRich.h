@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeSound = 2, // 声音
 //    ZCMessageTypeRich  = 3, // 富文本
     ZCMessageTypeRichPhoto  = 4, // 富文本
-    ZCMessageTypeRichText = 5, // 富文本中纯文字
+    ZCMessageTypeRichTextJson = 5, // 对象
     ZCMessageTypeRichVideo = 6,
     ZCMessageTypeHotGuide = 7,
     ZCMessageTypeLoopRobotRich  = 11, // 多伦会话，按普通文本处理

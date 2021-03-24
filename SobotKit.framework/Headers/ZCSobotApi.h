@@ -94,7 +94,7 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 @param showRecored  是否选中留言记录，0不选择，默认功能，1仅显示留言记录，2默认选中留言记录,可切换到留言
 @param byController 当前执行跳转的VC           not null
-@param CloseBlock 留言点击返回时间 code = 0 ,正常关闭， ，其他情况发送错误
+@param CloseBlock 留言点击返回时间 code = 0 ,正常关闭， ，其他情况发送错误 如获取不到模版
 */
 + (void)openLeave:(int )showRecored kitinfo:(ZCKitInfo *)kitInfo with:(UIViewController *)byController onItemClick:(void (^)(NSString *msg,int code))CloseBlock;
 
@@ -112,7 +112,7 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 /// 发送消息给人工
 /// @param textMsg  消息内如，如果是视频、图片、音频、文件时，请传本地图片路径
-/// @param msgType  0, //文本   1, //图片  12, // 文件   23, // 视频
+/// @param msgType  0, //文本   1, //图片  4, // 文件   3, // 视频
 /// @param ResultBlock 发送结果 code == 0表示已发送
 + (void)sendMessageToUser:(NSString *)textMsg type:(NSInteger ) msgType resultBlock:(nonnull void (^)(NSString *, int code))ResultBlock;
 

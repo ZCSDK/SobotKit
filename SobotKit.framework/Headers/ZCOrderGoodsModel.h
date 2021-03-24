@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString *goodsCount;
 
 
-/// 单位为分，显示时会默认格式化为元，例如，传入100，显示效果为1.00元
+/// 单位为分，只能是int类型的数字（显示时会默认格式化为元，例如，传入100，显示效果为1.00元）
 @property (nonatomic,strong) NSString *totalFee;
 
 // 获取状态字符串内容

@@ -761,6 +761,13 @@
 */
 @property (nonatomic,strong) NSString * leaveMsgGroupId;
 
+
+/**
+ 留言模板 id
+ 获取：设置 —>工单
+*/
+@property (nonatomic,strong) NSString * leaveTemplateId;
+
 /**
   选择图片时，不直接发送，预览发送
  【注意：预览方框仅为放大镜效果，不是裁切图片，发送的还是原图】
@@ -792,5 +799,11 @@
   是否隐藏底部新会话时的评价按钮，默认不隐藏
 */
 @property (nonatomic,assign) BOOL hideBottomEvaluation;
+
+
+/**
+  是否隐藏导航右上角“...”更多按钮，默认不隐藏
+*/
+@property (nonatomic,assign) BOOL hideNavBtnMore;
 
 @end
