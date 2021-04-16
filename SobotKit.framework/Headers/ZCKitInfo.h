@@ -425,6 +425,12 @@
 @property (nonatomic,strong) UIColor    *commentButtonBgColor;
 
 /**
+ *  评价选项按钮选中颜色(默认跟随主题色)
+ */
+@property (nonatomic,strong) UIColor    *commentItemButtonBgColor;
+@property (nonatomic,strong) UIColor    *commentItemButtonSelBgColor;
+
+/**
  *  提示气泡的背景颜色
  */
 @property (nonatomic,strong) UIColor    *BgTipAirBubblesColor;

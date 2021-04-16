@@ -80,6 +80,14 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 @property (nonatomic,strong) UIButton * evaluationBtn;
 
 
+/**
+ *
+ *  评价
+ *
+ **/
+@property (nonatomic,strong) UIButton * telBtn;
+
+
 
 
 /**
@@ -132,5 +140,10 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
  *
  **/
 -(void)goEvaluation;
+/*
+  设置 成员变量 isClickCloseBtn 为false
+  在isShowReturnTips 为true 切点击了暂时离开 去调用
+ */
+- (void)setIsCloseNo;
 
 @end

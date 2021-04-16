@@ -48,6 +48,8 @@
 		<string>FFFFFF</string>
 		<key>ZCBgSystemWhiteThirdGrayColor</key>
 		<string>FFFFFF</string>
+		<key>ZCRatingBGColor</key>
+		<string>F0AC0E</string>
 	</dict>
 	<key>dark</key>
 	<dict>
@@ -95,6 +97,8 @@
 		<string>FFFFFF</string>
 		<key>ZCBgSystemWhiteThirdGrayColor</key>
 		<string>353538</string>
+		<key>ZCRatingBGColor</key>
+		<string>F0AC0E</string>
 	</dict>
 </dict>
 </plist>

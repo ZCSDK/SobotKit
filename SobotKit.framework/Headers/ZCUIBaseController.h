@@ -105,6 +105,7 @@ typedef NS_ENUM(NSInteger,ZCPageCloseType) {
 -(UIButton *)createHelpCenterButtons:(CGFloat ) y sView:(UIView *) superView;
 -(void)openZCSDK:(UIButton *)sender;
 
+- (void)layoutTopView;
 @end
 
 
