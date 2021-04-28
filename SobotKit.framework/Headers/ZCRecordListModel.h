@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 //"timeStr":"2019-03-05 17:14:55"
 
 @property (nonatomic,copy) NSString * content; // 工单描述
+@property (nonatomic,copy) NSMutableAttributedString * contentAttr; // 工单描述
 
 @property (nonatomic,assign) int flag;  //1 创建了  2 受理了 3 关闭了
 
@@ -54,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * replyTime; // 回复的时间 时间戳1552296719 需要处理
 @property (nonatomic,copy) NSString * replyTimeStr; // 回复的时间 时间戳1552296719 需要处理
 
+@property (nonatomic,strong) NSMutableAttributedString *replyTimeStrAttr;
 
 
 // flag == 3 的时候有子集 触发评价相关
@@ -71,6 +73,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 2.8.2
 @property (nonatomic,strong) NSMutableArray * fileList; // 文件
+
+
 
 
 -(id)initWithMyDict:(NSDictionary *)dict;

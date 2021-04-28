@@ -35,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,assign) int orderStatus;
 
+// 自定义订单状态，仅当orderStatus=0时生效
+@property (nonatomic,strong) NSString *statusCustom;
+
 @property (nonatomic,strong) NSString *orderCode;
 
 // Java 中的long类型，例如[NSString stringWithFormat:@"%.0f",[[NSDate date] timeIntervalSince1970]*1000*1000]
