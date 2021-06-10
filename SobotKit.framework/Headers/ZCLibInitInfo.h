@@ -75,7 +75,7 @@
 #pragma mark 用户信息相关字段
 /**
 *  用户唯一标识（对接用户可靠身份，不能写死，相同的值会获取同一份历史数据，不建议为null，如果为空会以设备区别）
-*  null
+*  最大不能超过300个字符
 *  将自动备注到客户资料 （所有渠道统一参数名称，替换原有的userId）
 */
 @property(nonatomic,strong) NSString *partnerid;
