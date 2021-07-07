@@ -38,6 +38,7 @@ typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
     ZCReceivedMessageRevertMsg      = 211,// 消息撤回
     ZCReceivedMessageLockType_1      = 2131,// 会话锁定
     ZCReceivedMessageLockType_2      = 2132,// 会话解锁
+    ZCReceivedMessageTransferTips     = 301,// 转接提示语
 };
 
 
