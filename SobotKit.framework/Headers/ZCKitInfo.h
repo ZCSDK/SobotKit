@@ -88,6 +88,13 @@
  */
 @property (nonatomic,assign) BOOL isShowPortrait;
 
+
+/**
+ *  仅支持竖屏
+ *  默认为 NO，如何强制横屏，默认为LandscapeRight
+ */
+@property (nonatomic,assign) BOOL isShowLandscape;
+
 /**
  *
  *  SDK 页面中使用自定义的导航栏不在使用系统的导航栏（隐藏）
