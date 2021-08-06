@@ -121,6 +121,9 @@
 /// 聊天页面底部加号中功能：隐藏留言，默认NO(不隐藏)
 @property (nonatomic,assign) BOOL hideMenuLeave;
 
+/// 聊天页面底部加号中功能：仅隐藏人工状态下的留言，默认NO(不隐藏)
+@property (nonatomic,assign) BOOL hideMenuManualLeave;
+
 /// 聊天页面底部加号中功能：隐藏图片，默认NO(不隐藏)
 @property (nonatomic,assign) BOOL hideMenuPicture;
 

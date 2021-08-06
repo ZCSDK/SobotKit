@@ -302,6 +302,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  @return
  */
 -(void)dismissSkillSetView;
+-(UIView *)getSkillView;
 
 /**
  *

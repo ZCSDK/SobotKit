@@ -37,8 +37,8 @@
  *  @param errorBlock           初始化失败，返回失败状态
  *  @param sysNumIncorrectBlock 企业编号错误
  */
-- (void)initSobotSDK:(void (^)(ZCLibConfig *config))successBlock
-                 error:(void (^)(ZCNetWorkCode status))errorBlock
+- (void)initSobotChat:(void (^)(ZCLibConfig *config))successBlock
+                 error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
        appIdIncorrect:(void (^)(NSString *appId))appIdIncorrectBlock;
 
 

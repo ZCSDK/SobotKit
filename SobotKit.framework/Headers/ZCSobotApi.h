@@ -23,6 +23,7 @@
 #import "ZCPlatformTools.h"
 #import "ZCUIWebController.h"
 #import "ZCLocalStore.h"
+#import "ZCServiceCentreVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -241,6 +242,14 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 // 测试多语言是否有效，key 参见zh-Hans_lproj中获取
 +(NSString *)checkZCSTLocalString:(NSString *)key;
+
+
+/// md5字符串
+/// @param sign 要转换的字符串
++(NSString *)zcMd5Sign:(NSString *) sign;
+
+// 获取当前时间戳(毫秒)
++(NSString *)zcGetCurrentTimes;
 
 @end
 

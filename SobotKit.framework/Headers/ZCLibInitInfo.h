@@ -23,6 +23,10 @@
 // 请使用app_key替换
 @property (nonatomic,strong) NSString   *appKey NS_DEPRECATED_IOS(1.5,2_8_0);
 
+// 签名 MD5（app_key+partnerid+secret+create_time）
+@property(nonatomic,strong) NSString *sign;
+// 签名使用的时间戳
+@property(nonatomic,strong) NSString *create_time;
 
 
 #pragma mark 电商相关参数，普通版本无需关注
