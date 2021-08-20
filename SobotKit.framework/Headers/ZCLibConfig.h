@@ -19,6 +19,9 @@
  */
 @property (nonatomic , strong) NSString *uid;
 
+@property (nonatomic , strong) NSString *pu;
+@property (nonatomic , strong) NSString *puid;
+
 @property (nonatomic , strong) NSString *equipmentId;
 
 // 记录企业编号

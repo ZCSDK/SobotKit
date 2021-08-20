@@ -28,6 +28,9 @@
 // 签名使用的时间戳
 @property(nonatomic,strong) NSString *create_time;
 
+// 未使用，内部测试专用
+@property(nonatomic,strong) NSString *secret;
+
 
 #pragma mark 电商相关参数，普通版本无需关注
 /**
@@ -435,6 +438,12 @@
  指定引导语,不同的用户设置特定的引导语
  */
 @property(nonatomic,assign) int faqId NS_AVAILABLE_IOS(2.9.2);
+
+
+/**
+ appInit 接口 0-非第一次进入 1-第一次进入
+ */
+@property(nonatomic,assign) int isFirstEntry  NS_AVAILABLE_IOS(3.0.2);
 
 
 

@@ -84,20 +84,8 @@ typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSStrin
  */
 @property (nonatomic,strong) NSString     *platformUnionCode;
 
-#pragma mark ---  原 appKey  userId  2.1.0之前的版本使用，之后的版本使用 ZCLibInitInfo中的参数
-/**
- appkey，应用的唯一标识
- */
-//@property (nonatomic,strong) NSString   *appKey;
 
-
-/**
- 推送的用户Id
- 与ZCLibInitInfo.h中的字段统一，取消推送的关键参数
- */
-//@property (nonatomic,strong) NSString   *userId;
-
-
+/// 初始化功能配置属性
 @property (nonatomic,strong) ZCLibInitInfo *libInitInfo;
 
 /**

@@ -366,7 +366,7 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
 
 // 临时使用，查询数据时赋值
-//@property (nonatomic,strong) NSMutableAttributedString * displayAttr;
+@property (nonatomic,strong) NSMutableAttributedString * displayMsgAttr;
 @property (nonatomic,strong) NSMutableAttributedString * displaySugestionattr;
 
 /**
@@ -374,9 +374,13 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
  @return
  */
+// 保证使用时不创建NSMutableAttributedString属性
 -(NSString *) getModelDisplayText;
+-(NSString *) getModelDisplayText:(BOOL) createAttr;
 
+// 保证使用时不创建NSMutableAttributedString属性
 -(NSString *) getModelDisplaySugestionText;
+-(NSString *) getModelDisplaySugestionText:(BOOL) createAttr;
 
 -(NSString *)getLastMessage;
 
