@@ -170,6 +170,11 @@
 @property (nonatomic , assign) BOOL     realuateFlag;
 
 /**
+ * 点踩 转人工开关  1 开启  0关闭
+ */
+@property (nonatomic, assign) BOOL  realuateTransferFlag;
+
+/**
  *realuateFlag 顶踩开关 0关闭 1开启
  留言相关 1显示 0不显示
  telShowFlag 电话是否显示

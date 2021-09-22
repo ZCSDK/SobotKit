@@ -282,9 +282,17 @@
 
 /**
  *   商品卡片信息是否自动发送（转人工成功时，自动发送商品卡片信息）
- *   默认不发送
+ *   默认关闭  开启后默认一次有效会话内只发送一次
  **/
 @property (nonatomic,assign) BOOL isSendInfoCard;
+
+/*
+   是否每次都自动发送商品信息 （转人工成功时，自动发送商品卡片信息）
+   需要先开启 isSendInfoCard = YES
+  （3.0.3版本新增）
+ */
+@property (nonatomic,assign) BOOL isEveryTimeSendCard;
+
 /**
  *  产品信息
  */
@@ -299,7 +307,10 @@
 /// 人工后，是否主动发送一条信息
 @property(nonatomic,assign) BOOL autoSendOrderMessage;
 
-
+/**
+ * 是否每次都发送订单信息，需要先设置参数 autoSendOrderMessage = YES
+ */
+@property(nonatomic,assign) BOOL isEveryTimeAutoSend;
 
 ////////////////////////////////////////////////////////////////
 // 自定义字体，（可选）

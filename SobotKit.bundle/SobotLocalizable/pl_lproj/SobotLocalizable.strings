@@ -26,7 +26,7 @@
 "换一组" = "zmień grupę";
 "建议为必填" = "sugerowane zgodnie z wymaganiami";
 "服务评价" = "Ocena";
-"留言" = "Wiadomość ";
+"留言" = "Wiadomość";
 "您好，客服" = "Witam, obsługa klienta";
 "接受了您的请求" = "Zaakceptowano Twoją prośbę";
 "服务器请求错误！" = "Wycofano wiadomość";
@@ -199,3 +199,5 @@
 "状态" = "stan";
 "自定义字段" = "Pole niestandardowe";
 "非常不满意" = "Bardzo niezadowolony";
+"未解决问题？点击" = "Nie rozwiązałeś swojego problemu?";
+"转人工服务" = "Usługi człowieka";

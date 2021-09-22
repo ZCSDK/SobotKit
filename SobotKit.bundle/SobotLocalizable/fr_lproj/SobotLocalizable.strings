@@ -26,7 +26,7 @@
 "换一组" = "Changer un groupe";
 "建议为必填" = "Suggérer : Obligatoire";
 "服务评价" = "Évaluation";
-"留言" = "Laisser un mot ";
+"留言" = "Laisser un mot";
 "您好，客服" = "Bonjour, service client";
 "接受了您的请求" = "a accepté votre demande";
 "服务器请求错误！" = "Erreur de demande du serveur!";
@@ -199,3 +199,5 @@
 "状态" = "Statut";
 "自定义字段" = "Champ personnalisé";
 "非常不满意" = "Très insatisfait";
+"未解决问题？点击" = "Votre problème n'a pas été résolu ?";
+"转人工服务" = "Services à la personne";

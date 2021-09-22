@@ -41,6 +41,17 @@
                  error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
        appIdIncorrect:(void (^)(NSString *appId))appIdIncorrectBlock;
 
+/**
+ *  获取留言转离线消息配置接口
+ *
+ *  @param
+ *  @param successBlock         请求成功 返回  msgLeaveTxt、 msgLeaveContentTxt参数值
+ *  @param errorBlock           请求失败，返回失败状态
+ */
+- (void)initLeaveMsgConfig:(NSString *)groupId
+                       uid:(NSString *)uid
+                     error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
+                   success:(void(^)(NSString *msgLeaveTxt,NSString *msgLeaveContentTxt)) successBlock;
 
 /**
  *  转接人工
@@ -517,8 +528,16 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                  success:(void(^)(NSDictionary *dict,ZCMessageSendCode sendCode)) successBlock
                     fail:(void(^)(NSString *errorMsg,ZCMessageSendCode errorCode)) failBlock;
 
-
-
+/**
+ *
+ *  获取留言模板  post  带技能组ID 接口
+ *
+ **/
+-(void)getWsTemplateList:(ZCLibConfig *)config
+                 groupId:(NSString *)groupId
+                   start:(void (^)())startBlock
+                 success:(void(^)(NSDictionary *dict,ZCMessageSendCode sendCode)) successBlock
+                    fail:(void(^)(NSString *errorMsg,ZCMessageSendCode errorCode)) failBlock;
 
 
 /**
@@ -677,13 +696,24 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
  * uid ：用户id
  * content： 留言内容
  **/
+//-(void)getLeaveMsgWith:(NSString*)uid
+//                       Content:(NSString *)content
+//                       start:(void (^)())startBlock
+//                     success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+//                      failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+/**
+ * 留言转离线消息接口
+ * uid ：用户id
+ * content： 留言内容
+ * groupId : 技能组ID
+ **/
 -(void)getLeaveMsgWith:(NSString*)uid
-                       Content:(NSString *)content
-                       start:(void (^)())startBlock
-                     success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
-                      failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
-
-
+               Content:(NSString *)content
+               groupId:(NSString *)groupId
+                 start:(void (^)())startBlock
+               success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 /**
  *
@@ -698,5 +728,14 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                                start:(void (^)())startBlock
                              success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
                               failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
-
+/**
+ *
+ *   sdk保存发给用户的系统消息 (机器人点踩，触发转人工提示语 并发送给服务端保存)
+ *
+ **/
+-(void)insertSysMsg:(ZCLibConfig *) config
+                msg:(NSString*)msg
+             start:(void (^)())startBlock
+           success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+             failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 @end

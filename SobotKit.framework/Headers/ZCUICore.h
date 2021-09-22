@@ -505,4 +505,15 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
                            content:(NSString *)content
                             config:(ZCLibConfig *) _config;
 
+// 设置技能组ID 转人工时赋值，重新初始化的时候清空@”“ ，1.留言转离线消息页面使用 2.留言转工单模板接口使用
+-(void)saveGroupIdWith:(NSString*)groupId;
+
+// 获取技能组ID
+-(NSString*)getTempGroupId;
+
+/*
+ *  机器人点踩 触发转人工提示语
+ *
+ */
+-(void)addTipTurnToArtificialMsg;
 @end
