@@ -439,16 +439,16 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 /**
  *
  *  清除用户计数
- *
+ *   3.0.4 不在使用
  **/
--(void)cleanUserCount;
+//-(void)cleanUserCount;
 
 /**
  *
  *  清除客服计数
- *
+ *   3.0.4不在使用
  **/
--(void)cleanAdminCount;
+//-(void)cleanAdminCount;
 
 /**
  *

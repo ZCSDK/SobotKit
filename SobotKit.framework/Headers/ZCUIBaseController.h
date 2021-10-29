@@ -77,6 +77,7 @@ typedef NS_ENUM(NSInteger,ZCPageCloseType) {
 @property (nonatomic,assign) BOOL  isArtificial;
 
 
+
 /**
  *  创建TitleView
  */
@@ -105,6 +106,7 @@ typedef NS_ENUM(NSInteger,ZCPageCloseType) {
 
 -(UIButton *)createHelpCenterButtons:(CGFloat ) y sView:(UIView *) superView;
 -(void)openZCSDK:(UIButton *)sender;
+
 
 @end
 
