@@ -108,6 +108,7 @@ typedef NS_ENUM(NSInteger,ZCPagesType) {
     ZC_AskTabelPage    = 2,
     ZC_LeaveRecordPage = 3,
     ZC_LeaveOffLine    = 4, //发送留言离线消息，提交留言后 服务端会将用户下线
+    ZC_UserClosePage   = 5,// 用户跳转到自己的页面后 关闭智齿页面
 };
 
 
@@ -182,6 +183,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 @property(nonatomic,copy) void (^ZCViewControllerCloseBlock)(id object,ZCPageCloseType type); // 1129
 
+@property(nonatomic,copy) void (^ZCClosePageBlock)(ZCPagesType type);
 
 @property(nonatomic,strong) ZCKitInfo     *kitInfo;
 
@@ -516,4 +518,6 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  *
  */
 -(void)addTipTurnToArtificialMsg;
+
+
 @end

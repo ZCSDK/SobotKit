@@ -251,6 +251,9 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 // 获取当前时间戳(毫秒)
 +(NSString *)zcGetCurrentTimes;
 
+// 关闭智齿页面
++(void)closeSobotPage;
+
 @end
 
 NS_ASSUME_NONNULL_END
