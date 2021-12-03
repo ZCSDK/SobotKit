@@ -200,4 +200,9 @@
 "自定义字段" = "Özelleştirilen metin";
 "非常不满意" = "Çok tatmin olmadı.";
 "未解决问题？点击" = "Sorununuzu çözmediniz mi?";
-"转人工服务" = "İnsan kaynakları";
+"转人工服务" = "İnsan kaynakları ";
+"展开消息" = "Mesajı genişlet";
+"继续发送" = "Göndermeye devam et";
+"拒绝" = "Reddetmek";
+"您已同意发送个人敏感信息，本次授权有效期24小时" = "Kişisel duygusal bilgi göndermeye kabul ettiniz. Bu yetkili 24 saat boyunca geçerli.";
+"您已拒绝发送此消息" = "Bu mesajı göndermeyi reddettiniz";

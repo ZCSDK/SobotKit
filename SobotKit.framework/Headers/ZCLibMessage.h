@@ -79,6 +79,22 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
     ZCTipMessageUnresolvedProblemTurn             = 30,
     /****** 发送留言转离线消息后，结束会话 *****/
     ZCTipMessageChatCloseByLeaveMsg               = 99,
+    
+    
+    /**
+         * 用户咨询页授权
+         */
+    ZCTipMessageChat_AUTH_SAFETY = 43,
+
+        /**
+         * 用户同意敏感词授权
+         */
+    ZCTipMessageChat_AUTH_AGREE = 44,
+
+        /**
+         * 用户拒绝敏感词授权
+         */
+    ZCTipMessageChat_AUTH_REFUSE = 45,
    
 };
 
@@ -181,9 +197,18 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 @property (nonatomic , assign) float progress;
 
 /**
- *  发送状态，1 开始发送，2发送失败，0，发送完成
+ *  发送状态，1 开始发送，2发送失败，0，发送完成 
  */
 @property (nonatomic , assign) int  sendStatus;
+
+
+/// 发送人是否包含敏感词,0不启动，1启动，2拒绝
+@property (nonatomic , assign) int includeSensitive;
+
+/// 如果触发敏感信息，是否展示所有信息，默认收起
+@property (nonatomic , assign) BOOL showAllMessage;
+// 敏感词提示语
+@property (nonatomic , strong) NSString *sentisiveExplain;
 
 /**
  *  是否播放
