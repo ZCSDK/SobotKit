@@ -201,3 +201,8 @@
 "非常不满意" = "Very dissatisfied";
 "未解决问题？点击" = "Did not solve your problems?";
 "转人工服务" = "manual service";
+"展开消息" = "Expand message";
+"继续发送" = "Keep sending";
+"拒绝" = "Refuse";
+"您已同意发送个人敏感信息，本次授权有效期24小时" = "You have agreed to send personal sensitive information. This authorization is valid for 24 hours";
+"您已拒绝发送此消息" = "You have declined to send this message";

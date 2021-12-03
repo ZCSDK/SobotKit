@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, ZCConnectUserStatusCode) {
     /** * 人工服务连接失败，已重新连接。 */
     ZCConnectUserServerFailed = -1,
     
-    /** * 连接失败。 */
+    /** * 连接失败, 排队中。 */
     ZCConnectUserOfWaiting = 0,
 
     /** * 连接成功。 */
@@ -61,8 +61,15 @@ typedef NS_ENUM(NSInteger, ZCConnectUserStatusCode) {
     /** * 用户已经转人工无需再次请求 */
     ZCConnectUserBeConnected = 4,
     
+    // 机器人超时下线，转人工
+    ZCConnectUserRobotTimeout = 5,
+    
+    //如果设置指定客服的id。并且设置不是必须转入，服务器返回status=6.这个时候要设置receptionistId为null
+        //为null以后继续转人工逻辑。如果技能组开启就弹技能组，如果技能组没有开启，就直接转人工
+    ZCConnectUserNextTry = 6,
+    
     /**  排队达到阀值 */
-    ZCConnectUserWaitingThreshold = 7,
+    ZCConnectUserWaitingThreshold = 7
     
 };
 

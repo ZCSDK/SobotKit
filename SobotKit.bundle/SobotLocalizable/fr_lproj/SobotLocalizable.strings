@@ -26,7 +26,7 @@
 "换一组" = "Changer un groupe";
 "建议为必填" = "Suggérer : Obligatoire";
 "服务评价" = "Évaluation";
-"留言" = "Laisser un mot";
+"留言" = "Laisser un mot ";
 "您好，客服" = "Bonjour, service client";
 "接受了您的请求" = "a accepté votre demande";
 "服务器请求错误！" = "Erreur de demande du serveur!";
@@ -200,4 +200,9 @@
 "自定义字段" = "Champ personnalisé";
 "非常不满意" = "Très insatisfait";
 "未解决问题？点击" = "Votre problème n'a pas été résolu ?";
-"转人工服务" = "Services à la personne";
+"转人工服务" = "Services à la personne ";
+"展开消息" = "Développer le message";
+"继续发送" = "Continuer à envoyer";
+"拒绝" = "Refuser";
+"您已同意发送个人敏感信息，本次授权有效期24小时" = "Vous avez accepté d\'envoyer des renseignements personnels de nature délicate et cette autorisation est valide 24 heures sur 24.";
+"您已拒绝发送此消息" = "Vous avez refusé d\'envoyer ce message";

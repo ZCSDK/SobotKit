@@ -200,4 +200,9 @@
 "自定义字段" = "Campi personalizzati";
 "非常不满意" = "Molto insoddisfatto";
 "未解决问题？点击" = "Non hai risolto il tuo problema?";
-"转人工服务" = "Servizi Umani";
+"转人工服务" = "Servizi Umani ";
+"展开消息" = "Espandi il messaggio";
+"继续发送" = "Continua a inviare";
+"拒绝" = "Rifiutare";
+"您已同意发送个人敏感信息，本次授权有效期24小时" = "Hai accettato di inviare informazioni sensibili personali. Questa autorizzazione è valida per il 24 ore";
+"您已拒绝发送此消息" = "Hai rifiutato di inviare questo messaggio";
