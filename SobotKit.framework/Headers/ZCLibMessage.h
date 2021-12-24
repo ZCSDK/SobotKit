@@ -347,10 +347,14 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
 /**
  *
- *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工  3、关键词转人工、4、多次命中转人工(显示转人工按钮，不主动转人工)，5、按回答类型设置转人工策略
- *
+ *  transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工  3、关键词转人工、4、多次命中转人工(显示转人工按钮，不主动转人工)，5:机器人自动转人工(新版拆分为6-9,activeTransfer此时为1) 6直接转人工，7理解转人工，8引导转人工，9未知转人工 10，点踩转人工
  **/
 @property (nonatomic,assign)  int transferType;
+
+
+
+/// 客户原始提问 用于接下来针对词条点赞点踩用，点踩/赞时需要记录用户的原始问题用于统计展示
+@property (nonatomic,strong  ) NSString         *originQuestion;
 
 
 /**

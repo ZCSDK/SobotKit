@@ -138,14 +138,11 @@
 
 /**
  自定义转人工调用
- @param groupId  传入技能组id
- @param obj 转人工类型(ZCLibClient.h 中的TurnServiceBlock会给)  obj[@"value"]，0-不转，1-重复提问转人工，2-情绪负向转人工
+ @param message 包含机器人触发转人工相关信息
  @param uiInfo 配置商品信息和自动发送参数
  @param turnType 转人工事件类型（按钮触发，关键字触发等）
- @param keyword 关键字
- @param keywordId 关键字id
  */
-+(void)turnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj KitInfo:(ZCKitInfo *)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
++(void)customConnectUserService:(ZCLibMessage *) message kitInfo:(ZCKitInfo*)uiInfo type:(int) trunType;
 
 /**
  *

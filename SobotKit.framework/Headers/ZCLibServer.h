@@ -53,6 +53,16 @@
                      error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
                    success:(void(^)(NSString *msgLeaveTxt,NSString *msgLeaveContentTxt,NSString *leaveExplain)) successBlock;
 
+
+/// 3.0.6新增接口
+/// @param parameters  转人工参数
+/// @param _config 当前初始化返回对象
+/// @param startBlock   开始
+/// @param resultBlock 结果回调（如果是fail，result是一个key为error的错误原因）
+-(void)connectOnlineCustomer:(ZCLibOnlineCustomerParams *) parameters
+                      config:(ZCLibConfig *) _config
+                       start:(void(^)())startBlock
+                      result:(void (^)(NSDictionary *result, ZCConnectUserStatusCode)) resultBlock;
 /**
  *  转接人工
  *

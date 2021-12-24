@@ -59,7 +59,7 @@ typedef void(^ZCServerConnectBlock)(id message,ZCServerConnectStatus status,NSDi
 
 
 
-typedef void(^TurnServiceBlock)(id obj,NSString *msg,NSInteger turnType, NSString*keyword ,NSString*keywordId);
+typedef void(^TurnServiceBlock)(ZCLibMessage *model, NSInteger turnType);
 
 
 

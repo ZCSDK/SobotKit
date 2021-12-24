@@ -23,9 +23,15 @@
 
 typedef NS_ENUM(NSInteger,ZCTurnType) {
     ZCTurnType_KeyWord                 = 1,  // 关键字转人工
-    ZCTurnType_CellGroupClick          = 2,  // 点击关键字cell 中技能组
-    ZCTurnType_BtnClick                = 3,  // 点击转人工按钮
-    ZCTurnType_RepeatOrMood            = 4,  // 重复提问转人工 z或者 情绪负向转人工
+    ZCTurnType_KeyWordNoGroup,               // 关键字转人工,直接转
+    ZCTurnType_KeyWordSmart,                // 智能转人工，静默转
+    ZCTurnType_CellGroupClick,              // 点击关键字cell 中技能组
+    ZCTurnType_BtnClick,                    // 点击转人工按钮
+    ZCTurnType_RepeatOrMood,                // 重复提问转人工 z或者 情绪负向转人工
+    ZCTurnType_InitBeConnected,             // 初始化已经是人工
+    ZCTurnType_InitOnUserType,              // 初始化仅人工或人工优先
+    ZCTurnType_CustomKeyWord,               // 客户自定义关键字转人工，不出转人工按钮，在ZCLibInitInfo中配置
+    ZCTurnType_OffMessageAdmin,            // 转接到发送过离线消息的客服
 };
 
 typedef NS_ENUM(NSInteger,ZCInitStatus) {
@@ -73,9 +79,7 @@ typedef NS_ENUM(NSInteger,ZCShowStatus) {
     ZCShowStatusGoBack           = 26,// 返回到启动页面结束会话
     
     ZCTurnRobotFramChange        = 27,  // 多机器人切换按钮位置发生改变时
-    
-    ZCShowStatusMessageTurnServer= 28,  // 机器人回复智能转人工
-    
+        
     ZCShowTurnRobotBtn           = 29, // 是否显示多机器人切换按钮
     
     ZCShowQuickEntryView         = 30,// 显示快捷入口，重新设置页面高度
@@ -135,7 +139,7 @@ typedef NS_ENUM(NSInteger,ZCPagesType) {
  *  跳转到 留言和询前表单页面
  *
  **/
--(void)coreOpenNewPageVC:(ZCPagesType)type IsExist:(LeaveExitType) isExist  isShowToat:(BOOL) isShow  tipMsg:(NSString *)msg  Dict:(NSDictionary*)dict Object:(id)obj;
+-(void)coreOpenNewPageVC:(ZCPagesType)type IsExist:(LeaveExitType) isExist  isShowToat:(BOOL) isShow  tipMsg:(NSString *)msg  Dict:(NSDictionary*)dict Object:(id)obj trunType:(ZCTurnType )type;
 /**
  *
  *  跳转到评价页面 当前类中不能持有 chatView ,chatView 需要服从 ZCUICore的代理
@@ -241,7 +245,6 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 @property(nonatomic,strong) ZCLibMessage *lineModel;
 
-@property (nonatomic,assign) BOOL isSmartTurnServer;// 是否执行机器人智能转人工
 // 是否已经执行过转人工，再发送消息的时候使用，YES时，说明已经转过人工了，但是未说过话不做真正的转人工调用
 @property (nonatomic,assign) BOOL isAfterConnectUser;
 @property(nonatomic,strong) ZCLibMessage *afterModel;
@@ -271,31 +274,27 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  */
 -(void)getChatMessages;
 
-/**
- 检查并执行转人工操作
-  (id)obj  情绪转人工或者 重复问题转人工传值
- msg : 是否重新初始化 是否清理技能组
- @return
- */
--(void)checkUserServiceWithObject:(id)obj Msg:(NSString *)msg;
-
-/**
- 转人工客户
- code :0 转接成功，1排队，2显示技能组
- arr  :技能组列表
- result:排队描述
- msg : 是否重新转人工 是否清理技能组id
- */
--(void)turnUserService:(void(^)(int code,NSMutableArray *arr,NSString *result)) ResultBlock object:(id)obj Msg:(NSString*)msg;
 
 
+/// 转人工之前检查
+/// @param type  转人工类型
+/// @param message 影响转人工的对象
+-(void)checkUserServiceWithType:(ZCTurnType) type model:(ZCLibMessage *) message;
+
+
+
+/// 执行转人工，会做训前表单校验
+/// @param msgModel 当前影响转人工的机器人回复
+/// @param type  转人工类型
+-(void)doConnectUserService:(ZCLibMessage *)msgModel connectType:(ZCTurnType) type;
+
+
+
 /**
- *  用户自己拦截转人工的事件 调用自己的技能组页面
- *
- *
+ * 用户自己拦截转人工的事件 调用自己的技能组页面
+ * 可以重新设置ZClibInitInfo中的人工客服或是否继续往下转
  **/
--(void)customTurnServiceWithGroupId:(NSString *)groupId  Obj:(id)obj KitInfo:(ZCKitInfo*)uiInfo ZCTurnType:(ZCTurnType)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
-
+-(void)customConnectUserService:(ZCLibMessage *) message KitInfo:(ZCKitInfo*)uiInfo ZCTurnType:(ZCTurnType) turnType;
 
 
 /**
@@ -381,20 +380,6 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 // style == light ,dark
 -(NSDictionary *)getZCThemeColorDict:(NSString *) style;
 
-
-/**
- 执行转人工操作
- obj:转人工类型 obj[@"value"] = 0,1,2 ，0-不转，1-重复提问转人工，2-情绪负向转人工
- */
--(void)doConnectUserService:(id)obj;
-
-
-/**
- *
- *   关键字转人工
- *   groupid  groupName  是客服点击选中的技能组， 没有传@“” turnType 转人工类型
- **/
--(void)toConnectUserService:(ZCLibMessage *)message  GroupId:(NSString *)groupidStr GroupName:(NSString *)groupNameStr ZCTurnType:(ZCTurnType)turnType;
 
 
 /**

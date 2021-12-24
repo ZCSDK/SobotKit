@@ -141,7 +141,7 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 + (void)synchronizationInitInfoToSDK:(void (^)(NSString *msg,int code))ResultBlock;
 
 // 转人工自定义
-+ (void)connectCustomerService:(NSString *)groupId  Obj:(id)obj KitInfo:(ZCKitInfo*)uiInfo ZCTurnType:(NSInteger)turnType Keyword:(NSString*)keyword KeywordId:(NSString*)keywordId;
++ (void)connectCustomerService:(ZCLibMessage *)message KitInfo:(ZCKitInfo*)uiInfo ZCTurnType:(NSInteger)turnType;
 
 
 /// 获取最新回复

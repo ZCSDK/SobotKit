@@ -434,3 +434,53 @@
 -(id)initWithMyDict:(NSDictionary *)dict;
 
 @end
+
+
+
+@interface ZCLibOnlineCustomerParams : NSObject
+
+// 指定客服
+@property (nonatomic,strong) NSString *chooseAdminId;
+/**
+*  指定客服 转接类型
+*       0 可转入其他客服 ， 1 必须转入指定客服
+  （注意：如果当前指定的客服不在线，选择之后不能在转接到其他客服）
+*/
+@property (nonatomic,assign) int tranFlag;
+
+// 指定技能组
+@property (nonatomic,strong) NSString *groupId;
+@property (nonatomic,strong) NSString *groupName;
+
+// 当前是否正在排队，1是，0不是
+@property (nonatomic,assign) int current;
+
+// queueFlag  排队方式标记  只在关键字转人工（transferType=3）的时候传给服务端，其他情况传空
+//  1:展示排队或者客服不在线提示，为0不展示(如果转人工失败显示机器人回复，如果成功，不显示机器人回复)
+@property (nonatomic,assign) int queueFlag;
+
+// 触发关键字转人工时的关键字
+@property (nonatomic,strong) NSString *keywordId;
+// 关键字，多个逗号隔开
+@property (nonatomic,strong) NSString *keyword;
+
+// 智能路由
+@property (nonatomic,strong) NSArray *transferAction;
+// 指定客户优先
+//  同PC端 设置-在线客服分配-排队优先设置-指定客户优先   开启传1 默认不设置
+@property (nonatomic,assign) int queueFirst;
+
+//转人工类型：1-重复提问，2-负向情绪 ,3-关键词转人工 4-多伦会话转人工 5:机器人自动转人工(新版拆分为6-9,activeTransfer此时为1) 6直接转人工，7理解转人工，8引导转人工，9未知转人工 10，点踩转人工
+@property (nonatomic,assign) int transferType;
+
+// 词条触发转人工的词条id
+@property (nonatomic,strong) NSString *docId;
+
+// 未知问题触发转人工的客户问的未知问题,机器人接口返回originQuestion字段
+@property (nonatomic,strong) NSString *unknownQuestion;
+
+//转人工方式 0：机器人触发转人工 1：客户主动转人工  ， 当transferType>=5是均为0
+@property (nonatomic,assign) int activeTransfer;
+
+
+@end
