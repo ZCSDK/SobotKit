@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger,ZCTurnType) {
     ZCTurnType_KeyWordSmart,                // 智能转人工，静默转
     ZCTurnType_CellGroupClick,              // 点击关键字cell 中技能组
     ZCTurnType_BtnClick,                    // 点击转人工按钮
+    ZCTurnType_BtnClickUpOrDown,            // 点击转人工，踩活赞
     ZCTurnType_RepeatOrMood,                // 重复提问转人工 z或者 情绪负向转人工
     ZCTurnType_InitBeConnected,             // 初始化已经是人工
     ZCTurnType_InitOnUserType,              // 初始化仅人工或人工优先

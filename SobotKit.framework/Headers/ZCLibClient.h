@@ -259,4 +259,11 @@ typedef void(^TurnServiceBlock)(ZCLibMessage *model, NSInteger turnType);
  */
 +(NSString *) readLogFileDateString:(NSString *) dateString;
 
+
+
+
+
+/// <#Description#>
+-(NSString *)getPlatform_userid;
+
 @end

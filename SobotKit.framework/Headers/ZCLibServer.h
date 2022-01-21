@@ -77,20 +77,20 @@
  *  @param transferType  转人工类型，0-不转，1-重复提问转人工，2-情绪负向转人工
  *  @param queueFlag 如果为1，展示排队或者客服不在线提示，为0不展示
  */
--(void)connectOnlineCustomer:(NSString *) groupId
-                   groupName:(NSString *) groupName
-                      config:(ZCLibConfig *) _config
-                         Aid:(NSString *) aid
-                    TranFlag:(int) tranFlag
-                     Keyword:(NSString*)keyword
-                   KeywordId:(NSString *)keywordId
-                     current:(BOOL) isWaiting
-                TransferType:(int)transferType
-                   QueueFlag:(int)queueFlag
-                  ActionType:(NSArray*)actionType
-                  QueueFirst:(int)queueFirst
-                       start:(void(^)())startBlock
-                      result:(void (^)(NSDictionary *dict, ZCConnectUserStatusCode status)) resultBlock;
+//-(void)connectOnlineCustomer:(NSString *) groupId
+//                   groupName:(NSString *) groupName
+//                      config:(ZCLibConfig *) _config
+//                         Aid:(NSString *) aid
+//                    TranFlag:(int) tranFlag
+//                     Keyword:(NSString*)keyword
+//                   KeywordId:(NSString *)keywordId
+//                     current:(BOOL) isWaiting
+//                TransferType:(int)transferType
+//                   QueueFlag:(int)queueFlag
+//                  ActionType:(NSArray*)actionType
+//                  QueueFirst:(int)queueFirst
+//                       start:(void(^)())startBlock
+//                      result:(void (^)(NSDictionary *dict, ZCConnectUserStatusCode status)) resultBlock;
 
 /**
  *  把本地数据，封装到展示Model上
