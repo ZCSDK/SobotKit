@@ -415,5 +415,5 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 -(NSString *) getModelDisplaySugestionText:(BOOL) createAttr;
 
 -(NSString *)getLastMessage;
-
+- (NSString *)getHtmlAttrStringWithText:(NSString *)text;
 @end

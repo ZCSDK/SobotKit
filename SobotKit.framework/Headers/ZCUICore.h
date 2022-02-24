@@ -254,6 +254,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 @property(nonatomic,strong) NSDictionary *satisfactionDict; // 评价选项
 @property(nonatomic,strong) NSString *inviteSatisfactionCheckLabels; // 邀请评价已选择的标签
 
+@property(nonatomic,assign) BOOL currtChatOver;// 当前是评价完人工结束会话的状态  
 +(ZCUICore *)getUICore;
 
 -(ZCLibConfig *) getLibConfig;
@@ -505,5 +506,11 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  */
 -(void)addTipTurnToArtificialMsg;
 
+/**
+ *   获取临时存储的UID
+ */
+-(NSString *)getTempUid;
 
+// 评价完人工结束会话之后 将config置为nil
+-(void)setclosepamasAndClearConfig;
 @end

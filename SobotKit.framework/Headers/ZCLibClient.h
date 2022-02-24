@@ -266,4 +266,15 @@ typedef void(^TurnServiceBlock)(ZCLibMessage *model, NSInteger turnType);
 /// <#Description#>
 -(NSString *)getPlatform_userid;
 
+
+
+// 电商版本
++(BOOL) isPlatformUnion;
+
+// 当前版本
++(NSString *)sobotGetSDKVersion;
+
+// 当前渠道
++(NSString *)sobotGetAppChannel;
+
 @end

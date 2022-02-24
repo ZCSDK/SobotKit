@@ -5,10 +5,6 @@
 //  Created by zhangxy on 15/10/22.
 //  Copyright © 2015年 ZCLib. All rights reserved.
 //
-
-#define FormateTime @"yyyy-MM-dd HH:mm:ss"
-
-
 /**
  *  @enum 智齿连接业务状态码
  */

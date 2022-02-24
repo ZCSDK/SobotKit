@@ -110,7 +110,7 @@
                              style:(NSInteger) style
                               send:(BOOL) isSend
                               name:(NSString *)user_nick
-                           content:(NSString *)count
+                           content:(id )count
                             config:(ZCLibConfig *) config;
 
 
@@ -149,7 +149,7 @@
  @param text 文档
  @param flag 
  int flag = 0;
- if(![@"" isEqual:zcLibConvertToString(docId)]){
+ if(![@"" isEqual:sobotConvertToString(docId)]){
  flag = 1;
  }
  @param docId 问题的docId
@@ -501,6 +501,7 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
  *
  **/
 -(void)getWsTemplateList:(ZCLibConfig *)config
+                     uid:(NSString*)uid
                  groupId:(NSString *)groupId
                    start:(void (^)())startBlock
                  success:(void(^)(NSDictionary *dict,ZCMessageSendCode sendCode)) successBlock
