@@ -21,7 +21,7 @@
 @property (nonatomic,assign) NSInteger lineSpacing;
 
 /**
- *  是否设置为暗黑模式 默认为0,跟随系统设置, 1暗黑
+ *  是否设置为暗黑模式 默认为0,跟随系统设置, 1暗黑，2普通模式
  */
 @property (nonatomic,assign) NSInteger themeStyle;
 

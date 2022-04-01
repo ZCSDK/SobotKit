@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define SOBOT_FORMATE_DATETIME @"YYYY-MM-dd HH:mm:ss SSS"
+//@"YYYY-MM-dd HH:mm:ss SSS"
+#define SOBOT_FORMATE_DATETIME @"YYYY-MM-dd HH:mm:ss"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -45,7 +46,14 @@ NSDate * sobotStringFormateDate(NSString * stringDate);
 NSString *sobotIntervalSinceNow(NSString *theDate);
 
 
-// 技术日期之间的差值
+
+/**
+ 返回时差小时
+ **/
+int sobotIntervalDateSinceSimpleNow(NSString *theDate);
+
+
+// 计数日期之间的差值
 NSTimeInterval sobotDiffTimeSinceNow(NSString *theDate);
 
 /**

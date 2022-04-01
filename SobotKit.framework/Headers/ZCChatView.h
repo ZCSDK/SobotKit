@@ -133,6 +133,7 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
  *
  **/
 -(void)beginAniantions;
+-(void)setFrameForListTable;
 
 /**
  *
