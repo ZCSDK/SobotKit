@@ -182,7 +182,7 @@
 @property (nonatomic,assign) BOOL isUseImagesxcassets;
 
 /**
- *针对关闭按钮，单独设置是否显示评价界面，默认不显示
+ *针对关闭按钮，单独设置是否显示评价界面，默认不显示  (同isShowReturnTips 一起设置起效)
  */
 @property (nonatomic,assign) BOOL isShowCloseSatisfaction;
 
