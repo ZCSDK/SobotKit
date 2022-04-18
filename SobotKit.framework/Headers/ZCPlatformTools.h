@@ -57,6 +57,7 @@
 //////////////////////////////////////////
 -(ZCPlatformInfo *)getPlatformInfo;
 -(ZCLibMessage *)getWaitintMessage;
+-(NSString *)getPlatformUserId;
 
 
 /**
