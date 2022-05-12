@@ -21,6 +21,7 @@ typedef void(^onZCReceiveMessageBlock)(ZCLibMessage *message,int num,id obj);
 typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
     ZCReceivedMessageUnKonw         = -1,// 未知类型
     ZCReceiVedMessageNotice         = -2,// 通告不置顶
+    ZCReceivedMessageLeaveMessage         = -3,// 留言回显信息
     ZCReceiVedMessageDefault        = 0, // 普通消息
     ZCReceivedMessageNews           = 202,// 新消息
     ZCReceivedMessageOnline         = 200,// 接入人工成功

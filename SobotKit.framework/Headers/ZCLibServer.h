@@ -292,6 +292,7 @@
 -(void)sendLeaveMessage:(NSMutableDictionary *) params
                  config:(ZCLibConfig *) config
              TemplateId:(NSString *)templateId
+             ticketFrom:(NSString *)ticketFrom
                 success:(void (^)(ZCNetWorkCode code,int status,NSString *msg))successBlock
                  failed:(void (^)(NSString *errorMessage, ZCNetWorkCode erroCode))failedBlock;
 
@@ -691,6 +692,7 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
  *
  **/
 -(void)insertSysMsg:(ZCLibConfig *) config
+              title:(NSString*)title
                 msg:(NSString*)msg
              start:(void (^)())startBlock
            success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock

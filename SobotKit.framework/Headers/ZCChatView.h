@@ -134,7 +134,7 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
  **/
 -(void)beginAniantions;
 -(void)setFrameForListTable;
-
+-(void)setQuickViewFrame;
 /**
  *
  *  去评价
@@ -146,5 +146,8 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
   在isShowReturnTips 为true 切点击了暂时离开 去调用
  */
 - (void)setIsCloseNo;
+
+// 横竖屏切换时，将键盘回收
+-(void)hiddenKeyBoard;
 
 @end

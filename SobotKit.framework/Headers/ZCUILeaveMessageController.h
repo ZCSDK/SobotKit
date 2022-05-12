@@ -20,21 +20,17 @@ typedef void(^BackRefreshPageBlock)(id _Nonnull object);
 @property (nonatomic,assign) BOOL             isExitSDK;
 @property (nonatomic,assign) BOOL             isNavOpen;
 
-@property (nonatomic,strong) UIViewController *backVC;
-
-@property (nonatomic,assign) NSInteger        exitType;
-
 /**  是否显示排队人数已满*/
 @property (nonatomic,assign) BOOL             isShowToat;
 
-@property (nonatomic,strong) NSString         *tipMsg;
+@property (nonatomic,strong) NSString         * _Nullable tipMsg;
 
 @property (nonatomic,assign) int selectedType; // 默认 创建工单 2 留言记录
 
-@property (nonatomic,strong) NSDictionary * templateldIdDic;// {"templateId":1}，模板id从配置列表接口获取
+@property (nonatomic,strong) NSDictionary * _Nullable templateldIdDic;// {"templateId":1}，模板id从配置列表接口获取
 
 
-@property(nonatomic,strong)NSMutableArray   *coustomArr;// 用户自定义字段数组
+@property(nonatomic,strong)NSMutableArray   * _Nullable coustomArr;// 用户自定义字段数组
 
 // 2.7.1版本 和留言模板关联 数据从模板接口获取 原初始化接口的数据不在使用
 @property (nonatomic , assign) BOOL     telShowFlag;
@@ -65,9 +61,7 @@ typedef void(^BackRefreshPageBlock)(id _Nonnull object);
 
 @property (nonatomic,copy) NSString * _Nullable ticketTypeId;// 当-指定分类 传这个值
 
-@property (nonatomic,copy) BackRefreshPageBlock backRefreshPageblock;
-// 直接退出SDK 并关闭技能组弹框
--(void)setCloseBlock:(void (^)())closeBlock;
+@property (nonatomic,copy) BackRefreshPageBlock  _Nullable backRefreshPageblock;
 
 
 @end

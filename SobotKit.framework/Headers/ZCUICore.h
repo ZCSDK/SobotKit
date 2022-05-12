@@ -89,6 +89,9 @@ typedef NS_ENUM(NSInteger,ZCShowStatus) {
     
     
     ZCShowTextHeightChanged      = 33,// 输入框高度变化了
+    
+    
+    ZCShowLeaveEditViewWithTempleteId      = 34,// 多伦会话触发留言，以底部弹出方式显示
 };
 
 /**
