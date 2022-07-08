@@ -200,10 +200,12 @@
 "自定义字段" = "Campos personalizados";
 "非常不满意" = "Muito insatisfeito.";
 "未解决问题？点击" = "Não resolveu seu problema?";
-"转人工服务" = "Serviços Humanos ";
+"转人工服务" = "Serviços Humanos";
 "展开消息" = "Expanda a mensagem";
 "继续发送" = "Continue enviando";
 "拒绝" = "Recusar";
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "Você concordou em enviar informações pessoais sensíveis. Esta autorização é válida por 24 horas";
 "您已拒绝发送此消息" = "Você se recusou a enviar esta mensagem";
 "附件" = "invólucro";
+"填写信息" = "Preencher as informações";
+"排队自动断开结束会话" = "Terminar a sessão após a desconexão automática em fila";

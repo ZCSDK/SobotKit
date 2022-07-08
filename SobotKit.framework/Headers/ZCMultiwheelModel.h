@@ -38,7 +38,7 @@
 // 0,1,2,3,4
 @property (nonatomic,assign) int            templateIdType;// 模板类型
 
-//留言模版id，如果此字段不为空，当前为多伦最好一轮，并且3秒后，触发留言
+//留言模版id，如果此字段不为空，当前为多轮最好一轮，并且3秒后，触发留言
 @property (nonatomic,strong) NSString       *leaveTemplateId;
 
 //@property (nonatomic,strong) NSMutableArray         *inputContentList;// \"北京,上海,成都\",     手动输入[{"年龄":"18"},{"性别":"女"}]

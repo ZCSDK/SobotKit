@@ -29,10 +29,13 @@ typedef NS_ENUM(NSInteger,ZCReceivedMessageType) {
     ZCReceivedMessageTansfer        = 210,// 转接
     ZCReceivedMessageChatLock       = 213,// 会话锁定
     ZCReceivedMessageChatWarning    = 215,// 诈骗词告警
+    ZCReceivedMessageChatWartingOutTips    = 2155,// 排队离线提醒
+    ZCReceivedMessageOfflineUnknown = 2040,// 未识别原因下线
     ZCReceivedMessageOfflineByAdmin = 2041,// 管理员下线
     ZCReceivedMessageOfflineByClose = 2042,// 管理员移除用户
     ZCReceivedMessageOfflineBeBlack = 2043,// 被拉入黑名单，不重新接入
-    ZCReceivedMessageOfflineToLong  = 2044,// 长时间未说话
+    ZCReceivedMessageOfflineToLong  = 2044,// 长时间未说话,2049用户被下线
+    ZCReceivedMessageOfflineToWaiting  = 2049,// 排队超时离线
     ZCReceivedMessageToNewWindow    = 2046,// 打开新窗口
     ZCReceivedMessageConfirm        = 301,// 消息确认
     ZCReceivedMessageEvaluation     = 209,// 客服主动推送评价

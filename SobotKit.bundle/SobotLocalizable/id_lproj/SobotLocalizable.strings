@@ -200,10 +200,12 @@
 "自定义字段" = "Tanah adat";
 "非常不满意" = "Sangat tidak puas";
 "未解决问题？点击" = "Tidak menyelesaikan masalah Anda?";
-"转人工服务" = "Layanan manusia ";
+"转人工服务" = "Layanan manusia";
 "展开消息" = "Perluas pesannya";
 "继续发送" = "Terus kirim";
 "拒绝" = "Menolak";
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "Anda telah setuju untuk mengirim informasi sensitif pribadi. Otorisasi ini valid selama 24 jam";
 "您已拒绝发送此消息" = "Anda telah menolak untuk mengirim pesan ini";
 "附件" = "penyamaran";
+"填写信息" = "Compilare le informazioni";
+"排队自动断开结束会话" = "Termina la sessione dopo la disconnessione automatica in coda";

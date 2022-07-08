@@ -95,6 +95,14 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
          * 用户拒绝敏感词授权
          */
     ZCTipMessageChat_AUTH_REFUSE = 45,
+    /**
+     * 用户排队超时离线
+     */
+    ZCTipMessageChat_WaitingOut = 46,
+    /**
+     * 用户排队超时离线提醒
+     */
+    ZCTipMessageChat_WaitingOutTips = 47
    
 };
 

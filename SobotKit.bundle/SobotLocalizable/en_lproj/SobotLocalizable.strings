@@ -207,3 +207,5 @@
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "You have agreed to send personal sensitive information. This authorization is valid for 24 hours";
 "您已拒绝发送此消息" = "You have declined to send this message";
 "附件" = "Enclosure";
+"填写信息" = "Fill in information";
+"排队自动断开结束会话" = "End session after queued auto disconnect";

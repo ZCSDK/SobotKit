@@ -91,7 +91,7 @@ typedef NS_ENUM(NSInteger,ZCShowStatus) {
     ZCShowTextHeightChanged      = 33,// 输入框高度变化了
     
     
-    ZCShowLeaveEditViewWithTempleteId      = 34,// 多伦会话触发留言，以底部弹出方式显示
+    ZCShowLeaveEditViewWithTempleteId      = 34,// 多轮会话触发留言，以底部弹出方式显示
 };
 
 /**
@@ -516,4 +516,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 // 评价完人工结束会话之后 将config置为nil
 -(void)setclosepamasAndClearConfig;
+
+// 是否有正在录音的model在闪烁展示
+-(BOOL)getRecordModel;
 @end

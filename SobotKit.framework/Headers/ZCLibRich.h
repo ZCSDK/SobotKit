@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
     ZCMessageTypeRichTextJson = 5, // 对象
     ZCMessageTypeRichVideo = 6,
     ZCMessageTypeHotGuide = 7,
-    ZCMessageTypeLoopRobotRich  = 11, // 多伦会话，按普通文本处理
+    ZCMessageTypeLoopRobotRich  = 11, // 多轮会话，按普通文本处理
     ZCMessageTypeFile  = 4, // 文件
     ZCMessageTypeLoopChat = 15,
     ZCMessageTypeLocation  = 22, // 位置
@@ -37,13 +37,13 @@ typedef NS_ENUM(NSInteger,ZCMessageType) {
 typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 //    对象类型：
 //    * 0-富文本
-//    * 1-多伦会话
+//    * 1-多轮会话
 //    * 2-位置
 //    * 3-小卡片
 //    * 4-订单卡片
     
     ZCMessageRichTypeText  = 0,//-富文本
-    ZCMessageRichTypeLoop = 1, //多伦
+    ZCMessageRichTypeLoop = 1, //多轮
     ZCMessageRichTypeLocation = 2, // 位置
     ZCMessageRichTypeGoods = 3, // 商品卡片
     ZCMessageRichTypeOrder  = 4, // 订单
@@ -180,7 +180,7 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 
 /**
  *  1 直接回答，2 理解回答，3 不能回答, 4引导回答，6互联网寒暄，
- *  7 私有寒暄（包括第三方天气、快递接口）,8百科, 9 向导回答,10 业务接口    // 151 152 153 待接口 多轮会话的类型,1525 多伦触发留言
+ *  7 私有寒暄（包括第三方天气、快递接口）,8百科, 9 向导回答,10 业务接口    // 151 152 153 待接口 多轮会话的类型,1525 多轮触发留言
  */
 @property (nonatomic,assign  ) int              answerType;
 

@@ -26,7 +26,7 @@
 "换一组" = "zmień grupę";
 "建议为必填" = "sugerowane zgodnie z wymaganiami";
 "服务评价" = "Ocena";
-"留言" = "Wiadomość ";
+"留言" = "Wiadomość";
 "您好，客服" = "Witam, obsługa klienta";
 "接受了您的请求" = "Zaakceptowano Twoją prośbę";
 "服务器请求错误！" = "Wycofano wiadomość";
@@ -200,10 +200,12 @@
 "自定义字段" = "Pole niestandardowe";
 "非常不满意" = "Bardzo niezadowolony";
 "未解决问题？点击" = "Nie rozwiązałeś swojego problemu?";
-"转人工服务" = "Usługi człowieka ";
+"转人工服务" = "Usługi człowieka";
 "展开消息" = "Rozwiń wiadomość";
 "继续发送" = "Wysyłaj dalej";
 "拒绝" = "Odrzucać";
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "Użytkownik zgodził się na przesłanie poufnych danych osobowych. Niniejsze zezwolenie jest ważne przez dobę godzin";
 "您已拒绝发送此消息" = "Odmówiłeś wysłania tej wiadomości";
 "附件" = "obudowa";
+"填写信息" = "Wypełnij informacje";
+"排队自动断开结束会话" = "Zakończ sesję po automatycznym rozłączeniu w kolejce";
