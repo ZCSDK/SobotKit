@@ -77,6 +77,10 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 +(void)setMessageLinkClick:(BOOL (^)(NSString *link))messagelinkBlock;
 
 
+/// 点击拦截 小程序事件
+/// @param appletBlock 获取到的参数对象
++(void)setAppletClickBlock:(BOOL(^)(ZCLibMessage *_Nonnull))appletBlock;
+
 /// 点击返回功能事件监听，使用setFunctionClickListener替换
 /// @param backBlock id当前viewcontroller，type：帮助中心、留言、聊天、会话列表
 +(void)setZCViewControllerBackClick:(void (^)(id currentVC,ZCPageCloseType type))backBlock;

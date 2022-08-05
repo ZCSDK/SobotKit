@@ -209,3 +209,6 @@
 "附件" = "penyamaran";
 "填写信息" = "Compilare le informazioni";
 "排队自动断开结束会话" = "Termina la sessione dopo la disconnessione automatica in coda";
+"小程序" = "Aplet";
+"小程序只能通过微信打开" = "Aplet hanya dapat dibuka melalui wechat";
+"解析中..." = "Menganalisis";

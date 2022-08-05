@@ -209,3 +209,6 @@
 "附件" = "Anexo";
 "填写信息" = "Rellene la información";
 "排队自动断开结束会话" = "Terminar la sesión después de que la cola se desconecte automáticamente";
+"小程序" = "Applet";
+"小程序只能通过微信打开" = "Los applets sólo se pueden abrir a través de Wechat";
+"解析中..." = "Analizar...";

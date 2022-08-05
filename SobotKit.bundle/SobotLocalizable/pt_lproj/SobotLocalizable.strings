@@ -209,3 +209,6 @@
 "附件" = "invólucro";
 "填写信息" = "Preencher as informações";
 "排队自动断开结束会话" = "Terminar a sessão após a desconexão automática em fila";
+"小程序" = "Applet";
+"小程序只能通过微信打开" = "A 'Applet' só pode ser aberta através do wechat";
+"解析中..." = "Analisar";

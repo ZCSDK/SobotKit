@@ -41,12 +41,13 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 //    * 2-位置
 //    * 3-小卡片
 //    * 4-订单卡片
-    
+//    * 6-小程序卡片
     ZCMessageRichTypeText  = 0,//-富文本
     ZCMessageRichTypeLoop = 1, //多轮
     ZCMessageRichTypeLocation = 2, // 位置
     ZCMessageRichTypeGoods = 3, // 商品卡片
     ZCMessageRichTypeOrder  = 4, // 订单
+    ZCMessageRichTypeApplet  = 6, // 小程序卡片
     ZCMessageRichTypeBrowseTrack  = 114, // 浏览轨迹
 };
 /**
@@ -69,6 +70,7 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
  */
 @property (nonatomic,strong  ) NSString         * msg;
 
+@property (nonatomic,assign) BOOL isShowLinkCard;// 是否显示链接卡片
 /**
  语音翻译
  */
@@ -83,6 +85,9 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
  *  0文本 1图片 2音频 4 富文本中有图片 5 富文本中纯文字 6 富文本中有视频 15，多轮会话  7.热点引导, 8文件 ,24 商品卡片
  */
 @property (nonatomic,assign  ) ZCMessageType              msgType;
+
+// 当msgType =5时 type=6 是小程序卡片
+@property (nonatomic,assign) int type;
 
 /**
  * 13 doc文件格式
@@ -225,8 +230,28 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 /** 当前数据是 热点引导*/
 @property (nonatomic,assign) BOOL isHotGuide;
 
+//**************** 小程序使用参数 *************
+@property (nonatomic, copy) NSString *pagepath;// 页面
+@property (nonatomic, copy) NSString *appId;//  id
+@property (nonatomic, copy) NSString *titleStr;// 标题
+@property (nonatomic, copy) NSString *thumbUrl; // 封面
+@property (nonatomic, copy) NSString *logo; // 小图标
+@property (nonatomic, copy) NSString *descStr; // 描述
+//************ 小程序end ************
+
+// ****** 缓存链接卡片解析后的数据 ********
+@property (nonatomic, copy) NSString *linkTitle;
+@property (nonatomic, copy) NSString *linkDesc;
+@property (nonatomic, copy) NSString *linkIcon;
 
 
+// ************ 一问多答点踩 使用 ***********
+//kbId-知识库id   kbName-知识库名称  ruleId-规则id  answerId-答案id
+@property (nonatomic,copy) NSString *kbId;   // 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *kbName;  // 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *ruleId; // 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *answerId;// 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *answerStr;//一问多答 点踩 接口使用
 
 /**
  *  初始化
@@ -247,4 +272,6 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
  */
 -(ZCLibRich *) initWithAsnwer:(NSString *)answer WithSenderType:(int)senderType IsHistory:(BOOL) isHistory isHotGuide:(BOOL) ishotGuide;
 
+
+-(NSMutableDictionary *) getMsgDictionary:(NSString *) tempMessage;
 @end

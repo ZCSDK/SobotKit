@@ -209,3 +209,6 @@
 "附件" = "kaplama";
 "填写信息" = "Bilgi doldur";
 "排队自动断开结束会话" = "Otomatik bağlantısını kapattıktan sonra oturum bitir";
+"小程序" = "Applet";
+"小程序只能通过微信打开" = "Applet can only be opened through wechat";
+"解析中..." = "ParsingAnalisi";

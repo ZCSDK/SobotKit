@@ -209,3 +209,6 @@
 "附件" = "Chung";
 "填写信息" = "Điền thông tin vào";
 "排队自动断开结束会话" = "Kết thúc phiên chạy sau khi xếp hàng tự động ngắt";
+"小程序" = "Name";
+"小程序只能通过微信打开" = "Táo chỉ có thể mở qua wechat";
+"解析中..." = "Đức";

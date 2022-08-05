@@ -209,3 +209,6 @@
 "附件" = "Gehäuse";
 "填写信息" = "Informationen ausfüllen";
 "排队自动断开结束会话" = "Sitzung nach automatischer Trennung in der Warteschlange beenden";
+"小程序" = "AppletName";
+"小程序只能通过微信打开" = "Applet kann nur über Wechat geöffnet werden";
+"解析中..." = "Analyse";

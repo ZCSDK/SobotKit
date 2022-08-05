@@ -209,3 +209,6 @@
 "附件" = "recinzione";
 "填写信息" = "Compilare le informazioni";
 "排队自动断开结束会话" = "Termina la sessione dopo la disconnessione automatica in coda";
+"小程序" = "Applet";
+"小程序只能通过微信打开" = "Applet può essere aperto solo tramite wechat";
+"解析中..." = "Analisi";

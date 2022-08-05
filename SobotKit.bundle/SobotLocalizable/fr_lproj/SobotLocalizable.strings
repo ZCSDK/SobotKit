@@ -201,3 +201,6 @@
 "非常不满意" = "Très insatisfait";
 "未解决问题？点击" = "Votre problème n'a pas été résolu ?";
 "转人工服务" = "Services à la personne";
+"小程序" = "Applet";
+"小程序只能通过微信打开" = "Les applets ne peuvent être ouverts que par Wechat";
+"解析中..." = "Parsing...";

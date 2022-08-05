@@ -713,4 +713,14 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                         success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
                          failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
+
+///  获取超链解析数据接口
+/// @param url 要解析的超链
+/// @param startBlock startBlock description
+/// @param successBlock successBlock description
+/// @param failedBlock failedBlock description
+-(void)getHtmlAnalysisWithURL:(NSString *)url
+                        start:(void (^)())startBlock
+                      success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                       failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 @end

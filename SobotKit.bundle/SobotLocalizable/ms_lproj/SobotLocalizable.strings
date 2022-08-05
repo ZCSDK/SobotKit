@@ -209,3 +209,6 @@
 "附件" = "lampiran";
 "填写信息" = "Isi maklumat";
 "排队自动断开结束会话" = "Tutup sesi akhir auto dalam baris";
+"小程序" = "Aplet";
+"小程序只能通过微信打开" = "Aplet hanya boleh dibuka melalui wechat";
+"解析中..." = "Menghurai";

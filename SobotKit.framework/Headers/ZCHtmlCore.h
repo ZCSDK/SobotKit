@@ -36,6 +36,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)filterHTMLTag:(NSString *)str;
 
+
+
+/// 提取url的head信息
+/// @param url 要提取的链接信息
+/// @param filterBlock 结果
+/// [self websiteFilter:@"https://www.sobot.com" result:^(NSString * _Nonnull url, NSString * _Nonnull icon, NSString * _Nonnull title, NSString * _Nonnull desc, NSDictionary * _Nullable) { NSLog(@"url:%@\nicon:%@\ntitle:%@\ndesc:%@",url,icon,title,desc);}];
+///
++(void)websiteFilter:(NSString *) url result:(void(^)(NSString * _Nonnull url,NSString * _Nonnull icon,NSString *_Nonnull title,NSString * _Nonnull desc,NSDictionary *_Nullable dict)) filterBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

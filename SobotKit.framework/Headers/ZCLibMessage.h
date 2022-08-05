@@ -409,6 +409,17 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 @property (nonatomic,strong) NSMutableAttributedString * displayMsgAttr;
 @property (nonatomic,strong) NSMutableAttributedString * displaySugestionattr;
 
+// 存一问多答的数据
+@property (nonatomic,strong) NSMutableArray *answersList;
+
+@property (nonatomic,assign) BOOL isInAnswerslist; // 是否在answerslist中
+@property (nonatomic,assign) BOOL isAnswerslistLast;// 当前是否是list中最后一个对象，最后一个对象才能有顶踩、转人工的功能
+
+//kbId-知识库id   kbName-知识库名称  ruleId-规则id  answerId-答案id
+@property (nonatomic,copy) NSString *kbId;   // 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *kbName;  // 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *ruleId; // 一问多答 点踩 接口使用
+@property (nonatomic,copy) NSString *answerId;// 一问多答 点踩 接口使用
 /**
  获取显示的组合内容
 

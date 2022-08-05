@@ -209,3 +209,6 @@
 "附件" = "obudowa";
 "填写信息" = "Wypełnij informacje";
 "排队自动断开结束会话" = "Zakończ sesję po automatycznym rozłączeniu w kolejce";
+"小程序" = "Aplet";
+"小程序只能通过微信打开" = "Aplet może być otwarty tylko przez wechat";
+"解析中..." = "Analiza";

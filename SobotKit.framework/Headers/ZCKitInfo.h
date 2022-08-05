@@ -653,6 +653,12 @@
  */
 @property (nonatomic,strong) UIColor *scTopBackTextColor;
 
+
+/**
+ *   超链卡片的标题文字颜色
+ */
+@property (nonatomic,strong) UIColor *linkTitleTextColor;
+
 //=======================================================自定义文字颜色 end ==============================================
 
 #pragma Mark -- 图片相关
