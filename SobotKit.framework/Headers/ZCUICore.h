@@ -466,6 +466,11 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
  **/
 -(void)cancelSendFileMsg:(ZCLibMessage *)fileMsg;
 
+
+-(void)continueWaiting:(ZCLibMessage *)tipsModel;
+
+-(void)removeListModelWithType:(ZCMessageType ) type tips:(ZCTipMessageType) tips;
+
 // 当前是否显示客服欢迎语
 -(BOOL)showChatAdminHello;
 

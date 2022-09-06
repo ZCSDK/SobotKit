@@ -212,3 +212,5 @@
 "小程序" = "Applet";
 "小程序只能通过微信打开" = "Applet can only be opened through wechat";
 "解析中..." = "Parsing";
+"继续排队" = "Continue queuing";
+"如要继续等待，点击" = "If you continue to wait, click";

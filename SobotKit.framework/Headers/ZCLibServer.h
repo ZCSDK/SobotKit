@@ -699,6 +699,15 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
              failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 
+/// 继续排队
+/// @param config 获取uid用
+/// @param startBlock
+/// @param successBlock
+/// @param failedBlock
+-(void)continueWaiting:(ZCLibConfig *) config
+             start:(void (^)())startBlock
+           success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 
 /// sdk敏感词授权

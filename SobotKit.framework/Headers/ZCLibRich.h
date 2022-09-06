@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
     ZCMessageRichTypeGoods = 3, // 商品卡片
     ZCMessageRichTypeOrder  = 4, // 订单
     ZCMessageRichTypeApplet  = 6, // 小程序卡片
+    ZCMessageRichTypeArticle = 17,// 文章
     ZCMessageRichTypeBrowseTrack  = 114, // 浏览轨迹
 };
 /**
@@ -252,6 +253,15 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 @property (nonatomic,copy) NSString *ruleId; // 一问多答 点踩 接口使用
 @property (nonatomic,copy) NSString *answerId;// 一问多答 点踩 接口使用
 @property (nonatomic,copy) NSString *answerStr;//一问多答 点踩 接口使用
+
+//**************** 文章使用参数 *************
+@property (nonatomic, copy) NSString *articleBody;// 正文，不含标题头图搜索词的html
+@property (nonatomic, copy) NSString *articleDesc;//  简介，只有纯文字
+@property (nonatomic, copy) NSString *articleRichMoreUrl;// 点击文章查看更多
+@property (nonatomic, copy) NSString *articleContent; // 原文包含html的
+@property (nonatomic, copy) NSString *articleSnapshot; // 头图
+@property (nonatomic, copy) NSString *articleTitle; // 文章标题
+//************ 文章end ************
 
 /**
  *  初始化

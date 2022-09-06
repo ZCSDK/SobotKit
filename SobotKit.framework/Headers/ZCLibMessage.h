@@ -102,7 +102,12 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
     /**
      * 用户排队超时离线提醒
      */
-    ZCTipMessageChat_WaitingOutTips = 47
+    ZCTipMessageChat_WaitingOutTips = 47,
+    /**
+     * 用户排队超时离线提醒,继续排队
+     */
+    ZCTipMessageChat_WaitingContinueTips = 48,
+    ZCTipMessageChat_WaitingContinueMsg = 49
    
 };
 
@@ -415,11 +420,6 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 @property (nonatomic,assign) BOOL isInAnswerslist; // 是否在answerslist中
 @property (nonatomic,assign) BOOL isAnswerslistLast;// 当前是否是list中最后一个对象，最后一个对象才能有顶踩、转人工的功能
 
-//kbId-知识库id   kbName-知识库名称  ruleId-规则id  answerId-答案id
-@property (nonatomic,copy) NSString *kbId;   // 一问多答 点踩 接口使用
-@property (nonatomic,copy) NSString *kbName;  // 一问多答 点踩 接口使用
-@property (nonatomic,copy) NSString *ruleId; // 一问多答 点踩 接口使用
-@property (nonatomic,copy) NSString *answerId;// 一问多答 点踩 接口使用
 /**
  获取显示的组合内容
 

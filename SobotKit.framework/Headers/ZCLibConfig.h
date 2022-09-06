@@ -482,5 +482,7 @@
 //转人工方式 0：机器人触发转人工 1：客户主动转人工  ， 当transferType>=5是均为0
 @property (nonatomic,assign) int activeTransfer;
 
+@property (nonatomic,copy) NSString *ruleId;// 一问多答一问多答时的规则id
 
+@property (nonatomic,copy) NSString *answerMsgId;// 消息ID （直接回答的转人工按钮，对应的消息id）
 @end

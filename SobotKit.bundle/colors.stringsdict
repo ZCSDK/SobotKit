@@ -50,6 +50,8 @@
 		<string>FFFFFF</string>
 		<key>ZCRatingBGColor</key>
 		<string>F0AC0E</string>
+		<key>ZCArticleTitleTextColor</key>
+		<string>0DAEAF</string>
 	</dict>
 	<key>dark</key>
 	<dict>
@@ -99,6 +101,8 @@
 		<string>353538</string>
 		<key>ZCRatingBGColor</key>
 		<string>F0AC0E</string>
+		<key>ZCArticleTitleTextColor</key>
+		<string>0DAEAF</string>
 	</dict>
 </dict>
 </plist>
