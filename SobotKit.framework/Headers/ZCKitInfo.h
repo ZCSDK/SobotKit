@@ -805,7 +805,7 @@
  * 自定义 富文本消息中图片的高度 （如果设置的高度 <= 0 取默认高度 110  ）
  * 默认 取110
  */
-//@property (nonatomic,assign) CGFloat richImgHeight;
+@property (nonatomic,assign) CGFloat richImgHeight;
 
 /**
  * 自定义 富文本消息中图片的宽度 （如果传入的宽度 <= 0 取 默认宽度  ，如果传入的宽度 大于最大宽度 取最大宽度）
