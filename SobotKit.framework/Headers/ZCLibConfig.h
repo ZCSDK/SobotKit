@@ -363,6 +363,7 @@
 @property (nonatomic,assign) BOOL smartRouteInfoFlag;
 
 
+@property(nonatomic,assign) BOOL realuateStyle;// realuateStyle 0-右侧展示 1-下方展示！机器人点踩按钮
 
 /**
  *
@@ -485,4 +486,6 @@
 @property (nonatomic,copy) NSString *ruleId;// 一问多答一问多答时的规则id
 
 @property (nonatomic,copy) NSString *answerMsgId;// 消息ID （直接回答的转人工按钮，对应的消息id）
+
+
 @end
