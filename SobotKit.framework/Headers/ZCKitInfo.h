@@ -366,6 +366,9 @@
  */
 @property (nonatomic,strong) UIFont *notificationTopViewLabelFont;
 
+// 顶踩按钮的文字字号
+@property (nonatomic,strong) UIFont *topBtnFont;
+
 /**
  * 帮助中心 标题font
  */
@@ -633,6 +636,15 @@
  *  聊天对话框中顶踩 、转人工文字 选中颜色
  */
 @property (nonatomic,strong) UIColor *topBtnSelColor;
+
+// 聊天对话框中顶踩按钮边框颜色
+@property (nonatomic,strong) UIColor *topBtnLayerNolColor;
+
+// 聊天对话框中顶踩按钮边框选中颜色
+@property (nonatomic,strong) UIColor *topBtnLayerSelColor;
+
+// 聊天对话框中顶踩按钮选中的背景色
+@property (nonatomic,strong) UIColor *topBtnBgSelColor;
 
 /**
  *  顶踩 文字 置灰颜色
