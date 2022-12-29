@@ -425,6 +425,10 @@
 /// 延迟转人工，1:开; 0:关
 @property (nonatomic,assign) BOOL invalidSessionFlag;
 
+
+/// 会话结束是否推送评价开关：1-开启，0-关闭
+@property(nonatomic,assign) BOOL commentFlag;
+
 /**
  *  对象封装
  *
