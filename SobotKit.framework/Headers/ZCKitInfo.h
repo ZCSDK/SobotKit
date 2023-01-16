@@ -825,4 +825,6 @@
  */
 //@property (nonatomic,assign) CGFloat richImgWidth;
 
+// 系统相册 不使用满屏 默认满屏NO；
+@property (nonatomic,assign)BOOL imagepickerStyleUnFull;
 @end
