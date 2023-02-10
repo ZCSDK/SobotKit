@@ -413,7 +413,7 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 // 临时使用，查询数据时赋值
 @property (nonatomic,strong) NSMutableAttributedString * displayMsgAttr;
 @property (nonatomic,strong) NSMutableAttributedString * displaySugestionattr;
-
+@property (nonatomic,strong) NSMutableAttributedString * displayMsgStripeattr;
 // 存一问多答的数据
 @property (nonatomic,strong) NSMutableArray *answersList;
 
@@ -435,4 +435,8 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
 -(NSString *)getLastMessage;
 - (NSString *)getHtmlAttrStringWithText:(NSString *)text;
+
+// 多轮引导语
+-(NSString *) getModelDisplayMsgStripeText;
+-(NSString *) getModelDisplayMsgStripeText:(BOOL) createAttr;
 @end

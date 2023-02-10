@@ -192,6 +192,7 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 
 @property (nonatomic,copy) NSString * answerStrip;// 引导语，多轮会话中 15239 1523 1524 时 megtype ==11 时 添加
 
+@property (nonatomic,copy)NSString *loopMsgStripe;// 多轮引导语 megtype == 11 时，显示在消息的最上方
 
 // 是否开启换一批功能
 @property (nonatomic,assign  ) int              guideGroupFlag;

@@ -513,6 +513,11 @@
 @property (nonatomic,strong) UIColor *topViewTextColor;
 
 /**
+ *   "留言消息" 文字颜色
+ */
+@property (nonatomic,strong) UIColor *leaveMsgTextColor;
+
+/**
  *  左边气泡文字颜色
  */
 @property (nonatomic,strong) UIColor *leftChatTextColor;
