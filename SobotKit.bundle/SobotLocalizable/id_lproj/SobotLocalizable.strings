@@ -26,7 +26,7 @@
 "换一组" = "Ganti grup";
 "建议为必填" = "Disarankan sebagai opsional";
 "服务评价" = "Evaluasi";
-"留言" = "Tinggalkan mesej";
+"留言" = "Pesan";
 "您好，客服" = "Halo, layanan pelanggan";
 "接受了您的请求" = "telah menerima permintaan Anda";
 "服务器请求错误！" = "Kesalahan permintaan server!";
@@ -40,7 +40,7 @@
 "机器人客服评价" = "Evaluasi layanan pelanggan robot";
 "对不起，未能解决您的问题，正在为您转接人工客服" = "Maaf, masalah Anda tidak dapat diselesaikan, kami mentransfer Anda ke layanan pelanggan manual";
 "撤回了一条消息" = "menarik pesan";
-"重建会话" = "Buat ulang sesi";
+"重建会话" = "sesi baru";
 "重新发送" = "Kirim ulang";
 "必填" = "Yg dibutuhkan";
 "回复" = "Balasan";
@@ -61,7 +61,7 @@
 "回复内容不能为空" = "Konten balasan tidak boleh kosong";
 "请输入您的回复内容" = "Silakan masukkan balasan Anda";
 "请输入" = "silahkan masuk";
-"邀请您对本次服务进行评价" = "mengundang Anda untuk mengomentari layanan ini";
+"邀请您对本次服务进行评价" = "Masukan";
 "请您对本次服务进行评价" = "Tolong beri peringkat untuk layanan ini";
 "图片格式错误" = "Kesalahan format gambar";
 "手机号不能为空" = "Nomor telepon tidak boleh kosong";
@@ -83,7 +83,7 @@
 "找不到图片" = "Tidak dapat menemukan gambar";
 "以下为未读消息" = "Berikut ini adalah pesan yang belum dibaca";
 "暂无相关内容" = "Tidak ada konten terkait";
-"暂无客服在线" = "Tidak ada layanan pelanggan online";
+"暂无客服在线" = "tidak ada CS";
 "更新" = "Memperbarui";
 "您的留言状态有" = "Status pesan Anda adalah";
 "条新消息" = "Pesan baru";
@@ -121,8 +121,8 @@
 "立即下载" = "Unduh sekarang";
 "提交评价后会话将结束" = "Sesi akan berakhir setelah mengirimkan evaluasi";
 "您的评价会让我们做得更好" = "Evaluasi Anda akan membiarkan kami lebih baik";
-"已解决" = "terpecahkan";
-"未解决" = "belum terpecahkan";
+"已解决" = "Ya";
+"未解决" = "Tidak";
 "暂无相关信息" = "Tidak ada informasi";
 "邮箱不能为空" = "E-mail tidak boleh kosong";
 "请输入正确的邮箱" = "Format Email Anda salah";
@@ -146,7 +146,7 @@
 "连接中..." = "menghubungkan ...";
 "您已完成评价" = "Anda telah menyelesaikan evaluasi";
 "已完成" = "Sudah berhasil";
-"关闭" = "matikan";
+"关闭" = "Tutup";
 "清空聊天记录" = "Hapus riwayat obrolan";
 "清空" = "Kosong";
 "清空记录将无法恢复,是否要清空历史记录？" = "Menghapus rekaman tidak dapat dipulihkan. Apakah Anda ingin menghapus riwayat?";
@@ -164,7 +164,7 @@
 "提交" = "Kirimkan";
 "确定" = "Tentu";
 "取消" = "Batal";
-"拍摄" = "Mengambil foto";
+"拍摄" = "Kamera";
 "已保存到系统相册" = "Disimpan ke album sistem";
 "咨询后才能评价服务质量" = "Kualitas layanan hanya dapat dievaluasi setelah konsultasi";
 "不能为空" = "Tidak boleh kosong";
@@ -181,7 +181,7 @@
 "请输入手机号码" = "Silakan masukkan nomor ponsel Anda";
 "请输入邮箱地址" = "Silakan masukkan alamat Email Anda";
 "请填写问题描述" = "Silakan isi deskripsi masalah";
-"请填写询前表单" = "Silakan isi Formulir Pertanyaan Awal";
+"请填写询前表单" = "Silakan isi";
 "请在《设置 - 隐私 - 麦克风》选项中，允许访问您的麦克风" = "Izinkan akses ke mikrofon Anda di opsi \"Pengaturan-Privasi-Mikrofon \"";
 "请在《设置 - 隐私 - 相机》选项中，允许访问您的相机" = "Izinkan akses ke kamera Anda di opsi \ \"Pengaturan-Privasi-Kamera \"";
 "请在iPhone的《设置-隐私-照片》选项中，允许访问你的手机相册" = "Silakan izinkan akses ke album foto ponsel Anda dalam opsi foto privasi pengaturan iPhone";
