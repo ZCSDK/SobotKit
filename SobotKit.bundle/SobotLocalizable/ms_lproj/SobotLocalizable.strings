@@ -40,11 +40,11 @@
 "机器人客服评价" = "Penilaian perkhidmat pelanggan robot";
 "对不起，未能解决您的问题，正在为您转接人工客服" = "Minta maaf, tidak dapat mengatasi masalah anda, kami sedang beralih kepada perkhidmat pelanggan manual";
 "撤回了一条消息" = "telah memanggil balik mesej";
-"重建会话" = "sesi baru";
+"重建会话" = "Sesi baru";
 "重新发送" = "Hantarkan semula";
 "必填" = "Mesti mengisi";
 "回复" = "Balasan";
-"松开手指，取消发送" = "Lepaskan jari untuk membatal penghantaran";
+"松开手指，取消发送" = "Lepaskan batalkan hantar";
 "您收到了一条新消息" = "Anda ada satu mesej baru";
 "评分" = "Skor";
 "评语" = "Komen";
@@ -53,7 +53,7 @@
 "问题分类" = "Kategori masalah";
 "问题详情" = "Perincian soalan";
 "问题描述" = "Penerangan masalah";
-"上一页" = "halaman sebelumnya";
+"上一页" = "Halaman sebelumnya";
 "查看" = "Melihat";
 "按住 说话" = "Tekan, bercakap";
 "请上传附件" = "Sila memuat naik lampiran";
@@ -91,7 +91,7 @@
 "网络错误" = "Rangkaian salah";
 "我的服务评价" = "Penilaian perkhidmatan saya";
 "我的回复" = "Balasan saya";
-"手指上滑，取消发送" = "Luncurkan jari ke atas untuk membatal penghantaran";
+"手指上滑，取消发送" = "Leret ke atas untuk membatalkan";
 "温馨提示：从正规网站按照正常操作进行交易，不要轻易提供验证码、账号等隐私信息，谨防被骗！" = "Petunjuk hangat: Menurut operasi normal untuk transaksi dari laman web. Jangan-jangan mempercayai mesej yang memberi kod pengesahan, akaun dan mesej privasi lain untuk mengelakkan penipuan!";
 "元" = "Yuan";
 "留言记录" = "Catatan yang meninggalkan pesanan";
@@ -104,7 +104,7 @@
 "提交失败" = "Serahkan gagal";
 "我们将会以链接的形式在会话中向你反馈工单处理状态" = "Kami akan memaklumbalas kepada anda dalam perbincangan secara pautan";
 "完成" = "Selesai";
-"下一页" = "halaman berikutnya";
+"下一页" = "Halaman berikutnya";
 "排队中..." = "Sedang berbaris...";
 "客户服务中心" = "Pusat perkhidmatan pelanggan";
 "在线客服" = "Perkhidmat pelanggan dalam talian";
@@ -160,7 +160,7 @@
 "由于服务到期，该功能已关闭" = "Ciri-ciri telah dimatikan kerana kelulusan perkhidmatan";
 "结束会话" = "Tamat perbincangan";
 "您可以" = "Anda boleh";
-"发送" = "Hantarkan";
+"发送" = "Hantar";
 "提交" = "Serahkan";
 "确定" = "Pasti";
 "取消" = "Batal";
