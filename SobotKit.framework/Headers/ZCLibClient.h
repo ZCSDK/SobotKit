@@ -277,4 +277,9 @@ typedef void(^TurnServiceBlock)(ZCLibMessage *model, NSInteger turnType);
 // 当前渠道
 +(NSString *)sobotGetAppChannel;
 
+
+
+/// 当前使用语言编码
++(NSString *)getCurUseLanguagePreHeader;
+
 @end

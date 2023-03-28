@@ -54,8 +54,11 @@
  */
 @property (nonatomic , strong) NSString *adminHelloWord;
 
-//客服欢迎语规则，1-只显示一次，0-默认值
+//客服欢迎语规则，1-只显示一次，0-默认值, 2-仅首次咨询线上（isNew==1）
 @property (nonatomic , assign) int      adminHelloWordCountRule;
+
+// 是否为新用户，3.2.0新增属性，新用户首次咨询
+@property (nonatomic , assign) int      isNew;
 
 /**
  *  用户无应答提示时间
@@ -274,6 +277,10 @@
  * 机器人编号
  */
 @property (nonatomic, assign) int      robotFlag;
+
+
+/// 是否开通gpt，1开通，0未开通
+@property (nonatomic, assign) int      aiStatus;
 
 
 /*
