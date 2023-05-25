@@ -188,7 +188,10 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
  *  1 直接回答，2 理解回答，3 不能回答, 4引导回答，6互联网寒暄，
  *  7 私有寒暄（包括第三方天气、快递接口）,8百科, 9 向导回答,10 业务接口    // 151 152 153 待接口 多轮会话的类型,1525 多轮触发留言
  */
-@property (nonatomic,assign  ) int              answerType;
+@property (nonatomic,assign) int              answerType;
+
+// 3.2.1添加，点踩、点赞回传给接口
+@property (nonatomic,copy) NSString  *gptAnswerType;
 
 @property (nonatomic,copy) NSString * answerStrip;// 引导语，多轮会话中 15239 1523 1524 时 megtype ==11 时 添加
 

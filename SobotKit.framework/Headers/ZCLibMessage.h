@@ -77,8 +77,7 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
     ZCTipMessageChatWarning                       = 29,
     /**机器人点踩 触发转人工*/
     ZCTipMessageUnresolvedProblemTurn             = 30,
-    /****** 发送留言转离线消息后，结束会话 *****/
-    ZCTipMessageChatCloseByLeaveMsg               = 99,
+    
     
     
     /**
@@ -99,15 +98,21 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
      * 用户排队超时离线
      */
     ZCTipMessageChat_WaitingOut = 46,
+    /**多伦未填写留言信息**/
+    ZCTipMessageChatUnWriteLeaveMsg               = 47,
+    ZCTipMessageChatUnWriteLeaveMsgUnDo               = 48, // 不可点击
+    
+    /****** 发送留言转离线消息后，结束会话 *****/
+    ZCTipMessageChatCloseByLeaveMsg               = 99,
     /**
      * 用户排队超时离线提醒
      */
-    ZCTipMessageChat_WaitingOutTips = 47,
+    ZCTipMessageChat_WaitingOutTips = 100,
     /**
      * 用户排队超时离线提醒,继续排队
      */
-    ZCTipMessageChat_WaitingContinueTips = 48,
-    ZCTipMessageChat_WaitingContinueMsg = 49
+    ZCTipMessageChat_WaitingContinueTips = 101,
+    ZCTipMessageChat_WaitingContinueMsg = 102
    
 };
 
@@ -297,7 +302,8 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
  **/
 @property (nonatomic,copy) NSString * keyword;
 
-
+// 多伦节点相关的工单模板id
+@property (nonatomic,copy) NSString * deployId;
 /**
  *
  *   transferFlag:1-指定技能组接入，2-选择技能组列表，3-直接转入;
@@ -439,4 +445,6 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 // 多轮引导语
 -(NSString *) getModelDisplayMsgStripeText;
 -(NSString *) getModelDisplayMsgStripeText:(BOOL) createAttr;
+
+-(NSString *)getSysTipsText;
 @end

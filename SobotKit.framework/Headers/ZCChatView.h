@@ -150,4 +150,7 @@ typedef NS_ENUM(NSInteger,ZCChatViewGoBackType) {
 // 横竖屏切换时，将键盘回收
 -(void)hiddenKeyBoard;
 
+// 当前键盘弹起了
+-(BOOL)isKeyboardDisplay;
+
 @end

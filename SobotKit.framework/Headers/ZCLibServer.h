@@ -538,6 +538,28 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                             success:(void(^)(NSDictionary *dict,NSMutableArray * cusFieldArray,ZCNetWorkCode sendCode)) successBlock
                              failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
+
+
+/// 多伦触发留言节点，点击关闭和提交留言修改添加提醒消息
+/// @param config
+/// @param title 无用
+/// @param msg 实际内容，iOS不适用
+/// @param updateStatus (0表示插入 1表示更新)
+/// @param msgId
+/// @param deployId
+/// @param startBlock
+/// @param successBlock
+/// @param failedBlock 
+-(void)sendLoopTipActionMsg:(ZCLibConfig *) config
+                title:(NSString*)title
+                msg:(NSString*)msg
+               updateStatus:(int) updateStatus // 0表示插入 1表示更新
+                      msgId:(NSString *) msgId
+                   deployId:(NSString *) deployId
+             start:(void (^)())startBlock
+           success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                     failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
 /**
  *  获取用户留言记录列表接口 2.7.1 新增
  *   uid  用户id
