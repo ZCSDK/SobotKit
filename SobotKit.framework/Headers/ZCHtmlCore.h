@@ -45,6 +45,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 +(void)websiteFilter:(NSString *) url result:(void(^)(NSString * _Nonnull url,NSString * _Nonnull icon,NSString *_Nonnull title,NSString * _Nonnull desc,NSDictionary *_Nullable dict)) filterBlock;
 
+// 过滤掉所有的HTML标签，lastmsg 展示时帮用户处理掉 提示语中带html标签的问题
++(NSString *)filterHTML:(NSString *)str;
+
 @end
 
 NS_ASSUME_NONNULL_END

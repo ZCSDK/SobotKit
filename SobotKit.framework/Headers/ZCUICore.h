@@ -221,7 +221,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 @property(nonatomic,strong) NSMutableArray *cids;// cid 列表
 
 /** 未知说辞计数*/
-@property (nonatomic, assign) NSUInteger       unknownWordsCount;
+@property (nonatomic, assign) NSUInteger   unknownWordsCount;
 
 // 播放时动画展示View
 @property (nonatomic,strong) UIImageView    *animateView;
