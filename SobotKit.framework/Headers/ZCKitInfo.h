@@ -33,12 +33,12 @@
 /**
  *  链接地址正则表达式
  *  默认为：
-    @"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
+ @"(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
  */
 @property (nonatomic,strong) NSString *urlRegular;
 
 /**
-*  电话号码正则表达式
+ *  电话号码正则表达式
  *  默认为@"0+\\d{2}-\\d{8}|0+\\d{2}-\\d{7}|0+\\d{3}-\\d{8}|0+\\d{3}-\\d{7}|1+[34578]+\\d{9}|\\+\\d{2}1+[34578]+\\d{9}|400\\d{7}|400-\\d{3}-\\d{4}|\\d{11}|\\d{10}|\\d{8}|\\d{7}"
  * 例如：82563452、01082563234、010-82543213、031182563234、0311-82563234
  、+8613691080322、4008881234、400-888-1234
@@ -281,9 +281,9 @@
 @property (nonatomic,assign) BOOL isSendInfoCard;
 
 /**
-   是否每次都自动发送商品信息 （转人工成功时，自动发送商品卡片信息）
-   需要先开启 isSendInfoCard = YES
-  （3.0.3版本新增）
+ 是否每次都自动发送商品信息 （转人工成功时，自动发送商品卡片信息）
+ 需要先开启 isSendInfoCard = YES
+ （3.0.3版本新增）
  */
 @property (nonatomic,assign) BOOL isEveryTimeSendCard;
 
@@ -761,49 +761,49 @@
 /**
  留言技能组 id
  获取：设置 —>工单技能组设置
-*/
+ */
 @property (nonatomic,strong) NSString *leaveMsgGroupId;
 
 /**
  留言模板 id
  获取：设置 —>工单
-*/
+ */
 @property (nonatomic,strong) NSString *leaveTemplateId;
 
 /**
-  选择图片时，不直接发送，预览发送
+ 选择图片时，不直接发送，预览发送
  【注意：预览方框仅为放大镜效果，不是裁切图片，发送的还是原图】
-*/
+ */
 @property (nonatomic,assign) BOOL showPhotoPreview;
 
 /**
-  是否隐藏会话时间，默认NO不隐藏；如果不是中国区，与客户端的真实时间是有差异可以选择隐藏会话中的时间
-*/
+ 是否隐藏会话时间，默认NO不隐藏；如果不是中国区，与客户端的真实时间是有差异可以选择隐藏会话中的时间
+ */
 @property (nonatomic,assign) BOOL hideChatTime;
 
 /**
-  是否隐藏机器人评价标签，默认不隐藏
-*/
+ 是否隐藏机器人评价标签，默认不隐藏
+ */
 @property (nonatomic,assign) BOOL hideRototEvaluationLabels;
 
 /**
-  是否隐藏人工评价标签，默认不隐藏
-*/
+ 是否隐藏人工评价标签，默认不隐藏
+ */
 @property (nonatomic,assign) BOOL hideManualEvaluationLabels;
 
 /**
-  是否底部新会话时的评价按钮留言按钮，默认不隐藏
-*/
+ 是否底部新会话时的评价按钮留言按钮，默认不隐藏
+ */
 @property (nonatomic,assign) BOOL hideBottomLeave;
 
 /**
-  是否隐藏底部新会话时的评价按钮，默认不隐藏
-*/
+ 是否隐藏底部新会话时的评价按钮，默认不隐藏
+ */
 @property (nonatomic,assign) BOOL hideBottomEvaluation;
 
 /**
-  是否隐藏导航右上角“...”更多按钮，默认不隐藏
-*/
+ 是否隐藏导航右上角“...”更多按钮，默认不隐藏
+ */
 @property (nonatomic,assign) BOOL hideNavBtnMore;
 
 /**
@@ -813,7 +813,7 @@
 
 
 /**
- * 3.1.3 新增 富文本中图片的宽度和高度属性设置 
+ * 3.1.3 新增 富文本中图片的宽度和高度属性设置
  * 高度设置： 如果设置的高度 <= 0 取默认高度 110
  * 宽度设置 ：如果传入的宽度 <= 0 取 默认宽度  ，如果传入的宽度 大于最大宽度 取最大宽度
  */
@@ -832,4 +832,12 @@
 
 // 系统相册 不使用满屏 默认满屏NO；
 @property (nonatomic,assign)BOOL imagepickerStyleUnFull;
+
+
+
+/// 聊天气泡是否显示聊天客服的昵称头像
+/// 默认NO，不显示
+@property (nonatomic,assign)BOOL showLeftMsgFace;
+@property (nonatomic,assign)BOOL showLeftMsgNickName;
+
 @end

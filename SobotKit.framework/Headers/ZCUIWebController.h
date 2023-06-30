@@ -16,6 +16,8 @@
  */
 @interface ZCUIWebController : ZCUIBaseController
 
+@property(nonatomic,assign)BOOL isCheckTxtEncode;
+
 /**
  *  初始化 v2.7.9支持传入html字符串展示
  *
@@ -24,6 +26,7 @@
  *  @return ZCUIWebController
  */
 -(id)initWithURL:(NSString *)url;
+
 
 
 @end

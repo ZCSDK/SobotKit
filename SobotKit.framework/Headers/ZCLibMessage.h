@@ -157,7 +157,9 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 /**
  *  用户名称
  */
+@property (nonatomic , strong) NSString *servantName;
 @property (nonatomic , strong) NSString *senderName;
+@property (nonatomic , strong) NSString *servantFace;
 
 /**
  *  发送,0，自己，1机器人，2客服
@@ -398,6 +400,13 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
  *  是否是机器人引导语
  */
 @property (nonatomic , assign) BOOL isRobotGuide;
+
+
+/**
+ *  是否为同一个连续对象用户发送消息
+ */
+@property (nonatomic , assign) BOOL isShowSenderFlag;
+
 
 /**
  *  初始化
