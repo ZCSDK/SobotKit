@@ -218,3 +218,5 @@
 "踩" = "Dislike";
 "您未提交信息，请" = "You have not submitted any information. Please";
 "重新填写信息" = "Fill in the information again";
+
+"会话已结束，可重新发起咨询" = "The session has ended, consultation can be initiated again";

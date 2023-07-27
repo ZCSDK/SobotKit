@@ -325,17 +325,11 @@
 
 
 
-/**
- *  登出
- */
--(void)logOut:(ZCLibConfig *) config;
-
-
-
-/**
- 退出推送
- */
--(void)loginOutPush:(void(^)(NSString *partnerid,NSString *token,NSError *err)) resultBlock;
+/// 离线用户，3.2.3版本新增
+/// @param unRegisteToken 是否取消注册推送
+/// @param reason 离线原因，用于日志分析
+/// @param resultBlock，结果(接口调用情况)
+-(void)logOut:(BOOL) unRegisteToken reason:(NSString *) reason result:(void (^)(NSString *, NSString *,NSError *))resultBlock;
 
 /**
  *  下载文件

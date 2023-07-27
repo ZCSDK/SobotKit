@@ -177,9 +177,16 @@ typedef void(^TurnServiceBlock)(ZCLibMessage *model, NSInteger turnType);
  关闭通道，清理内存，退出智齿客户 移除推送
  说明：调用此方法后将不能接收到离线消息，除非再次进入智齿SDK重新激活,
  isClosePush:YES ,是关闭push；NO离线用户，但是可以收到push推送
+ 3.2.3版本，使用closeAndOutChat替换
  */
-+(void) closeAndoutZCServer:(BOOL) isClosePush;
+//+(void) closeAndoutZCServer:(BOOL) isClosePush;
 
+
+/// 强制离线用户
+/// - Parameters:
+///   - unRegisterToken: 是否取消注册推送：YES是取消，NO仅离线用户不取消注册推送
+///   - reason: 离线原因(请认真填写，可分析后期用户异常离线，不做数据展示)
++(void) closeAndOutChat:(BOOL) unRegisterToken reason:(NSString *) reason;
 
 /**
  添加异常统计

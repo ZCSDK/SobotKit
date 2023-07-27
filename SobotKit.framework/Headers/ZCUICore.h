@@ -184,7 +184,7 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 
 @property(nonatomic,weak) id<ZCUICoreDelegate> delegate;
 
-@property(nonatomic,copy) initResultBlock ResultBlock;
+//@property(nonatomic,copy) initResultBlock ResultBlock;
 
 @property(nonatomic,copy) BOOL (^LinkClickBlock)(NSString *linkUrl); // 1129
 

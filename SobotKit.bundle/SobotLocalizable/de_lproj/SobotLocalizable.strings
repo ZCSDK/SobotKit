@@ -218,3 +218,5 @@
 "踩" = "stepping";
 "您未提交信息，请" = "Sie haben keine Informationen übermittelt. Bitte";
 "重新填写信息" = "Füllen Sie die Informationen erneut aus";
+
+"会话已结束，可重新发起咨询" = "Die Sitzung ist beendet, Konsultation kann erneut eingeleitet werden";

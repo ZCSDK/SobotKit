@@ -205,8 +205,9 @@ messageLinkClick:(BOOL (^)(NSString *link)) messagelinkBlock;
 
 
 /// 关闭通道，清理内存，退出智齿客户 移除推送
-/// @param isClosePush YES 关闭push；NO 离线用户，但是可以收到push推送
-+ (void)outCurrentUserZCLibInfo:(BOOL) isClosePush;
+/// @param unRegisterToken YES 关闭push；NO 离线用户，但是可以收到push推送
+/// @param reason 离线原因(请认真填写，不做显示仅做后期异常离线分析)
++ (void)outCurrentUser:(BOOL) unRegisterToken reason:(NSString *) reason;
 
 
 

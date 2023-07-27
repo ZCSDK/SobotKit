@@ -112,7 +112,9 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
      * 用户排队超时离线提醒,继续排队
      */
     ZCTipMessageChat_WaitingContinueTips = 101,
-    ZCTipMessageChat_WaitingContinueMsg = 102
+    ZCTipMessageChat_WaitingContinueMsg = 102,
+    /**发送消息时，发现用户离线提示语，雷霆新增*/
+    ZCTipMessageChat_SendMsgUserOut = 103
    
 };
 

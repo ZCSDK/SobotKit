@@ -218,3 +218,5 @@
 "踩" = "krok na";
 "您未提交信息，请" = "Nie podałeś żadnych informacji. Proszę";
 "重新填写信息" = "Wypełnij ponownie informacje";
+
+"会话已结束，可重新发起咨询" = "Sesja zakończona, konsultacje mogą zostać ponownie rozpoczęte";
