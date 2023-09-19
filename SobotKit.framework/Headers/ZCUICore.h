@@ -19,6 +19,7 @@
 #import "ZCUILeaveMessageController.h"
 #import "ZCChatView.h"
 #import "ZCLibServer.h"
+#import "ZCSatisfactionConfig.h"
 
 
 typedef NS_ENUM(NSInteger,ZCTurnType) {
@@ -68,7 +69,7 @@ typedef NS_ENUM(NSInteger,ZCShowStatus) {
     /** 客服长时间不说话提醒 */
     ZCShowNSTimerAdminTimeOut    = 22,
     
-    /** 添加评价页面 */
+    /** 弹起技能组事件，其它弹窗销毁 */
     ZCShowCustomActionSheet      = 23,
     
     /** 设置键盘样式 */
@@ -257,7 +258,8 @@ typedef void(^initResultBlock)(ZCInitStatus code,NSMutableArray *arr,NSString *r
 @property(nonatomic,strong) ZCLibMessage *afterModel;
 
 
-@property(nonatomic,strong) NSDictionary *satisfactionDict; // 评价选项
+@property(nonatomic,strong) ZCSatisfactionConfig *satisfactionConfig; // 评价选项
+@property(nonatomic,strong) ZCSatisfactionConfig *satisfactionLeaveConfig; // 留言评价选项
 @property(nonatomic,strong) NSString *inviteSatisfactionCheckLabels; // 邀请评价已选择的标签
 
 @property(nonatomic,assign) BOOL currtChatOver;// 当前是评价完人工结束会话的状态  

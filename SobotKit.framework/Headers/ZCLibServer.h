@@ -694,14 +694,12 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
  *  提交工单评价 （工单详情页面触发评价）
  *
  **/
--(void)postAddTicketSatisfactionWith:(NSString*)ticketId
-                                 Uid:(NSString*)uid
-                           CompanyId:(NSString*)companyId
-                               Score:(NSString*)score
-                              Remark:(NSString*)remark
+-(void)postAddTicketSatisfactionWith:(NSString*)uid
+                           dict:(NSDictionary*)inParam
                                start:(void (^)())startBlock
                              success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
                               failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
 /**
  *
  *   sdk保存发给用户的系统消息 (机器人点踩，触发转人工提示语 并发送给服务端保存)
@@ -748,4 +746,17 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                         start:(void (^)())startBlock
                       success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
                        failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
+
+
+
+
+/// 延迟转人工，排队时调用接口
+/// @param content 发送内容
+/// @param config 当前初始化对象
+/// @param errorBlock 失败
+/// @param successBlock 成功
+-(void)sendAfterModeWithConnectWait:(NSString *)content
+                       uid:(ZCLibConfig *)config
+                     error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
+                            success:(void(^)(NSString *msgLeaveTxt,NSString *msgLeaveContentTxt,NSString *leaveExplain)) successBlock;
 @end

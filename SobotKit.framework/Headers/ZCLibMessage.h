@@ -273,7 +273,7 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
 
 
 /**
- *  0 没有评价 1已解决  2未解决
+ *  0 没有评价 1已解决  2未解决 ,3评价但没有选项(是否解决)
  *
  */
 @property (nonatomic , assign) int  satisfactionCommtType;

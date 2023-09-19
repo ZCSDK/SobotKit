@@ -144,12 +144,12 @@
 "消息中心" = "Message";
 "未连接" = "Not connected";
 "连接中..." = "Connecting…";
-"您已完成评价" = "We\'ve received your feedback";
+"您已完成评价" = "We've received your feedback";
 "已完成" = "Completed";
 "关闭" = "Close";
 "清空聊天记录" = "Clear chat history";
 "清空" = "Yes";
-"清空记录将无法恢复,是否要清空历史记录？" = "Cleared record can\'t be recovered. Are you sure to clear the history?";
+"清空记录将无法恢复,是否要清空历史记录？" = "Cleared record can't be recovered. Are you sure to clear the history?";
 "文件" = "File";
 "选择分类" = "Choose type";
 "请选择要留言的业务" = "Choose business";
@@ -199,8 +199,8 @@
 "状态" = "status";
 "自定义字段" = "Custom field";
 "非常不满意" = "Very dissatisfied";
-"未解决问题？点击" = "Did not solve your problems?";
-"转人工服务" = "manual service";
+"未解决问题？点击" = "Sorry for not being helpful on this issue, kindly click ";
+"转人工服务" = "Live Chat";
 "展开消息" = "Expand message";
 "继续发送" = "Keep sending";
 "拒绝" = "Refuse";
@@ -220,3 +220,6 @@
 "重新填写信息" = "Fill in the information again";
 
 "会话已结束，可重新发起咨询" = "The session has ended, consultation can be initiated again";
+
+"标签" = "Label";
+"是否解决" = "Is it resolved";
