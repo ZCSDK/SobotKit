@@ -107,6 +107,7 @@ NSString* sobotGetLibraryFilePath(const NSString* fileName);
 /**
  *  get the Tmp path of download file
  ***/
+#warning ios17开始存储文件路径可能会报 Error Domain=AVFoundationErrorDomain Code=-11823 "无法存储" 
 NSString* sobotGetTempFilePath(NSString* fileName);
 /**
  * extract the file name from path
