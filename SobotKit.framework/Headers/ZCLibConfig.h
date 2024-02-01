@@ -436,6 +436,9 @@
 /// 会话结束是否推送评价开关：1-开启，0-关闭
 @property(nonatomic,assign) BOOL commentFlag;
 
+
+
+
 /**
  *  对象封装
  *
@@ -497,6 +500,7 @@
 @property (nonatomic,copy) NSString *ruleId;// 一问多答一问多答时的规则id
 
 @property (nonatomic,copy) NSString *answerMsgId;// 消息ID （直接回答的转人工按钮，对应的消息id）
+
 
 
 @end

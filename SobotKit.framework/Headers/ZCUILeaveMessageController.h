@@ -43,6 +43,10 @@ typedef void(^BackRefreshPageBlock)(id _Nonnull object);
 @property (nonatomic , assign) BOOL     enclosureShowFlag;
 @property (nonatomic , assign) BOOL     enclosureFlag;
 
+@property (nonatomic , assign) BOOL ticketContentShowFlag;
+@property (nonatomic , assign) BOOL ticketContentFillFlag;
+
+
 @property (nonatomic , assign) BOOL     emailFlag;
 @property (nonatomic , assign) BOOL     emailShowFlag;
 

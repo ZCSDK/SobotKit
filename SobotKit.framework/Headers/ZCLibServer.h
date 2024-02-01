@@ -232,6 +232,7 @@
  @param failedBlock
  */
 -(void)delPlatformMemberByUser:(NSString *) listId
+                    platformId:(NSString *)platformId
                        start:(void(^)()) startBlock
                      success:(void(^)(NSDictionary *dictionary,ZCNetWorkCode sendCode)) successBlock
                       failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
