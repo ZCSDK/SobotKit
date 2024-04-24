@@ -78,8 +78,8 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
     /**机器人点踩 触发转人工*/
     ZCTipMessageUnresolvedProblemTurn             = 30,
     
-    
-    
+    /** 多轮节点转人工欢提示语 */
+    ZCTipMessageTurnTipMsg                        = 31,
     /**
          * 用户咨询页授权
          */

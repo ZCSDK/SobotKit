@@ -34,6 +34,9 @@ typedef NS_ENUM(NSInteger,ZCTurnType) {
     ZCTurnType_InitOnUserType,              // 初始化仅人工或人工优先
     ZCTurnType_CustomKeyWord,               // 客户自定义关键字转人工，不出转人工按钮，在ZCLibInitInfo中配置
     ZCTurnType_OffMessageAdmin,            // 转接到发送过离线消息的客服
+    ZCTurnType_LoopGroup,                   // 多轮转人工带技能组ID
+    ZCTurnType_LoopAdmin,                   // 多轮转人工带客服ID
+    ZCTurnType_LoopNol,                     // 多轮节点默认转
 };
 
 typedef NS_ENUM(NSInteger,ZCInitStatus) {

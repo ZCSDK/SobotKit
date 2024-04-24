@@ -187,6 +187,7 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 /**
  *  1 直接回答，2 理解回答，3 不能回答, 4引导回答，6互联网寒暄，
  *  7 私有寒暄（包括第三方天气、快递接口）,8百科, 9 向导回答,10 业务接口    // 151 152 153 待接口 多轮会话的类型,1525 多轮触发留言
+ *   1526 多轮触发转人工
  */
 @property (nonatomic,assign) int              answerType;
 
@@ -266,6 +267,15 @@ typedef NS_ENUM(NSInteger,ZCMessageRichType) {
 @property (nonatomic, copy) NSString *articleSnapshot; // 头图
 @property (nonatomic, copy) NSString *articleTitle; // 文章标题
 //************ 文章end ************
+
+//************* 机器人多轮转人工 ***********
+// 转人工模式 0-按客户分配策略 1 -指定客服转 2 指定技能组转    这里不能使用int  需要判断null的场景
+@property (nonatomic, copy) NSString* nodeTransferFlag;
+// 转人工目标ID 客服或者技能组ID
+@property (nonatomic, copy) NSString *transferTargetId;
+// 转人工结果 1-直接转人工 2 分组接待 3 无法转人工（忽略接口端预览参数）
+@property (nonatomic, assign) int transferResult;
+//************* 机器人多轮转人工end ***********
 
 /**
  *  初始化
