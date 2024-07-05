@@ -48,7 +48,7 @@
 "您收到了一条新消息" = "You have received a new message";
 "评分" = "Score";
 "评语" = "Comment";
-"是否解决了您的问题？" = "Has your problem been solved?";
+"是否解决了您的问题？" = "Has solved your problem?";
 "受理中" = "Processing";
 "问题分类" = "Problem type";
 "问题详情" = "Issue details";
@@ -144,12 +144,12 @@
 "消息中心" = "Message";
 "未连接" = "Not connected";
 "连接中..." = "Connecting…";
-"您已完成评价" = "We've received your feedback";
+"您已完成评价" = "We\'ve received your feedback";
 "已完成" = "Completed";
 "关闭" = "Close";
 "清空聊天记录" = "Clear chat history";
 "清空" = "Yes";
-"清空记录将无法恢复,是否要清空历史记录？" = "Cleared record can't be recovered. Are you sure to clear the history?";
+"清空记录将无法恢复,是否要清空历史记录？" = "Cleared record can\'t be recovered. Are you sure to clear the history?";
 "文件" = "File";
 "选择分类" = "Choose type";
 "请选择要留言的业务" = "Choose business";
@@ -168,6 +168,7 @@
 "已保存到系统相册" = "Saved to system albums";
 "咨询后才能评价服务质量" = "Please use our service and then send feedback";
 "不能为空" = "Required";
+"重新加载" = "Reload";
 "编号" = "number";
 "播放失败" = "Play failed";
 "创建成功" = "Created successfully";
@@ -199,8 +200,8 @@
 "状态" = "status";
 "自定义字段" = "Custom field";
 "非常不满意" = "Very dissatisfied";
-"未解决问题？点击" = "Sorry for not being helpful on this issue, kindly click ";
-"转人工服务" = "Live Chat";
+"未解决问题？点击" = "Did not solve your problems?";
+"转人工服务" = "manual service";
 "展开消息" = "Expand message";
 "继续发送" = "Keep sending";
 "拒绝" = "Refuse";
@@ -213,13 +214,12 @@
 "小程序只能通过微信打开" = "Applet can only be opened through wechat";
 "解析中..." = "Parsing";
 "继续排队" = "Continue queuing";
-"如要继续等待，点击" = "If you continue to wait, click";
-"顶" = "Like";
-"踩" = "Dislike";
+"如果继续等待，点击" = "If you continue to wait, click";
+"顶" = "top";
+"踩" = "step on";
 "您未提交信息，请" = "You have not submitted any information. Please";
 "重新填写信息" = "Fill in the information again";
-
 "会话已结束，可重新发起咨询" = "The session has ended, consultation can be initiated again";
-
-"标签" = "Label";
-"是否解决" = "Is it resolved";
+"请选择是否解决了您的问题" = "Please choose whether your issue has been resolved";
+"保存成功" = "Saved";
+"保存失败" = "Save failed";

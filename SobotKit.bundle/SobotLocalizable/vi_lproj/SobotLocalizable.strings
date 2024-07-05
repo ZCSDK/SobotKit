@@ -168,6 +168,7 @@
 "已保存到系统相册" = "Đã lưu vào album hệ thống";
 "咨询后才能评价服务质量" = "Sau khi tư vấn mới có thể đánh giá chất lượng dịch vụ";
 "不能为空" = "Không thể để trống";
+"重新加载" = "Tải lại";
 "编号" = "Mã số";
 "播放失败" = "Phát sóng thất bại";
 "创建成功" = "Tạo thành công";
@@ -213,10 +214,12 @@
 "小程序只能通过微信打开" = "Táo chỉ có thể mở qua wechat";
 "解析中..." = "Đức";
 "继续排队" = "Tiếp tục xếp hàng";
-"如要继续等待，点击" = "Nếu bạn tiếp tục đợi, hãy nhắp vào";
+"如果继续等待，点击" = "Nếu bạn tiếp tục đợi, hãy nhắp vào";
 "顶" = "trên";
 "踩" = "bước lên";
 "您未提交信息，请" = "Bạn chưa gửi thông tin, vui lòng";
 "重新填写信息" = "Điền lại thông tin";
-
 "会话已结束，可重新发起咨询" = "Phiên đã kết thúc, tư vấn có thể được khởi động lại";
+"请选择是否解决了您的问题" = "Vui lòng chọn nếu vấn đề của bạn được giải quyết";
+"保存成功" = "đã lưu thành công";
+"保存失败" = "Lưu thất bại";

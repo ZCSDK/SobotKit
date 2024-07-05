@@ -83,7 +83,7 @@
 "找不到图片" = "nie może znaleźć zdjęcia";
 "以下为未读消息" = "Yuan";
 "暂无相关内容" = "Odpowiednia treść tymczasowo niedostępne";
-"暂无客服在线" = "Brak obsługi klienta online";
+"暂无客服在线" = "brak obsługi klienta online";
 "更新" = "zastąpienie";
 "您的留言状态有" = "Stan Twojej wiadomości to";
 "条新消息" = "nowe wiadomości";
@@ -168,6 +168,7 @@
 "已保存到系统相册" = "zapisano w albumie systemowym";
 "咨询后才能评价服务质量" = "Jakość usług można ocenić tylko po konsultacji";
 "不能为空" = "nie może być pusty";
+"重新加载" = "przeładuj";
 "编号" = "numer";
 "播放失败" = "odtwarzanie się nie powiodło";
 "创建成功" = "utworzono pomyślnie";
@@ -213,10 +214,12 @@
 "小程序只能通过微信打开" = "Aplet może być otwarty tylko przez wechat";
 "解析中..." = "Analiza";
 "继续排队" = "Kontynuuj kolejkę";
-"如要继续等待，点击" = "Jeśli nadal będziesz czekać, kliknij";
+"如果继续等待，点击" = "Jeśli nadal będziesz czekać, kliknij";
 "顶" = "na górze";
 "踩" = "krok na";
 "您未提交信息，请" = "Nie podałeś żadnych informacji. Proszę";
 "重新填写信息" = "Wypełnij ponownie informacje";
-
 "会话已结束，可重新发起咨询" = "Sesja zakończona, konsultacje mogą zostać ponownie rozpoczęte";
+"请选择是否解决了您的问题" = "Proszę wybrać, czy Twój problem został rozwiązany";
+"保存成功" = "Zapisano pomyślnie";
+"保存失败" = "nie udało się zapisać";

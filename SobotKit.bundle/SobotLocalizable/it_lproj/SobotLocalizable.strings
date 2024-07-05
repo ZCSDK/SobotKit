@@ -168,6 +168,7 @@
 "已保存到系统相册" = "Salvato nell\'album di sistema";
 "咨询后才能评价服务质量" = "Valutare la qualità dei servizi solo dopo la consultazione";
 "不能为空" = "Non può essere vuoto";
+"重新加载" = "Ricarica";
 "编号" = "Numero";
 "播放失败" = "Riproduzione fallita";
 "创建成功" = "Creazione con successo";
@@ -213,10 +214,12 @@
 "小程序只能通过微信打开" = "Applet può essere aperto solo tramite wechat";
 "解析中..." = "Analisi";
 "继续排队" = "Continua a fare la coda";
-"如要继续等待，点击" = "Se si continua ad aspettare, fare clic su";
+"如果继续等待，点击" = "Se si continua ad aspettare, fare clic su";
 "顶" = "in alto";
 "踩" = "passo avanti";
 "您未提交信息，请" = "Non hai inviato alcuna informazione. Per favore";
 "重新填写信息" = "Compila nuovamente le informazioni";
-
 "会话已结束，可重新发起咨询" = "La sessione è terminata, la consultazione può essere ripresa";
+"请选择是否解决了您的问题" = "Scegliere se il problema è stato risolto";
+"保存成功" = "Salvato con successo";
+"保存失败" = "Salva fallito";

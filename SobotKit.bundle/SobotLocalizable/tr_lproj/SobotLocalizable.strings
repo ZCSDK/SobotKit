@@ -168,6 +168,7 @@
 "已保存到系统相册" = "Sistem albümüne kaydedildi";
 "咨询后才能评价服务质量" = "Danışmadan sonra hizmet kalitesi değerlendirilebilir";
 "不能为空" = "Boş olmamalı";
+"重新加载" = "Yeniden yükle";
 "编号" = "Seri numarası";
 "播放失败" = "Oynatma başarısız";
 "创建成功" = "Başarıyla kuruldu";
@@ -209,14 +210,16 @@
 "附件" = "kaplama";
 "填写信息" = "Bilgi doldur";
 "排队自动断开结束会话" = "Otomatik bağlantısını kapattıktan sonra oturum bitir";
-"小程序" = "Applet";
+"小程序" = "Aplet";
 "小程序只能通过微信打开" = "Applet can only be opened through wechat";
 "解析中..." = "ParsingAnalisi";
 "继续排队" = "Devam et.";
-"如要继续等待，点击" = "Beklemeye devam ederseniz, tıklayın";
+"如果继续等待，点击" = "Beklemeye devam ederseniz, tıklayın";
 "顶" = "top";
 "踩" = "Step on";
 "您未提交信息，请" = "Hiçbir bilgi göndermediniz. Lütfen";
 "重新填写信息" = "Bilgileri tekrar doldur";
-
 "会话已结束，可重新发起咨询" = "Oturum bitti, danışma tekrar başlatılabilir.";
+"请选择是否解决了您的问题" = "Lütfen sorununuz çözüldüğünü seçin.";
+"保存成功" = "Başarıyla kaydedildi";
+"保存失败" = "Depolama başarısız";
