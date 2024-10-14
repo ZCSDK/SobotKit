@@ -61,6 +61,9 @@ NSTimeInterval sobotDiffTimeSinceNow(NSString *theDate);
  */
 NSInteger sobotGetDataYear(NSDate *date);
 
+// 时间戳转date
+NSDate * sobotStringFormateDateToDate(NSString * stringDate);
+
 @end
 
 NS_ASSUME_NONNULL_END
