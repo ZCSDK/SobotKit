@@ -760,4 +760,19 @@ Integer status 反馈结果-顶/踩 1 顶 0 踩
                        uid:(ZCLibConfig *)config
                      error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
                             success:(void(^)(NSString *msgLeaveTxt,NSString *msgLeaveContentTxt,NSString *leaveExplain)) successBlock;
+
+
+
+/// 回调前台，检测当前用户是否已经离线
+/// - Parameters:
+///   - config: 当前正在会话的初始化配置
+///   - startBlock: 开始
+///   - successBlock: 成功
+///   - failedBlock: 失败
+///   - finishBlock: 结束(本接口关注此回调即可)
++(void)checkUserOnlineStatus:(ZCLibConfig *)config
+                        start:(void(^)(NSString *urlString)) startBlock
+                      success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode))successBlock
+                       failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode))failedBlock
+                      finish:(void(^)(NSString *jsonString)) finishBlock;
 @end
