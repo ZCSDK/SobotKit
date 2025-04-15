@@ -409,6 +409,10 @@ typedef NS_ENUM(NSInteger,ZCTipMessageType) {
  */
 @property (nonatomic , assign) BOOL isShowSenderFlag;
 
+/**
+ *  是否是结束会话触发评价的消息类型，这里需要查看当前是否评价过
+ */
+@property(nonatomic,assign) BOOL isCloseEvaluation;
 
 /**
  *  初始化
