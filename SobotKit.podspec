@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = "SobotKit"
 
-s.version          = "3.3.3.6"
+s.version          = "3.3.3.7"
 
 s.summary          = "A marquee view used on iOS."
 s.description      = <<-DESC
